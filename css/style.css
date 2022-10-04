@@ -1,3 +1,9 @@
+:root {
+    --red_robo:rgb(188, 46, 36);
+}
+
+
+
 body{
     margin:0px;
     width:100vw;
@@ -45,11 +51,11 @@ body{
 
 
 #swatch_roboticist:hover {
-    color: rgb(255, 0, 0);
-    text-shadow:    0 0 50px rgb(194, 39, 39),
-                    0 0 100px rgb(194, 39, 39),
-                    0 0 150px rgb(194, 39, 39),
-                    0 0 200px rgb(194, 39, 39),
-                    0 0 300px rgb(194, 39, 39);
+    color: var(--red_robo);
+    text-shadow:    0 0 50px var(--red_robo),
+                    0 0 100px var(--red_robo),
+                    0 0 150px var(--red_robo),
+                    0 0 200px var(--red_robo),
+                    0 0 300px var(--red_robo);
 }
 
