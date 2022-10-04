@@ -1,28 +1,55 @@
-#landing_container{
+body{
     margin:0px;
-    width:50%;
-    height:auto;
+    width:100vw;
+    height:100vh;
+    font-family: 'League Spartan', sans-serif;
+  }
+
+#landing_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0px;
+    width:100vw;
+    height:100vh;
 }
 
 #landing_header_container{
-    width:500px;
-    height:50%;
+    width: 39vw;
+    height: auto;
     background: blue;
-
-}
-
-h1{
+    padding-bottom:0.6vh;
+    padding-top: 1vh;
     text-align: center;
-    font-size: 2.55vw;
-    white-space: pre;
-    margin:0px;
+    font-size: 3.5vw;
+    font-weight: 600;
+
 }
 
 #landing_swatch_container{
-    width:10%;
-    height:50%;
-    background: red;
+    margin:0px;
+    width:17vw;
+    height:500px;
+    background: black;
+}
+
+#swatch_roboticist{
+    margin-bottom:0.3vh;
+    margin-top: 0.6vh;
+    text-align: right;
+    font-size: 2.55vw;
+    font-weight: 550;
+    color: white;
+    transition: 0.3s;
 }
 
 
+#swatch_roboticist:hover {
+    color: rgb(255, 0, 0);
+    text-shadow:    0 0 50px rgb(194, 39, 39),
+                    0 0 100px rgb(194, 39, 39),
+                    0 0 150px rgb(194, 39, 39),
+                    0 0 200px rgb(194, 39, 39),
+                    0 0 300px rgb(194, 39, 39);
+}
 
