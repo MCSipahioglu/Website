@@ -1,12 +1,13 @@
 :root {
-    --red_robo:rgb(188, 46, 36);
+    --red_robo:rgb(204, 52, 51); /*(199, 68, 74) <- solukluğu iyi gibi bu hue(?) da renkleri bulalım*/
 }
 
-
+*{                              /*Formats all*/
+    margin:0px;
+}
 
 body{
-    margin:0px;
-    width:100vw;
+    width:100vw;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
     height:100vh;
     font-family: 'League Spartan', sans-serif;
   }
@@ -15,7 +16,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin:0px;
     width:100vw;
     height:100vh;
 }
@@ -23,9 +23,10 @@ body{
 #landing_header_container{
     width: 39vw;
     height: auto;
-    background: blue;
-    padding-bottom:0.6vh;
-    padding-top: 1vh;
+    border-style: solid;
+    border-width: 1px;
+    padding-bottom:0.1vh;
+    padding-top: 0.8vh;
     text-align: center;
     font-size: 3.5vw;
     font-weight: 600;
@@ -33,7 +34,9 @@ body{
 }
 
 #landing_swatch_container{
-    margin:0px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
     width:17vw;
     height:500px;
     background: black;
