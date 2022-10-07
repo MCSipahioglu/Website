@@ -4,18 +4,26 @@
 
 *{                              /*Formats all*/
     margin:0px;
+    padding:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+title{
+    display: none;
+}
+
 
 body{
     width:100vw;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
     height:100vh;
     font-family: 'League Spartan', sans-serif;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.56) 0%,rgba(127,127,127,1) 100%);
+    overflow: hidden;
   }
 
 #landing_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width:100vw;
     height:100vh;
 }
@@ -34,12 +42,11 @@ body{
 }
 
 #landing_swatch_container{
-    display: flex;
-    justify-content: right;
-    align-items: center;
     width:17vw;
     height:500px;
-    background: black;
+    justify-content: right;
+    border-style: solid;
+    border-width: 1px;
 }
 
 #swatch_roboticist{
