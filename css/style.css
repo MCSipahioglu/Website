@@ -5,9 +5,6 @@
 *{                              /*Formats all*/
     margin:0px;
     padding:0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 title{
@@ -21,44 +18,81 @@ body{
     font-family: 'League Spartan', sans-serif;
     background: radial-gradient(ellipse at center, rgba(255,255,255,0.56) 0%,rgba(127,127,127,1) 100%);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 #landing_container{
-    width:100vw;
-    height:100vh;
+    margin-right: 20.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing_logo{
+    padding-bottom: 6vh;
+    border-style: solid;
+    border-width: 1px;
+
 }
 
 #landing_header_container{
     width: 39vw;
     height: auto;
-    border-style: solid;
-    border-width: 1px;
     padding-bottom:0.1vh;
     padding-top: 0.8vh;
     text-align: center;
     font-size: 3.5vw;
     font-weight: 600;
+    border-style: solid;
+    border-width: 1px;
 
 }
 
 #landing_swatch_container{
-    width:17vw;
-    height:500px;
-    justify-content: right;
+    width: 100vh;
+    height: 100vh;
+    position: absolute;
+    left: 29.3vw;
     border-style: solid;
     border-width: 1px;
+    transform-origin: 50vh 50vh;
+    /*transform:rotate(90deg);*/
 }
 
-#swatch_roboticist{
-    margin-bottom:0.3vh;
-    margin-top: 0.6vh;
-    text-align: right;
+#swatch_roboticist, #swatch_botsmith, #swatch_inventor, #swatch_writer{
+    width: 30vh;
+    height: 3vh;
+    padding-left: 70vh;
+    position: absolute;
+    top: 48.5vh;
+    text-align: left;
     font-size: 2.55vw;
     font-weight: 550;
     color: white;
     transition: 0.3s;
 }
 
+#swatch_roboticist{
+
+}
+
+#swatch_botsmith{
+    transform-origin: center;
+    transform:rotate(15deg);
+}
+
+
+#swatch_inventor{
+    transform-origin: center;
+    transform:rotate(30deg);
+}
+
+#swatch_writer{
+    transform-origin: center;
+    transform:rotate(45deg);
+}
 
 #swatch_roboticist:hover {
     color: var(--red_robo);
@@ -69,3 +103,12 @@ body{
                     0 0 300px var(--red_robo);
 }
 
+
+#centered{
+    width: 50vh;
+    height: 50vh;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+
+}
