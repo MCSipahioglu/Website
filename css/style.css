@@ -1,5 +1,9 @@
 :root {
-    --red_robo:rgb(204, 52, 51); /*(199, 68, 74) <- solukluğu iyi gibi bu hue(?) da renkleri bulalım*/
+    --swatch_red:hsl(0, 60%, 50%); /*(199, 68, 74) <- solukluğu iyi gibi bu hue(?) da renkleri bulalım*/
+    --swatch_purple:hsl(295, 60%, 50%);
+    --swatch_orange:hsl(30, 60%, 50%);
+    --swatch_turqoise:hsl(167, 60%, 50%);
+
 }
 
 *{                              /*Formats all*/
@@ -58,7 +62,7 @@ body{
     border-style: solid;
     border-width: 1px;
     transform-origin: 50vh 50vh;
-    /*transform:rotate(90deg);*/
+
 }
 
 #swatch_roboticist, #swatch_botsmith, #swatch_inventor, #swatch_writer{
@@ -95,14 +99,40 @@ body{
 }
 
 #swatch_roboticist:hover {
-    color: var(--red_robo);
-    text-shadow:    0 0 50px var(--red_robo),
-                    0 0 100px var(--red_robo),
-                    0 0 150px var(--red_robo),
-                    0 0 200px var(--red_robo),
-                    0 0 300px var(--red_robo);
+    color: var(--swatch_red);
+    text-shadow:    0 0 50px var(--swatch_red),
+                    0 0 100px var(--swatch_red),
+                    0 0 150px var(--swatch_red),
+                    0 0 200px var(--swatch_red),
+                    0 0 300px var(--swatch_red);
 }
 
+#swatch_botsmith:hover {
+    color: var(--swatch_purple);
+    text-shadow:    0 0 50px var(--swatch_purple),
+                    0 0 100px var(--swatch_purple),
+                    0 0 150px var(--swatch_purple),
+                    0 0 200px var(--swatch_purple),
+                    0 0 300px var(--swatch_purple);
+}
+
+#swatch_inventor:hover {
+    color: var(--swatch_orange);
+    text-shadow:    0 0 50px var(--swatch_orange),
+                    0 0 100px var(--swatch_orange),
+                    0 0 150px var(--swatch_orange),
+                    0 0 200px var(--swatch_orange),
+                    0 0 300px var(--swatch_orange);
+}
+
+#swatch_writer:hover {
+    color: var(--swatch_turqoise);
+    text-shadow:    0 0 50px var(--swatch_turqoise),
+                    0 0 100px var(--swatch_turqoise),
+                    0 0 150px var(--swatch_turqoise),
+                    0 0 200px var(--swatch_turqoise),
+                    0 0 300px var(--swatch_turqoise);
+}
 
 #centered{
     width: 50vh;
