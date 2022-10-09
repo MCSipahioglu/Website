@@ -43,7 +43,7 @@ body{
 
 }
 
-#landing_header_container{
+#landing_header{
     width: 39vw;
     height: auto;
     padding-bottom:0.1vh;
@@ -64,20 +64,22 @@ body{
     border-style: solid;
     border-width: var(--visualization_border_width);
     transform-origin: 50vh 50vh;
+    transition: 0.3s;                                   /*This makes the rotation smooth*/
 
 }
 
 #swatch_roboticist, #swatch_botsmith, #swatch_inventor, #swatch_writer{
-    width: 30vh;
+    width: auto;
     height: 3vh;
-    padding-left: 70vh;
+    margin-left: 70vh;
     position: absolute;
     top: 48.5vh;
     text-align: left;
     font-size: 2.55vw;
     font-weight: 550;
     color: white;
-    transition: 0.3s;
+    cursor: pointer;
+    transform-origin: -20vh 1.5vh;
 }
 
 #swatch_roboticist{
@@ -85,18 +87,15 @@ body{
 }
 
 #swatch_botsmith{
-    transform-origin: center;
     transform:rotate(15deg);
 }
 
 
 #swatch_inventor{
-    transform-origin: center;
     transform:rotate(30deg);
 }
 
 #swatch_writer{
-    transform-origin: center;
     transform:rotate(45deg);
 }
 
