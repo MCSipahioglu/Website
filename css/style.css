@@ -1,8 +1,10 @@
-:root {
-    --swatch_red:hsl(0, 60%, 50%); /*(199, 68, 74) <- solukluğu iyi gibi bu hue(?) da renkleri bulalım*/
+:root {                         /*Global Variables */
+    --swatch_red:hsl(0, 60%, 50%);        /*Look at saturation value to select non-invasive colors*/
     --swatch_purple:hsl(295, 60%, 50%);
     --swatch_orange:hsl(30, 60%, 50%);
     --swatch_turqoise:hsl(167, 60%, 50%);
+
+    --swatch_angle_step:25deg;              /* Must change angle_step in swatch.js with this!*/
     --visualization_border_width:0px;
 
 }
@@ -10,11 +12,12 @@
 *{                              /*Formats all*/
     margin:0px;
     padding:0px;
+    border-style: solid;
+    border-width: var(--visualization_border_width);
 }
 
 title{
     display: none;
-    border-width: 0px;
 }
 
 
@@ -23,63 +26,77 @@ body{
     height:100vh;
     font-family: 'League Spartan', sans-serif;
     background: radial-gradient(ellipse at center, rgba(255,255,255,0.56) 0%,rgba(127,127,127,1) 100%);
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;           /*Non-Scrollable Page*/
   }
 
-#landing_container{
-    margin-right: 20.8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
+
+#landing_header_name, #landing_header_start, #landing_header_middle, #landing_header_end{
+    width: auto;
+    position: absolute;
+    top: 50vmin;
+    padding-top: 1.75vmin;      /*Perfect for dead center at this font*/
+
+    text-align: center;
+    font-size: 8vmin;
+    font-weight: 600;
+
 }
 
 #landing_logo{
-    padding-bottom: 6vh;
-    border-style: solid;
-    border-width: var(--visualization_border_width);
-
+    width: 10vmin;
+    position: absolute;
+    top: 47.5vmin;
+    left: calc(25% + 2vmin);
 }
 
-#landing_header{
-    width: 39vw;
-    height: auto;
-    padding-bottom:0.1vh;
-    padding-top: 0.8vh;
-    text-align: center;
-    font-size: 3.5vw;
-    font-weight: 600;
-    border-style: solid;
-    border-width: var(--visualization_border_width);
+#landing_header_name{
+    left: calc(25%);
+    transform: translateY(-150%)
+}
 
+#landing_header_start{
+    right: calc(50% + 2.75vmin);
+    transform: translateY(-50%);
+}
+
+#landing_header_middle{
+    left: calc(50% + 0.2vmin); /*Special value to make the letter "O" dead center in the page. (So it will be used as the center of rotation, nice*/
+    transform: translate(-50%, -50%);
+}
+
+#landing_header_end{
+    left: calc(50% + 3.2vmin);
+    transform: translateY(-50%);
 }
 
 #landing_swatch_container{
-    width: 100vh;
-    height: 100vh;
+    width: 100vmin;
+    height: 100vmin;
     position: absolute;
-    left: 29.3vw;
-    border-style: solid;
-    border-width: var(--visualization_border_width);
-    transform-origin: 50vh 50vh;
-    transition: 0.3s;                                   /*This makes the rotation smooth*/
+    margin-left: 25%;
+    transform-origin: 50vmin 50vmin;
+    transition: 0.25s;           /*This makes the rotation smooth*/
 
 }
 
 #swatch_roboticist, #swatch_botsmith, #swatch_inventor, #swatch_writer{
     width: auto;
-    height: 3vh;
-    margin-left: 70vh;
+    height: auto;
+    margin-left: 70vmin;
+
     position: absolute;
-    top: 48.5vh;
+    top: 47.25vh;
     text-align: left;
-    font-size: 2.55vw;
+
+    transform-origin: -19.8vh 2.75vh;
+
+    font-size: 5.5vmin;
     font-weight: 550;
-    color: white;
+    padding-top: 1.203125vmin;      /*Perfect for dead center at this font*/
+
     cursor: pointer;
-    transform-origin: -20vh 1.5vh;
 }
 
 #swatch_roboticist{
@@ -87,16 +104,16 @@ body{
 }
 
 #swatch_botsmith{
-    transform:rotate(15deg);
+    transform:rotate(var(--swatch_angle_step));
 }
 
 
 #swatch_inventor{
-    transform:rotate(30deg);
+    transform:rotate(calc(var(--swatch_angle_step) * 2));
 }
 
 #swatch_writer{
-    transform:rotate(45deg);
+    transform:rotate(calc(var(--swatch_angle_step) * 3));
 }
 
 #swatch_roboticist:hover {
@@ -139,7 +156,14 @@ body{
     width: 50vh;
     height: 50vh;
     text-align: center;
-    border-style: solid;
-    border-width:  var(--visualization_border_width);
+
+}
+
+#half_page{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 50vh;
 
 }
