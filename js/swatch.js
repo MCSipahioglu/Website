@@ -1,6 +1,6 @@
 const swatch_element=document.getElementById("landing_swatch_container");
 const angle_step=25;
-const swatch_element_count=4;
+const swatch_element_count=5;
 var current_step=0;
 
 

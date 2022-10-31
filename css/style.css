@@ -3,6 +3,7 @@
     --swatch_purple:hsl(295, 60%, 50%);
     --swatch_orange:hsl(30, 60%, 50%);
     --swatch_turqoise:hsl(167, 60%, 50%);
+    --swatch_green:hsl(81, 60%, 50%);
 
     --swatch_angle_step:25deg;              /* Must change angle_step in swatch.js with this!*/
     --visualization_border_width:0px;
@@ -14,21 +15,20 @@
     padding:0px;
     border-style: solid;
     border-width: var(--visualization_border_width);
+    color: rgb(255, 255, 255);
 }
 
 title{
     display: none;
 }
 
-
 body{
     width:100vw;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
     height:100vh;
     font-family: 'League Spartan', sans-serif;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,0.56) 0%,rgba(127,127,127,1) 100%);
+    background: rgb(29, 29, 29);
     overflow: hidden;           /*Non-Scrollable Page*/
   }
-
 
 
 
@@ -45,10 +45,10 @@ body{
 }
 
 #landing_logo{
-    width: 10vmin;
+    width: 5vmin;
     position: absolute;
-    top: 47.5vmin;
-    left: calc(25% + 2vmin);
+    bottom: 5px;
+    right: 5px;
 }
 
 #landing_header_name{
@@ -77,11 +77,11 @@ body{
     position: absolute;
     margin-left: 25%;
     transform-origin: 50vmin 50vmin;
-    transition: 0.25s;           /*This makes the rotation smooth*/
+    transition: 0.2s;           /*This makes the rotation smooth*/
 
 }
 
-#swatch_roboticist, #swatch_botsmith, #swatch_inventor, #swatch_writer{
+#swatch_roboticist, #swatch_botsmith, #swatch_inventor, #swatch_writer, #swatch_traveller{
     width: auto;
     height: auto;
     margin-left: 70vmin;
@@ -114,6 +114,10 @@ body{
 
 #swatch_writer{
     transform:rotate(calc(var(--swatch_angle_step) * 3));
+}
+
+#swatch_traveller{
+    transform:rotate(calc(var(--swatch_angle_step) * 4));
 }
 
 #swatch_roboticist:hover {
@@ -150,6 +154,15 @@ body{
                     0 0 150px var(--swatch_turqoise),
                     0 0 200px var(--swatch_turqoise),
                     0 0 300px var(--swatch_turqoise);
+}
+
+#swatch_traveller:hover {
+    color: var(--swatch_green);
+    text-shadow:    0 0 50px var(--swatch_green),
+                    0 0 100px var(--swatch_green),
+                    0 0 150px var(--swatch_green),
+                    0 0 200px var(--swatch_green),
+                    0 0 300px var(--swatch_green);
 }
 
 #centered{
