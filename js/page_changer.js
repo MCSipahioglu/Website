@@ -22,11 +22,11 @@ const e_navbar_writer=document.getElementById("navbar_writer");
 const e_navbar_traveller=document.getElementById("navbar_traveller");
 
 
-e_roboticist.addEventListener("click", page_change_roboticist);
-e_botsmith.addEventListener("click", page_change_botsmith);
-e_inventor.addEventListener("click", page_change_inventor);
-e_writer.addEventListener("click", page_change_writer);
-e_traveller.addEventListener("click", page_change_traveller);
+e_roboticist.onclick = function() {page_change_roboticist()};
+e_botsmith.onclick   = function() {page_change_botsmith()};
+e_inventor.onclick   = function() {page_change_inventor()};
+e_writer.onclick     = function() {page_change_writer()};
+e_traveller.onclick  = function() {page_change_traveller()};
 
 
 
