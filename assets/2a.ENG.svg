@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{clip-path:url(#SVGID_2_);stroke:#FFFFFF;stroke-width:60;}
+	.st2{clip-path:url(#SVGID_2_);stroke:#000000;stroke-width:40;}
+	.st3{clip-path:url(#SVGID_2_);stroke:#FFFFFF;stroke-width:100;}
+	.st4{clip-path:url(#SVGID_2_);stroke:#000000;stroke-width:60;}
+</style>
+<g>
+	<defs>
+		<circle id="SVGID_1_" cx="150" cy="150" r="150"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<rect class="st0" width="300" height="300"/>
+	<path class="st1" d="M0,0l300,300 M300,0L0,300"/>
+	<path class="st2" d="M0,0l300,300 M300,0L0,300"/>
+	<path class="st0" d="M150,150v-30L30,0H0l180,150L300,30V0L150,180l120,120h30L120,150L0,270v30L150,150z"/>
+	<path class="st3" d="M150,0v300 M0,150h300"/>
+	<path class="st4" d="M150,0v300 M0,150h300"/>
+</g>
+</svg>

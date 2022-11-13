@@ -164,48 +164,29 @@ body{
     right: 0.75vmin;
 }
 
-
-#logo_cv{
-    width: 5vmin;
-    height: 5vmin;
+#logo_wrapper{
     position: absolute;
     top: 1.5vmin;
     right: 1.5vmin;
     display: flex;
-    justify-content: center;
-    align-items: center;  
 }
 
-#logo_lang{
+#logo_cv, #logo_lang, #logo_email, #logo_dot{
     width: 5vmin;
     height: 5vmin;
-    position: absolute;
-    top: 1.5vmin;
-    right: 1.5vmin;
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
-#logo_email{
-    width: 5vmin;
-    height: 5vmin;
-    position: absolute;
-    top: 1.5vmin;
-    right: 1.5vmin;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-}
-
-#logo_email:hover {
-  background-color: #bbb;
+#logo_cv:hover, #logo_lang:hover, #logo_email:hover {
+  background-color: rgb(94, 94, 94);
   border-radius: 50%;
   cursor: pointer;
 
 }
 
-#image_email{
+#image_cv, #image_eng, #image_email, #image_dot{
     width: 3.5vmin;
     height: 3.5vmin;
 }
