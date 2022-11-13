@@ -10,12 +10,9 @@
 }
 
 #swatch_roboticist, #swatch_botsmith, #swatch_inventor, #swatch_writer, #swatch_traveller{
-    width: auto;
-    height: auto;
-    margin-left: 70vmin;
-
     position: absolute;
     top: 47.25vh;
+    margin-left: 70vmin;
     text-align: left;
 
     transform-origin: -19.8vh 2.75vh;

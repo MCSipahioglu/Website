@@ -1,72 +1,11 @@
-/*NAVBAR*/
-#navbar{
-    width: 100vw;
-    height: 8vmin;
-
-    display: flex;
-    align-items: center;
-    justify-content: right;
-
-    z-index: 2;
-}
-
-#navbar_name, #navbar_menu {
-    text-align: center;
-    padding-top: 1vmin;
-
-    font-size: 4.5vmin;
-    font-weight: 550; 
-
-
-    transition: 0.4s;
-
-    z-index: inherit;
-
-}
-
-#navbar_roboticist, #navbar_botsmith, #navbar_inventor, #navbar_writer, #navbar_traveller
-
-
-#navbar_name{
-    padding-left: 3vmin;
-}
-
-#navbar_roboticist{
-    color: var(--swatch_red);
-    text-shadow:0 0 50px var(--swatch_red);
-}
-
-#navbar_botsmith{
-    color: var(--swatch_purple);
-    text-shadow:0 0 50px var(--swatch_purple);
-}
-
-#navbar_inventor{
-    color: var(--swatch_orange);
-    text-shadow:0 0 50px var(--swatch_orange);
-}
-
-#navbar_writer{
-    color: var(--swatch_turqoise);
-    text-shadow:0 0 50px var(--swatch_turqoise);
-}
-
-#navbar_traveller{
-    color: var(--swatch_green);
-    text-shadow:0 0 50px var(--swatch_green);
-}
-
-
-
-
-
+/*LOGOS*/
 #logo_wrapper{
+    width: 25vmin;
+    height: 5vmin;
     display: flex;
     z-index: 10;
 }
 
-
-/*LOGOS*/
 #logo_cv, #logo_lang, #logo_email, #logo_dot{
     width: 5vmin;
     height: 5vmin;
@@ -87,6 +26,9 @@
     height: 3.5vmin;
 }
 
+
+
+/*S LOGOS*/
 #logo_S, #logo_S_red, #logo_S_purple, #logo_S_orange, #logo_S_turqoise, #logo_S_green{
     position: absolute;
     bottom: 0.75vmin;

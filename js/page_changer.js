@@ -12,7 +12,7 @@ const e_sweeper_wrapper=document.getElementById("sweeper_wrapper");
 const e_sweeper_neon=document.getElementById("sweeper_neon");
 const e_logo_S=document.getElementById("logo_S");
 
-const e_navbar=document.getElementById("navbar");
+const e_navbar_wrapper=document.getElementById("navbar_wrapper");
 const e_navbar_menu=document.getElementById("navbar_menu");
 const e_navbar_name=document.getElementById("navbar_name");
 const e_navbar_roboticist=document.getElementById("navbar_roboticist");
@@ -44,8 +44,8 @@ function page_change_roboticist(event){
     e_logo_S.id= "logo_S_red";
 
 
-    setTimeout(() => {  e_navbar.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_roboticist.style.opacity="100%"; }, 1750);
+    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
+    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
                          
 }
 
@@ -61,8 +61,8 @@ function page_change_botsmith(event){
     e_logo_S.id= "logo_S_purple";
 
 
-    setTimeout(() => {  e_navbar.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_botsmith.style.opacity="100%"; }, 1750);
+    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
+    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
                          
 }
 
@@ -78,8 +78,8 @@ function page_change_inventor(event){
     e_logo_S.id= "logo_S_orange";
 
 
-    setTimeout(() => {  e_navbar.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_inventor.style.opacity="100%"; }, 1750);
+    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
+    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
                          
 }
 
@@ -95,8 +95,8 @@ function page_change_writer(event){
     e_logo_S.id= "logo_S_turqoise";
 
 
-    setTimeout(() => {  e_navbar.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_writer.style.opacity="100%"; }, 1750);
+    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
+    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
                          
 }
 
@@ -112,8 +112,8 @@ function page_change_traveller(event){
     e_logo_S.id= "logo_S_green";
 
 
-    setTimeout(() => {  e_navbar.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_traveller.style.opacity="100%"; }, 1750);
+    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
+    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
                          
 }
 

@@ -1,0 +1,87 @@
+/*NAVBAR*/
+#navbar_wrapper{
+    width: 100vw;
+    height: 8vmin;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    z-index: 2;
+}
+
+#navbar_name{
+    text-align: center;
+    padding-top: 1vmin;
+    padding-left: 3vmin;
+
+    font-size: 4.5vmin;
+    font-weight: 550; 
+
+    opacity: 0%;
+    transition: 0.4s;
+
+    z-index: inherit;
+
+}
+
+
+
+#navbar_menu{
+    width: calc(100vw - 78.2vmin);
+    height: 8vmin;
+
+    opacity: 0%;
+    transition: 0.4s;
+
+    z-index: inherit;
+}
+
+
+#navbar_roboticist, #navbar_botsmith, #navbar_inventor, #navbar_writer, #navbar_traveller{
+    position: absolute;
+    margin-left: calc((100vw - 78.2vmin)/2 - 10vmin);
+    
+    font-size: 4.5vmin;
+    font-weight: 550;
+    padding-top: 2.4vmin;
+    
+    cursor: pointer;
+}
+
+
+
+#navbar_roboticist{
+    color: var(--swatch_red);
+    text-shadow:0 0 50px var(--swatch_red);
+}
+
+#navbar_botsmith{
+    color: var(--swatch_purple);
+    text-shadow:0 0 50px var(--swatch_purple);
+}
+
+#navbar_inventor{
+    color: var(--swatch_orange);
+    text-shadow:0 0 50px var(--swatch_orange);
+}
+
+#navbar_writer{
+    color: var(--swatch_turqoise);
+    text-shadow:0 0 50px var(--swatch_turqoise);
+}
+
+#navbar_traveller{
+    color: var(--swatch_green);
+    text-shadow:0 0 50px var(--swatch_green);
+}
+
+
+
+
+
+
+
+
+
+
