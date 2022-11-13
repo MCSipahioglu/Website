@@ -7,14 +7,13 @@
     display: flex;
 
     transition: 1s;
+
+    z-index: 1;
 }
 
 #sweeper_neon{
     width: 0.75vmin;
     height: 100vh;
-
-    background-color: var(--swatch_red);
-    box-shadow: 0px 0px 3vmin 1.5vmin var(--swatch_red);
 
     z-index: 2;
 }
@@ -23,8 +22,6 @@
     width: calc(100vw - 0.75vmin);
     height: 100vh;
     background-color: var(--bg_black);
-
-    z-index: 1;
 }
 
 #sweeper_divider{
@@ -35,8 +32,6 @@
     top: 8vmin;
 
     background-color: white;
-
-    z-index: 1;
 }
 
 
