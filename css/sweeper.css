@@ -1,0 +1,42 @@
+#sweeper_wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: calc(100vw + 5vmin);
+
+    display: flex;
+
+    transition: 1s;
+}
+
+#sweeper_neon{
+    width: 0.75vmin;
+    height: 100vh;
+
+    background-color: var(--swatch_red);
+    box-shadow: 0px 0px 3vmin 1.5vmin var(--swatch_red);
+
+    z-index: 2;
+}
+
+#sweeper_blanket{
+    width: calc(100vw - 0.75vmin);
+    height: 100vh;
+    background-color: var(--bg_black);
+
+    z-index: 1;
+}
+
+#sweeper_divider{
+    position: absolute;
+    width: calc(100vw + 0.75vmin);
+    height: 0.75vmin;
+
+    top: 8vmin;
+
+    background-color: white;
+
+    z-index: 1;
+}
+
+

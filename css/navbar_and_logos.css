@@ -1,0 +1,91 @@
+/*NAVBAR*/
+#navbar{
+    width: 100vw;
+    height: 8vmin;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#navbar_name, #navbar_roboticist{
+    text-align: center;
+    padding-top: 1vmin;
+
+    font-size: 4.5vmin;
+    font-weight: 550; 
+
+    transition: 0.3s;
+}
+
+#navbar_roboticist{
+    color: var(--swatch_red);
+    text-shadow:    0 0 50px var(--swatch_red),
+                    0 0 100px var(--swatch_red),
+                    0 0 150px var(--swatch_red),
+                    0 0 200px var(--swatch_red),
+                    0 0 300px var(--swatch_red);
+}
+
+#logo_wrapper{
+    display: flex;
+
+    z-index: 100;
+}
+
+
+/*LOGOS*/
+#logo_cv, #logo_lang, #logo_email, #logo_dot{
+    width: 5vmin;
+    height: 5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo_cv:hover, #logo_lang:hover, #logo_email:hover {
+  background-color: rgb(94, 94, 94);
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+#image_cv, #image_eng, #image_email, #image_dot{
+    width: 3.5vmin;
+    height: 3.5vmin;
+}
+
+#logo_S{
+    position: absolute;
+    bottom: 0.75vmin;
+    right: 0.75vmin;
+
+    width: 4.9vmin;
+    height: 6.5vmin;
+    background: url(../assets/logo_white.svg);
+    background-size: 4.9vmin;
+}
+
+#logo_S::before{
+    content: '';
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    background: url(../assets/logo_red.svg);
+    background-size: 4.9vmin;
+
+
+    animation: animate 4s linear infinite;
+
+}
+
+@keyframes animate{
+    0%{
+        width:0%;
+    }
+    50%{
+        width:100%;
+    }
+}

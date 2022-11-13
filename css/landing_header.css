@@ -1,0 +1,22 @@
+/*LANDING HEADER*/
+#landing_header_name, #landing_header_surname{
+    width: auto;
+    position: absolute;
+    padding-top: 1.75vmin;      /*Perfect for dead center at this font*/
+
+    text-align: center;
+    font-size: 8vmin;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+#landing_header_name{
+    left: calc((100vw - 100vmin)/2 + 8.9vmin); 
+    top: 36.5vmin
+}
+
+#landing_header_surname{
+    left: calc(50vw - 25vmin); 
+    top: 45.5vmin;
+}
