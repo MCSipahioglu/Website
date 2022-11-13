@@ -1,3 +1,5 @@
+/* RESPONSIVE VIA: EVERYTHING OF VMIN */
+
 :root {                         /*Global Variables */
     --swatch_red:hsl(0, 60%, 50%);        /*Look at saturation value to select non-invasive colors*/
     --swatch_purple:hsl(295, 60%, 50%);
@@ -5,6 +7,8 @@
     --swatch_turqoise:hsl(167, 60%, 50%);
     --swatch_green:hsl(81, 60%, 50%);
 
+
+    --bg_black: rgb(21,21,21);
     --swatch_angle_step:25deg;              /* Must change angle_step in swatch.js with this!*/
     --visualization_border_width:0px;
 
@@ -26,56 +30,43 @@ body{
     width:100vw;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
     height:100vh;
     font-family: 'League Spartan', sans-serif;
-    background: rgb(29, 29, 29);
+    background: var(--bg_black);
     overflow: hidden;           /*Non-Scrollable Page*/
-  }
+}
 
 
 
-#landing_header_name, #landing_header_start, #landing_header_middle, #landing_header_end{
+/*LANDING HEADER*/
+#landing_header_name, #landing_header_surname{
     width: auto;
     position: absolute;
-    top: 50vmin;
     padding-top: 1.75vmin;      /*Perfect for dead center at this font*/
 
     text-align: center;
     font-size: 8vmin;
     font-weight: 600;
 
-}
-
-#landing_logo{
-    width: 5vmin;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
+    transition: 0.3s;
 }
 
 #landing_header_name{
-    left: calc(25%);
-    transform: translateY(-150%)
+    left: calc((100vw - 100vmin)/2 + 8.9vmin); 
+    top: 36.5vmin
 }
 
-#landing_header_start{
-    right: calc(50% + 2.75vmin);
-    transform: translateY(-50%);
+#landing_header_surname{
+    left: calc(50vw - 25vmin); 
+    top: 45.5vmin;
 }
 
-#landing_header_middle{
-    left: calc(50% + 0.2vmin); /*Special value to make the letter "O" dead center in the page. (So it will be used as the center of rotation, nice*/
-    transform: translate(-50%, -50%);
-}
 
-#landing_header_end{
-    left: calc(50% + 3.2vmin);
-    transform: translateY(-50%);
-}
 
-#landing_swatch_container{
+/*SWATCH*/
+#landing_swatch_container{  
     width: 100vmin;
     height: 100vmin;
     position: absolute;
-    margin-left: 25%;
+    left: calc((100vw - 100vmin)/2); 
     transform-origin: 50vmin 50vmin;
     transition: 0.2s;           /*This makes the rotation smooth*/
 
@@ -106,7 +97,6 @@ body{
 #swatch_botsmith{
     transform:rotate(var(--swatch_angle_step));
 }
-
 
 #swatch_inventor{
     transform:rotate(calc(var(--swatch_angle_step) * 2));
@@ -164,6 +154,62 @@ body{
                     0 0 200px var(--swatch_green),
                     0 0 300px var(--swatch_green);
 }
+
+
+/*LOGOS*/
+#landing_logo{
+    width: 5vmin;
+    position: absolute;
+    bottom: 0.75vmin;
+    right: 0.75vmin;
+}
+
+
+#logo_cv{
+    width: 5vmin;
+    height: 5vmin;
+    position: absolute;
+    top: 1.5vmin;
+    right: 1.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#logo_lang{
+    width: 5vmin;
+    height: 5vmin;
+    position: absolute;
+    top: 1.5vmin;
+    right: 1.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#logo_email{
+    width: 5vmin;
+    height: 5vmin;
+    position: absolute;
+    top: 1.5vmin;
+    right: 1.5vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+#logo_email:hover {
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+#image_email{
+    width: 3.5vmin;
+    height: 3.5vmin;
+}
+
 
 #centered{
     width: 50vh;
