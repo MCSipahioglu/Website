@@ -15,14 +15,20 @@ const e_logo_S=document.getElementById("logo_S");
 const e_navbar_wrapper=document.getElementById("navbar_wrapper");
 const e_navbar_menu=document.getElementById("navbar_menu");
 const e_navbar_name=document.getElementById("navbar_name");
-const e_navbar_roboticist=document.getElementById("navbar_roboticist");
-const e_navbar_botsmith=document.getElementById("navbar_botsmith");
-const e_navbar_inventor=document.getElementById("navbar_inventor");
-const e_navbar_writer=document.getElementById("navbar_writer");
-const e_navbar_traveller=document.getElementById("navbar_traveller");
 
 
-e_roboticist.onclick = function() {page_change_roboticist()};
+const e_n_roboticist=document.getElementById("navbar_roboticist");
+const e_n_botsmith=document.getElementById("navbar_botsmith");
+const e_n_inventor=document.getElementById("navbar_inventor");
+const e_n_writer=document.getElementById("navbar_writer");
+const e_n_traveller=document.getElementById("navbar_traveller");
+const e_navmen_count=5;
+const navmen_y_step=4;
+
+
+
+
+e_roboticist.onclick = function() {page_change_roboticist();};
 e_botsmith.onclick   = function() {page_change_botsmith()};
 e_inventor.onclick   = function() {page_change_inventor()};
 e_writer.onclick     = function() {page_change_writer()};
@@ -30,12 +36,21 @@ e_traveller.onclick  = function() {page_change_traveller()};
 
 
 
-
-
-function page_change_roboticist(event){
+function deactivate_landing(){
     e_landing_header_name.style.display="none";             //Deactivate landing page
     e_landing_header_surname.style.display="none";
     e_landing_swatch_wrapper.style.display="none";
+}
+
+function activate_navbar(){
+    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
+    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
+}
+
+
+
+function page_change_roboticist(event){
+    deactivate_landing();
 
     console.log('Roboticist Clicked!');                     //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
@@ -43,16 +58,27 @@ function page_change_roboticist(event){
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_red";
 
+    //Order the navbar menu items.
+    e_n_inventor.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_writer.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_traveller.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
+    e_n_roboticist.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_botsmith.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
 
-    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
-                         
+    e_n_traveller.style.fontSize="3vmin";
+    e_n_botsmith.style.fontSize="3vmin";
+
+    e_n_traveller.style.opacity="30%";
+    e_n_botsmith.style.opacity="30%";
+
+    e_n_roboticist.style.color="var(--swatch_red)";
+    e_n_roboticist.style.textShadow="0 0 50px var(--swatch_red)";
+
+    activate_navbar();                        
 }
 
 function page_change_botsmith(event){
-    e_landing_header_name.style.display="none";             //Deactivate landing page
-    e_landing_header_surname.style.display="none";
-    e_landing_swatch_wrapper.style.display="none";
+    deactivate_landing();
 
     console.log('Botsmith Clicked!');                       //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
@@ -60,16 +86,27 @@ function page_change_botsmith(event){
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_purple";
 
+    //Order the navbar menu items.
+    e_n_writer.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_traveller.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_roboticist.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
+    e_n_botsmith.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_inventor.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
 
-    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
-                         
+    e_n_roboticist.style.fontSize="3vmin";
+    e_n_inventor.style.fontSize="3vmin";
+
+    e_n_roboticist.style.opacity="30%";
+    e_n_inventor.style.opacity="30%";
+
+    e_n_botsmith.style.color="var(--swatch_purple)";
+    e_n_botsmith.style.textShadow="0 0 50px var(--swatch_purple)";
+
+    activate_navbar();    
 }
 
 function page_change_inventor(event){
-    e_landing_header_name.style.display="none";             //Deactivate landing page
-    e_landing_header_surname.style.display="none";
-    e_landing_swatch_wrapper.style.display="none";
+    deactivate_landing();
 
     console.log('Inventor Clicked!');                       //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
@@ -77,16 +114,27 @@ function page_change_inventor(event){
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_orange";
 
+    //Order the navbar menu items.
+    e_n_traveller.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_roboticist.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_botsmith.style.transform= "translateY("+ -0.78*navmen_y_step +"vmin)";
+    e_n_inventor.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_writer.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
 
-    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
-                         
+    e_n_botsmith.style.fontSize="3vmin";
+    e_n_writer.style.fontSize="3vmin";
+
+    e_n_botsmith.style.opacity="30%";
+    e_n_writer.style.opacity="30%";
+
+    e_n_inventor.style.color="var(--swatch_orange)";
+    e_n_inventor.style.textShadow="0 0 50px var(--swatch_orange)";
+
+    activate_navbar();                       
 }
 
 function page_change_writer(event){
-    e_landing_header_name.style.display="none";             //Deactivate landing page
-    e_landing_header_surname.style.display="none";
-    e_landing_swatch_wrapper.style.display="none";
+    deactivate_landing();
 
     console.log('Writer Clicked!');                         //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
@@ -94,16 +142,27 @@ function page_change_writer(event){
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_turqoise";
 
+    //Order the navbar menu items.
+    e_n_roboticist.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_botsmith.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_inventor.style.transform= "translateY("+ -0.78*navmen_y_step +"vmin)";
+    e_n_writer.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_traveller.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
 
-    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
-                         
+    e_n_inventor.style.fontSize="3vmin";
+    e_n_traveller.style.fontSize="3vmin";
+
+    e_n_inventor.style.opacity="30%";
+    e_n_traveller.style.opacity="30%";
+
+    e_n_writer.style.color="var(--swatch_turqoise)";
+    e_n_writer.style.textShadow="0 0 50px var(--swatch_turqoise)";
+
+    activate_navbar();                   
 }
 
 function page_change_traveller(event){
-    e_landing_header_name.style.display="none";             //Deactivate landing page
-    e_landing_header_surname.style.display="none";
-    e_landing_swatch_wrapper.style.display="none";
+    deactivate_landing();
 
     console.log('Traveller Clicked!');                      //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
@@ -111,10 +170,23 @@ function page_change_traveller(event){
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_green";
 
+    //Order the navbar menu items.
+    e_n_botsmith.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_inventor.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_writer.style.transform= "translateY("+ -0.78*navmen_y_step +"vmin)";
+    e_n_traveller.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_roboticist.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
 
-    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
-                         
+    e_n_writer.style.fontSize="3vmin";
+    e_n_roboticist.style.fontSize="3vmin";
+
+    e_n_writer.style.opacity="30%";
+    e_n_roboticist.style.opacity="30%";
+
+    e_n_traveller.style.color="var(--swatch_green)";
+    e_n_traveller.style.textShadow="0 0 50px var(--swatch_green)";
+
+    activate_navbar();                     
 }
 
 

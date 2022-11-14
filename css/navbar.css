@@ -39,41 +39,56 @@
 
 
 #navbar_roboticist, #navbar_botsmith, #navbar_inventor, #navbar_writer, #navbar_traveller{
+    width: 25vmin;
+    
     position: absolute;
     margin-left: calc((100vw - 78.2vmin)/2 - 10vmin);
     
+    color: white;
     font-size: 4.5vmin;
     font-weight: 550;
+    text-align: center;
     padding-top: 2.4vmin;
-    
+
     cursor: pointer;
 }
 
-
-
 #navbar_roboticist{
-    color: var(--swatch_red);
-    text-shadow:0 0 50px var(--swatch_red);
+
 }
 
-#navbar_botsmith{
-    color: var(--swatch_purple);
-    text-shadow:0 0 50px var(--swatch_purple);
+#navbar_botsmith{    
 }
 
 #navbar_inventor{
-    color: var(--swatch_orange);
-    text-shadow:0 0 50px var(--swatch_orange);
 }
 
 #navbar_writer{
-    color: var(--swatch_turqoise);
-    text-shadow:0 0 50px var(--swatch_turqoise);
+    transform: translateY(calc(-2.78 * var(--navmen_y_step) ) );
 }
 
 #navbar_traveller{
-    color: var(--swatch_green);
-    text-shadow:0 0 50px var(--swatch_green);
+}
+
+
+
+
+#navbar_roboticist:hover{
+}
+
+#navbar_botsmith:hover{
+}
+
+#navbar_inventor:hover{
+
+}
+
+#navbar_writer:hover{
+
+}
+
+#navbar_traveller:hover{
+
 }
 
 
