@@ -25,8 +25,6 @@
 
 }
 
-
-
 #navbar_menu{
     width: calc(100vw - 78.2vmin);
     height: 8vmin;
@@ -36,7 +34,6 @@
 
     z-index: inherit;
 }
-
 
 #navbar_roboticist, #navbar_botsmith, #navbar_inventor, #navbar_writer, #navbar_traveller{
     width: 25vmin;
@@ -50,57 +47,12 @@
     text-align: center;
     padding-top: 2.4vmin;
 
-}
-
-#navbar_roboticist{
+    transition: 0.2s;
 
 }
 
-#navbar_botsmith{    
-
+#navbar_menu:hover{
+    background-color: aliceblue;
 }
-
-#navbar_inventor{
-
-}
-
-#navbar_writer{
-
-}
-
-#navbar_traveller{
-
-}
-
-
-
-
-#navbar_roboticist:hover{
-
-}
-
-#navbar_botsmith:hover{
-
-}
-
-#navbar_inventor:hover{
-
-}
-
-#navbar_writer:hover{
-
-}
-
-#navbar_traveller:hover{
-
-}
-
-
-
-
-
-
-
-
 
 

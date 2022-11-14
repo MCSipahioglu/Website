@@ -1,31 +1,36 @@
+//Elements for getting onclick interrupt
 const e_roboticist=document.getElementById("swatch_roboticist");
 const e_botsmith=document.getElementById("swatch_botsmith");
 const e_inventor=document.getElementById("swatch_inventor");
 const e_writer=document.getElementById("swatch_writer");
 const e_traveller=document.getElementById("swatch_traveller");
 
+//Elements to disactivate
 const e_landing_header_name=document.getElementById("landing_header_name");
 const e_landing_header_surname=document.getElementById("landing_header_surname");
 const e_landing_swatch_wrapper=document.getElementById("landing_swatch_wrapper");
 
+//Elements for transition to other pages
 const e_sweeper_wrapper=document.getElementById("sweeper_wrapper");
 const e_sweeper_neon=document.getElementById("sweeper_neon");
 const e_logo_S=document.getElementById("logo_S");
 
+//Elements to activate
 const e_navbar_wrapper=document.getElementById("navbar_wrapper");
 const e_navbar_menu=document.getElementById("navbar_menu");
 const e_navbar_name=document.getElementById("navbar_name");
 
-
+//Elements to activate and scroll through
 const e_n_roboticist=document.getElementById("navbar_roboticist");
 const e_n_botsmith=document.getElementById("navbar_botsmith");
 const e_n_inventor=document.getElementById("navbar_inventor");
 const e_n_writer=document.getElementById("navbar_writer");
 const e_n_traveller=document.getElementById("navbar_traveller");
+
 const e_navmen_count=5;
 
-
-
+//MAIN
+//Onclick interrupts to leave the landing page
 e_roboticist.onclick = function() {page_change_roboticist();};
 e_botsmith.onclick   = function() {page_change_botsmith()};
 e_inventor.onclick   = function() {page_change_inventor()};
@@ -34,6 +39,7 @@ e_traveller.onclick  = function() {page_change_traveller()};
 
 
 
+//FUNCTIONS
 function deactivate_landing(){
     e_landing_header_name.style.display="none";             //Deactivate landing page
     e_landing_header_surname.style.display="none";
@@ -43,7 +49,15 @@ function deactivate_landing(){
 function activate_navbar(){
     setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
     setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
+    
+    //Wheel interrupt to use the navbar menu
+    e_navbar_menu.addEventListener("mouseover", navbar_menu_scroll);  //When scrolling on menu, scroll the menu.
 }
+
+
+
+
+
 
 function navbar_roboticist_order(){
     e_n_writer.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
@@ -63,6 +77,12 @@ function navbar_roboticist_order(){
     e_n_inventor.style.opacity="0%";
     e_n_writer.style.opacity="0%";
     e_n_traveller.style.opacity="30%";
+
+    e_n_roboticist.style.display="inline";
+    e_n_botsmith.style.display="inline";
+    e_n_inventor.style.display="none";
+    e_n_writer.style.display="none";
+    e_n_traveller.style.display="inline";
 
     e_n_roboticist.style.color="var(--swatch_red)";
     e_n_botsmith.style.color="rgb(255,255,255)";
@@ -95,6 +115,12 @@ function navbar_botsmith_order(){
     e_n_inventor.style.opacity="30%";
     e_n_writer.style.opacity="0%";
     e_n_traveller.style.opacity="0%";
+
+    e_n_roboticist.style.display="inline";
+    e_n_botsmith.style.display="inline";
+    e_n_inventor.style.display="inline";
+    e_n_writer.style.display="none";
+    e_n_traveller.style.display="none";
 
     e_n_roboticist.style.color="rgb(255,255,255)";
     e_n_botsmith.style.color="var(--swatch_purple)";
@@ -129,6 +155,12 @@ function navbar_inventor_order(){
     e_n_writer.style.opacity="30%";
     e_n_traveller.style.opacity="0%";
 
+    e_n_roboticist.style.display="none";
+    e_n_botsmith.style.display="inline";
+    e_n_inventor.style.display="inline";
+    e_n_writer.style.display="inline";
+    e_n_traveller.style.display="none";
+
     e_n_roboticist.style.color="rgb(255,255,255)";
     e_n_botsmith.style.color="rgb(255,255,255)";
     e_n_inventor.style.color="var(--swatch_orange)"; 
@@ -161,6 +193,12 @@ function navbar_writer_order(){
     e_n_writer.style.opacity="100%";
     e_n_traveller.style.opacity="30%";
 
+    e_n_roboticist.style.display="none";
+    e_n_botsmith.style.display="none";
+    e_n_inventor.style.display="inline";
+    e_n_writer.style.display="inline";
+    e_n_traveller.style.display="inline";
+
     e_n_roboticist.style.color="rgb(255,255,255)";
     e_n_botsmith.style.color="rgb(255,255,255)";
     e_n_inventor.style.color="rgb(255,255,255)";
@@ -192,6 +230,12 @@ function navbar_traveller_order(){
     e_n_inventor.style.opacity="0%";
     e_n_writer.style.opacity="30%";
     e_n_traveller.style.opacity="100%";
+
+    e_n_roboticist.style.display="inline";
+    e_n_botsmith.style.display="none";
+    e_n_inventor.style.display="none";
+    e_n_writer.style.display="inline";
+    e_n_traveller.style.display="inline";
 
     e_n_roboticist.style.color="rgb(255,255,255)";
     e_n_botsmith.style.color="rgb(255,255,255)";
@@ -280,4 +324,11 @@ function page_change_traveller(event){
     activate_navbar();                     
 }
 
+
+
+
+
+function navbar_menu_scroll(event){
+    console.log("Navbar Menu Scrolling!");
+}
 
