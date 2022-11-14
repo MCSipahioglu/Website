@@ -50,7 +50,6 @@
     text-align: center;
     padding-top: 2.4vmin;
 
-    cursor: pointer;
 }
 
 #navbar_roboticist{
@@ -58,25 +57,30 @@
 }
 
 #navbar_botsmith{    
+
 }
 
 #navbar_inventor{
+
 }
 
 #navbar_writer{
-    transform: translateY(calc(-2.78 * var(--navmen_y_step) ) );
+
 }
 
 #navbar_traveller{
+
 }
 
 
 
 
 #navbar_roboticist:hover{
+
 }
 
 #navbar_botsmith:hover{
+
 }
 
 #navbar_inventor:hover{

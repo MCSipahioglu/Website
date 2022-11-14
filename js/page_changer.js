@@ -45,6 +45,169 @@ function activate_navbar(){
     setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
 }
 
+function navbar_roboticist_order(){
+    e_n_writer.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_traveller.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
+    e_n_roboticist.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_botsmith.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
+    e_n_inventor.style.transform= "translateY(calc("+ 2 +"*var(--navmen_y_step)))";
+
+    e_n_roboticist.style.fontSize="4.5vmin";
+    e_n_botsmith.style.fontSize="3vmin";
+    e_n_inventor.style.fontSize="3vmin";
+    e_n_writer.style.fontSize="3vmin";
+    e_n_traveller.style.fontSize="3vmin";
+
+    e_n_roboticist.style.opacity="100%";
+    e_n_botsmith.style.opacity="30%";
+    e_n_inventor.style.opacity="0%";
+    e_n_writer.style.opacity="0%";
+    e_n_traveller.style.opacity="30%";
+
+    e_n_roboticist.style.color="var(--swatch_red)";
+    e_n_botsmith.style.color="rgb(255,255,255)";
+    e_n_inventor.style.color="rgb(255,255,255)";
+    e_n_writer.style.color="rgb(255,255,255)";
+    e_n_traveller.style.color="rgb(255,255,255)";
+
+    e_n_roboticist.style.textShadow="0 0 50px var(--swatch_red)";
+    e_n_botsmith.style.textShadow="none";
+    e_n_inventor.style.textShadow="none";
+    e_n_writer.style.textShadow="none";
+    e_n_traveller.style.textShadow="none";
+}
+
+function navbar_botsmith_order(){
+    e_n_traveller.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_roboticist.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
+    e_n_botsmith.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_inventor.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
+    e_n_writer.style.transform= "translateY(calc("+ 2 +"*var(--navmen_y_step)))";
+
+    e_n_roboticist.style.fontSize="3vmin";
+    e_n_botsmith.style.fontSize="4.5vmin";
+    e_n_inventor.style.fontSize="3vmin";
+    e_n_writer.style.fontSize="3vmin";
+    e_n_traveller.style.fontSize="3vmin";
+
+    e_n_roboticist.style.opacity="30%";
+    e_n_botsmith.style.opacity="100%";
+    e_n_inventor.style.opacity="30%";
+    e_n_writer.style.opacity="0%";
+    e_n_traveller.style.opacity="0%";
+
+    e_n_roboticist.style.color="rgb(255,255,255)";
+    e_n_botsmith.style.color="var(--swatch_purple)";
+    e_n_inventor.style.color="rgb(255,255,255)";
+    e_n_writer.style.color="rgb(255,255,255)";
+    e_n_traveller.style.color="rgb(255,255,255)";
+
+
+    e_n_roboticist.style.textShadow="none";
+    e_n_botsmith.style.textShadow="0 0 50px var(--swatch_purple)";
+    e_n_inventor.style.textShadow="none";
+    e_n_writer.style.textShadow="none";
+    e_n_traveller.style.textShadow="none";
+}
+
+function navbar_inventor_order(){
+    e_n_roboticist.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_botsmith.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
+    e_n_inventor.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_writer.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
+    e_n_traveller.style.transform= "translateY(calc("+ 2 +"*var(--navmen_y_step)))";
+
+    e_n_roboticist.style.fontSize="3vmin";
+    e_n_botsmith.style.fontSize="3vmin";
+    e_n_inventor.style.fontSize="4.5vmin";
+    e_n_writer.style.fontSize="3vmin";
+    e_n_traveller.style.fontSize="3vmin";
+
+    e_n_roboticist.style.opacity="0%";
+    e_n_botsmith.style.opacity="30%";
+    e_n_inventor.style.opacity="100%";
+    e_n_writer.style.opacity="30%";
+    e_n_traveller.style.opacity="0%";
+
+    e_n_roboticist.style.color="rgb(255,255,255)";
+    e_n_botsmith.style.color="rgb(255,255,255)";
+    e_n_inventor.style.color="var(--swatch_orange)"; 
+    e_n_writer.style.color="rgb(255,255,255)";
+    e_n_traveller.style.color="rgb(255,255,255)";
+
+    e_n_roboticist.style.textShadow="none";
+    e_n_botsmith.style.textShadow="none";
+    e_n_inventor.style.textShadow="0 0 50px var(--swatch_orange)";
+    e_n_writer.style.textShadow="none";
+    e_n_traveller.style.textShadow="none";
+}
+
+function navbar_writer_order(){
+    e_n_botsmith.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_inventor.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
+    e_n_writer.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_traveller.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
+    e_n_roboticist.style.transform= "translateY(calc("+ 2 +"*var(--navmen_y_step)))";
+
+    e_n_roboticist.style.fontSize="3vmin";
+    e_n_botsmith.style.fontSize="3vmin";
+    e_n_inventor.style.fontSize="3vmin";
+    e_n_writer.style.fontSize="4.5vmin";
+    e_n_traveller.style.fontSize="3vmin";
+
+    e_n_roboticist.style.opacity="0%";
+    e_n_botsmith.style.opacity="0%";
+    e_n_inventor.style.opacity="30%";
+    e_n_writer.style.opacity="100%";
+    e_n_traveller.style.opacity="30%";
+
+    e_n_roboticist.style.color="rgb(255,255,255)";
+    e_n_botsmith.style.color="rgb(255,255,255)";
+    e_n_inventor.style.color="rgb(255,255,255)";
+    e_n_writer.style.color="var(--swatch_turqoise)";
+    e_n_traveller.style.color="rgb(255,255,255)";
+
+    e_n_roboticist.style.textShadow="none";
+    e_n_botsmith.style.textShadow="none";
+    e_n_inventor.style.textShadow="none";
+    e_n_writer.style.textShadow="0 0 50px var(--swatch_turqoise)";
+    e_n_traveller.style.textShadow="none";  
+}
+
+function navbar_traveller_order(){
+    e_n_inventor.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
+    e_n_writer.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
+    e_n_traveller.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
+    e_n_roboticist.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
+    e_n_botsmith.style.transform= "translateY(calc("+ 2 +"*var(--navmen_y_step)))";
+
+    e_n_roboticist.style.fontSize="3vmin";
+    e_n_botsmith.style.fontSize="3vmin";
+    e_n_inventor.style.fontSize="3vmin";
+    e_n_writer.style.fontSize="3vmin";
+    e_n_traveller.style.fontSize="4.5vmin";
+
+    e_n_roboticist.style.opacity="30%";
+    e_n_botsmith.style.opacity="0%";
+    e_n_inventor.style.opacity="0%";
+    e_n_writer.style.opacity="30%";
+    e_n_traveller.style.opacity="100%";
+
+    e_n_roboticist.style.color="rgb(255,255,255)";
+    e_n_botsmith.style.color="rgb(255,255,255)";
+    e_n_inventor.style.color="rgb(255,255,255)";
+    e_n_writer.style.color="rgb(255,255,255)";
+    e_n_traveller.style.color="var(--swatch_green)"; 
+
+    e_n_roboticist.style.textShadow="none";
+    e_n_botsmith.style.textShadow="none";
+    e_n_inventor.style.textShadow="none";
+    e_n_writer.style.textShadow="none";
+    e_n_traveller.style.textShadow="0 0 50px var(--swatch_green)";
+}
+
+
+
 
 
 function page_change_roboticist(event){
@@ -57,21 +220,7 @@ function page_change_roboticist(event){
     e_logo_S.id= "logo_S_red";
 
     //Order the navbar menu items.
-    e_n_inventor.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
-    e_n_writer.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_n_traveller.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
-    e_n_roboticist.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
-    e_n_botsmith.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
-
-    e_n_traveller.style.fontSize="3vmin";
-    e_n_botsmith.style.fontSize="3vmin";
-
-    e_n_traveller.style.opacity="30%";
-    e_n_botsmith.style.opacity="30%";
-
-    e_n_roboticist.style.color="var(--swatch_red)";
-    e_n_roboticist.style.textShadow="0 0 50px var(--swatch_red)";
-
+    navbar_roboticist_order();
     activate_navbar();                        
 }
 
@@ -85,21 +234,7 @@ function page_change_botsmith(event){
     e_logo_S.id= "logo_S_purple";
 
     //Order the navbar menu items.
-    e_n_writer.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
-    e_n_traveller.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_n_roboticist.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
-    e_n_botsmith.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
-    e_n_inventor.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
-
-    e_n_roboticist.style.fontSize="3vmin";
-    e_n_inventor.style.fontSize="3vmin";
-
-    e_n_roboticist.style.opacity="30%";
-    e_n_inventor.style.opacity="30%";
-
-    e_n_botsmith.style.color="var(--swatch_purple)";
-    e_n_botsmith.style.textShadow="0 0 50px var(--swatch_purple)";
-
+    navbar_botsmith_order();
     activate_navbar();    
 }
 
@@ -113,21 +248,7 @@ function page_change_inventor(event){
     e_logo_S.id= "logo_S_orange";
 
     //Order the navbar menu items.
-    e_n_traveller.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
-    e_n_roboticist.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_n_botsmith.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
-    e_n_inventor.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
-    e_n_writer.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
-
-    e_n_botsmith.style.fontSize="3vmin";
-    e_n_writer.style.fontSize="3vmin";
-
-    e_n_botsmith.style.opacity="30%";
-    e_n_writer.style.opacity="30%";
-
-    e_n_inventor.style.color="var(--swatch_orange)";
-    e_n_inventor.style.textShadow="0 0 50px var(--swatch_orange)";
-
+    navbar_inventor_order();
     activate_navbar();                       
 }
 
@@ -141,21 +262,7 @@ function page_change_writer(event){
     e_logo_S.id= "logo_S_turqoise";
 
     //Order the navbar menu items.
-    e_n_roboticist.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
-    e_n_botsmith.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_n_inventor.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
-    e_n_writer.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
-    e_n_traveller.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
-
-    e_n_inventor.style.fontSize="3vmin";
-    e_n_traveller.style.fontSize="3vmin";
-
-    e_n_inventor.style.opacity="30%";
-    e_n_traveller.style.opacity="30%";
-
-    e_n_writer.style.color="var(--swatch_turqoise)";
-    e_n_writer.style.textShadow="0 0 50px var(--swatch_turqoise)";
-
+    navbar_writer_order();
     activate_navbar();                   
 }
 
@@ -169,21 +276,7 @@ function page_change_traveller(event){
     e_logo_S.id= "logo_S_green";
 
     //Order the navbar menu items.
-    e_n_botsmith.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
-    e_n_inventor.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_n_writer.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
-    e_n_traveller.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
-    e_n_roboticist.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
-
-    e_n_writer.style.fontSize="3vmin";
-    e_n_roboticist.style.fontSize="3vmin";
-
-    e_n_writer.style.opacity="30%";
-    e_n_roboticist.style.opacity="30%";
-
-    e_n_traveller.style.color="var(--swatch_green)";
-    e_n_traveller.style.textShadow="0 0 50px var(--swatch_green)";
-
+    navbar_traveller_order();
     activate_navbar();                     
 }
 
