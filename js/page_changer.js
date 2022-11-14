@@ -27,7 +27,8 @@ const e_n_inventor=document.getElementById("navbar_menu_inventor");
 const e_n_writer=document.getElementById("navbar_menu_writer");
 const e_n_traveller=document.getElementById("navbar_menu_traveller");
 
-const e_navmen_count=5;
+const navmen_count=5;
+var navmen_og_index=0;  //Keep in mind the original page condition for navbar menu.
 var navmen_index=0;
 
 //MAIN
@@ -41,7 +42,20 @@ e_traveller.onclick  = function() {page_change_traveller()};
 //Hover+Wheel interrupt to use the navbar menu
 document.addEventListener('mousemove', e => {
     if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu_") ){ //When on the navbar_menu elements:
-        document.addEventListener("wheel", navbar_menu_scroll, false);      //Check for scrolling. (Scroll navbar_menu when scrolling while hovering on it.)
+        document.addEventListener("wheel", navbar_menu_scroll, true);      //Check for scrolling. (Scroll navbar_menu when scrolling while hovering on it.)
+    }else{
+        document.removeEventListener("wheel", navbar_menu_scroll, true);    //When leaving navbar_menu area, stop listening for scroll and revert to original condition.
+        if(navmen_og_index==0){
+            navbar_roboticist_order();
+        }else if(navmen_og_index==1){
+            navbar_botsmith_order();
+        }else if(navmen_og_index==2){
+            navbar_inventor_order();
+        }else if(navmen_og_index==3){
+            navbar_writer_order();  
+        }else if(navmen_og_index==4){
+            navbar_traveller_order();
+        }
     }
   }, {passive: true})
 
@@ -273,7 +287,8 @@ function page_change_roboticist(event){
     //Order the navbar menu items.
     navbar_roboticist_order();
     activate_navbar();
-    navmen_index=1;                   
+    navmen_og_index=0;
+    navmen_index=0;                   
 }
 
 function page_change_botsmith(event){
@@ -288,7 +303,8 @@ function page_change_botsmith(event){
     //Order the navbar menu items.
     navbar_botsmith_order();
     activate_navbar();
-    navmen_index=2;
+    navmen_og_index=1;
+    navmen_index=1;
 }
 
 function page_change_inventor(event){
@@ -303,7 +319,8 @@ function page_change_inventor(event){
     //Order the navbar menu items.
     navbar_inventor_order();
     activate_navbar();
-    navmen_index=3;                  
+    navmen_og_index=2;
+    navmen_index=2;                  
 }
 
 function page_change_writer(event){
@@ -318,7 +335,8 @@ function page_change_writer(event){
     //Order the navbar menu items.
     navbar_writer_order();
     activate_navbar();
-    navmen_index=4;               
+    navmen_og_index=3;
+    navmen_index=3;               
 }
 
 function page_change_traveller(event){
@@ -333,7 +351,8 @@ function page_change_traveller(event){
     //Order the navbar menu items.
     navbar_traveller_order();
     activate_navbar();
-    navmen_index=5;                    
+    navmen_og_index=4;
+    navmen_index=4;                    
 }
 
 
@@ -341,17 +360,30 @@ function page_change_traveller(event){
 
 
 function navbar_menu_scroll(event){
-
-
     var delta = Math.sign(event.deltaY);     //Normalize Scroll's deltaY (+-120 for Chrome into -+1)
+
 
     if (delta==1){         //Scroll Down
         console.log('Down');
-
+        navmen_index=((navmen_index+1)%navmen_count+navmen_count)%navmen_count;
     }
     else if (delta==-1){   //Scroll Up
         console.log('Up');
+        navmen_index=((navmen_index-1)%navmen_count+navmen_count)%navmen_count;
+    }
 
+
+
+    if(navmen_index==0){
+        navbar_roboticist_order();
+    }else if(navmen_index==1){
+        navbar_botsmith_order();
+    }else if(navmen_index==2){
+        navbar_inventor_order();
+    }else if(navmen_index==3){
+        navbar_writer_order();  
+    }else if(navmen_index==4){
+        navbar_traveller_order();
     }
 }
 
