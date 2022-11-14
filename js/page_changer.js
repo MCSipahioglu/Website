@@ -362,14 +362,13 @@ function page_change_traveller(event){
 function navbar_menu_scroll(event){
     var delta = Math.sign(event.deltaY);     //Normalize Scroll's deltaY (+-120 for Chrome into -+1)
 
-
     if (delta==1){         //Scroll Down
         console.log('Down');
-        navmen_index=((navmen_index+1)%navmen_count+navmen_count)%navmen_count;
+        navmen_index=((navmen_index+1)%navmen_count+navmen_count)%navmen_count;     //Weird modulo so that negative numbers become positive as well.
     }
     else if (delta==-1){   //Scroll Up
         console.log('Up');
-        navmen_index=((navmen_index-1)%navmen_count+navmen_count)%navmen_count;
+        navmen_index=((navmen_index-1)%navmen_count+navmen_count)%navmen_count;     //Weird modulo so that negative numbers become positive as well.
     }
 
 
