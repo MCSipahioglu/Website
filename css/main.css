@@ -20,7 +20,7 @@ Sweep Animation:    https://www.youtube.com/watch?v=W9XEARppU8s&t=213s&ab_channe
 
 
     --bg_black: rgb(21,21,21);
-    --swatch_angle_step:25deg;              /* Must change angle_step in swatch.js with this!*/
+    --swatch_angle_step: 25deg;         /* Just changing here will reflect to any js use as well*/
     --navmen_y_step: 4vmin;
     --visualization_border_width:0px;
 
