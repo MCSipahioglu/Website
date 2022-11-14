@@ -35,7 +35,7 @@
     z-index: inherit;
 }
 
-#navbar_roboticist, #navbar_botsmith, #navbar_inventor, #navbar_writer, #navbar_traveller{
+#navbar_menu_roboticist, #navbar_menu_botsmith, #navbar_menu_inventor, #navbar_menu_writer, #navbar_menu_traveller{
     width: 25vmin;
     
     position: absolute;

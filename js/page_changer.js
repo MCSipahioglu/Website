@@ -21,13 +21,14 @@ const e_navbar_menu=document.getElementById("navbar_menu");
 const e_navbar_name=document.getElementById("navbar_name");
 
 //Elements to activate and scroll through
-const e_n_roboticist=document.getElementById("navbar_roboticist");
-const e_n_botsmith=document.getElementById("navbar_botsmith");
-const e_n_inventor=document.getElementById("navbar_inventor");
-const e_n_writer=document.getElementById("navbar_writer");
-const e_n_traveller=document.getElementById("navbar_traveller");
+const e_n_roboticist=document.getElementById("navbar_menu_roboticist");
+const e_n_botsmith=document.getElementById("navbar_menu_botsmith");
+const e_n_inventor=document.getElementById("navbar_menu_inventor");
+const e_n_writer=document.getElementById("navbar_menu_writer");
+const e_n_traveller=document.getElementById("navbar_menu_traveller");
 
 const e_navmen_count=5;
+var navmen_index=0;
 
 //MAIN
 //Onclick interrupts to leave the landing page
@@ -36,6 +37,15 @@ e_botsmith.onclick   = function() {page_change_botsmith()};
 e_inventor.onclick   = function() {page_change_inventor()};
 e_writer.onclick     = function() {page_change_writer()};
 e_traveller.onclick  = function() {page_change_traveller()};
+
+//Hover+Wheel interrupt to use the navbar menu
+document.addEventListener('mousemove', e => {
+    if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu_") ){ //When on the navbar_menu elements:
+        document.addEventListener("wheel", navbar_menu_scroll, false);      //Check for scrolling. (Scroll navbar_menu when scrolling while hovering on it.)
+    }
+  }, {passive: true})
+
+
 
 
 
@@ -48,10 +58,7 @@ function deactivate_landing(){
 
 function activate_navbar(){
     setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);
-    
-    //Wheel interrupt to use the navbar menu
-    e_navbar_menu.addEventListener("mouseover", navbar_menu_scroll);  //When scrolling on menu, scroll the menu.
+    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);       //Spawn via opacity to not mess up the flex display composition
 }
 
 
@@ -265,7 +272,8 @@ function page_change_roboticist(event){
 
     //Order the navbar menu items.
     navbar_roboticist_order();
-    activate_navbar();                        
+    activate_navbar();
+    navmen_index=1;                   
 }
 
 function page_change_botsmith(event){
@@ -279,7 +287,8 @@ function page_change_botsmith(event){
 
     //Order the navbar menu items.
     navbar_botsmith_order();
-    activate_navbar();    
+    activate_navbar();
+    navmen_index=2;
 }
 
 function page_change_inventor(event){
@@ -293,7 +302,8 @@ function page_change_inventor(event){
 
     //Order the navbar menu items.
     navbar_inventor_order();
-    activate_navbar();                       
+    activate_navbar();
+    navmen_index=3;                  
 }
 
 function page_change_writer(event){
@@ -307,7 +317,8 @@ function page_change_writer(event){
 
     //Order the navbar menu items.
     navbar_writer_order();
-    activate_navbar();                   
+    activate_navbar();
+    navmen_index=4;               
 }
 
 function page_change_traveller(event){
@@ -321,7 +332,8 @@ function page_change_traveller(event){
 
     //Order the navbar menu items.
     navbar_traveller_order();
-    activate_navbar();                     
+    activate_navbar();
+    navmen_index=5;                    
 }
 
 
@@ -329,6 +341,17 @@ function page_change_traveller(event){
 
 
 function navbar_menu_scroll(event){
-    console.log("Navbar Menu Scrolling!");
+
+
+    var delta = Math.sign(event.deltaY);     //Normalize Scroll's deltaY (+-120 for Chrome into -+1)
+
+    if (delta==1){         //Scroll Down
+        console.log('Down');
+
+    }
+    else if (delta==-1){   //Scroll Up
+        console.log('Up');
+
+    }
 }
 
