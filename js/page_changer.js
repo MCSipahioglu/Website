@@ -23,8 +23,6 @@ const e_n_inventor=document.getElementById("navbar_inventor");
 const e_n_writer=document.getElementById("navbar_writer");
 const e_n_traveller=document.getElementById("navbar_traveller");
 const e_navmen_count=5;
-const navmen_y_step=4;
-
 
 
 
@@ -59,7 +57,7 @@ function page_change_roboticist(event){
     e_logo_S.id= "logo_S_red";
 
     //Order the navbar menu items.
-    e_n_inventor.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_inventor.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
     e_n_writer.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n_traveller.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_roboticist.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
@@ -87,7 +85,7 @@ function page_change_botsmith(event){
     e_logo_S.id= "logo_S_purple";
 
     //Order the navbar menu items.
-    e_n_writer.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_writer.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
     e_n_traveller.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n_roboticist.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_botsmith.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
@@ -115,9 +113,9 @@ function page_change_inventor(event){
     e_logo_S.id= "logo_S_orange";
 
     //Order the navbar menu items.
-    e_n_traveller.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_traveller.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
     e_n_roboticist.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_n_botsmith.style.transform= "translateY("+ -0.78*navmen_y_step +"vmin)";
+    e_n_botsmith.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_inventor.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
     e_n_writer.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
 
@@ -143,9 +141,9 @@ function page_change_writer(event){
     e_logo_S.id= "logo_S_turqoise";
 
     //Order the navbar menu items.
-    e_n_roboticist.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_roboticist.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
     e_n_botsmith.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_n_inventor.style.transform= "translateY("+ -0.78*navmen_y_step +"vmin)";
+    e_n_inventor.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_writer.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
     e_n_traveller.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
 
@@ -171,9 +169,9 @@ function page_change_traveller(event){
     e_logo_S.id= "logo_S_green";
 
     //Order the navbar menu items.
-    e_n_botsmith.style.transform= "translateY("+ -2.78*navmen_y_step +"vmin)";
+    e_n_botsmith.style.transform= "translateY(calc("+ -2.78 +"*var(--navmen_y_step)))";
     e_n_inventor.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_n_writer.style.transform= "translateY("+ -0.78*navmen_y_step +"vmin)";
+    e_n_writer.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_traveller.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
     e_n_roboticist.style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
 
