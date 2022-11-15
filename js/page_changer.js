@@ -82,7 +82,7 @@ function deactivate_landing(){
 
 function activate_navbar(){ //Spawn in navbar
     setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn via opacity to not mess up the flex display composition
-    setTimeout(() => {  e_navbar_menu.style.display="inline"; }, 1750);       
+    setTimeout(() => {  e_navbar_menu.style.visibility="visible"; e_navbar_menu.style.opacity="100%"; }, 1750);     //Can't animate in from display none, instead animate in from visibility+opacity
 }
 
 
@@ -90,45 +90,80 @@ function activate_navbar(){ //Spawn in navbar
 
 
 function activate_page_roboticist(){
-    e_p_roboticist.style.display="inline";
-    e_p_botsmith.style.display="none";
-    e_p_inventor.style.display="none";
-    e_p_writer.style.display="none";
-    e_p_traveller.style.display="none";
+    setTimeout(() => {
+    e_p_roboticist.style.visibility="visible";
+    e_p_roboticist.style.opacity="100%";
+    e_p_botsmith.style.visibility="hidden";
+    e_p_botsmith.style.opacity="0%";
+    e_p_inventor.style.visibility="hidden";
+    e_p_inventor.style.opacity="0%";
+    e_p_writer.style.visibility="hidden";
+    e_p_writer.style.opacity="0%";
+    e_p_traveller.style.visibility="hidden";
+    e_p_traveller.style.opacity="0%";
+    }, 2500);
+
 }
 
 function activate_page_botsmith(){
-    e_p_roboticist.style.display="none";
-    e_p_botsmith.style.display="inline";
-    e_p_inventor.style.display="none";
-    e_p_writer.style.display="none";
-    e_p_traveller.style.display="none";
+    setTimeout(() => {
+    e_p_roboticist.style.visibility="hidden";
+    e_p_roboticist.style.opacity="0%";
+    e_p_botsmith.style.visibility="visible";
+    e_p_botsmith.style.opacity="100%";
+    e_p_inventor.style.visibility="hidden";
+    e_p_inventor.style.opacity="0%";
+    e_p_writer.style.visibility="hidden";
+    e_p_writer.style.opacity="0%";
+    e_p_traveller.style.visibility="hidden";
+    e_p_traveller.style.opacity="0%";
+    }, 2500);
 }
 
 function activate_page_inventor(){
-    e_p_roboticist.style.display="none";
-    e_p_botsmith.style.display="none";
-    e_p_inventor.style.display="inline";
-    e_p_writer.style.display="none";
-    e_p_traveller.style.display="none";
-
+    setTimeout(() => {
+    e_p_roboticist.style.visibility="hidden";
+    e_p_roboticist.style.opacity="0%";
+    e_p_botsmith.style.visibility="hidden";
+    e_p_botsmith.style.opacity="0%";
+    e_p_inventor.style.visibility="visible";
+    e_p_inventor.style.opacity="100%";
+    e_p_writer.style.visibility="hidden";
+    e_p_writer.style.opacity="0%";
+    e_p_traveller.style.visibility="hidden";
+    e_p_traveller.style.opacity="0%";
+    }, 2500);
 }
 
 function activate_page_writer(){
-    e_p_roboticist.style.display="none";
-    e_p_botsmith.style.display="none";
-    e_p_inventor.style.display="none";
-    e_p_writer.style.display="inline";
-    e_p_traveller.style.display="none";
+    setTimeout(() => {
+    e_p_roboticist.style.visibility="hidden";
+    e_p_roboticist.style.opacity="0%";
+    e_p_botsmith.style.visibility="hidden";
+    e_p_botsmith.style.opacity="0%";
+    e_p_inventor.style.visibility="hidden";
+    e_p_inventor.style.opacity="0%";
+    e_p_writer.style.visibility="visible";
+    e_p_writer.style.opacity="100%";
+    e_p_traveller.style.visibility="hidden";
+    e_p_traveller.style.opacity="0%";
+    }, 2500);
 
 }
 
 function activate_page_traveller(){
-    e_p_roboticist.style.display="none";
-    e_p_botsmith.style.display="none";
-    e_p_inventor.style.display="none";
-    e_p_writer.style.display="none";
-    e_p_traveller.style.display="inline";
+    setTimeout(() => {
+    e_p_roboticist.style.visibility="hidden";
+    e_p_roboticist.style.opacity="0%";
+    e_p_botsmith.style.visibility="hidden";
+    e_p_botsmith.style.opacity="0%";
+    e_p_inventor.style.visibility="hidden";
+    e_p_inventor.style.opacity="0%";
+    e_p_writer.style.visibility="hidden";
+    e_p_writer.style.opacity="0%";
+    e_p_traveller.style.visibility="visible";
+    e_p_traveller.style.opacity="100%";
+    }, 2500);
 
 }
 
@@ -346,7 +381,8 @@ function page_change_roboticist(event){
     activate_navbar();
     navmen_og_index=0;
     navmen_index=0;
-    activate_page_roboticist();      
+    activate_page_roboticist();
+          
 }
 
 function page_change_botsmith(event){
@@ -364,6 +400,7 @@ function page_change_botsmith(event){
     navmen_og_index=1;
     navmen_index=1;
     activate_page_botsmith();
+    
 }
 
 function page_change_inventor(event){
@@ -380,7 +417,7 @@ function page_change_inventor(event){
     activate_navbar();
     navmen_og_index=2;
     navmen_index=2;
-    activate_page_inventor();      
+    activate_page_inventor();
 }
 
 function page_change_writer(event){

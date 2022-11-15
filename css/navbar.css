@@ -30,8 +30,10 @@
     width: calc(100vw - 78.2vmin);
     height: 8vmin;
 
-    display: none;
-    transition: 0.4s;
+    visibility: hidden;
+    opacity: 0%;
+    transition: visibility 0s, opacity 0.4s;
+
 
     z-index: inherit;
 }
