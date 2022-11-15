@@ -12,6 +12,7 @@ const e_landing_swatch_wrapper=document.getElementById("landing_swatch_wrapper")
 
 //Elements for transition to other pages
 const e_sweeper_wrapper=document.getElementById("sweeper_wrapper");
+const e_sweeper_divider=document.getElementById("sweeper_divider");
 const e_sweeper_neon=document.getElementById("sweeper_neon");
 const e_logo_S=document.getElementById("logo_S");
 
@@ -284,6 +285,7 @@ function page_change_roboticist(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_red";
 
     //Order the navbar menu items.
@@ -300,6 +302,7 @@ function page_change_botsmith(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_purple";
 
     //Order the navbar menu items.
@@ -316,6 +319,7 @@ function page_change_inventor(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_orange";
 
     //Order the navbar menu items.
@@ -332,6 +336,7 @@ function page_change_writer(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_turqoise";
 
     //Order the navbar menu items.
@@ -348,6 +353,7 @@ function page_change_traveller(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
     e_logo_S.id= "logo_S_green";
 
     //Order the navbar menu items.

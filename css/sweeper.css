@@ -30,9 +30,16 @@
     width: calc(100vw + 0.75vmin);
     height: 0.75vmin;
 
+    left: calc(100vw + 5vmin);
     top: 8vmin;
 
-    background-color: white;
+    background-color: rgb(255,255,255);
+
+    transition: 1s;
+
+    z-index: 1;
+
+
 }
 
 
