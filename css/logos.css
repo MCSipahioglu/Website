@@ -15,10 +15,7 @@
 }
 
 #logo_cv:hover, #logo_lang:hover, #logo_email:hover {
-  background-color: rgb(94, 94, 94);
-  border-radius: 50%;
   cursor: pointer;
-
 }
 
 #image_cv, #image_eng, #image_email, #image_dot{
@@ -26,6 +23,11 @@
     height: 3.5vmin;
 }
 
+#image_cv:hover, #image_eng:hover, #image_email:hover{
+    border-width: 0.5vmin;
+    border-radius: 50%;
+    border-style: solid;
+}
 
 
 /*S LOGOS*/
