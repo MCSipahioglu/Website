@@ -23,6 +23,7 @@
 
     z-index: inherit;
 
+    cursor: default;
 }
 
 #navbar_menu{
@@ -49,6 +50,7 @@
 
     transition: 0.2s;
 
+    cursor: pointer;
 }
 
 

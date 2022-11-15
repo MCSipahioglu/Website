@@ -42,9 +42,11 @@ e_traveller.onclick  = function() {page_change_traveller()};
 //Hover+Wheel interrupt to use the navbar menu
 document.addEventListener('mousemove', e => {
     if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu_") ){ //When on the navbar_menu elements:
-        document.addEventListener("wheel", navbar_menu_scroll, true);      //Check for scrolling. (Scroll navbar_menu when scrolling while hovering on it.)
+        document.addEventListener("wheel", navbar_menu_scroll, true);       //Check for scrolling. (Scroll navbar_menu when scrolling while hovering on it.)
+        document.addEventListener("click", navbar_menu_redirect, true);     //If clicked when able to scroll. Then redirect.
     }else{
-        document.removeEventListener("wheel", navbar_menu_scroll, true);    //When leaving navbar_menu area, stop listening for scroll and revert to original condition.
+        document.removeEventListener("wheel", navbar_menu_scroll, true);    //When leaving navbar_menu area, stop listening for events and revert to original condition.
+        document.removeEventListener("click", navbar_menu_redirect, true);
         if(navmen_og_index==0){
             navbar_roboticist_order();
         }else if(navmen_og_index==1){
@@ -386,3 +388,90 @@ function navbar_menu_scroll(event){
     }
 }
 
+
+
+
+
+function page_redirect_roboticist(event){
+    console.log('Roboticist Clicked!');                     //Console feedback
+    e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_red";
+
+    //Order the navbar menu items.
+    navbar_roboticist_order();
+    navmen_og_index=0;
+    navmen_index=0;                
+}
+
+function page_redirect_botsmith(event){
+    console.log('Botsmith Clicked!');                       //Console feedback
+    e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_purple";
+
+    //Order the navbar menu items.
+    navbar_botsmith_order();
+    navmen_og_index=1;
+    navmen_index=1;
+}
+
+function page_redirect_inventor(event){
+    console.log('Inventor Clicked!');                       //Console feedback
+    e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_orange";
+
+    //Order the navbar menu items.
+    navbar_inventor_order();
+    navmen_og_index=2;
+    navmen_index=2;                  
+}
+
+function page_redirect_writer(event){
+    console.log('Writer Clicked!');                         //Console feedback
+    e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_turqoise";
+
+    //Order the navbar menu items.
+    navbar_writer_order();
+    navmen_og_index=3;
+    navmen_index=3;               
+}
+
+function page_redirect_traveller(event){
+    console.log('Traveller Clicked!');                      //Console feedback
+    e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_green";
+
+    //Order the navbar menu items.
+    navbar_traveller_order();
+    navmen_og_index=4;
+    navmen_index=4;                    
+}
+
+
+
+
+function navbar_menu_redirect(event){
+    e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation
+
+    if(navmen_index==0){
+        setTimeout(() => {  page_redirect_roboticist(); }, 1000);
+    }else if(navmen_index==1){
+        setTimeout(() => {  page_redirect_botsmith(); }, 1000);
+    }else if(navmen_index==2){
+        setTimeout(() => {  page_redirect_inventor(); }, 1000);
+    }else if(navmen_index==3){
+        setTimeout(() => {  page_redirect_writer(); }, 1000); 
+    }else if(navmen_index==4){
+        setTimeout(() => {  page_redirect_traveller(); }, 1000);
+    }
+}
