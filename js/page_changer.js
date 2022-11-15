@@ -32,6 +32,13 @@ const navmen_count=5;
 var navmen_og_index=0;  //Keep in mind the original page condition for navbar menu.
 var navmen_index=0;
 
+//Pages to activate
+const e_p_roboticist=document.getElementById("page_roboticist");
+const e_p_botsmith=document.getElementById("page_botsmith");
+const e_p_inventor=document.getElementById("page_inventor");
+const e_p_writer=document.getElementById("page_writer");
+const e_p_traveller=document.getElementById("page_traveller");
+
 //MAIN
 //Onclick interrupts to leave the landing page
 e_roboticist.onclick = function() {page_change_roboticist();};
@@ -73,9 +80,52 @@ function deactivate_landing(){
     e_landing_swatch_wrapper.style.display="none";
 }
 
-function activate_navbar(){
-    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_menu.style.display="inline"; }, 1750);       //Spawn via opacity to not mess up the flex display composition
+function activate_navbar(){ //Spawn in navbar
+    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn via opacity to not mess up the flex display composition
+    setTimeout(() => {  e_navbar_menu.style.display="inline"; }, 1750);       
+}
+
+function activate_page_roboticist(){
+    e_p_roboticist.style.display="inline";
+    e_p_botsmith.style.display="none";
+    e_p_inventor.style.display="none";
+    e_p_writer.style.display="none";
+    e_p_traveller.style.display="none";
+}
+
+function activate_page_botsmith(){
+    e_p_roboticist.style.display="none";
+    e_p_botsmith.style.display="inline";
+    e_p_inventor.style.display="none";
+    e_p_writer.style.display="none";
+    e_p_traveller.style.display="none";
+}
+
+function activate_page_inventor(){
+    e_p_roboticist.style.display="none";
+    e_p_botsmith.style.display="none";
+    e_p_inventor.style.display="inline";
+    e_p_writer.style.display="none";
+    e_p_traveller.style.display="none";
+
+}
+
+function activate_page_writer(){
+    e_p_roboticist.style.display="none";
+    e_p_botsmith.style.display="none";
+    e_p_inventor.style.display="none";
+    e_p_writer.style.display="inline";
+    e_p_traveller.style.display="none";
+
+}
+
+function activate_page_traveller(){
+    e_p_roboticist.style.display="none";
+    e_p_botsmith.style.display="none";
+    e_p_inventor.style.display="none";
+    e_p_writer.style.display="none";
+    e_p_traveller.style.display="inline";
+
 }
 
 
@@ -281,7 +331,6 @@ function navbar_traveller_order(){
 function page_change_roboticist(event){
     deactivate_landing();
 
-    console.log('Roboticist Clicked!');                     //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -292,13 +341,13 @@ function page_change_roboticist(event){
     navbar_roboticist_order();
     activate_navbar();
     navmen_og_index=0;
-    navmen_index=0;                   
+    navmen_index=0;
+    activate_page_roboticist();      
 }
 
 function page_change_botsmith(event){
     deactivate_landing();
 
-    console.log('Botsmith Clicked!');                       //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -310,12 +359,12 @@ function page_change_botsmith(event){
     activate_navbar();
     navmen_og_index=1;
     navmen_index=1;
+    activate_page_botsmith();
 }
 
 function page_change_inventor(event){
     deactivate_landing();
 
-    console.log('Inventor Clicked!');                       //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -326,13 +375,13 @@ function page_change_inventor(event){
     navbar_inventor_order();
     activate_navbar();
     navmen_og_index=2;
-    navmen_index=2;                  
+    navmen_index=2;
+    activate_page_inventor();      
 }
 
 function page_change_writer(event){
     deactivate_landing();
 
-    console.log('Writer Clicked!');                         //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -343,13 +392,13 @@ function page_change_writer(event){
     navbar_writer_order();
     activate_navbar();
     navmen_og_index=3;
-    navmen_index=3;               
+    navmen_index=3;
+    activate_page_writer();
 }
 
 function page_change_traveller(event){
     deactivate_landing();
 
-    console.log('Traveller Clicked!');                      //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -360,7 +409,8 @@ function page_change_traveller(event){
     navbar_traveller_order();
     activate_navbar();
     navmen_og_index=4;
-    navmen_index=4;                    
+    navmen_index=4;
+    activate_page_traveller();      
 }
 
 
@@ -371,11 +421,9 @@ function navbar_menu_scroll(event){
     var delta = Math.sign(event.deltaY);     //Normalize Scroll's deltaY (+-120 for Chrome into -+1)
 
     if (delta==1){         //Scroll Down
-        console.log('Down');
         navmen_index=((navmen_index+1)%navmen_count+navmen_count)%navmen_count;     //Weird modulo so that negative numbers become positive as well.
     }
     else if (delta==-1){   //Scroll Up
-        console.log('Up');
         navmen_index=((navmen_index-1)%navmen_count+navmen_count)%navmen_count;     //Weird modulo so that negative numbers become positive as well.
     }
 
@@ -399,7 +447,6 @@ function navbar_menu_scroll(event){
 
 
 function page_redirect_roboticist(event){
-    console.log('Roboticist Clicked!');                     //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -408,11 +455,11 @@ function page_redirect_roboticist(event){
     //Order the navbar menu items.
     navbar_roboticist_order();
     navmen_og_index=0;
-    navmen_index=0;                
+    navmen_index=0;
+    activate_page_roboticist();       
 }
 
 function page_redirect_botsmith(event){
-    console.log('Botsmith Clicked!');                       //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -422,10 +469,10 @@ function page_redirect_botsmith(event){
     navbar_botsmith_order();
     navmen_og_index=1;
     navmen_index=1;
+    activate_page_botsmith();
 }
 
 function page_redirect_inventor(event){
-    console.log('Inventor Clicked!');                       //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -434,11 +481,11 @@ function page_redirect_inventor(event){
     //Order the navbar menu items.
     navbar_inventor_order();
     navmen_og_index=2;
-    navmen_index=2;                  
+    navmen_index=2;
+    activate_page_inventor();        
 }
 
 function page_redirect_writer(event){
-    console.log('Writer Clicked!');                         //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -447,11 +494,11 @@ function page_redirect_writer(event){
     //Order the navbar menu items.
     navbar_writer_order();
     navmen_og_index=3;
-    navmen_index=3;               
+    navmen_index=3;
+    activate_page_writer();
 }
 
 function page_redirect_traveller(event){
-    console.log('Traveller Clicked!');                      //Console feedback
     e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -460,7 +507,8 @@ function page_redirect_traveller(event){
     //Order the navbar menu items.
     navbar_traveller_order();
     navmen_og_index=4;
-    navmen_index=4;                    
+    navmen_index=4;
+    activate_page_traveller();  
 }
 
 

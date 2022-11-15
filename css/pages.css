@@ -1,5 +1,21 @@
 /*PAGES*/
-#page_roboticist{
+#page_roboticist, #page_botsmith, #page_inventor, #page_writer, #page_traveller{
+    width: calc(100vw - 6vmin);
+    height: calc(100vh - 8.75vmin);
 
+    position: absolute;
+    top: 8.75vmin;
+    left: 3vmin;
+
+
+
+    z-index: 2;
+    display: none;
+
+}
+
+#map{
+    width: 500px;
+    
 }
 

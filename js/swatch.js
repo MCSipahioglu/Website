@@ -11,14 +11,10 @@ function swatch_rotate(event){
     if (delta==1 && current_step<element_swatch_count-1){         //Rotate Down
         element_swatch.style.transform = "rotate(calc(" + -1*current_step + " * var(--swatch_angle_step) - var(--swatch_angle_step)))";
         current_step+=1;
-        //console.log('Down');
-        //console.log(current_step);
     }
     else if (delta==-1 && current_step>0){                           //Rotate Up
         element_swatch.style.transform = "rotate(calc(" + -1*current_step + " * var(--swatch_angle_step) + var(--swatch_angle_step)))";
         current_step+=-1;
-        //console.log('Up');
-        //console.log(current_step);
 
     }
 
