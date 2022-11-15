@@ -85,6 +85,10 @@ function activate_navbar(){ //Spawn in navbar
     setTimeout(() => {  e_navbar_menu.style.display="inline"; }, 1750);       
 }
 
+
+
+
+
 function activate_page_roboticist(){
     e_p_roboticist.style.display="inline";
     e_p_botsmith.style.display="none";
@@ -529,3 +533,13 @@ function navbar_menu_redirect(event){
         setTimeout(() => {  page_redirect_traveller(); }, 1000);
     }
 }
+
+
+
+
+
+
+
+
+
+

@@ -2,13 +2,13 @@
 #sweeper_wrapper{
     width: 100vw;
     height: 100vh;
+
     position: absolute;
     left: calc(100vw + 5vmin);
 
     display: flex;
 
     transition: 1s;
-
     z-index: 1;
 }
 
@@ -22,14 +22,15 @@
 #sweeper_blanket{
     width: calc(100vw - 0.75vmin);
     height: 100vh;
+
     background-color: var(--bg_black);
 }
 
 #sweeper_divider{
-    position: absolute;
     width: calc(100vw + 0.75vmin);
     height: 0.75vmin;
 
+    position: absolute;
     left: calc(100vw + 5vmin);
     top: 8vmin;
 
@@ -38,7 +39,6 @@
     transition: 1s;
 
     z-index: 1;
-
 
 }
 

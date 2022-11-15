@@ -29,6 +29,7 @@ Sweep Animation:    https://www.youtube.com/watch?v=W9XEARppU8s&t=213s&ab_channe
 *{                              /*Formats all*/
     margin:0px;
     padding:0px;
+    
     border-style: solid;
     border-width: var(--visualization_border_width);
     color: rgb(255, 255, 255);
@@ -41,8 +42,11 @@ title{
 body{
     width:100vw;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
     height:100vh;
+
     font-family: 'League Spartan', sans-serif;
+
     background: var(--bg_black);
+
     overflow: hidden;           /*Non-Scrollable Page*/
 }
 
@@ -52,6 +56,7 @@ h1{
     font-size: 3vmin;
     font-weight: 550;
     text-align: justify;
+
 }
 
 
@@ -59,5 +64,6 @@ p{
     font-size: 2vmin;
     font-weight: 400;
     text-align: justify;
+
 }
 

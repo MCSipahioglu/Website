@@ -2,20 +2,23 @@
 #logo_wrapper{
     width: 25vmin;
     height: 5vmin;
+
     display: flex;
+
     z-index: 10;
 }
 
 #logo_cv, #logo_lang, #logo_email, #logo_dot{
     width: 5vmin;
     height: 5vmin;
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #logo_cv:hover, #logo_lang:hover, #logo_email:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #image_cv, #image_eng, #image_email, #image_dot{
@@ -32,18 +35,17 @@
 
 /*S LOGOS*/
 #logo_S, #logo_S_red, #logo_S_purple, #logo_S_orange, #logo_S_turqoise, #logo_S_green{
+    width: 4.9vmin;
+    height: 6.5vmin;
+
     position: absolute;
     bottom: 0.75vmin;
     right: 0.75vmin;
-
-    width: 4.9vmin;
-    height: 6.5vmin;
 
     background-size: 4.9vmin;
 
     z-index: 10;
     transition: 0.2s;
-
 }
 
 #logo_S{

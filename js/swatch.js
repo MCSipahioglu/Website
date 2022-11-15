@@ -15,7 +15,6 @@ function swatch_rotate(event){
     else if (delta==-1 && current_step>0){                           //Rotate Up
         element_swatch.style.transform = "rotate(calc(" + -1*current_step + " * var(--swatch_angle_step) + var(--swatch_angle_step)))";
         current_step+=-1;
-
     }
 
 }
