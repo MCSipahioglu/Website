@@ -75,7 +75,7 @@ function deactivate_landing(){
 
 function activate_navbar(){
     setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn in navbar
-    setTimeout(() => {  e_navbar_menu.style.opacity="100%"; }, 1750);       //Spawn via opacity to not mess up the flex display composition
+    setTimeout(() => {  e_navbar_menu.style.display="inline"; }, 1750);       //Spawn via opacity to not mess up the flex display composition
 }
 
 
