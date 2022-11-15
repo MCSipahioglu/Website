@@ -14,6 +14,7 @@ const e_landing_swatch_wrapper=document.getElementById("landing_swatch_wrapper")
 const e_sweeper_wrapper=document.getElementById("sweeper_wrapper");
 const e_sweeper_divider=document.getElementById("sweeper_divider");
 const e_sweeper_neon=document.getElementById("sweeper_neon");
+const e_sweeper_secondary=document.getElementById("sweeper_secondary");
 const e_logo_S=document.getElementById("logo_S");
 
 //Elements to activate
@@ -83,16 +84,17 @@ function deactivate_landing(){
 function activate_navbar(){ //Spawn in navbar
     setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn via opacity to not mess up the flex display composition
     setTimeout(() => {  e_navbar_menu.style.visibility="visible"; e_navbar_menu.style.opacity="100%"; }, 1750);     //Can't animate in from display none, instead animate in from visibility+opacity
+    e_sweeper_secondary.style.display="inline";     //Also spawn in the secondary sweeper.
 }
 
 
-
-
-
+//Activating/Deactivating Pages
 function activate_page_roboticist(){
-    setTimeout(() => {
     e_p_roboticist.style.visibility="visible";
     e_p_roboticist.style.opacity="100%";
+}
+
+function deactivate_page_except_roboticist(){
     e_p_botsmith.style.visibility="hidden";
     e_p_botsmith.style.opacity="0%";
     e_p_inventor.style.visibility="hidden";
@@ -101,58 +103,72 @@ function activate_page_roboticist(){
     e_p_writer.style.opacity="0%";
     e_p_traveller.style.visibility="hidden";
     e_p_traveller.style.opacity="0%";
-    }, 2500);
-
 }
+
+
 
 function activate_page_botsmith(){
-    setTimeout(() => {
-    e_p_roboticist.style.visibility="hidden";
-    e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="visible";
     e_p_botsmith.style.opacity="100%";
+}
+
+function deactivate_page_except_botsmith(){
+    e_p_roboticist.style.visibility="hidden";
+    e_p_roboticist.style.opacity="0%";
     e_p_inventor.style.visibility="hidden";
     e_p_inventor.style.opacity="0%";
     e_p_writer.style.visibility="hidden";
     e_p_writer.style.opacity="0%";
     e_p_traveller.style.visibility="hidden";
     e_p_traveller.style.opacity="0%";
-    }, 2500);
 }
+
+
 
 function activate_page_inventor(){
-    setTimeout(() => {
-    e_p_roboticist.style.visibility="hidden";
-    e_p_roboticist.style.opacity="0%";
-    e_p_botsmith.style.visibility="hidden";
-    e_p_botsmith.style.opacity="0%";
     e_p_inventor.style.visibility="visible";
     e_p_inventor.style.opacity="100%";
+}
+
+function deactivate_page_except_inventor(){
+    e_p_roboticist.style.visibility="hidden";
+    e_p_roboticist.style.opacity="0%";
+    e_p_botsmith.style.visibility="hidden";
+    e_p_botsmith.style.opacity="0%";
     e_p_writer.style.visibility="hidden";
     e_p_writer.style.opacity="0%";
     e_p_traveller.style.visibility="hidden";
     e_p_traveller.style.opacity="0%";
-    }, 2500);
 }
+
+
 
 function activate_page_writer(){
-    setTimeout(() => {
+    e_p_writer.style.visibility="visible";
+    e_p_writer.style.opacity="100%";
+
+}
+
+function deactivate_page_except_writer(){
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="hidden";
     e_p_botsmith.style.opacity="0%";
     e_p_inventor.style.visibility="hidden";
     e_p_inventor.style.opacity="0%";
-    e_p_writer.style.visibility="visible";
-    e_p_writer.style.opacity="100%";
     e_p_traveller.style.visibility="hidden";
     e_p_traveller.style.opacity="0%";
-    }, 2500);
+}
+
+
+
+function activate_page_traveller(){
+    e_p_traveller.style.visibility="visible";
+    e_p_traveller.style.opacity="100%";
 
 }
 
-function activate_page_traveller(){
-    setTimeout(() => {
+function deactivate_page_except_traveller(){
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="hidden";
@@ -161,17 +177,13 @@ function activate_page_traveller(){
     e_p_inventor.style.opacity="0%";
     e_p_writer.style.visibility="hidden";
     e_p_writer.style.opacity="0%";
-    e_p_traveller.style.visibility="visible";
-    e_p_traveller.style.opacity="100%";
-    }, 2500);
-
 }
 
 
 
 
 
-
+//Navbar Menu Scroll
 function navbar_roboticist_order(){
     e_n_writer.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n_traveller.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
@@ -365,99 +377,6 @@ function navbar_traveller_order(){
 
 
 
-
-
-function page_change_roboticist(event){
-    deactivate_landing();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_red";
-
-    //Order the navbar menu items.
-    navbar_roboticist_order();
-    activate_navbar();
-    navmen_og_index=0;
-    navmen_index=0;
-    activate_page_roboticist();
-          
-}
-
-function page_change_botsmith(event){
-    deactivate_landing();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_purple";
-
-    //Order the navbar menu items.
-    navbar_botsmith_order();
-    activate_navbar();
-    navmen_og_index=1;
-    navmen_index=1;
-    activate_page_botsmith();
-    
-}
-
-function page_change_inventor(event){
-    deactivate_landing();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_orange";
-
-    //Order the navbar menu items.
-    navbar_inventor_order();
-    activate_navbar();
-    navmen_og_index=2;
-    navmen_index=2;
-    activate_page_inventor();
-}
-
-function page_change_writer(event){
-    deactivate_landing();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_turqoise";
-
-    //Order the navbar menu items.
-    navbar_writer_order();
-    activate_navbar();
-    navmen_og_index=3;
-    navmen_index=3;
-    activate_page_writer();
-}
-
-function page_change_traveller(event){
-    deactivate_landing();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_green";
-
-    //Order the navbar menu items.
-    navbar_traveller_order();
-    activate_navbar();
-    navmen_og_index=4;
-    navmen_index=4;
-    activate_page_traveller();      
-}
-
-
-
-
-
 function navbar_menu_scroll(event){
     var delta = Math.sign(event.deltaY);     //Normalize Scroll's deltaY (+-120 for Chrome into -+1)
 
@@ -487,87 +406,186 @@ function navbar_menu_scroll(event){
 
 
 
+//First Spawning Of a Page
+function page_change_roboticist(event){
+    deactivate_landing();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_red";
+
+    //Order the navbar menu items.
+    navbar_roboticist_order();
+    activate_navbar();
+    navmen_og_index=0;
+    navmen_index=0;
+    setTimeout(() => {  activate_page_roboticist(); }, 2500);
+          
+}
+
+function page_change_botsmith(event){
+    deactivate_landing();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_purple";
+
+    //Order the navbar menu items.
+    navbar_botsmith_order();
+    activate_navbar();
+    navmen_og_index=1;
+    navmen_index=1;
+    setTimeout(() => {  activate_page_botsmith(); }, 2500);
+    
+}
+
+function page_change_inventor(event){
+    deactivate_landing();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_orange";
+
+    //Order the navbar menu items.
+    navbar_inventor_order();
+    activate_navbar();
+    navmen_og_index=2;
+    navmen_index=2;
+    setTimeout(() => {  activate_page_inventor(); }, 2500);
+}
+
+function page_change_writer(event){
+    deactivate_landing();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_turqoise";
+
+    //Order the navbar menu items.
+    navbar_writer_order();
+    activate_navbar();
+    navmen_og_index=3;
+    navmen_index=3;
+    setTimeout(() => {  activate_page_writer(); }, 2500);
+}
+
+function page_change_traveller(event){
+    deactivate_landing();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_green";
+
+    //Order the navbar menu items.
+    navbar_traveller_order();
+    activate_navbar();
+    navmen_og_index=4;
+    navmen_index=4;
+    setTimeout(() => {  activate_page_traveller(); }, 2500);      
+}
+
+
+
+
+
+//Redirecting to that page.
 function page_redirect_roboticist(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_secondary.style.left="-100vw";
     e_logo_S.id= "logo_S_red";
 
     //Order the navbar menu items.
     navbar_roboticist_order();
     navmen_og_index=0;
     navmen_index=0;
-    activate_page_roboticist();       
+    setTimeout(() => {  activate_page_roboticist(); }, 1000);       
 }
 
 function page_redirect_botsmith(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_secondary.style.left="-100vw";
     e_logo_S.id= "logo_S_purple";
 
     //Order the navbar menu items.
     navbar_botsmith_order();
     navmen_og_index=1;
     navmen_index=1;
-    activate_page_botsmith();
+    setTimeout(() => {  activate_page_botsmith(); }, 1000);
 }
 
 function page_redirect_inventor(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_secondary.style.left="-100vw";
     e_logo_S.id= "logo_S_orange";
 
     //Order the navbar menu items.
     navbar_inventor_order();
     navmen_og_index=2;
     navmen_index=2;
-    activate_page_inventor();        
+    setTimeout(() => {  activate_page_inventor(); }, 1000);        
 }
 
 function page_redirect_writer(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_secondary.style.left="-100vw";
     e_logo_S.id= "logo_S_turqoise";
 
     //Order the navbar menu items.
     navbar_writer_order();
     navmen_og_index=3;
     navmen_index=3;
-    activate_page_writer();
+    setTimeout(() => {  activate_page_writer(); }, 1000);
 }
 
 function page_redirect_traveller(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_secondary.style.left="-100vw";
     e_logo_S.id= "logo_S_green";
 
     //Order the navbar menu items.
     navbar_traveller_order();
     navmen_og_index=4;
     navmen_index=4;
-    activate_page_traveller();  
+    setTimeout(() => {  activate_page_traveller(); }, 1000); 
 }
 
 
 
 
 function navbar_menu_redirect(event){
-    e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation
+    e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation. (Right Sweep)
+    e_sweeper_secondary.style.left="0vw";
 
     if(navmen_index==0){
-        setTimeout(() => {  page_redirect_roboticist(); }, 1000);
+        setTimeout(() => {  deactivate_page_except_roboticist(); page_redirect_roboticist(); }, 1000);
     }else if(navmen_index==1){
-        setTimeout(() => {  page_redirect_botsmith(); }, 1000);
+        setTimeout(() => {  deactivate_page_except_botsmith(); page_redirect_botsmith(); }, 1000);
     }else if(navmen_index==2){
-        setTimeout(() => {  page_redirect_inventor(); }, 1000);
+        setTimeout(() => {  deactivate_page_except_inventor(); page_redirect_inventor(); }, 1000);
     }else if(navmen_index==3){
-        setTimeout(() => {  page_redirect_writer(); }, 1000); 
+        setTimeout(() => {  deactivate_page_except_writer(); page_redirect_writer(); }, 1000); 
     }else if(navmen_index==4){
-        setTimeout(() => {  page_redirect_traveller(); }, 1000);
+        setTimeout(() => {  deactivate_page_except_traveller(); page_redirect_traveller(); }, 1000);
     }
 }
 
