@@ -28,7 +28,7 @@
 
 
 
-#image_cv, #image_eng, #image_tr, #image_email, #image_dot{
+#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_copypaste{
     width: 3.5vmin;
     height: 3.5vmin;
 
@@ -37,9 +37,9 @@
     z-index: inherit;
 }
 
-#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover{
+#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_copypaste:hover{
     border-width: 0.5vmin;
-    border-radius: 50%;
+    border-radius: 4.1vmin;
     border-style: solid;
     cursor: pointer;
 }
@@ -56,7 +56,7 @@
 }
 
 #lang_dropdown{
-    width: 4.1vmin;
+    width: 4.2vmin;
     height: 0vmin;  /*9vmin*/
 
     visibility: hidden;
@@ -76,45 +76,47 @@
 }
 
 
-
-
-
-
-/*S LOGOS*/
-#logo_S, #logo_S_red, #logo_S_purple, #logo_S_orange, #logo_S_turqoise, #logo_S_green{
-    width: 4.9vmin;
-    height: 6.5vmin;
+#email_wrapper{
+    height: 4.2vmin;
+    width: 40vmin;
 
     position: absolute;
-    bottom: 0.75vmin;
-    right: 0.75vmin;
+    top: 1.4vmin;
+    left: calc(100vw);
 
-    background-size: 4.9vmin;
+    font-size: 2vmin;
+    font-weight: 400;
 
-    z-index: 10;
-    transition: 0.2s;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    border-width: 0.5vmin;
+    border-top-left-radius: 5vmin;
+    border-bottom-left-radius: 5vmin;
+    border-style: solid;
+
+    background-color: var(--bg_black);
+
+    transition: 0.5s;
+    z-index: 12;
+
 }
 
-#logo_S{
-    background: url(../assets/logo_white.svg);
+#logo_copypaste{
+    width: 4.2vmin;
+    height: 4.2vmin;
+
+    margin-right: 1vmin;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: inherit;
 }
 
-#logo_S_red{
-    background: url(../assets/logo_red.svg);
-}
 
-#logo_S_purple{
-    background: url(../assets/logo_purple.svg);
-}
 
-#logo_S_orange{
-    background: url(../assets/logo_orange.svg);
-}
 
-#logo_S_turqoise{
-    background: url(../assets/logo_turqoise.svg);
-}
 
-#logo_S_green{
-    background: url(../assets/logo_green.svg);
-}

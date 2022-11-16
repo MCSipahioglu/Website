@@ -8,7 +8,7 @@ var current_lang=0; //0 for ENG, 1 for TR.
 
 
 
-e_logo_eng.addEventListener("click", dropdown_lang_when_eng, true);     //Bage boots up on English
+e_logo_eng.addEventListener("click", dropdown_lang_when_eng, true);     //Page boots up on English
 
 
 

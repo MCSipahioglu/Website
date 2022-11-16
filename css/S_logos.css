@@ -1,0 +1,38 @@
+/*S LOGOS*/
+#logo_S, #logo_S_red, #logo_S_purple, #logo_S_orange, #logo_S_turqoise, #logo_S_green{
+    width: 4.9vmin;
+    height: 6.5vmin;
+
+    position: absolute;
+    bottom: 0.75vmin;
+    right: 0.75vmin;
+
+    background-size: 4.9vmin;
+
+    z-index: 10;
+    transition: 0.2s;
+}
+
+#logo_S{
+    background: url(../assets/logo_white.svg);
+}
+
+#logo_S_red{
+    background: url(../assets/logo_red.svg);
+}
+
+#logo_S_purple{
+    background: url(../assets/logo_purple.svg);
+}
+
+#logo_S_orange{
+    background: url(../assets/logo_orange.svg);
+}
+
+#logo_S_turqoise{
+    background: url(../assets/logo_turqoise.svg);
+}
+
+#logo_S_green{
+    background: url(../assets/logo_green.svg);
+}
