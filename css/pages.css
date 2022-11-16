@@ -13,10 +13,19 @@
 
 }
 
-#cv_pdf{
+#cv_pdf_eng, #cv_pdf_tr{
     width: 100%;
     height: calc(100vh - 8.75vmin);
 
+    position: absolute;
+
+    transition: visibility 0s, opacity 0.2s;
+
+}
+
+#cv_pdf_tr{
+    opacity: 0%;
+    visibility: hidden;
 }
 
 #page_roboticist, #page_botsmith, #page_inventor, #page_writer, #page_traveller{
