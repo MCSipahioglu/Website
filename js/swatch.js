@@ -3,9 +3,9 @@ const element_swatch_count=5;
 var current_step=0;
 
 
-document.addEventListener("wheel", swatch_rotate);
+document.addEventListener("wheel", RotateSwatch);
 
-function swatch_rotate(event){
+function RotateSwatch(event){
     var delta = Math.sign(event.deltaY);     //Normalize Scroll's deltaY (+-120 for Chrome into -+1)
 
     if (delta==1 && current_step<element_swatch_count-1){         //Rotate Down

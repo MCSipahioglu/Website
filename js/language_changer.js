@@ -10,13 +10,13 @@ var current_lang=0; //0 for ENG, 1 for TR.
 
 
 
-e_logo_eng.addEventListener("click", dropdown_lang_when_eng, true);     //Page boots up on English
+e_logo_eng.addEventListener("click", DropdownActivateWhenEng, true);     //Page boots up on English
 
 
 
 
-function dropdown_lang_when_eng(){
-    e_logos_lang.addEventListener("mouseleave", dropdown_left_when_eng, true);   //Also start listening for exit condition
+function DropdownActivateWhenEng(){
+    e_logos_lang.addEventListener("mouseleave", DropdownLeftWhenEng, true);   //Also start listening for exit condition
 
     //When clicked drop down dropdown menu.
     e_lang_dropdown.style.height="9.15vmin";
@@ -27,10 +27,10 @@ function dropdown_lang_when_eng(){
     e_logo_tr.style.opacity="100%";
 
     //Start listening for lang change click or exit mouseleave
-    e_logo_tr.addEventListener("click", lang_change_tr, true);  
+    e_logo_tr.addEventListener("click", LanguageChangeTr, true);  
 }
 
-function dropdown_despawn_when_eng(){
+function DropdownDeactivateWhenEng(){
     e_logo_tr.style.visibility="hidden";
     e_logo_tr.style.opacity="0%";
 
@@ -38,15 +38,15 @@ function dropdown_despawn_when_eng(){
     e_lang_dropdown.style.visibility="hidden";
     e_lang_dropdown.style.opacity="0%";
     
-    e_logo_tr.removeEventListener("click", lang_change_tr, true);
-    e_logos_lang.removeEventListener("mouseleave", dropdown_left_when_eng, true);
+    e_logo_tr.removeEventListener("click", LanguageChangeTr, true);
+    e_logos_lang.removeEventListener("mouseleave", DropdownLeftWhenEng, true);
 }
 
-function dropdown_left_when_eng(event){
+function DropdownLeftWhenEng(event){
     
     // if leaving dropdown menu. (If the element we leave to isn't contained in the dropdown menu.)
     if(e_logos_lang.contains(event.relatedTarget)==0){
-        dropdown_despawn_when_eng();
+        DropdownDeactivateWhenEng();
     }
 }
 
@@ -54,8 +54,8 @@ function dropdown_left_when_eng(event){
 
 
 
-function dropdown_lang_when_tr(){
-    e_logos_lang.addEventListener("mouseleave", dropdown_left_when_tr, true);   //Also start listening for exit condition
+function DropdownActivateWhenTr(){
+    e_logos_lang.addEventListener("mouseleave", DropdownLeftWhenTr, true);   //Also start listening for exit condition
 
     //When clicked drop down dropdown menu.
     e_lang_dropdown.style.height="9.15vmin";
@@ -66,10 +66,10 @@ function dropdown_lang_when_tr(){
     e_logo_eng.style.opacity="100%";
 
     //Start listening for lang change click
-    e_logo_eng.addEventListener("click", lang_change_eng, true);
+    e_logo_eng.addEventListener("click", LanguageChangeEng, true);
 }
 
-function dropdown_despawn_when_tr(){
+function DropdownDeactivateWhenTr(){
     e_logo_eng.style.visibility="hidden";
     e_logo_eng.style.opacity="0%";
 
@@ -77,15 +77,15 @@ function dropdown_despawn_when_tr(){
     e_lang_dropdown.style.visibility="hidden";
     e_lang_dropdown.style.opacity="0%";
     
-    e_logo_eng.removeEventListener("click", lang_change_eng, true);
-    e_logos_lang.removeEventListener("mouseleave", dropdown_left_when_tr, true);
+    e_logo_eng.removeEventListener("click", LanguageChangeEng, true);
+    e_logos_lang.removeEventListener("mouseleave", DropdownLeftWhenTr, true);
 }
 
-function dropdown_left_when_tr(event){
+function DropdownLeftWhenTr(event){
     
     // if leaving dropdown menu. (If the element we leave to isn't contained in the dropdown menu.)
     if(e_logos_lang.contains(event.relatedTarget)==0){
-        dropdown_despawn_when_tr();
+        DropdownDeactivateWhenTr();
     }
 }
 
@@ -93,11 +93,11 @@ function dropdown_left_when_tr(event){
 
 
 
-function lang_change_eng(){
+function LanguageChangeEng(){
     current_lang=0;
-    dropdown_despawn_when_tr();
-    e_logo_tr.removeEventListener("click", dropdown_lang_when_tr, true);
-    e_logo_eng.addEventListener("click", dropdown_lang_when_eng, true);
+    DropdownDeactivateWhenTr();
+    e_logo_tr.removeEventListener("click", DropdownActivateWhenTr, true);
+    e_logo_eng.addEventListener("click", DropdownActivateWhenEng, true);
     e_logos_lang.insertBefore(e_logo_eng, e_logo_tr);
     e_logo_eng.style.visibility="visible";
     e_logo_eng.style.opacity="100%";
@@ -113,11 +113,11 @@ function lang_change_eng(){
 }
 
 
-function lang_change_tr(){
+function LanguageChangeTr(){
     current_lang=1;
-    dropdown_despawn_when_eng();
-    e_logo_eng.removeEventListener("click", dropdown_lang_when_eng, true);
-    e_logo_tr.addEventListener("click", dropdown_lang_when_tr, true);
+    DropdownDeactivateWhenEng();
+    e_logo_eng.removeEventListener("click", DropdownActivateWhenEng, true);
+    e_logo_tr.addEventListener("click", DropdownActivateWhenTr, true);
 
     e_logos_lang.insertBefore(e_logo_tr, e_logo_eng);
     e_logo_tr.style.visibility="visible";

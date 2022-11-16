@@ -42,31 +42,31 @@ const e_p_traveller=document.getElementById("page_traveller");
 
 //MAIN
 //Onclick interrupts to leave the landing page
-e_roboticist.onclick = function() {page_change_roboticist();};
-e_botsmith.onclick   = function() {page_change_botsmith()};
-e_inventor.onclick   = function() {page_change_inventor()};
-e_writer.onclick     = function() {page_change_writer()};
-e_traveller.onclick  = function() {page_change_traveller()};
+e_roboticist.onclick = function() {PageChangeRoboticist();};
+e_botsmith.onclick   = function() {PageChangeBotsmith()};
+e_inventor.onclick   = function() {PageChangeInventor()};
+e_writer.onclick     = function() {PageChangeWriter()};
+e_traveller.onclick  = function() {PageChangeTraveller()};
 
 
 //Hover+Wheel interrupt to use the navbar menu
 document.addEventListener('mousemove', e => {
     if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu_") ){ //When on the navbar_menu elements:
-        document.addEventListener("wheel", navbar_menu_scroll, true);       //Check for scrolling. (Scroll navbar_menu when scrolling while hovering on it.)
-        document.addEventListener("click", navbar_menu_redirect, true);     //If clicked when able to scroll. Then redirect.
+        document.addEventListener("wheel", NavbarMenuScroll, true);       //Check for scrolling. (Scroll navbar_menu when scrolling while hovering on it.)
+        document.addEventListener("click", NavbarMenuRedirect, true);     //If clicked when able to scroll. Then redirect.
     }else{
-        document.removeEventListener("wheel", navbar_menu_scroll, true);    //When leaving navbar_menu area, stop listening for events and revert to original condition.
-        document.removeEventListener("click", navbar_menu_redirect, true);
+        document.removeEventListener("wheel", NavbarMenuScroll, true);    //When leaving navbar_menu area, stop listening for events and revert to original condition.
+        document.removeEventListener("click", NavbarMenuRedirect, true);
         if(navmen_og_index==0){
-            navbar_roboticist_order();
+            NavbarOrderRoboticist();
         }else if(navmen_og_index==1){
-            navbar_botsmith_order();
+            NavbarOrderBotsmith();
         }else if(navmen_og_index==2){
-            navbar_inventor_order();
+            NavbarOrderInventor();
         }else if(navmen_og_index==3){
-            navbar_writer_order();  
+            NavbarOrderWriter();  
         }else if(navmen_og_index==4){
-            navbar_traveller_order();
+            NavbarOrderTraveller();
         }
     }
   }, {passive: true})
@@ -76,13 +76,13 @@ document.addEventListener('mousemove', e => {
 
 
 //FUNCTIONS
-function deactivate_landing(){
+function DeactivateLanding(){
     e_landing_header_name.style.display="none";             //Deactivate landing page
     e_landing_header_surname.style.display="none";
     e_landing_swatch_wrapper.style.display="none";
 }
 
-function activate_navbar(){ //Spawn in navbar
+function ActivateNavbar(){ //Spawn in navbar
     setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn via opacity to not mess up the flex display composition
     setTimeout(() => {  e_navbar_menu.style.visibility="visible"; e_navbar_menu.style.opacity="100%"; }, 1750);     //Can't animate in from display none, instead animate in from visibility+opacity
     e_sweeper_secondary.style.display="inline";     //Also spawn in the secondary sweeper.
@@ -90,12 +90,12 @@ function activate_navbar(){ //Spawn in navbar
 
 
 //Activating/Deactivating Pages
-function activate_page_roboticist(){
+function PageActivateRoboticist(){
     e_p_roboticist.style.visibility="visible";
     e_p_roboticist.style.opacity="100%";
 }
 
-function deactivate_page_except_roboticist(){
+function PageDeactivateExceptRoboticist(){
     e_p_botsmith.style.visibility="hidden";
     e_p_botsmith.style.opacity="0%";
     e_p_inventor.style.visibility="hidden";
@@ -108,12 +108,12 @@ function deactivate_page_except_roboticist(){
 
 
 
-function activate_page_botsmith(){
+function PageActivateBotsmith(){
     e_p_botsmith.style.visibility="visible";
     e_p_botsmith.style.opacity="100%";
 }
 
-function deactivate_page_except_botsmith(){
+function PageDeactivateExceptBotsmith(){
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_inventor.style.visibility="hidden";
@@ -126,12 +126,12 @@ function deactivate_page_except_botsmith(){
 
 
 
-function activate_page_inventor(){
+function PageActivateInventor(){
     e_p_inventor.style.visibility="visible";
     e_p_inventor.style.opacity="100%";
 }
 
-function deactivate_page_except_inventor(){
+function PageDeactivateExceptInventor(){
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="hidden";
@@ -144,13 +144,13 @@ function deactivate_page_except_inventor(){
 
 
 
-function activate_page_writer(){
+function PageActivateWriter(){
     e_p_writer.style.visibility="visible";
     e_p_writer.style.opacity="100%";
 
 }
 
-function deactivate_page_except_writer(){
+function PageDeactivateExceptWriter(){
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="hidden";
@@ -163,13 +163,13 @@ function deactivate_page_except_writer(){
 
 
 
-function activate_page_traveller(){
+function PageActivateTraveller(){
     e_p_traveller.style.visibility="visible";
     e_p_traveller.style.opacity="100%";
 
 }
 
-function deactivate_page_except_traveller(){
+function PageDeactivateExceptTraveller(){
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="hidden";
@@ -185,7 +185,7 @@ function deactivate_page_except_traveller(){
 
 
 //Navbar Menu Scroll
-function navbar_roboticist_order(){
+function NavbarOrderRoboticist(){
     e_n_writer.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n_traveller.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_roboticist.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
@@ -223,7 +223,7 @@ function navbar_roboticist_order(){
     e_n_traveller.style.textShadow="none";
 }
 
-function navbar_botsmith_order(){
+function NavbarOrderBotsmith(){
     e_n_traveller.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n_roboticist.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_botsmith.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
@@ -262,7 +262,7 @@ function navbar_botsmith_order(){
     e_n_traveller.style.textShadow="none";
 }
 
-function navbar_inventor_order(){
+function NavbarOrderInventor(){
     e_n_roboticist.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n_botsmith.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_inventor.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
@@ -300,7 +300,7 @@ function navbar_inventor_order(){
     e_n_traveller.style.textShadow="none";
 }
 
-function navbar_writer_order(){
+function NavbarOrderWriter(){
     e_n_botsmith.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n_inventor.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_writer.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
@@ -338,7 +338,7 @@ function navbar_writer_order(){
     e_n_traveller.style.textShadow="none";  
 }
 
-function navbar_traveller_order(){
+function NavbarOrderTraveller(){
     e_n_inventor.style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n_writer.style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
     e_n_traveller.style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
@@ -378,7 +378,7 @@ function navbar_traveller_order(){
 
 
 
-function navbar_menu_scroll(event){
+function NavbarMenuScroll(event){
     var delta = Math.sign(event.deltaY);     //Normalize Scroll's deltaY (+-120 for Chrome into -+1)
 
     if (delta==1){         //Scroll Down
@@ -391,15 +391,15 @@ function navbar_menu_scroll(event){
 
 
     if(navmen_index==0){
-        navbar_roboticist_order();
+        NavbarOrderRoboticist();
     }else if(navmen_index==1){
-        navbar_botsmith_order();
+        NavbarOrderBotsmith();
     }else if(navmen_index==2){
-        navbar_inventor_order();
+        NavbarOrderInventor();
     }else if(navmen_index==3){
-        navbar_writer_order();  
+        NavbarOrderWriter();  
     }else if(navmen_index==4){
-        navbar_traveller_order();
+        NavbarOrderTraveller();
     }
 }
 
@@ -408,8 +408,8 @@ function navbar_menu_scroll(event){
 
 
 //First Spawning Of a Page
-function page_change_roboticist(event){
-    deactivate_landing();
+function PageChangeRoboticist(event){
+    DeactivateLanding();
 
     e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
@@ -418,16 +418,16 @@ function page_change_roboticist(event){
     e_logo_S.id= "logo_S_red";
 
     //Order the navbar menu items.
-    navbar_roboticist_order();
-    activate_navbar();
+    NavbarOrderRoboticist();
+    ActivateNavbar();
     navmen_og_index=0;
     navmen_index=0;
-    setTimeout(() => {  activate_page_roboticist(); }, 2500);
+    setTimeout(() => {  PageActivateRoboticist(); }, 2500);
           
 }
 
-function page_change_botsmith(event){
-    deactivate_landing();
+function PageChangeBotsmith(event){
+    DeactivateLanding();
 
     e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
@@ -436,16 +436,16 @@ function page_change_botsmith(event){
     e_logo_S.id= "logo_S_purple";
 
     //Order the navbar menu items.
-    navbar_botsmith_order();
-    activate_navbar();
+    NavbarOrderBotsmith();
+    ActivateNavbar();
     navmen_og_index=1;
     navmen_index=1;
-    setTimeout(() => {  activate_page_botsmith(); }, 2500);
+    setTimeout(() => {  PageActivateBotsmith(); }, 2500);
     
 }
 
-function page_change_inventor(event){
-    deactivate_landing();
+function PageChangeInventor(event){
+    DeactivateLanding();
 
     e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
@@ -454,15 +454,15 @@ function page_change_inventor(event){
     e_logo_S.id= "logo_S_orange";
 
     //Order the navbar menu items.
-    navbar_inventor_order();
-    activate_navbar();
+    NavbarOrderInventor();
+    ActivateNavbar();
     navmen_og_index=2;
     navmen_index=2;
-    setTimeout(() => {  activate_page_inventor(); }, 2500);
+    setTimeout(() => {  PageActivateInventor(); }, 2500);
 }
 
-function page_change_writer(event){
-    deactivate_landing();
+function PageChangeWriter(event){
+    DeactivateLanding();
 
     e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
@@ -471,15 +471,15 @@ function page_change_writer(event){
     e_logo_S.id= "logo_S_turqoise";
 
     //Order the navbar menu items.
-    navbar_writer_order();
-    activate_navbar();
+    NavbarOrderWriter();
+    ActivateNavbar();
     navmen_og_index=3;
     navmen_index=3;
-    setTimeout(() => {  activate_page_writer(); }, 2500);
+    setTimeout(() => {  PageActivateWriter(); }, 2500);
 }
 
-function page_change_traveller(event){
-    deactivate_landing();
+function PageChangeTraveller(event){
+    DeactivateLanding();
 
     e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
@@ -488,11 +488,11 @@ function page_change_traveller(event){
     e_logo_S.id= "logo_S_green";
 
     //Order the navbar menu items.
-    navbar_traveller_order();
-    activate_navbar();
+    NavbarOrderTraveller();
+    ActivateNavbar();
     navmen_og_index=4;
     navmen_index=4;
-    setTimeout(() => {  activate_page_traveller(); }, 2500);      
+    setTimeout(() => {  PageActivateTraveller(); }, 2500);      
 }
 
 
@@ -500,7 +500,7 @@ function page_change_traveller(event){
 
 
 //Redirecting to that page.
-function page_redirect_roboticist(event){
+function PageRedirectRoboticist(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -508,13 +508,13 @@ function page_redirect_roboticist(event){
     e_logo_S.id= "logo_S_red";
 
     //Order the navbar menu items.
-    navbar_roboticist_order();
+    NavbarOrderRoboticist();
     navmen_og_index=0;
     navmen_index=0;
-    setTimeout(() => {  activate_page_roboticist(); }, 1000);       
+    setTimeout(() => {  PageActivateRoboticist(); }, 1000);       
 }
 
-function page_redirect_botsmith(event){
+function PageRedirectBotsmith(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -522,13 +522,13 @@ function page_redirect_botsmith(event){
     e_logo_S.id= "logo_S_purple";
 
     //Order the navbar menu items.
-    navbar_botsmith_order();
+    NavbarOrderBotsmith();
     navmen_og_index=1;
     navmen_index=1;
-    setTimeout(() => {  activate_page_botsmith(); }, 1000);
+    setTimeout(() => {  PageActivateBotsmith(); }, 1000);
 }
 
-function page_redirect_inventor(event){
+function PageRedirectInventor(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -536,13 +536,13 @@ function page_redirect_inventor(event){
     e_logo_S.id= "logo_S_orange";
 
     //Order the navbar menu items.
-    navbar_inventor_order();
+    NavbarOrderInventor();
     navmen_og_index=2;
     navmen_index=2;
-    setTimeout(() => {  activate_page_inventor(); }, 1000);        
+    setTimeout(() => {  PageActivateInventor(); }, 1000);        
 }
 
-function page_redirect_writer(event){
+function PageRedirectWriter(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -550,13 +550,13 @@ function page_redirect_writer(event){
     e_logo_S.id= "logo_S_turqoise";
 
     //Order the navbar menu items.
-    navbar_writer_order();
+    NavbarOrderWriter();
     navmen_og_index=3;
     navmen_index=3;
-    setTimeout(() => {  activate_page_writer(); }, 1000);
+    setTimeout(() => {  PageActivateWriter(); }, 1000);
 }
 
-function page_redirect_traveller(event){
+function PageRedirectTraveller(event){
     e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
     e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
@@ -564,29 +564,29 @@ function page_redirect_traveller(event){
     e_logo_S.id= "logo_S_green";
 
     //Order the navbar menu items.
-    navbar_traveller_order();
+    NavbarOrderTraveller();
     navmen_og_index=4;
     navmen_index=4;
-    setTimeout(() => {  activate_page_traveller(); }, 1000); 
+    setTimeout(() => {  PageActivateTraveller(); }, 1000); 
 }
 
 
 
 
-function navbar_menu_redirect(event){
+function NavbarMenuRedirect(event){
     e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation. (Right Sweep)
     e_sweeper_secondary.style.left="0vw";
 
     if(navmen_index==0){
-        setTimeout(() => {  deactivate_page_except_roboticist(); page_redirect_roboticist(); }, 1000);
+        setTimeout(() => {  PageDeactivateExceptRoboticist(); PageRedirectRoboticist(); }, 1000);
     }else if(navmen_index==1){
-        setTimeout(() => {  deactivate_page_except_botsmith(); page_redirect_botsmith(); }, 1000);
+        setTimeout(() => {  PageDeactivateExceptBotsmith(); PageRedirectBotsmith(); }, 1000);
     }else if(navmen_index==2){
-        setTimeout(() => {  deactivate_page_except_inventor(); page_redirect_inventor(); }, 1000);
+        setTimeout(() => {  PageDeactivateExceptInventor(); PageRedirectInventor(); }, 1000);
     }else if(navmen_index==3){
-        setTimeout(() => {  deactivate_page_except_writer(); page_redirect_writer(); }, 1000); 
+        setTimeout(() => {  PageDeactivateExceptWriter(); PageRedirectWriter(); }, 1000); 
     }else if(navmen_index==4){
-        setTimeout(() => {  deactivate_page_except_traveller(); page_redirect_traveller(); }, 1000);
+        setTimeout(() => {  PageDeactivateExceptTraveller(); PageRedirectTraveller(); }, 1000);
     }
 }
 
