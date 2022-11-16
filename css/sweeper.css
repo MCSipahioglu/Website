@@ -16,7 +16,7 @@
     width: 0.75vmin;
     height: 100vh;
 
-    z-index: 4;
+    z-index: 2;
 }
 
 #sweeper_blanket{
@@ -54,7 +54,7 @@
 
     background-color: var(--bg_black);
 
-    transition: 1s;
+    transition: 1s ;
     z-index: 3;
 }
 

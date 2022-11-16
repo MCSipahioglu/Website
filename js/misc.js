@@ -1,5 +1,4 @@
-document.getElementById("logo_email").onclick = function() {CopyEmail()};
-
+//For Loading the Screen
 window.onload = function() {LoadingScreen()};
 
 function LoadingScreen(){
@@ -8,8 +7,14 @@ function LoadingScreen(){
 }
 
 
+
+//For copying email
+document.getElementById("logo_email").onclick = function() {CopyEmail()};
+
 function CopyEmail() {
     /* Copy text into clipboard */
     navigator.clipboard.writeText("mustafacagataysipahioglu@gmail.com");
     alert("Copied contact e-mail.");
 }
+
+

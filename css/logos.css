@@ -8,29 +8,76 @@
     z-index: 10;
 }
 
-#logo_cv, #logo_lang, #logo_email, #logo_dot{
+#logos_lang{
+    width: 5vmin;
+    height: 10vmin;
+
+    z-index: 11;
+}
+
+#logo_cv, #logo_eng, #logo_tr, #logo_email, #logo_dot{
     width: 5vmin;
     height: 5vmin;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: inherit;
 }
 
-#logo_cv:hover, #logo_lang:hover, #logo_email:hover {
-    cursor: pointer;
-}
 
-#image_cv, #image_eng, #image_email, #image_dot{
+
+#image_cv, #image_eng, #image_tr, #image_email, #image_dot{
     width: 3.5vmin;
     height: 3.5vmin;
+
+    padding: 0.3vmin;
+
+    z-index: inherit;
 }
 
-#image_cv:hover, #image_eng:hover, #image_email:hover{
+#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover{
     border-width: 0.5vmin;
     border-radius: 50%;
     border-style: solid;
+    cursor: pointer;
 }
+
+#logo_eng, #logo_tr{
+    transition: visibility 0s, opacity 0.4s;
+}
+
+
+
+#logo_tr{
+    visibility: hidden;
+    opacity: 0%;
+}
+
+#lang_dropdown{
+    width: 4.1vmin;
+    height: 0vmin;  /*9vmin*/
+
+    visibility: hidden;
+    opacity: 0%;
+    
+    position: absolute;
+    right: 9.95vmin;
+    top: 1.45vmin;
+
+    background-color: var(--bg_black);
+
+    border-width: 0.5vmin;
+    border-radius: 4.5vmin;
+    border-style: solid;
+
+    transition: 0.4s;
+}
+
+
+
+
 
 
 /*S LOGOS*/

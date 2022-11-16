@@ -13,7 +13,8 @@
     justify-content: center;
     align-items: center;
 
-    opacity: 0%;        /*Remove this when you want to use the loading screen */
+    display:none;   /*Remove this when you want to use the loading screen */
+    opacity: 100%;
     transition: 1s;
     z-index: 11;
 }

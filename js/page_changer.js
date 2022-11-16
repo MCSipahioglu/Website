@@ -48,6 +48,7 @@ e_inventor.onclick   = function() {page_change_inventor()};
 e_writer.onclick     = function() {page_change_writer()};
 e_traveller.onclick  = function() {page_change_traveller()};
 
+
 //Hover+Wheel interrupt to use the navbar menu
 document.addEventListener('mousemove', e => {
     if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu_") ){ //When on the navbar_menu elements:
@@ -588,10 +589,6 @@ function navbar_menu_redirect(event){
         setTimeout(() => {  deactivate_page_except_traveller(); page_redirect_traveller(); }, 1000);
     }
 }
-
-
-
-
 
 
 
