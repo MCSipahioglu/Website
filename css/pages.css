@@ -1,4 +1,24 @@
 /*PAGES*/
+#page_cv{
+    width: 100vw;
+    height: calc(100vh - 8.75vmin);
+
+    position: absolute;
+    top: 100vh;
+
+    background-color: var(--bg_black);
+    
+    transition: 1s;
+    z-index: 11;
+
+}
+
+#cv_pdf{
+    width: 100%;
+    height: calc(100vh - 8.75vmin);
+
+}
+
 #page_roboticist, #page_botsmith, #page_inventor, #page_writer, #page_traveller{
     width: calc(100vw - 6vmin);
     height: calc(100vh - 8.75vmin);

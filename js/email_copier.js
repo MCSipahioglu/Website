@@ -4,7 +4,7 @@ const e_email_wrapper=document.getElementById("email_wrapper");
 const e_email=document.getElementById("email");
 
 
-document.getElementById("logo_email").onclick = function() {ExpandEmail()};
+e_logo_email.onclick = function() {ExpandEmail()};
 
 
 

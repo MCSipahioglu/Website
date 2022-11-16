@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: right;
 
-    z-index: 2;
 }
 
 #navbar_name{
@@ -24,6 +23,7 @@
     z-index: inherit;
 
     cursor: default;
+    z-index: 2;
 }
 
 #navbar_menu{
@@ -34,8 +34,7 @@
     opacity: 0%;
     transition: visibility 0s, opacity 0.4s;
 
-
-    z-index: inherit;
+    z-index: 2;
 }
 
 #navbar_menu_roboticist, #navbar_menu_botsmith, #navbar_menu_inventor, #navbar_menu_writer, #navbar_menu_traveller{

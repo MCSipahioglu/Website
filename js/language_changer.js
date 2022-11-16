@@ -4,6 +4,8 @@ const e_logo_eng=document.getElementById("logo_eng");
 const e_logo_tr=document.getElementById("logo_tr");
 const e_lang_dropdown=document.getElementById("lang_dropdown");
 
+const e_cv_pdf=document.getElementById("cv_pdf");
+
 var current_lang=0; //0 for ENG, 1 for TR.
 
 
@@ -103,7 +105,9 @@ function lang_change_eng(){
     e_logo_tr.style.opacity="0%";
 
 
-    //Change page content
+
+    //Change Page Content
+    e_cv_pdf.src="assets/Mustafa Cagatay Sipahioglu - CV.pdf"
 
 
 }
@@ -123,7 +127,8 @@ function lang_change_tr(){
 
 
 
-    //Change page content
+    //Change Page Content
+    e_cv_pdf.src="assets/Mustafa Çağatay Sipahioğlu - CV.pdf"
 
 
 

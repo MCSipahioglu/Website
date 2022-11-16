@@ -5,17 +5,17 @@
 
     display: flex;
 
-    z-index: 10;
+    z-index: 12;
 }
 
 #logos_lang{
     width: 5vmin;
     height: 10vmin;
 
-    z-index: 11;
+    z-index: 12;
 }
 
-#logo_cv, #logo_eng, #logo_tr, #logo_email, #logo_dot{
+#logo_cv, #logo_eng, #logo_tr, #logo_email, #logo_dot, #logo_return{
     width: 5vmin;
     height: 5vmin;
 
@@ -26,9 +26,17 @@
     z-index: inherit;
 }
 
+#logo_return{
+    position: absolute;
+    top: 1.5vmin;
+    right: 20vmin;
+
+    visibility: hidden;
+    opacity: 0%;
+}
 
 
-#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_copypaste{
+#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_copypaste, #image_return{
     width: 3.5vmin;
     height: 3.5vmin;
 
@@ -37,18 +45,16 @@
     z-index: inherit;
 }
 
-#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_copypaste:hover{
+#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_copypaste:hover, #image_return:hover{
     border-width: 0.5vmin;
     border-radius: 4.1vmin;
     border-style: solid;
     cursor: pointer;
 }
 
-#logo_eng, #logo_tr{
+#logo_eng, #logo_tr, #logo_cv, #logo_return{
     transition: visibility 0s, opacity 0.4s;
 }
-
-
 
 #logo_tr{
     visibility: hidden;
