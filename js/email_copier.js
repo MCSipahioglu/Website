@@ -20,7 +20,7 @@ function ExpandEmail(){
 function CopyEmail() {
     /* Copy text into clipboard */
     navigator.clipboard.writeText("mustafacagataysipahioglu@gmail.com");
-    e_email.innerHTML="Email Copied!";
+    e_email.innerHTML="Email copied to clipboard.";
 }
 
 
