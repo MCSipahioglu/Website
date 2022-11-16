@@ -61,9 +61,14 @@ h1{
 
 
 p{
+    padding-top: 1vh;
+
     font-size: 2vmin;
     font-weight: 400;
     text-align: justify;
 
 }
 
+ul{
+    list-style-type: none;
+}
