@@ -15,7 +15,7 @@
     z-index: 12;
 }
 
-#logo_cv, #logo_eng, #logo_tr, #logo_email, #logo_dot, #logo_return{
+#logo_cv, #logo_eng, #logo_tr, #logo_email, #logo_dot, #logo_return, #logo_filter{
     width: 5vmin;
     height: 5vmin;
 
@@ -36,7 +36,7 @@
 }
 
 
-#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_copypaste, #image_return{
+#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_copypaste, #image_return, #image_filter{
     width: 3.5vmin;
     height: 3.5vmin;
 
@@ -51,6 +51,7 @@
     border-style: solid;
     cursor: pointer;
 }
+
 
 #logo_eng, #logo_tr, #logo_cv, #logo_return{
     transition: visibility 0s, opacity 0.4s;

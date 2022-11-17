@@ -90,7 +90,7 @@
 .post_tag{
 
     font-size: 1.5vmin;
-    font-weight: 300;
+    font-weight: 400;
     text-align: justify;
 }
 
@@ -100,9 +100,55 @@
     font-size: 2vmin;
     font-weight: 400;
     text-align: justify;
+
+    transition: visibility 0s, opacity 0.4s;
+}
+
+#filter_container{
+    width: calc((100vw - 6vmin - 50vw)/2 - 3vmin);
+    height: calc((100vh - 8.75vmin)/2);
+ 
+    position: absolute;
+}
+
+#logo_filter{
+    position: absolute;
+    top: 1.25vh;
+}
+
+#filter_buttons_container{
+    position: absolute;
+    top: 5vmin;
+    left: 1.5vmin;
+    
+}
+
+.filter_button_container{
+    height: 2vmin;
+
+    padding-top: 1vmin;
+}
+
+.filter_button{
+    height: 2vmin;
+    width: 2vmin;
+
+    border-style: solid;
+    border-width: 0.5vmin;
+    border-color: white;
+
+    background: none;
+
+    cursor:pointer;
+
+     
+
 }
 
 
+#filter_1, #filter_2, #filter_3, #filter_4{
+    background-color: white;
+}
 
 /* TRAVELLER */
 #map{
