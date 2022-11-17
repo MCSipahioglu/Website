@@ -105,7 +105,7 @@
 
     background-color: var(--bg_black);
 
-    transition: 0.5s;
+    transition: 0.25s;
     z-index: 12;
 
 }
