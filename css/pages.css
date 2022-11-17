@@ -147,7 +147,7 @@
 
 
 #filter_1, #filter_2, #filter_3, #filter_4{
-    background-color: white;
+    background-color: var(--bg_black);
 }
 
 /* TRAVELLER */

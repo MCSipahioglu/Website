@@ -9,7 +9,7 @@ e_logo_return.addEventListener("click", CvDeactivate, true);
 
 
 function CvActivate(){
-    e_page_cv.style.top="8.75vmin";
+    e_page_cv.style.top="8vmin";
 
     e_logo_cv.style.visibility="hidden";
     e_logo_cv.style.opacity="0%";
