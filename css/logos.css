@@ -15,7 +15,7 @@
     z-index: 12;
 }
 
-#logo_cv, #logo_eng, #logo_tr, #logo_email, #logo_dot, #logo_return, #logo_filter{
+#logo_cv, #logo_eng, #logo_tr, #logo_email, #logo_dot, #logo_return, #logo_filter, #project_page_return_button, #project_page_return_dot{
     width: 5vmin;
     height: 5vmin;
 
@@ -26,6 +26,38 @@
     z-index: inherit;
 }
 
+#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_copypaste, #image_return, #image_filter, #image_project_return, #image_project_dot{
+    width: 3.5vmin;
+    height: 3.5vmin;
+
+    padding: 0.3vmin;
+
+    z-index: inherit;
+}
+
+#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_copypaste:hover, #image_return:hover, #image_project_return:hover, #image_project_dot:hover{
+    border-width: 0.5vmin;
+    border-radius: 4.1vmin;
+    border-style: solid;
+    cursor: pointer;
+}
+
+#project_page_return_button_container{
+    width: 10vmin;
+    height: 5vmin;
+
+    position: absolute;
+    top: 1.5vmin;
+    right: 25vmin;
+
+    visibility: hidden;
+    opacity: 0%;
+
+    z-index: 13;
+}
+
+
+
 #logo_return{
     position: absolute;
     top: 1.5vmin;
@@ -35,22 +67,6 @@
     opacity: 0%;
 }
 
-
-#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_copypaste, #image_return, #image_filter{
-    width: 3.5vmin;
-    height: 3.5vmin;
-
-    padding: 0.3vmin;
-
-    z-index: inherit;
-}
-
-#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_copypaste:hover, #image_return:hover{
-    border-width: 0.5vmin;
-    border-radius: 4.1vmin;
-    border-style: solid;
-    cursor: pointer;
-}
 
 
 #logo_eng, #logo_tr, #logo_cv, #logo_return{
@@ -81,6 +97,7 @@
 
     transition: 0.4s;
 }
+
 
 
 #email_wrapper{

@@ -1,6 +1,6 @@
 /*PAGES*/
 
-/* GENERAL */
+/* MAIN PAGES */
 #page_roboticist, #page_botsmith, #page_inventor, #page_writer, #page_traveller{
     width: calc(100vw - 6vmin);
     height: calc(100vh - 8.75vmin);
@@ -17,7 +17,6 @@
 
 }
 
-
 #page_roboticist, #page_botsmith, #page_inventor, #page_writer{
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
@@ -27,6 +26,31 @@
 #page_roboticist::-webkit-scrollbar, #page_botsmith::-webkit-scrollbar, #page_inventor::-webkit-scrollbar, #page_writer::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
+
+.project_page{
+    width: calc(100vw - 2 * 6.4vmin);
+
+
+    position: absolute;
+    top: 8.75vmin;
+    left: 6.4vmin;
+
+    height: 0vmin;
+    opacity: 0%;
+
+    transition: 0.4s;
+    z-index: 3;
+
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
+.project_page::-webkit-scrollbar{
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+
 
 
 .relevant_skills{
@@ -60,12 +84,15 @@
     width: 30vmin;
     height: 30vmin;
 
+    border: none;
+    background: none;
+
     border-radius: 1vmin;
+
+    cursor: pointer;
+    transition: 0.25s;
 }
 
-.project_container:hover{
-    cursor: pointer;
-}
 
 .project_container_roboticist:hover{
     background-color: var(--swatch_red);
@@ -87,7 +114,6 @@
     width: 10vmin;
     height: 10vmin;
 
-    padding-left: 10vmin;
     padding-top: 2vmin;
 }
 
@@ -113,25 +139,42 @@
     border-color: white;
 }
 
-
-
-
-
 /*ROBOTICIST*/
 .header_roboticist{
     color: var(--swatch_red);
     text-shadow: 0 0 50px var(--swatch_red);
 }
+
+#project_page_roboticist{
+    background-color: var(--swatch_red);
+}
+
+
+
 /*BOTSMITH*/
 .header_botsmith{
     color: var(--swatch_purple);
     text-shadow: 0 0 50px var(--swatch_purple);
 }
+
+#project_page_botsmith{
+    background-color: var(--swatch_purple);
+}
+
+
+
 /*INVENTOR*/
 .header_inventor{
     color: var(--swatch_orange);
     text-shadow: 0 0 50px var(--swatch_orange);
 }
+
+#project_page_inventor{
+    background-color: var(--swatch_orange);
+}
+
+
+
 /* WRITER */
 .post_container{
     width: 50vw;
@@ -221,7 +264,7 @@
 /* CV */
 #page_cv{
     width: 100vw;
-    height: calc(100vh - 8.75vmin);
+    height: calc(100vh - 8vmin);
 
     position: absolute;
     top: 100vh;

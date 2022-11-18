@@ -16,8 +16,6 @@ function CvActivate(){
     e_logo_return.style.visibility="visible";
     e_logo_return.style.opacity="100%";
 
-    console.log("present");
-
 }
 
 
@@ -28,7 +26,5 @@ function CvDeactivate(){
     e_logo_return.style.opacity="0%";
     e_logo_cv.style.visibility="visible";
     e_logo_cv.style.opacity="100%";
-
-    console.log("unpresent");
 
 }
