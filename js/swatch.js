@@ -3,7 +3,7 @@ const element_swatch_count=5;
 var current_step=0;
 
 
-document.addEventListener("wheel", RotateSwatch);
+document.addEventListener("wheel", RotateSwatch, true);
 
 function RotateSwatch(event){
     var delta = Math.sign(event.deltaY);     //Normalize Scroll's deltaY (+-120 for Chrome into -+1)

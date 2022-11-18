@@ -80,6 +80,7 @@ function DeactivateLanding(){
     e_landing_header_name.style.display="none";             //Deactivate landing page
     e_landing_header_surname.style.display="none";
     e_landing_swatch_wrapper.style.display="none";
+    document.removeEventListener("wheel", RotateSwatch, true);
 }
 
 function ActivateNavbar(){ //Spawn in navbar
@@ -574,6 +575,7 @@ function PageRedirectTraveller(event){
 
 
 function NavbarMenuRedirect(event){
+    DeactivateAll();                    //Deactivate active project or CV pages.
     e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation. (Right Sweep)
     e_sweeper_secondary.style.left="0vw";
 
@@ -591,7 +593,14 @@ function NavbarMenuRedirect(event){
 }
 
 
+function DeactivateAll(){
+    //Deactivate CV.
+    CvDeactivate();
 
+    //Deactivate Open Projects. (Must check if the function name is valid since when no projects open we don't have a corresponding function)
+    var DeactivateAProject = window["Deactivate"+activeproject];
+    if (typeof DeactivateAProject === "function") DeactivateAProject.apply(null,);
+}
 
 
 

@@ -1,11 +1,13 @@
-const e_roboticist_blanket=document.getElementById("project_page_roboticist");
-const e_botsmith_blanket=document.getElementById("project_page_botsmith");
-const e_inventor_blanket=document.getElementById("project_page_inventor");
+const e_roboticist_blanket=document.getElementById("project_page_roboticist_blanket");
+const e_botsmith_blanket=document.getElementById("project_page_botsmith_blanket");
+const e_inventor_blanket=document.getElementById("project_page_inventor_blanket");
 
 const e_project_return_container=document.getElementById("project_page_return_button_container");
 const e_project_return_button=document.getElementById("project_page_return_button");
 
+const e_pp_r1=document.getElementById("pp_r1");
 
+var activeproject="zxafdfmlk";  //Jibberish to prevent misfire in case we define a function as Deactivate()
 
 
 
@@ -67,11 +69,14 @@ function DeactivateInventorBlanket(DeactivateFunc){
 
 
 function ActivateR1(){
+    activeproject="R1";
     ActivateRoboticistBlanket(DeactivateR1);
     //Activate PageR1
+    e_pp_r1.style.display="inline";
 }
 
 function DeactivateR1(){
+    activeproject="zxafdfmlk";
     DeactivateRoboticistBlanket(DeactivateR1);
     //Deactive PageR1
 }
@@ -81,11 +86,13 @@ function DeactivateR1(){
 
 
 function ActivateB1(){
+    activeproject="B1";
     ActivateBotsmithBlanket(DeactivateB1);
     //Activate PageB1
 }
 
 function DeactivateB1(){
+    activeproject="zxafdfmlk";
     DeactivateBotsmithBlanket(DeactivateB1);
     //Deactive PageB1
 }
@@ -93,11 +100,13 @@ function DeactivateB1(){
 
 
 function ActivateB2(){
+    activeproject="B2";
     ActivateBotsmithBlanket(DeactivateB2);
     //Activate PageB2
 }
 
 function DeactivateB2(){
+    activeproject="zxafdfmlk";
     DeactivateBotsmithBlanket(DeactivateB2);
     //Deactive PageB2
 }
@@ -105,11 +114,13 @@ function DeactivateB2(){
 
 
 function ActivateB3(){
+    activeproject="B3";
     ActivateBotsmithBlanket(DeactivateB3);
     //Activate PageB3
 }
 
 function DeactivateB3(){
+    activeproject="zxafdfmlk";
     DeactivateBotsmithBlanket(DeactivateB3);
     //Deactive PageB3
 }
@@ -117,11 +128,13 @@ function DeactivateB3(){
 
 
 function ActivateB4(){
+    activeproject="B4";
     ActivateBotsmithBlanket(DeactivateB4);
     //Activate PageB4
 }
 
 function DeactivateB4(){
+    activeproject="zxafdfmlk";
     DeactivateBotsmithBlanket(DeactivateB4);
     //Deactive PageB4
 }
@@ -131,11 +144,16 @@ function DeactivateB4(){
 
 
 function ActivateI1(){
+    activeproject="I1";
     ActivateInventorBlanket(DeactivateI1);
     //Activate PageI1
 }
 
 function DeactivateI1(){
+    activeproject="zxafdfmlk";
     DeactivateInventorBlanket(DeactivateI1);
     //Deactive PageI1
 }
+
+
+
