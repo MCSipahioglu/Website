@@ -30,7 +30,13 @@
 
 
 .relevant_skills{
+    width: calc(100vw - 2 * 6.4vmin);
+
+    position: relative;
+    left: 3.4vmin;
+
     column-count: 3;
+
 }
 
 
@@ -41,20 +47,40 @@
     top: 2vmin;
     left: 3.4vmin;
 
-
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-    gap: calc((100vw - 2 * 6.4vmin) / 8);
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 10vmin;
+    grid-row-gap: 10vmin;
 }
 
 
 .project_container{
-    width: calc(2 * (100vw - 2 * 6.4vmin) / 8);
-    height: calc(2 * (100vw - 2 * 6.4vmin) / 8);
-    background-color: red;
+    width: 28vmin;
+    height: 28vmin;
+
+    border-radius: 1vmin;
 }
 
+.project_container:hover{
+    cursor: pointer;
+}
 
+.project_container_roboticist:hover{
+    background-color: var(--swatch_red);
+    box-shadow: 0 0 10vmin var(--swatch_red);
+}
+
+.project_container_botsmith:hover{
+    background-color: var(--swatch_purple);
+    box-shadow: 0 0 10vmin var(--swatch_purple);
+}
+
+.project_container_inventor:hover{
+    background-color: var(--swatch_orange);
+    box-shadow: 0 0 10vmin var(--swatch_orange);
+}
 
 
 
@@ -68,11 +94,20 @@
 
 
 /*ROBOTICIST*/
-
+.header_roboticist{
+    color: var(--swatch_red);
+    text-shadow: 0 0 50px var(--swatch_red);
+}
 /*BOTSMITH*/
-
+.header_botsmith{
+    color: var(--swatch_purple);
+    text-shadow: 0 0 50px var(--swatch_purple);
+}
 /*INVENTOR*/
-
+.header_inventor{
+    color: var(--swatch_orange);
+    text-shadow: 0 0 50px var(--swatch_orange);
+}
 /* WRITER */
 .post_container{
     width: 50vw;

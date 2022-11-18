@@ -53,9 +53,12 @@ body{
 h1{
     padding-top: 2vh;
 
-    font-size: 3vmin;
+    font-size: 4vmin;
     font-weight: 550;
-    text-align: justify;
+    text-align: center;
+
+    
+    
 
 }
 
