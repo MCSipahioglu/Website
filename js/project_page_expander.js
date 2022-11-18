@@ -6,6 +6,11 @@ const e_project_return_container=document.getElementById("project_page_return_bu
 const e_project_return_button=document.getElementById("project_page_return_button");
 
 const e_pp_r1=document.getElementById("pp_r1");
+const e_pp_b1=document.getElementById("pp_b1");
+const e_pp_b2=document.getElementById("pp_b2");
+const e_pp_b3=document.getElementById("pp_b3");
+const e_pp_b4=document.getElementById("pp_b4");
+const e_pp_i1=document.getElementById("pp_i1");
 
 var activeproject="zxafdfmlk";  //Jibberish to prevent misfire in case we define a function as Deactivate()
 
@@ -71,14 +76,19 @@ function DeactivateInventorBlanket(DeactivateFunc){
 function ActivateR1(){
     activeproject="R1";
     ActivateRoboticistBlanket(DeactivateR1);
+
     //Activate PageR1
-    e_pp_r1.style.display="inline";
+    e_pp_r1.style.height="calc(100vh - 8.75vmin)";
+    e_pp_r1.style.opacity="100%";
 }
 
 function DeactivateR1(){
     activeproject="zxafdfmlk";
     DeactivateRoboticistBlanket(DeactivateR1);
+
     //Deactive PageR1
+    e_pp_r1.style.height="0vmin";
+    e_pp_r1.style.opacity="0%";
 }
 
 
@@ -88,13 +98,19 @@ function DeactivateR1(){
 function ActivateB1(){
     activeproject="B1";
     ActivateBotsmithBlanket(DeactivateB1);
+
     //Activate PageB1
+    e_pp_b1.style.height="calc(100vh - 8.75vmin)";
+    e_pp_b1.style.opacity="100%";
 }
 
 function DeactivateB1(){
     activeproject="zxafdfmlk";
     DeactivateBotsmithBlanket(DeactivateB1);
+
     //Deactive PageB1
+    e_pp_b1.style.height="0vmin";
+    e_pp_b1.style.opacity="0%";
 }
 
 
@@ -102,13 +118,19 @@ function DeactivateB1(){
 function ActivateB2(){
     activeproject="B2";
     ActivateBotsmithBlanket(DeactivateB2);
+
     //Activate PageB2
+    e_pp_b2.style.height="calc(100vh - 8.75vmin)";
+    e_pp_b2.style.opacity="100%";
 }
 
 function DeactivateB2(){
     activeproject="zxafdfmlk";
     DeactivateBotsmithBlanket(DeactivateB2);
+
     //Deactive PageB2
+    e_pp_b2.style.height="0vmin";
+    e_pp_b2.style.opacity="0%";
 }
 
 
@@ -116,13 +138,19 @@ function DeactivateB2(){
 function ActivateB3(){
     activeproject="B3";
     ActivateBotsmithBlanket(DeactivateB3);
+
     //Activate PageB3
+    e_pp_b3.style.height="calc(100vh - 8.75vmin)";
+    e_pp_b3.style.opacity="100%";
 }
 
 function DeactivateB3(){
     activeproject="zxafdfmlk";
     DeactivateBotsmithBlanket(DeactivateB3);
+
     //Deactive PageB3
+    e_pp_b3.style.height="0vmin";
+    e_pp_b3.style.opacity="0%";
 }
 
 
@@ -130,13 +158,19 @@ function DeactivateB3(){
 function ActivateB4(){
     activeproject="B4";
     ActivateBotsmithBlanket(DeactivateB4);
+
     //Activate PageB4
+    e_pp_b4.style.height="calc(100vh - 8.75vmin)";
+    e_pp_b4.style.opacity="100%";
 }
 
 function DeactivateB4(){
     activeproject="zxafdfmlk";
     DeactivateBotsmithBlanket(DeactivateB4);
+
     //Deactive PageB4
+    e_pp_b4.style.height="0vmin";
+    e_pp_b4.style.opacity="0%";
 }
 
 
@@ -146,13 +180,19 @@ function DeactivateB4(){
 function ActivateI1(){
     activeproject="I1";
     ActivateInventorBlanket(DeactivateI1);
+
     //Activate PageI1
+    e_pp_i1.style.height="calc(100vh - 8.75vmin)";
+    e_pp_i1.style.opacity="100%";
 }
 
 function DeactivateI1(){
     activeproject="zxafdfmlk";
     DeactivateInventorBlanket(DeactivateI1);
+
     //Deactive PageI1
+    e_pp_i1.style.height="0vmin";
+    e_pp_i1.style.opacity="0%";
 }
 
 
