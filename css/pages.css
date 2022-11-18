@@ -17,9 +17,50 @@
 
 }
 
+
+#page_roboticist, #page_botsmith, #page_inventor, #page_writer{
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll;
+}
+
+#page_roboticist::-webkit-scrollbar, #page_botsmith::-webkit-scrollbar, #page_inventor::-webkit-scrollbar, #page_writer::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+
+
 .relevant_skills{
     column-count: 3;
 }
+
+
+.projects{
+    width: calc(100vw - 2 * 6.4vmin);
+
+    position: relative;
+    top: 2vmin;
+    left: 3.4vmin;
+
+
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: calc((100vw - 2 * 6.4vmin) / 8);
+}
+
+
+.project_container{
+    width: calc(2 * (100vw - 2 * 6.4vmin) / 8);
+    height: calc(2 * (100vw - 2 * 6.4vmin) / 8);
+    background-color: red;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -61,16 +102,6 @@
 /*INVENTOR*/
 
 /* WRITER */
-#page_writer{
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll;
-}
-
-#page_writer::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
-}
-
 .post_container{
     width: 50vw;
 
