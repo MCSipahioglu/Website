@@ -64,35 +64,7 @@
 
 
 
-/* CV */
-#page_cv{
-    width: 100vw;
-    height: calc(100vh - 8.75vmin);
 
-    position: absolute;
-    top: 100vh;
-
-    background-color: var(--bg_black);
-    
-    transition: 1s;
-    z-index: 11;
-
-}
-
-#cv_pdf_eng, #cv_pdf_tr{
-    width: 100%;
-    height: calc(100vh - 8.75vmin);
-
-    position: absolute;
-
-    transition: visibility 0s, opacity 0.2s;
-
-}
-
-#cv_pdf_tr{
-    opacity: 0%;
-    visibility: hidden;
-}
 
 
 /*ROBOTICIST*/
@@ -185,4 +157,34 @@
 #map{
     width: calc(100vw - 6vmin);
     
+}
+
+/* CV */
+#page_cv{
+    width: 100vw;
+    height: calc(100vh - 8.75vmin);
+
+    position: absolute;
+    top: 100vh;
+
+    background-color: var(--bg_black);
+    
+    transition: 1s;
+    z-index: 11;
+
+}
+
+#cv_pdf_eng, #cv_pdf_tr{
+    width: 100%;
+    height: calc(100vh - 8.75vmin);
+
+    position: absolute;
+
+    transition: visibility 0s, opacity 0.2s;
+
+}
+
+#cv_pdf_tr{
+    opacity: 0%;
+    visibility: hidden;
 }
