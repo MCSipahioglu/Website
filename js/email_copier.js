@@ -21,12 +21,6 @@ function EmailActivate(){
     
 }
 
-function EmailExitCheckOutside(Event){
-    if ( ((document.elementFromPoint(Event.clientX, Event.clientY)).id).includes("email")==0){ //After 2 secs if mouse is not in the email area, despawn it.
-        EmailDeactivate();
-    }
-}
-
 
 
 function EmailCopy() {
@@ -39,6 +33,14 @@ function EmailCopy() {
 
 function EmailExitCheckInside(event){
     if(e_email_wrapper.contains(event.relatedTarget)==0){
+        EmailDeactivate();
+    }
+}
+
+
+
+function EmailExitCheckOutside(Event){
+    if ( ((document.elementFromPoint(Event.clientX, Event.clientY)).id).includes("email")==0){ //After 2 secs if mouse is not in the email area, despawn it.
         EmailDeactivate();
     }
 }

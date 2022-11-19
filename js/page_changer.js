@@ -711,7 +711,9 @@ function ReturnToLanding(){
     DeactivateNavbar();
     PageDeactivateExceptLanding();
 
-
+    //Reset Swatch
+    element_swatch.style.transform = "rotate(0deg)";
+    current_step=0;
 
     //Swipe to Right
     setTimeout(() => {     
