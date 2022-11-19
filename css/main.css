@@ -77,5 +77,8 @@ ul{
 }
 
 button {
+    border: none;
+    background: none;
     font-family : inherit;
+    cursor: pointer;
 }

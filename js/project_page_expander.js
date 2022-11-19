@@ -2,9 +2,6 @@ const e_roboticist_blanket=document.getElementById("project_page_roboticist_blan
 const e_botsmith_blanket=document.getElementById("project_page_botsmith_blanket");
 const e_inventor_blanket=document.getElementById("project_page_inventor_blanket");
 
-const e_project_return_container=document.getElementById("project_page_return_button_container");
-const e_project_return_button=document.getElementById("project_page_return_button");
-
 const e_pp_r1=document.getElementById("pp_r1");
 const e_pp_r2=document.getElementById("pp_r2");
 const e_pp_r3=document.getElementById("pp_r3");
@@ -19,57 +16,36 @@ var activeproject="zxafdfmlk";  //Jibberish to prevent misfire in case we define
 
 
 
-function ActivateProjectReturn(DeactivateFunc){
-    e_project_return_container.style.opacity="100%";
-    e_project_return_container.style.visibility="visible";
-    e_project_return_button.addEventListener("click", DeactivateFunc, true);
-}
-
-function DeactivateProjectReturn(DeactivateFunc){
-    e_project_return_container.style.opacity="0%";
-    e_project_return_container.style.visibility="hidden";
-    e_project_return_button.removeEventListener("click", DeactivateFunc, true);
-}
 
 
-
-
-
-
-function ActivateRoboticistBlanket(DeactivateFunc){
+function ActivateRoboticistBlanket(){
     e_roboticist_blanket.style.height="calc(100vh - 8.75vmin)";
     e_roboticist_blanket.style.opacity="100%";
-    ActivateProjectReturn(DeactivateFunc);
 }
 
-function DeactivateRoboticistBlanket(DeactivateFunc){
+function DeactivateRoboticistBlanket(){
     e_roboticist_blanket.style.height="0vmin";
     e_roboticist_blanket.style.opacity="0%";
-    DeactivateProjectReturn(DeactivateFunc);
 }
 
-function ActivateBotsmithBlanket(DeactivateFunc){
+function ActivateBotsmithBlanket(){
     e_botsmith_blanket.style.height="calc(100vh - 8.75vmin)";
     e_botsmith_blanket.style.opacity="100%";
-    ActivateProjectReturn(DeactivateFunc);
 }
 
-function DeactivateBotsmithBlanket(DeactivateFunc){
+function DeactivateBotsmithBlanket(){
     e_botsmith_blanket.style.height="0vmin";
     e_botsmith_blanket.style.opacity="0%";
-    DeactivateProjectReturn(DeactivateFunc);
 }
 
-function ActivateInventorBlanket(DeactivateFunc){
+function ActivateInventorBlanket(){
     e_inventor_blanket.style.height="calc(100vh - 8.75vmin)";
     e_inventor_blanket.style.opacity="100%";
-    ActivateProjectReturn(DeactivateFunc);
 }
 
-function DeactivateInventorBlanket(DeactivateFunc){
+function DeactivateInventorBlanket(){
     e_inventor_blanket.style.height="0vmin";
     e_inventor_blanket.style.opacity="0%";
-    DeactivateProjectReturn(DeactivateFunc);
 }
 
 
@@ -78,74 +54,82 @@ function DeactivateInventorBlanket(DeactivateFunc){
 
 function ActivateR1(){
     activeproject="R1";
-    ActivateRoboticistBlanket(DeactivateR1);
+    ActivateRoboticistBlanket();
 
     //Activate PageR1
     e_pp_r1.style.height="calc(100vh - 8.75vmin)";
     e_pp_r1.style.opacity="100%";
+    e_pp_r1.style.visibility="visible";
 }
 
 function DeactivateR1(){
     activeproject="zxafdfmlk";
-    DeactivateRoboticistBlanket(DeactivateR1);
+    DeactivateRoboticistBlanket();
 
     //Deactive PageR1
     e_pp_r1.style.height="0vmin";
     e_pp_r1.style.opacity="0%";
+    e_pp_r1.style.visibility="hidden";
 }
 
 function ActivateR2(){
     activeproject="R2";
-    ActivateRoboticistBlanket(DeactivateR2);
+    ActivateRoboticistBlanket();
 
     //Activate PageR2
     e_pp_r2.style.height="calc(100vh - 8.75vmin)";
     e_pp_r2.style.opacity="100%";
+    e_pp_r2.style.visibility="visible";
 }
 
 function DeactivateR2(){
     activeproject="zxafdfmlk";
-    DeactivateRoboticistBlanket(DeactivateR2);
+    DeactivateRoboticistBlanket();
 
     //Deactive PageR2
     e_pp_r2.style.height="0vmin";
     e_pp_r2.style.opacity="0%";
+    e_pp_r2.style.visibility="hidden";
 }
 
 function ActivateR3(){
     activeproject="R3";
-    ActivateRoboticistBlanket(DeactivateR3);
+    ActivateRoboticistBlanket();
 
     //Activate PageR3
     e_pp_r3.style.height="calc(100vh - 8.75vmin)";
     e_pp_r3.style.opacity="100%";
+    e_pp_r3.style.visibility="visible";
 }
 
 function DeactivateR3(){
     activeproject="zxafdfmlk";
-    DeactivateRoboticistBlanket(DeactivateR3);
+    DeactivateRoboticistBlanket();
 
     //Deactive PageR3
     e_pp_r3.style.height="0vmin";
     e_pp_r3.style.opacity="0%";
+    e_pp_r3.style.visibility="hidden";
 }
 
 function ActivateR4(){
     activeproject="R4";
-    ActivateRoboticistBlanket(DeactivateR4);
+    ActivateRoboticistBlanket();
 
     //Activate PageR4
     e_pp_r4.style.height="calc(100vh - 8.75vmin)";
     e_pp_r4.style.opacity="100%";
+    e_pp_r4.style.visibility="visible";
 }
 
 function DeactivateR4(){
     activeproject="zxafdfmlk";
-    DeactivateRoboticistBlanket(DeactivateR4);
+    DeactivateRoboticistBlanket();
 
     //Deactive PageR4
     e_pp_r4.style.height="0vmin";
     e_pp_r4.style.opacity="0%";
+    e_pp_r4.style.visibility="hidden";
 }
 
 
@@ -153,80 +137,88 @@ function DeactivateR4(){
 
 function ActivateB1(){
     activeproject="B1";
-    ActivateBotsmithBlanket(DeactivateB1);
+    ActivateBotsmithBlanket();
 
     //Activate PageB1
     e_pp_b1.style.height="calc(100vh - 8.75vmin)";
     e_pp_b1.style.opacity="100%";
+    e_pp_b1.style.visibility="visible";
 }
 
 function DeactivateB1(){
     activeproject="zxafdfmlk";
-    DeactivateBotsmithBlanket(DeactivateB1);
+    DeactivateBotsmithBlanket();
 
     //Deactive PageB1
     e_pp_b1.style.height="0vmin";
     e_pp_b1.style.opacity="0%";
+    e_pp_b1.style.visibility="hidden";
 }
 
 
 
 function ActivateB2(){
     activeproject="B2";
-    ActivateBotsmithBlanket(DeactivateB2);
+    ActivateBotsmithBlanket();
 
     //Activate PageB2
     e_pp_b2.style.height="calc(100vh - 8.75vmin)";
     e_pp_b2.style.opacity="100%";
+    e_pp_b2.style.visibility="visible";
 }
 
 function DeactivateB2(){
     activeproject="zxafdfmlk";
-    DeactivateBotsmithBlanket(DeactivateB2);
+    DeactivateBotsmithBlanket();
 
     //Deactive PageB2
     e_pp_b2.style.height="0vmin";
     e_pp_b2.style.opacity="0%";
+    e_pp_b2.style.visibility="hidden";
 }
 
 
 
 function ActivateB3(){
     activeproject="B3";
-    ActivateBotsmithBlanket(DeactivateB3);
+    ActivateBotsmithBlanket();
 
     //Activate PageB3
     e_pp_b3.style.height="calc(100vh - 8.75vmin)";
     e_pp_b3.style.opacity="100%";
+    e_pp_b3.style.visibility="visible";
 }
 
 function DeactivateB3(){
     activeproject="zxafdfmlk";
-    DeactivateBotsmithBlanket(DeactivateB3);
+    DeactivateBotsmithBlanket();
 
     //Deactive PageB3
     e_pp_b3.style.height="0vmin";
     e_pp_b3.style.opacity="0%";
+    e_pp_b3.style.visibility="hidden";
 }
 
 
 
 function ActivateB4(){
     activeproject="B4";
-    ActivateBotsmithBlanket(DeactivateB4);
+    ActivateBotsmithBlanket();
 
     //Activate PageB4
     e_pp_b4.style.height="calc(100vh - 8.75vmin)";
     e_pp_b4.style.opacity="100%";
+    e_pp_b4.style.visibility="visible";
 }
 
 function DeactivateB4(){
     activeproject="zxafdfmlk";
-    DeactivateBotsmithBlanket(DeactivateB4);
+    DeactivateBotsmithBlanket();
 
     //Deactive PageB4
     e_pp_b4.style.height="0vmin";
     e_pp_b4.style.opacity="0%";
+    e_pp_b4.style.visibility="hidden";
 }
 
 
@@ -235,20 +227,22 @@ function DeactivateB4(){
 
 function ActivateI1(){
     activeproject="I1";
-    ActivateInventorBlanket(DeactivateI1);
+    ActivateInventorBlanket();
 
     //Activate PageI1
     e_pp_i1.style.height="calc(100vh - 8.75vmin)";
     e_pp_i1.style.opacity="100%";
+    e_pp_i1.style.visibility="visible";
 }
 
 function DeactivateI1(){
     activeproject="zxafdfmlk";
-    DeactivateInventorBlanket(DeactivateI1);
+    DeactivateInventorBlanket();
 
     //Deactive PageI1
     e_pp_i1.style.height="0vmin";
     e_pp_i1.style.opacity="0%";
+    e_pp_i1.style.visibility="hidden";
 }
 
 
