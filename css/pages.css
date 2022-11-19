@@ -33,6 +33,10 @@
     position: relative;
     left: 3.4vmin;
 
+    font-size: 3vmin;
+    font-weight: 400;
+    text-align: center;
+
     column-count: 3;
 
 }
