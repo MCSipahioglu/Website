@@ -35,6 +35,11 @@
     z-index: inherit;
 }
 
+.image_attention{
+    width: 3.5vmin;
+    height: 3.5vmin;
+}
+
 #image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_copypaste:hover, #image_return:hover, #image_project_return:hover{
     border-width: 0.5vmin;
     border-radius: 4.1vmin;

@@ -210,7 +210,7 @@
 }
 
 .post_title{
-    padding-top: 2vh;
+    padding-top: 2vmin;
 
     font-size: 3vmin;
     font-weight: 550;
@@ -254,9 +254,9 @@
 }
 
 .filter_button_container{
-    height: 2vmin;
+    height: 3vmin;
 
-    padding-top: 1vmin;
+    padding-left: 0.25vmin;;
 
     pointer-events: none;
 }
@@ -266,19 +266,17 @@
     width: 1.4vmin;
 
     border-style: solid;
-    border-width: 0.4vmin;
+    border-width: 0.35vmin;
     border-color: var(--bg_black);
 
     outline-style: solid;
-    outline-width: 0.4vmin;
+    outline-width: 0.35vmin;
     outline-color: white;
 
     background: none;
 
     cursor:pointer;
     pointer-events: all;
-
-     
 
 }
 
