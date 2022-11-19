@@ -1,5 +1,5 @@
 const e_logo_email=document.getElementById("logo_email");
-const e_logo_copypaste=document.getElementById("logo_copypaste");
+const e_logo_email_copypaste=document.getElementById("logo_email_copypaste");
 const e_email_wrapper=document.getElementById("email_wrapper");
 const e_email=document.getElementById("email");
 
@@ -9,10 +9,22 @@ e_logo_email.onclick = function() {EmailActivate()};
 
 
 function EmailActivate(){
-    e_email_wrapper.addEventListener("mouseleave", EmailLeft, true);
-
     e_email_wrapper.style.left="calc(100vw - 38vmin)";
-    e_logo_copypaste.addEventListener("click", EmailCopy, true);
+    e_logo_email_copypaste.addEventListener("click", EmailCopy, true);
+
+    setTimeout(() => {  
+
+        e_email_wrapper.addEventListener("mouseleave", EmailExitCheckInside, true);
+        document.addEventListener('mousemove', EmailExitCheckOutside, true);    //Passing the MouseEvent is done like this, it is a fucking nightmare.
+    
+    }, 1000);  //Give 2 second grace period to get in the email wrapper.
+    
+}
+
+function EmailExitCheckOutside(Event){
+    if ( ((document.elementFromPoint(Event.clientX, Event.clientY)).id).includes("email")==0){ //After 2 secs if mouse is not in the email area, despawn it.
+        EmailDeactivate();
+    }
 }
 
 
@@ -25,7 +37,7 @@ function EmailCopy() {
 
 
 
-function EmailLeft(event){
+function EmailExitCheckInside(event){
     if(e_email_wrapper.contains(event.relatedTarget)==0){
         EmailDeactivate();
     }
@@ -38,7 +50,9 @@ function EmailDeactivate(){
     setTimeout(() => {  e_email.innerHTML="mustafacagataysipahioglu@gmail.com"; }, 500);
     
 
-    e_logo_copypaste.removeEventListener("click", EmailCopy, true);
-    e_email_wrapper.removeEventListener("mouseleave", EmailLeft, true);
+    e_logo_email_copypaste.removeEventListener("click", EmailCopy, true);
+    e_email_wrapper.removeEventListener("mouseleave", EmailExitCheckInside, true);
+    document.removeEventListener('mousemove', EmailExitCheckOutside, true);
+
 }
 

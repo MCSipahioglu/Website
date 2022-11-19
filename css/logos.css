@@ -26,7 +26,7 @@
     z-index: inherit;
 }
 
-#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_copypaste, #image_return, #image_filter{
+#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_email_copypaste, #image_return, #image_filter{
     width: 3.5vmin;
     height: 3.5vmin;
 
@@ -40,7 +40,7 @@
     height: 3.5vmin;
 }
 
-#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_copypaste:hover, #image_return:hover{
+#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_email_copypaste:hover, #image_return:hover{
     border-width: 0.5vmin;
     border-radius: 4.1vmin;
     border-style: solid;
@@ -116,7 +116,7 @@
 
 }
 
-#logo_copypaste{
+#logo_email_copypaste{
     width: 4.2vmin;
     height: 4.2vmin;
 
