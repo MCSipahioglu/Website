@@ -6,6 +6,9 @@ const e_project_return_container=document.getElementById("project_page_return_bu
 const e_project_return_button=document.getElementById("project_page_return_button");
 
 const e_pp_r1=document.getElementById("pp_r1");
+const e_pp_r2=document.getElementById("pp_r2");
+const e_pp_r3=document.getElementById("pp_r3");
+const e_pp_r4=document.getElementById("pp_r4");
 const e_pp_b1=document.getElementById("pp_b1");
 const e_pp_b2=document.getElementById("pp_b2");
 const e_pp_b3=document.getElementById("pp_b3");
@@ -91,6 +94,59 @@ function DeactivateR1(){
     e_pp_r1.style.opacity="0%";
 }
 
+function ActivateR2(){
+    activeproject="R2";
+    ActivateRoboticistBlanket(DeactivateR2);
+
+    //Activate PageR2
+    e_pp_r2.style.height="calc(100vh - 8.75vmin)";
+    e_pp_r2.style.opacity="100%";
+}
+
+function DeactivateR2(){
+    activeproject="zxafdfmlk";
+    DeactivateRoboticistBlanket(DeactivateR2);
+
+    //Deactive PageR2
+    e_pp_r2.style.height="0vmin";
+    e_pp_r2.style.opacity="0%";
+}
+
+function ActivateR3(){
+    activeproject="R3";
+    ActivateRoboticistBlanket(DeactivateR3);
+
+    //Activate PageR3
+    e_pp_r3.style.height="calc(100vh - 8.75vmin)";
+    e_pp_r3.style.opacity="100%";
+}
+
+function DeactivateR3(){
+    activeproject="zxafdfmlk";
+    DeactivateRoboticistBlanket(DeactivateR3);
+
+    //Deactive PageR3
+    e_pp_r3.style.height="0vmin";
+    e_pp_r3.style.opacity="0%";
+}
+
+function ActivateR4(){
+    activeproject="R4";
+    ActivateRoboticistBlanket(DeactivateR4);
+
+    //Activate PageR4
+    e_pp_r4.style.height="calc(100vh - 8.75vmin)";
+    e_pp_r4.style.opacity="100%";
+}
+
+function DeactivateR4(){
+    activeproject="zxafdfmlk";
+    DeactivateRoboticistBlanket(DeactivateR4);
+
+    //Deactive PageR4
+    e_pp_r4.style.height="0vmin";
+    e_pp_r4.style.opacity="0%";
+}
 
 
 

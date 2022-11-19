@@ -3,43 +3,33 @@
 <svg version="1.1" id="katman_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st0{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+	.st1{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
 </style>
 <g>
 	<path class="st0" d="M76.2,38.4c9.2,3,15,7.5,15,12.5c0,9-18.5,16.3-41.3,16.3S8.8,60,8.8,51c0-5,5.8-9.6,15-12.5"/>
 	<path class="st0" d="M40.2,35.2c3.1-0.3,6.4-0.5,9.8-0.5c3.4,0,6.6,0.2,9.8,0.5"/>
 	<g>
 		<ellipse class="st0" cx="32" cy="20.2" rx="8.2" ry="3.3"/>
-		<line class="st1" x1="23.8" y1="45.2" x2="23.8" y2="20.2"/>
+		<line class="st0" x1="23.8" y1="45.2" x2="23.8" y2="20.2"/>
 		<g>
 			<path class="st0" d="M32,48.5c-4.6,0-8.2-1.5-8.2-3.3"/>
 			<path class="st0" d="M40.2,45.2c0,1.8-3.7,3.3-8.2,3.3"/>
 		</g>
-		<line class="st1" x1="40.2" y1="45.2" x2="40.2" y2="20.2"/>
+		<line class="st0" x1="40.2" y1="45.2" x2="40.2" y2="20.2"/>
 	</g>
 	<g>
 		<ellipse class="st0" cx="68" cy="31.7" rx="8.2" ry="3.3"/>
-		<line class="st1" x1="59.8" y1="56.7" x2="59.8" y2="31.7"/>
+		<line class="st0" x1="59.8" y1="56.7" x2="59.8" y2="31.7"/>
 		<g>
 			<path class="st0" d="M68,60c-4.6,0-8.2-1.5-8.2-3.3"/>
 			<path class="st0" d="M76.2,56.7c0,1.8-3.7,3.3-8.2,3.3"/>
 		</g>
-		<line class="st1" x1="76.2" y1="56.7" x2="76.2" y2="31.7"/>
+		<line class="st0" x1="76.2" y1="56.7" x2="76.2" y2="31.7"/>
 	</g>
-	<line class="st1" x1="8.8" y1="51" x2="8.8" y2="67.2"/>
-	<path class="st0" d="M50,83.5c-22.8,0-41.3-7.3-41.3-16.3"/>
-	<path class="st0" d="M91.3,67.2c0,9-18.5,16.3-41.3,16.3"/>
-	<line class="st1" x1="91.3" y1="51" x2="91.3" y2="67.2"/>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
-</g>
-<g>
+	<line class="st0" x1="8.8" y1="51" x2="8.8" y2="67.2"/>
+	<path class="st1" d="M50,83.5c-22.8,0-41.3-7.3-41.3-16.3"/>
+	<path class="st1" d="M91.3,67.2c0,9-18.5,16.3-41.3,16.3"/>
+	<line class="st0" x1="91.3" y1="51" x2="91.3" y2="67.2"/>
 </g>
 </svg>
