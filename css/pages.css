@@ -251,7 +251,7 @@
 
 #filter_buttons_container{
     position: absolute;
-    top: 5vmin;
+    top: 6vmin;
     left: 1.5vmin;
 
     pointer-events: none;
