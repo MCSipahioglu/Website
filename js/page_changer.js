@@ -49,6 +49,7 @@ e_writer.onclick     = function() {PageChangeWriter()};
 e_traveller.onclick  = function() {PageChangeTraveller()};
 
 
+
 //Hover+Wheel interrupt to use the navbar menu
 document.addEventListener('mousemove', e => {
     if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu_") ){ //When on the navbar_menu elements:
@@ -76,6 +77,13 @@ document.addEventListener('mousemove', e => {
 
 
 //FUNCTIONS
+function ActivateLanding(){
+    e_landing_header_name.style.display="inline";             //Deactivate landing page
+    e_landing_header_surname.style.display="inline";
+    e_landing_swatch_wrapper.style.display="inline";
+    document.addEventListener("wheel", RotateSwatch, true);
+}
+
 function DeactivateLanding(){
     e_landing_header_name.style.display="none";             //Deactivate landing page
     e_landing_header_surname.style.display="none";
@@ -89,11 +97,112 @@ function ActivateNavbar(){ //Spawn in navbar
     e_sweeper_secondary.style.display="inline";     //Also spawn in the secondary sweeper.
 }
 
+function DeactivateNavbar(){ //Spawn in navbar
+    e_sweeper_secondary.style.display="none";     //Despawn the secondary sweeper.
+    e_navbar_name.style.opacity="0%";
+    e_navbar_menu.style.visibility="hidden";
+    e_navbar_menu.style.opacity="0%";
+}
+
+
+//First Spawning Of a Page
+function PageChangeRoboticist(event){
+    DeactivateLanding();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_red";
+
+    //Order the navbar menu items.
+    NavbarOrderRoboticist();
+    ActivateNavbar();
+    navmen_og_index=0;
+    navmen_index=0;
+    setTimeout(() => {  PageActivateRoboticist(); }, 2500);
+          
+}
+
+function PageChangeBotsmith(event){
+    DeactivateLanding();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_purple";
+
+    //Order the navbar menu items.
+    NavbarOrderBotsmith();
+    ActivateNavbar();
+    navmen_og_index=1;
+    navmen_index=1;
+    setTimeout(() => {  PageActivateBotsmith(); }, 2500);
+    
+}
+
+function PageChangeInventor(event){
+    DeactivateLanding();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_orange";
+
+    //Order the navbar menu items.
+    NavbarOrderInventor();
+    ActivateNavbar();
+    navmen_og_index=2;
+    navmen_index=2;
+    setTimeout(() => {  PageActivateInventor(); }, 2500);
+}
+
+function PageChangeWriter(event){
+    DeactivateLanding();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_turqoise";
+
+    //Order the navbar menu items.
+    NavbarOrderWriter();
+    ActivateNavbar();
+    navmen_og_index=3;
+    navmen_index=3;
+    setTimeout(() => {  PageActivateWriter(); }, 2500);
+}
+
+function PageChangeTraveller(event){
+    DeactivateLanding();
+
+    e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
+    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
+    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
+    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
+    e_logo_S.id= "logo_S_green";
+
+    //Order the navbar menu items.
+    NavbarOrderTraveller();
+    ActivateNavbar();
+    navmen_og_index=4;
+    navmen_index=4;
+    setTimeout(() => {  PageActivateTraveller(); }, 2500);      
+}
+
+
+
+
+
 
 //Activating/Deactivating Pages
 function PageActivateRoboticist(){
     e_p_roboticist.style.visibility="visible";
     e_p_roboticist.style.opacity="100%";
+    e_logo_S.style.pointerEvents="all";
 }
 
 function PageDeactivateExceptRoboticist(){
@@ -117,6 +226,7 @@ function PageDeactivateExceptRoboticist(){
 function PageActivateBotsmith(){
     e_p_botsmith.style.visibility="visible";
     e_p_botsmith.style.opacity="100%";
+    e_logo_S.style.pointerEvents="all";
 }
 
 function PageDeactivateExceptBotsmith(){
@@ -140,6 +250,7 @@ function PageDeactivateExceptBotsmith(){
 function PageActivateInventor(){
     e_p_inventor.style.visibility="visible";
     e_p_inventor.style.opacity="100%";
+    e_logo_S.style.pointerEvents="all";
 }
 
 function PageDeactivateExceptInventor(){
@@ -163,7 +274,7 @@ function PageDeactivateExceptInventor(){
 function PageActivateWriter(){
     e_p_writer.style.visibility="visible";
     e_p_writer.style.opacity="100%";
-
+    e_logo_S.style.pointerEvents="all";
 }
 
 function PageDeactivateExceptWriter(){
@@ -187,7 +298,7 @@ function PageDeactivateExceptWriter(){
 function PageActivateTraveller(){
     e_p_traveller.style.visibility="visible";
     e_p_traveller.style.opacity="100%";
-
+    e_logo_S.style.pointerEvents="all";
 }
 
 function PageDeactivateExceptTraveller(){
@@ -206,6 +317,21 @@ function PageDeactivateExceptTraveller(){
     e_p_writer.style.opacity="0%";
 }
 
+
+function PageDeactivateExceptLanding(){
+    e_logo_S.style.pointerEvents="none";
+
+    e_p_roboticist.style.visibility="hidden";
+    e_p_roboticist.style.opacity="0%";
+    e_p_botsmith.style.visibility="hidden";
+    e_p_botsmith.style.opacity="0%";
+    e_p_inventor.style.visibility="hidden";
+    e_p_inventor.style.opacity="0%";
+    e_p_writer.style.visibility="hidden";
+    e_p_writer.style.opacity="0%";
+    e_p_traveller.style.visibility="hidden";
+    e_p_traveller.style.opacity="0%";
+}
 
 
 
@@ -433,93 +559,7 @@ function NavbarMenuScroll(event){
 
 
 
-//First Spawning Of a Page
-function PageChangeRoboticist(event){
-    DeactivateLanding();
 
-    e_sweeper_neon.style.backgroundColor="var(--swatch_red)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_red)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_red";
-
-    //Order the navbar menu items.
-    NavbarOrderRoboticist();
-    ActivateNavbar();
-    navmen_og_index=0;
-    navmen_index=0;
-    setTimeout(() => {  PageActivateRoboticist(); }, 2500);
-          
-}
-
-function PageChangeBotsmith(event){
-    DeactivateLanding();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_purple)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_purple)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_purple";
-
-    //Order the navbar menu items.
-    NavbarOrderBotsmith();
-    ActivateNavbar();
-    navmen_og_index=1;
-    navmen_index=1;
-    setTimeout(() => {  PageActivateBotsmith(); }, 2500);
-    
-}
-
-function PageChangeInventor(event){
-    DeactivateLanding();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_orange)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_orange)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_orange";
-
-    //Order the navbar menu items.
-    NavbarOrderInventor();
-    ActivateNavbar();
-    navmen_og_index=2;
-    navmen_index=2;
-    setTimeout(() => {  PageActivateInventor(); }, 2500);
-}
-
-function PageChangeWriter(event){
-    DeactivateLanding();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_turqoise)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_turqoise)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_turqoise";
-
-    //Order the navbar menu items.
-    NavbarOrderWriter();
-    ActivateNavbar();
-    navmen_og_index=3;
-    navmen_index=3;
-    setTimeout(() => {  PageActivateWriter(); }, 2500);
-}
-
-function PageChangeTraveller(event){
-    DeactivateLanding();
-
-    e_sweeper_neon.style.backgroundColor="var(--swatch_green)"//Assign Colors
-    e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin var(--swatch_green)"
-    e_sweeper_wrapper.style.left="-0.75vmin";               //Sweep to left
-    e_sweeper_divider.style.left="-0.75vmin";               //Sweep to left
-    e_logo_S.id= "logo_S_green";
-
-    //Order the navbar menu items.
-    NavbarOrderTraveller();
-    ActivateNavbar();
-    navmen_og_index=4;
-    navmen_index=4;
-    setTimeout(() => {  PageActivateTraveller(); }, 2500);      
-}
 
 
 
@@ -634,6 +674,7 @@ function PageRedirectTraveller(event){
 
 
 
+
 function NavbarMenuRedirect(event){
     DeactivateAll();                    //Deactivate active project or CV pages.
     e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation. (Right Sweep)
@@ -664,3 +705,24 @@ function DeactivateAll(){
 
 
 
+function ReturnToLanding(){
+    //Deactivate All Pages
+    DeactivateAll();                    //Deactivate active project or CV pages.
+    DeactivateNavbar();
+    PageDeactivateExceptLanding();
+
+
+
+    //Swipe to Right
+    setTimeout(() => {     
+        e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation. (Right Sweep)
+        e_sweeper_divider.style.left="calc(100vw + 5vmin)";
+    }, 400);
+
+    setTimeout(() => {     
+        e_logo_S.id= "logo_S";
+    }, 995);
+
+    //Activate Landing
+    ActivateLanding();
+}
