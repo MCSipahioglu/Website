@@ -97,6 +97,11 @@ function PageActivateRoboticist(){
 }
 
 function PageDeactivateExceptRoboticist(){
+    e_p_botsmith.style.transition="opacity 0s";     //Make transitions 0s. Such that the previous pages despawn immediately to not be seen during the sweeper left animation.
+    e_p_inventor.style.transition="opacity 0s";
+    e_p_writer.style.transition="opacity 0s";
+    e_p_traveller.style.transition="opacity 0s";
+
     e_p_botsmith.style.visibility="hidden";
     e_p_botsmith.style.opacity="0%";
     e_p_inventor.style.visibility="hidden";
@@ -115,6 +120,11 @@ function PageActivateBotsmith(){
 }
 
 function PageDeactivateExceptBotsmith(){
+    e_p_roboticist.style.transition="opacity 0s";     //Make transitions 0s. Such that the previous pages despawn immediately to not be seen during the sweeper left animation.
+    e_p_inventor.style.transition="opacity 0s";
+    e_p_writer.style.transition="opacity 0s";
+    e_p_traveller.style.transition="opacity 0s";
+
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_inventor.style.visibility="hidden";
@@ -133,6 +143,11 @@ function PageActivateInventor(){
 }
 
 function PageDeactivateExceptInventor(){
+    e_p_roboticist.style.transition="opacity 0s";     //Make transitions 0s. Such that the previous pages despawn immediately to not be seen during the sweeper left animation.
+    e_p_botsmith.style.transition="opacity 0s";
+    e_p_writer.style.transition="opacity 0s";
+    e_p_traveller.style.transition="opacity 0s";
+
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="hidden";
@@ -152,6 +167,11 @@ function PageActivateWriter(){
 }
 
 function PageDeactivateExceptWriter(){
+    e_p_roboticist.style.transition="opacity 0s";     //Make transitions 0s. Such that the previous pages despawn immediately to not be seen during the sweeper left animation.
+    e_p_botsmith.style.transition="opacity 0s";
+    e_p_inventor.style.transition="opacity 0s";
+    e_p_traveller.style.transition="opacity 0s";
+
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="hidden";
@@ -171,6 +191,11 @@ function PageActivateTraveller(){
 }
 
 function PageDeactivateExceptTraveller(){
+    e_p_roboticist.style.transition="opacity 0s";     //Make transitions 0s. Such that the previous pages despawn immediately to not be seen during the sweeper left animation.
+    e_p_botsmith.style.transition="opacity 0s";
+    e_p_inventor.style.transition="opacity 0s";
+    e_p_writer.style.transition="opacity 0s";
+
     e_p_roboticist.style.visibility="hidden";
     e_p_roboticist.style.opacity="0%";
     e_p_botsmith.style.visibility="hidden";
@@ -512,6 +537,13 @@ function PageRedirectRoboticist(event){
     NavbarOrderRoboticist();
     navmen_og_index=0;
     navmen_index=0;
+
+    setTimeout(() => {          //Reassign animation length after sweeping before activating the page.
+    e_p_botsmith.style.transition="opacity 0.4s";
+    e_p_inventor.style.transition="opacity 0.4s";
+    e_p_writer.style.transition="opacity 0.4s";
+    e_p_traveller.style.transition="opacity 0.4s";}, 400);  
+
     setTimeout(() => {  PageActivateRoboticist(); }, 1000);       
 }
 
@@ -526,6 +558,13 @@ function PageRedirectBotsmith(event){
     NavbarOrderBotsmith();
     navmen_og_index=1;
     navmen_index=1;
+
+    setTimeout(() => {          //Reassign animation length after sweeping before activating the page.
+        e_p_roboticist.style.transition="opacity 0.4s";
+        e_p_inventor.style.transition="opacity 0.4s";
+        e_p_writer.style.transition="opacity 0.4s";
+        e_p_traveller.style.transition="opacity 0.4s";}, 400);
+    
     setTimeout(() => {  PageActivateBotsmith(); }, 1000);
 }
 
@@ -540,6 +579,13 @@ function PageRedirectInventor(event){
     NavbarOrderInventor();
     navmen_og_index=2;
     navmen_index=2;
+
+    setTimeout(() => {          //Reassign animation length after sweeping before activating the page.
+        e_p_roboticist.style.transition="opacity 0.4s";
+        e_p_botsmith.style.transition="opacity 0.4s";
+        e_p_writer.style.transition="opacity 0.4s";
+        e_p_traveller.style.transition="opacity 0.4s";}, 400);
+
     setTimeout(() => {  PageActivateInventor(); }, 1000);        
 }
 
@@ -554,6 +600,13 @@ function PageRedirectWriter(event){
     NavbarOrderWriter();
     navmen_og_index=3;
     navmen_index=3;
+    
+    setTimeout(() => {          //Reassign animation length after sweeping before activating the page.
+        e_p_roboticist.style.transition="opacity 0.4s";
+        e_p_botsmith.style.transition="opacity 0.4s";
+        e_p_inventor.style.transition="opacity 0.4s";
+        e_p_traveller.style.transition="opacity 0.4s";}, 400);
+
     setTimeout(() => {  PageActivateWriter(); }, 1000);
 }
 
@@ -568,6 +621,13 @@ function PageRedirectTraveller(event){
     NavbarOrderTraveller();
     navmen_og_index=4;
     navmen_index=4;
+
+    setTimeout(() => {          //Reassign animation length after sweeping before activating the page.
+        e_p_roboticist.style.transition="opacity 0.4s";
+        e_p_botsmith.style.transition="opacity 0.4s";
+        e_p_inventor.style.transition="opacity 0.4s";
+        e_p_writer.style.transition="opacity 0.4s";}, 400);
+
     setTimeout(() => {  PageActivateTraveller(); }, 1000); 
 }
 
