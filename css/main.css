@@ -49,6 +49,13 @@ NEW PROJECT:pages.css:    whatever you need
     color: rgb(255, 255, 255);
 }
 
+.screen{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+
 title{
     display: none;
 }
@@ -96,3 +103,46 @@ button {
     font-family : inherit;
     cursor: pointer;
 }
+
+
+@media screen and (max-width:768px) {
+    #desktop{
+       display: none; 
+    }
+    #tablet{
+        display: none; 
+     }
+     #mobile{
+        display: inline; 
+     }
+}
+
+@media screen and (max-width:1023px) {
+    #desktop{
+       display: none; 
+    }
+    #tablet{
+        display: inline; 
+     }
+     #mobile{
+        display: none; 
+     }
+}
+
+@media screen and (min-width:1024px) {
+    #desktop{
+       display: inline; 
+    }
+    #tablet{
+        display: none; 
+     }
+     #mobile{
+        display: none; 
+     }
+}
+
+
+
+
+
+
