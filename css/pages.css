@@ -133,6 +133,7 @@
     width: calc(100vw - 2 * 6.4vmin);
 
     position: absolute;
+    top: 0vmin;
     left: 3.4vmin;
 
     height: 0vmin;
