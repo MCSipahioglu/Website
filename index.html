@@ -172,7 +172,7 @@
     <div class="projects">
 
 
-      <button type="button" onclick="ActivateR1()" class="project_container project_container_roboticist">
+      <button type="button" onclick="Activate(0,0)" class="project_container project_container_roboticist">
         <img src="./assets/R1.ESC.svg" class="project_logo">
         <h1>
           ESC
@@ -184,7 +184,8 @@
           See more details about this project.
         </div>
       </button>
-      <button type="button" onclick="ActivateR2()" class="project_container project_container_roboticist">
+
+      <button type="button" onclick="Activate(0,1)" class="project_container project_container_roboticist">
         <img src="./assets/R2.WireBender.svg" class="project_logo">
         <h1>
           WIRE BENDER
@@ -196,10 +197,11 @@
           See more details about this project.
         </div>
       </button>
-      <button type="button" onclick="ActivateR3()" class="project_container project_container_roboticist">
+
+      <button type="button" onclick="Activate(0,2)" class="project_container project_container_roboticist">
         <img src="./assets/R3.AlCNC.svg" class="project_logo">
         <h1>
-          AL CNC
+          Al CNC
         </h1>
         <div class="project_intro">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
@@ -208,10 +210,11 @@
           See more details about this project.
         </div>
       </button>
-      <button type="button" onclick="ActivateR4()" class="project_container project_container_roboticist">
+
+      <button type="button" onclick="Activate(0,3)" class="project_container project_container_roboticist">
         <img src="./assets/R4.CuCNC.svg" class="project_logo">
         <h1>
-          CU CNC
+          Cu CNC
         </h1>
         <div class="project_intro">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
@@ -227,34 +230,58 @@
 
 
       <div class="project_content" id="pp_r1">
-        <button type="button" onclick="DeactivateR1()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(0,0)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-  
+        <img src="./assets/R1.ESC.svg" class="project_logo">
+        <h1>
+          ESC
+        </h1>
+        <div class="project_intro">
+
+        </div>
       </div>
   
   
       <div class="project_content" id="pp_r2">
-        <button type="button" onclick="DeactivateR2()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(0,1)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-  
+        <img src="./assets/R2.WireBender.svg" class="project_logo">
+        <h1>
+          WIRE BENDER
+        </h1>
+        <div class="project_intro">
+
+        </div>
       </div>
   
   
       <div class="project_content" id="pp_r3">
-        <button type="button" onclick="DeactivateR3()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(0,2)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-  
+        <img src="./assets/R3.AlCNC.svg" class="project_logo">
+        <h1>
+          Al CNC
+        </h1>
+        <div class="project_intro">
+
+        </div>
       </div>
   
   
       <div class="project_content" id="pp_r4">
-        <button type="button" onclick="DeactivateR4()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(0,3)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-  
+        <img src="./assets/R4.CuCNC.svg" class="project_logo">
+        <h1>
+          Cu CNC
+        </h1>
+        <div class="project_intro">
+
+        </div>
       </div>
   
   
@@ -272,7 +299,7 @@
     <div class="projects">
 
 
-      <button type="button" onclick="ActivateB1()" class="project_container project_container_botsmith">
+      <button type="button" onclick="Activate(1,0)" class="project_container project_container_botsmith">
         <img src="./assets/B1.Lurien.svg" class="project_logo">
         <h1>
           LURIEN
@@ -285,7 +312,7 @@
         </div>
       </button>
 
-      <button type="button" onclick="ActivateB2()" class="project_container project_container_botsmith">
+      <button type="button" onclick="Activate(1,1)" class="project_container project_container_botsmith">
         <img src="./assets/B2.Smithers.svg" class="project_logo">
         <h1>
           SMITHERS
@@ -298,7 +325,7 @@
         </div>
       </button>
 
-      <button type="button" onclick="ActivateB3()" class="project_container project_container_botsmith">
+      <button type="button" onclick="Activate(1,2)" class="project_container project_container_botsmith">
         <img src="./assets/B3.Draper.svg" class="project_logo">
         <h1>
           DRAPER
@@ -311,7 +338,7 @@
         </div>
       </button>
 
-      <button type="button" onclick="ActivateB4()" class="project_container project_container_botsmith">
+      <button type="button" onclick="Activate(1,3)" class="project_container project_container_botsmith">
         <img src="./assets/B4.Sparrow.svg" class="project_logo">
         <h1>
           SPARROW
@@ -325,17 +352,13 @@
       </button>
 
 
-
-
-
-
     </div>
 
     <div id="project_page_botsmith_blanket" class="project_page">
 
 
       <div class="project_content" id="pp_b1">
-        <button type="button" onclick="DeactivateB1()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(1,0)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
         <img src="./assets/B1.Lurien.svg" class="project_logo">
@@ -349,27 +372,43 @@
         </div>
       </div>
   
-  
       <div class="project_content" id="pp_b2">
-        <button type="button" onclick="DeactivateB2()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(1,1)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-  
+        <img src="./assets/B2.Smithers.svg" class="project_logo">
+        <h1>
+          SMITHERS
+        </h1>
+        <div class="project_intro">
+
+        </div>
       </div>
-  
   
       <div class="project_content" id="pp_b3">
-        <button type="button" onclick="DeactivateB3()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(1,2)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-  
+        <img src="./assets/B3.Draper.svg" class="project_logo">
+        <h1>
+          DRAPER
+        </h1>
+        <div class="project_intro">
+
+        </div>
       </div>
   
-  
       <div class="project_content" id="pp_b4">
-        <button type="button" onclick="DeactivateB4()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(1,3)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
+        <img src="./assets/B4.Sparrow.svg" class="project_logo">
+        <h1>
+          SPARROW
+        </h1>
+        <div class="project_intro">
+
+        </div>
   
       </div>
   
@@ -383,10 +422,11 @@
     <h1 class="header_inventor"> 
       DESIGNS & PATENTS
     </h1>
+
     <div class="projects">
 
 
-      <button type="button" onclick="ActivateI1()" class="project_container project_container_inventor">
+      <button type="button" onclick="Activate(2,0)" class="project_container project_container_inventor">
         <img src="./assets/D1.Website.svg" class="project_logo">
         <h1>
           WEBSITE
@@ -401,14 +441,21 @@
 
 
     </div>
+
     <div id="project_page_inventor_blanket" class="project_page">
 
-
+      
       <div class="project_content" id="pp_i1">
-        <button type="button" onclick="DeactivateI1()" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(2,0)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-  
+        <img src="./assets/D1.Website.svg" class="project_logo">
+        <h1>
+          WEBSITE
+        </h1>
+        <div class="project_intro">
+
+        </div>
       </div>
   
   
@@ -552,7 +599,7 @@
 
 
 
-  
+
   <button type="button" onclick="ReturnToLanding()" id="logo_S"></button>
   
 
