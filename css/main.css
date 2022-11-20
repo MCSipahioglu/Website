@@ -62,12 +62,12 @@ NEW PROJECT:pages.css:    whatever you need
     height: 50vh;
 
     position: absolute;
-    margin-top: 25vh;
+    margin-top: 10vh;
     margin-left: 10vw;
 
     font-size: 5vmin;
     font-weight: 600;
-    text-align: center;
+    text-align: justify;
 
 }
 
