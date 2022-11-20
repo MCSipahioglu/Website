@@ -53,7 +53,24 @@ NEW PROJECT:pages.css:    whatever you need
     width: 100vw;
     height: 100vh;
     position: absolute;
+
+    background-color: var(--bg_black);
 }
+
+.error{
+    width: 80vw;
+    height: 50vh;
+
+    position: absolute;
+    margin-top: 25vh;
+    margin-left: 10vw;
+
+    font-size: 5vmin;
+    font-weight: 600;
+    text-align: center;
+
+}
+
 
 
 title{
@@ -117,7 +134,7 @@ button {
      }
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (min-width: 769px) and (max-width:1023px) {
     #desktop{
        display: none; 
     }
