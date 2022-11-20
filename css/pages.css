@@ -27,6 +27,8 @@
     display: none; /* for Chrome, Safari, and Opera */
 }
 
+
+/*Inside Projects (The Grid)*/
 .relevant_skills{
     width: calc(100vw - 2 * 6.4vmin);
 
@@ -126,16 +128,12 @@
 
 
 
-
-
-
+/*Secondary Project Page*/
 .project_page{
     width: calc(100vw - 2 * 6.4vmin);
 
-
     position: absolute;
-    top: 8.75vmin;
-    left: 6.4vmin;
+    left: 3.4vmin;
 
     height: 0vmin;
     opacity: 0%;
@@ -325,7 +323,7 @@
     
 }
 
-
+/* NEW PAGE */
 
 /* CV */
 #page_cv{

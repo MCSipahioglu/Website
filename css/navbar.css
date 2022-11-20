@@ -37,7 +37,7 @@
     z-index: 2;
 }
 
-#navbar_menu_roboticist, #navbar_menu_botsmith, #navbar_menu_inventor, #navbar_menu_writer, #navbar_menu_traveller{
+.navbar_menu_element{
     width: 25vmin;
     
     position: absolute;

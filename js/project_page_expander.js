@@ -1,6 +1,11 @@
 const e_roboticist_blanket=document.getElementById("project_page_roboticist_blanket");
 const e_botsmith_blanket=document.getElementById("project_page_botsmith_blanket");
 const e_inventor_blanket=document.getElementById("project_page_inventor_blanket");
+e_blanket=[
+    document.getElementById("project_page_roboticist_blanket"),
+    document.getElementById("project_page_botsmith_blanket"),
+    document.getElementById("project_page_inventor_blanket")];
+
 
 const e_pp_r1=document.getElementById("pp_r1");
 const e_pp_r2=document.getElementById("pp_r2");

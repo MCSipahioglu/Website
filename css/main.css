@@ -11,6 +11,20 @@ Google Analytics:   https://www.youtube.com/watch?v=K9ExoBi7AXw&ab_channel=DMSAn
 Don't put a redirect to the landing page. (Funnel people to realize that the navbar menu is an active element.)
 */
 
+
+/*  WHEN ADDING NEW SECTION
+NEW PAGE:   swatch.css:   something to rotate, something to hover
+            S_logos.css:  1 common, 1 image
+            main.css:     1 color
+            pages.css:    whatever you need
+
+            swatch.js:    swatch_element count one up
+            page_changer.js: page_count one up and follow
+
+NEW PROJECT:pages.css:    whatever you need
+
+            page_expander.js: and follow */
+
 :root {                         /*Global Variables */
     --swatch_red:hsl(0, 60%, 50%);        /*Look at saturation value to select non-invasive colors*/
     --swatch_purple:hsl(295, 60%, 50%);

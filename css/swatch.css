@@ -10,7 +10,7 @@
     transition: 0.2s;           /*This makes the rotation smooth*/
 }
 
-#swatch_roboticist, #swatch_botsmith, #swatch_inventor, #swatch_writer, #swatch_traveller{
+.swatch_element{
     position: absolute;
     top: 47.25vh;
     margin-left: 70vmin;
@@ -27,23 +27,6 @@
 
 #swatch_roboticist{
 }
-
-#swatch_botsmith{
-    transform:rotate(var(--swatch_angle_step));
-}
-
-#swatch_inventor{
-    transform:rotate(calc(var(--swatch_angle_step) * 2));
-}
-
-#swatch_writer{
-    transform:rotate(calc(var(--swatch_angle_step) * 3));
-}
-
-#swatch_traveller{
-    transform:rotate(calc(var(--swatch_angle_step) * 4));
-}
-
 #swatch_roboticist:hover {
     color: var(--swatch_red);
     text-shadow:    0 0 50px var(--swatch_red),
@@ -53,6 +36,9 @@
                     0 0 300px var(--swatch_red);
 }
 
+#swatch_botsmith{
+    transform:rotate(var(--swatch_angle_step));
+}
 #swatch_botsmith:hover {
     color: var(--swatch_purple);
     text-shadow:    0 0 50px var(--swatch_purple),
@@ -62,6 +48,9 @@
                     0 0 300px var(--swatch_purple);
 }
 
+#swatch_inventor{
+    transform:rotate(calc(var(--swatch_angle_step) * 2));
+}
 #swatch_inventor:hover {
     color: var(--swatch_orange);
     text-shadow:    0 0 50px var(--swatch_orange),
@@ -71,6 +60,9 @@
                     0 0 300px var(--swatch_orange);
 }
 
+#swatch_writer{
+    transform:rotate(calc(var(--swatch_angle_step) * 3));
+}
 #swatch_writer:hover {
     color: var(--swatch_turqoise);
     text-shadow:    0 0 50px var(--swatch_turqoise),
@@ -80,6 +72,9 @@
                     0 0 300px var(--swatch_turqoise);
 }
 
+#swatch_traveller{
+    transform:rotate(calc(var(--swatch_angle_step) * 4));
+}
 #swatch_traveller:hover {
     color: var(--swatch_green);
     text-shadow:    0 0 50px var(--swatch_green),
@@ -88,5 +83,26 @@
                     0 0 200px var(--swatch_green),
                     0 0 300px var(--swatch_green); 
 }
+
+
+
+/*
+#swatch_element_i{
+    transform:rotate(calc(var(--swatch_angle_step) * i));
+}
+#swatch_element_i:hover {
+    color: var(--swatch_i);
+    text-shadow:    0 0 50px var(--swatch_i),
+                    0 0 100px var(--swatch_i),
+                    0 0 150px var(--swatch_i),
+                    0 0 200px var(--swatch_i),
+                    0 0 300px var(--swatch_i); 
+}
+*/
+
+
+
+
+
 
 

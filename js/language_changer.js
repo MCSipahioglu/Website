@@ -29,6 +29,18 @@ function DropdownActivateWhenEng(){
     e_logo_tr.addEventListener("click", LanguageChangeTr, true);  
 }
 
+function DropdownDeactivateWhenEng(){
+    e_logo_tr.style.visibility="hidden";
+    e_logo_tr.style.opacity="0%";
+
+    e_lang_dropdown.style.height="0vmin";
+    e_lang_dropdown.style.visibility="hidden";
+    e_lang_dropdown.style.opacity="0%";
+    
+    e_logo_tr.removeEventListener("click", LanguageChangeTr, true);
+    e_logos_lang.removeEventListener("mouseleave", DropdownLeftWhenEng, true);
+}
+
 function DropdownLeftWhenEng(event){
     
     // if leaving dropdown menu. (If the element we leave to isn't contained in the dropdown menu.)
@@ -36,6 +48,10 @@ function DropdownLeftWhenEng(event){
         DropdownDeactivateWhenEng();
     }
 }
+
+
+
+
 
 function DropdownActivateWhenTr(){
     e_logos_lang.addEventListener("mouseleave", DropdownLeftWhenTr, true);   //Also start listening for exit condition
@@ -52,6 +68,18 @@ function DropdownActivateWhenTr(){
     e_logo_eng.addEventListener("click", LanguageChangeEng, true);
 }
 
+function DropdownDeactivateWhenTr(){
+    e_logo_eng.style.visibility="hidden";
+    e_logo_eng.style.opacity="0%";
+
+    e_lang_dropdown.style.height="0vmin";
+    e_lang_dropdown.style.visibility="hidden";
+    e_lang_dropdown.style.opacity="0%";
+    
+    e_logo_eng.removeEventListener("click", LanguageChangeEng, true);
+    e_logos_lang.removeEventListener("mouseleave", DropdownLeftWhenTr, true);
+}
+
 function DropdownLeftWhenTr(event){
     
     // if leaving dropdown menu. (If the element we leave to isn't contained in the dropdown menu.)
@@ -59,6 +87,8 @@ function DropdownLeftWhenTr(event){
         DropdownDeactivateWhenTr();
     }
 }
+
+
 
 
 
@@ -88,6 +118,7 @@ function LanguageChangeEng(){
 
 }
 
+
 function LanguageChangeTr(){
     DropdownDeactivateWhenEng();
     e_logo_eng.removeEventListener("click", DropdownActivateWhenEng, true);
@@ -110,27 +141,3 @@ function LanguageChangeTr(){
 }
 
 
-
-function DropdownDeactivateWhenEng(){
-    e_logo_tr.style.visibility="hidden";
-    e_logo_tr.style.opacity="0%";
-
-    e_lang_dropdown.style.height="0vmin";
-    e_lang_dropdown.style.visibility="hidden";
-    e_lang_dropdown.style.opacity="0%";
-    
-    e_logo_tr.removeEventListener("click", LanguageChangeTr, true);
-    e_logos_lang.removeEventListener("mouseleave", DropdownLeftWhenEng, true);
-}
-
-function DropdownDeactivateWhenTr(){
-    e_logo_eng.style.visibility="hidden";
-    e_logo_eng.style.opacity="0%";
-
-    e_lang_dropdown.style.height="0vmin";
-    e_lang_dropdown.style.visibility="hidden";
-    e_lang_dropdown.style.opacity="0%";
-    
-    e_logo_eng.removeEventListener("click", LanguageChangeEng, true);
-    e_logos_lang.removeEventListener("mouseleave", DropdownLeftWhenTr, true);
-}
