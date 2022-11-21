@@ -240,7 +240,7 @@ function PageRedirect(page_index){
     e_sweeper_neon.style.backgroundColor = colors[page_index];//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin "+colors[page_index];
     e_sweeper_wrapper.style.left="-0.75vmin";                 //Sweep to left
-    e_sweeper_secondary.style.left="-100vw";
+    e_sweeper_secondary.style.left="calc(-100vw - 5.75vmin)";
     e_logo_S.id= S_ids[page_index];
 
     //Order the navbar menu items.

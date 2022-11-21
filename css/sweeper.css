@@ -43,12 +43,12 @@
 }
 
 #sweeper_secondary{         /*For redirecting pages*/
-    width: 100vw;
+    width: calc(100vw + 0.75vmin);
     height: calc(100vh - 8.75vmin);
 
     position: absolute;
     top: 8.75vmin;
-    left: -100vw;
+    left: calc(-100vw - 5.75vmin);
 
     display: none;
 
