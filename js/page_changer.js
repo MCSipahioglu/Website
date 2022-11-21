@@ -53,11 +53,11 @@ S_ids=["logo_S_red",
 
 //MAIN
 //Elements for getting onclick interrupt                    //Add new element with its interrupt here.
-const e_roboticist=document.getElementById("swatch_roboticist").onclick = function() {PageChange(0)};
-const e_botsmith=document.getElementById("swatch_botsmith").onclick     = function() {PageChange(1)};
-const e_inventor=document.getElementById("swatch_inventor").onclick     = function() {PageChange(2)};
-const e_writer=document.getElementById("swatch_writer").onclick         = function() {PageChange(3)};
-const e_traveller=document.getElementById("swatch_traveller").onclick   = function() {PageChange(4)};
+document.getElementById("swatch_roboticist").onclick = function() {PageChange(0)};
+document.getElementById("swatch_botsmith").onclick     = function() {PageChange(1)};
+document.getElementById("swatch_inventor").onclick     = function() {PageChange(2)};
+document.getElementById("swatch_writer").onclick         = function() {PageChange(3)};
+document.getElementById("swatch_traveller").onclick   = function() {PageChange(4)};
 
 
 
