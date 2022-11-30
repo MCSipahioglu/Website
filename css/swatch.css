@@ -48,10 +48,10 @@
                     0 0 300px var(--swatch_purple);
 }
 
-#swatch_inventor{
+#swatch_designer{
     transform:rotate(calc(var(--swatch_angle_step) * 2));
 }
-#swatch_inventor:hover {
+#swatch_designer:hover {
     color: var(--swatch_orange);
     text-shadow:    0 0 50px var(--swatch_orange),
                     0 0 100px var(--swatch_orange),

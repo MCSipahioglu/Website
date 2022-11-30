@@ -27,6 +27,77 @@
         left: 0vmin;
     }
 
+    .projects{
+        width: 100vw;
+    
+        position: relative;
+    
+        display: grid;
+        grid-row: auto;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .project_container{
+        width: 60vmin;
+        height: 60vmin;
+
+        margin: 10vmin;
+    
+        border-radius: 1vmin;
+    
+    }
+    
+    .project_container_roboticist{
+        background-color: var(--swatch_red);
+        box-shadow: 0 0 10vmin var(--swatch_red);
+    }
+    
+    .project_container_botsmith{
+        background-color: var(--swatch_purple);
+        box-shadow: 0 0 10vmin var(--swatch_purple);
+    }
+    
+    .project_container_designer{
+        background-color: var(--swatch_orange);
+        box-shadow: 0 0 10vmin var(--swatch_orange);
+    }
+
+    .project_logo{
+        width: 10vmin;
+        height: 10vmin;
+        
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    
+    
+        padding-top: 2vmin;
+    }
+    
+    .project_intro{             /*3 Lines are allowed*/
+        padding-top: 1vmin;
+        padding-bottom: 1vmin;
+    
+        font-size: 2vmin;
+        font-weight: 400;
+        text-align: justify;
+    }
+    
+    .project_expand{
+        padding-top: 1vh;
+    
+        font-size: 2vmin;
+        font-weight: 400;
+        text-align: center;
+    
+    
+        border-top-style: solid;
+        border-top-width: 0.5vmin;
+        border-color: white;
+    }
+
+
     @media (orientation:portrait) {
         .page_content{
             height: calc(100vh - 2 * 10.75vmin);
@@ -34,6 +105,11 @@
 
         
     }
+
+
+
+
+
 
     @media (orientation:landscape) {
         .page_content{
@@ -72,17 +148,14 @@
     width: 100vw;
     height: calc(100vh - 10.75vmin);
 
-    scroll-behavior: smooth;
-
-    padding-top: 10vmin;
+    overflow: scroll;
 
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-column-gap: 10vmin;
-    grid-row-gap: 10vmin;
 
 }
+
 
 #mobile_menu{
     width: 100vw;
@@ -95,11 +168,15 @@
     border-top-style: solid;
     border-top-width: 0.75vmin;
     border-top-color: white;
+
+    background-color: aliceblue;
 }
 
 .mobile_landing_element{
-    width: 40vmin;
-    height: 40vmin;
+    width: 60vmin;
+    height: 60vmin;
+
+    margin: 10vmin;
 
     border-radius: 1vmin;
 }
@@ -116,7 +193,7 @@
     box-shadow: 0 0 10vmin var(--swatch_purple);
 }
 
-#mobile_inventor{
+#mobile_designer{
     background-color: var(--swatch_orange);
     box-shadow: 0 0 10vmin var(--swatch_orange);
 }

@@ -4,11 +4,11 @@ const e_logo_return=document.getElementById("logo_return");
 const e_page_cv=document.getElementById("page_cv");
 
 
-e_logo_cv.addEventListener("click", CvActivate, true);
-e_logo_return.addEventListener("click", CvDeactivate, true);
+e_logo_cv.addEventListener("click", CVActivate, true);
+e_logo_return.addEventListener("click", CVDeactivate, true);
 
 
-function CvActivate(){
+function CVActivate(){
     e_page_cv.style.top="8vmin";
 
     e_logo_cv.style.visibility="hidden";
@@ -19,7 +19,7 @@ function CvActivate(){
 }
 
 
-function CvDeactivate(){
+function CVDeactivate(){
     e_page_cv.style.top="100vh";
 
     e_logo_return.style.visibility="hidden";

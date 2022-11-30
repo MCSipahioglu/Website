@@ -25,7 +25,7 @@ var navmen_index=0;
 const e_n=[
     document.getElementById("navbar_menu_roboticist"),
     document.getElementById("navbar_menu_botsmith"),
-    document.getElementById("navbar_menu_inventor"),
+    document.getElementById("navbar_menu_designer"),
     document.getElementById("navbar_menu_writer"),
     document.getElementById("navbar_menu_traveller")];      //Append the new element here.
 
@@ -33,7 +33,7 @@ const e_n=[
 const e_p=[
     document.getElementById("page_roboticist"),
     document.getElementById("page_botsmith"),
-    document.getElementById("page_inventor"),
+    document.getElementById("page_designer"),
     document.getElementById("page_writer"),
     document.getElementById("page_traveller")];             //Append the new element here.
 
@@ -54,48 +54,19 @@ S_ids=["logo_S_red",
 //MAIN
 //Elements for getting onclick interrupt                    //Add new element with its interrupt here.
 document.getElementById("swatch_roboticist").onclick = function() {PageChange(0)};
-document.getElementById("swatch_botsmith").onclick     = function() {PageChange(1)};
-document.getElementById("swatch_inventor").onclick     = function() {PageChange(2)};
-document.getElementById("swatch_writer").onclick         = function() {PageChange(3)};
-document.getElementById("swatch_traveller").onclick   = function() {PageChange(4)};
+document.getElementById("swatch_botsmith").onclick   = function() {PageChange(1)};
+document.getElementById("swatch_designer").onclick   = function() {PageChange(2)};
+document.getElementById("swatch_writer").onclick     = function() {PageChange(3)};
+document.getElementById("swatch_traveller").onclick  = function() {PageChange(4)};
 
 
 
 
 
 //--------------------------------------FUNCTIONS--------------------------------------
-//Landing (De)Activate
-function ActivateLanding(){
-    e_landing_header_name.style.display="inline";             //Deactivate landing page
-    e_landing_header_surname.style.display="inline";
-    e_landing_swatch_wrapper.style.display="inline";
-    document.addEventListener("wheel", RotateSwatch, true);
-}
-
-function DeactivateLanding(){
-    e_landing_header_name.style.display="none";             //Deactivate landing page
-    e_landing_header_surname.style.display="none";
-    e_landing_swatch_wrapper.style.display="none";
-    document.removeEventListener("wheel", RotateSwatch, true);
-}
-
-//Navbar (De)Activate
-function ActivateNavbar(){
-    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn via opacity to not mess up the flex display composition
-    setTimeout(() => {  e_navbar_menu.style.visibility="visible"; e_navbar_menu.style.opacity="100%"; }, 1750);     //Can't animate in from display none, instead animate in from visibility+opacity
-    e_sweeper_secondary.style.display="inline";     //Also spawn in the secondary sweeper.
-}
-
-function DeactivateNavbar(){
-    e_sweeper_secondary.style.display="none";     //Despawn the secondary sweeper.
-    e_navbar_name.style.opacity="0%";
-    e_navbar_menu.style.visibility="hidden";
-    e_navbar_menu.style.opacity="0%";
-}
-
 //First Loading of a Page
 function PageChange(page_index){
-    DeactivateLanding();
+    LandingDeactivate();
 
     e_sweeper_neon.style.backgroundColor=colors[page_index];//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin "+colors[page_index];
@@ -104,15 +75,34 @@ function PageChange(page_index){
     e_logo_S.id= S_ids[page_index];
 
     //Order the navbar menu items.
-    NavbarOrder(page_index);
-    ActivateNavbar();
+    NavbarMenuOrder(page_index);
+    NavbarMenuActivate();
     navmen_og_index=page_index;
     navmen_index=page_index;
     setTimeout(() => {  PageActivate(page_index); }, 2500);
 }
 
+
+
+//Landing (De)Activate
+function LandingActivate(){
+    e_landing_header_name.style.display="inline";            //Activate landing page
+    e_landing_header_surname.style.display="inline";
+    e_landing_swatch_wrapper.style.display="block";
+    document.addEventListener("wheel", SwatchRotate, true);
+}
+
+function LandingDeactivate(){
+    e_landing_header_name.style.display="none";             //Deactivate landing page
+    e_landing_header_surname.style.display="none";
+    e_landing_swatch_wrapper.style.display="none";
+    document.removeEventListener("wheel", SwatchRotate, true);
+}
+
+
+
 //Navbar Order Set
-function NavbarOrder(page_index){
+function NavbarMenuOrder(page_index){
     
     e_n[(page_index+3)%page_count].style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
     e_n[(page_index+4)%page_count].style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
@@ -132,11 +122,11 @@ function NavbarOrder(page_index){
     e_n[(page_index+3)%page_count].style.opacity="0%";
     e_n[(page_index+4)%page_count].style.opacity="30%";
 
-    e_n[(page_index)%page_count].style.display="inline";
-    e_n[(page_index+1)%page_count].style.display="inline";
+    e_n[(page_index)%page_count].style.display="block";
+    e_n[(page_index+1)%page_count].style.display="block";
     e_n[(page_index+2)%page_count].style.display="none";
     e_n[(page_index+3)%page_count].style.display="none";
-    e_n[(page_index+4)%page_count].style.display="inline";
+    e_n[(page_index+4)%page_count].style.display="block";
 
     e_n[(page_index)%page_count].style.color=colors[page_index];
     e_n[(page_index+1)%page_count].style.color="rgb(255,255,255)";
@@ -150,6 +140,24 @@ function NavbarOrder(page_index){
     e_n[(page_index+3)%page_count].style.textShadow="none";
     e_n[(page_index+4)%page_count].style.textShadow="none";
 }
+
+
+
+//Navbar (De)Activate
+function NavbarMenuActivate(){
+    setTimeout(() => {  e_navbar_wrapper.style.justifyContent="space-between"; e_navbar_name.style.opacity="100%"; }, 1000);//Spawn via opacity to not mess up the flex display composition
+    setTimeout(() => {  e_navbar_menu.style.visibility="visible"; e_navbar_menu.style.opacity="100%"; }, 1750);     //Can't animate in from display none, instead animate in from visibility+opacity
+    e_sweeper_secondary.style.display="block";     //Also spawn in the secondary sweeper.
+}
+
+function NavbarMenuDeactivate(){
+    e_sweeper_secondary.style.display="none";     //Despawn the secondary sweeper.
+    e_navbar_name.style.opacity="0%";             //Despawn navbar
+    e_navbar_menu.style.visibility="hidden";
+    e_navbar_menu.style.opacity="0%";
+}
+
+
 
 //Activate Main Page
 function PageActivate(page_index){
@@ -168,9 +176,11 @@ document.addEventListener('mousemove', e => {
     }else{
         document.removeEventListener("wheel", NavbarMenuScroll, true);    //When leaving navbar_menu area, stop listening for events and revert to original condition.
         document.removeEventListener("click", NavbarMenuRedirect, true);
-        NavbarOrder(navmen_og_index);
+        NavbarMenuOrder(navmen_og_index);
     }
   }, {passive: true})
+
+
 
 //Scrolling Function
 function NavbarMenuScroll(event){
@@ -183,39 +193,28 @@ function NavbarMenuScroll(event){
         navmen_index=((navmen_index-1)%page_count+page_count)%page_count;     //Weird modulo so that negative numbers become positive as well.
     }
 
-    NavbarOrder(navmen_index);
+    NavbarMenuOrder(navmen_index);
 }
 
 //Redirecting Between Two Main Pages
 function NavbarMenuRedirect(){
-    DeactivateAll();                    //Deactivate active project or CV pages.
+    AllDeactivate();                    //Deactivate active project or CV pages.
     e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation. (Right Sweep)
     e_sweeper_secondary.style.left="0vw";
 
     setTimeout(() => {  PageDeactivateExcept(navmen_index); PageRedirect(navmen_index); }, 1000);
-    /*
-    if(navmen_index==0){
-        setTimeout(() => {  PageDeactivateExcept(navmen_index); PageRedirect(navmen_index); }, 1000);
-    }else if(navmen_index==1){
-        setTimeout(() => {  PageDeactivateExceptBotsmith(); PageRedirectBotsmith(); }, 1000);
-    }else if(navmen_index==2){
-        setTimeout(() => {  PageDeactivateExceptInventor(); PageRedirectInventor(); }, 1000);
-    }else if(navmen_index==3){
-        setTimeout(() => {  PageDeactivateExceptWriter(); PageRedirectWriter(); }, 1000); 
-    }else if(navmen_index==4){
-        setTimeout(() => {  PageDeactivateExceptTraveller(); PageRedirectTraveller(); }, 1000);
-    }
-    */
 }
 
 //Close Any Open Projects or the CV
-function DeactivateAll(){
+function AllDeactivate(){
     //Deactivate CV.
-    CvDeactivate();
+    CVDeactivate();
 
-    //Deactivate Open Projects. (Must check if the function name is valid since when no projects open we don't have a corresponding function)
-    var DeactivateAProject = window["Deactivate"+activeproject];
-    if (typeof DeactivateAProject === "function") DeactivateAProject.apply(null,);
+    //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
+    if(active_project_index != -1){
+        Deactivate(active_page_index, active_project_index);
+    }
+    
 }
 
 //Deactivate Pages Except Page[page_index]
@@ -244,7 +243,7 @@ function PageRedirect(page_index){
     e_logo_S.id= S_ids[page_index];
 
     //Order the navbar menu items.
-    NavbarOrder(page_index);
+    NavbarMenuOrder(page_index);
     navmen_og_index=page_index;
     navmen_index=page_index;
 
@@ -263,8 +262,8 @@ function PageRedirect(page_index){
 //Return to Landing Interrupt via S Logo
 function ReturnToLanding(){
     //Deactivate All Pages
-    DeactivateAll();                    //Deactivate active project or CV pages.
-    DeactivateNavbar();
+    AllDeactivate();                    //Deactivate active project or CV pages.
+    NavbarMenuDeactivate();
     PageDeactivateExceptLanding();
 
     //Reset Swatch
@@ -282,7 +281,7 @@ function ReturnToLanding(){
     }, 995);
 
     //Activate Landing
-    ActivateLanding();
+    LandingActivate();
 }
 
 //Deactivate All Pages
