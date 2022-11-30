@@ -3,13 +3,14 @@ const e_logo_email_copypaste=document.getElementById("logo_email_copypaste");
 const e_email_wrapper=document.getElementById("email_wrapper");
 const e_email=document.getElementById("email");
 
+const email="mcsipahioglu@gmail.com"
 
 e_logo_email.onclick = function() {EmailActivate()};
 
 
 
 function EmailActivate(){
-    e_email_wrapper.style.left="calc(100vw - 38vmin)";
+    e_email_wrapper.style.left="calc(100vw - 28vmin)";
     e_logo_email_copypaste.addEventListener("click", EmailCopy, true);
 
     setTimeout(() => {  
@@ -25,7 +26,7 @@ function EmailActivate(){
 
 function EmailCopy() {
     /* Copy text into clipboard */
-    navigator.clipboard.writeText("mustafacagataysipahioglu@gmail.com");
+    navigator.clipboard.writeText(email);
     e_email.innerHTML="Email copied to clipboard.";
 }
 
@@ -49,7 +50,7 @@ function EmailExitCheckOutside(Event){
 
 function EmailDeactivate(){
     e_email_wrapper.style.left="100vw";
-    setTimeout(() => {  e_email.innerHTML="mustafacagataysipahioglu@gmail.com"; }, 500);
+    setTimeout(() => {  e_email.innerHTML=email; }, 500);
     
 
     e_logo_email_copypaste.removeEventListener("click", EmailCopy, true);

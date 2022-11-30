@@ -1,0 +1,132 @@
+#desktop_assets_wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+
+#mobile_assets_wrapper{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/*@media screen and (max-width:768px) {
+
+
+}*/
+
+@media screen and (max-width:1023px) {
+    #desktop_assets_wrapper{
+        display: none;
+    }
+
+    .page_content{
+        width: 100vw;
+
+        position: absolute;
+        top: 10.75vmin;
+        left: 0vmin;
+    }
+
+    @media (orientation:portrait) {
+        .page_content{
+            height: calc(100vh - 2 * 10.75vmin);
+        }
+
+        
+    }
+
+    @media (orientation:landscape) {
+        .page_content{
+            height: calc(100vh - 10.75vmin);
+        }
+
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    #mobile_assets_wrapper{
+        display: none;
+    }
+    
+}
+
+
+
+#mobile_header{
+    width: 100vw;
+    height: 8vmin;
+
+    padding-top: 2vmin;
+
+    text-align: center;
+    font-size: 8vmin;
+    font-weight: 550;
+
+    border-bottom-style: solid;
+    border-bottom-width: 0.75vmin;
+    border-bottom-color: white;
+}
+
+#mobile_landing{
+    width: 100vw;
+    height: calc(100vh - 10.75vmin);
+
+    scroll-behavior: smooth;
+
+    padding-top: 10vmin;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 10vmin;
+    grid-row-gap: 10vmin;
+
+}
+
+#mobile_menu{
+    width: 100vw;
+    height: 10vmin;
+
+    position: absolute;
+    bottom: -10.75vmin;
+    left: 0vmin;
+
+    border-top-style: solid;
+    border-top-width: 0.75vmin;
+    border-top-color: white;
+}
+
+.mobile_landing_element{
+    width: 40vmin;
+    height: 40vmin;
+
+    border-radius: 1vmin;
+}
+
+
+
+#mobile_roboticist{
+    background-color: var(--swatch_red);
+    box-shadow: 0 0 10vmin var(--swatch_red);
+}
+
+#mobile_botsmith{
+    background-color: var(--swatch_purple);
+    box-shadow: 0 0 10vmin var(--swatch_purple);
+}
+
+#mobile_inventor{
+    background-color: var(--swatch_orange);
+    box-shadow: 0 0 10vmin var(--swatch_orange);
+}
+
+#mobile_writer{
+    background-color: var(--swatch_turqoise);
+    box-shadow: 0 0 10vmin var(--swatch_turqoise);
+}
+
+#mobile_traveller{
+    background-color: var(--swatch_green);
+    box-shadow: 0 0 10vmin var(--swatch_green);
+}

@@ -3,6 +3,7 @@
 /*Library
 Animation:          https://www.youtube.com/watch?v=YszONjKpgg4&ab_channel=WebDevSimplified
 Sweep Animation:    https://www.youtube.com/watch?v=W9XEARppU8s&t=213s&ab_channel=OnlineTutorials
+Responsiveness:     https://youtu.be/ZYV6dYtz4HA
 Google Analytics:   https://www.youtube.com/watch?v=K9ExoBi7AXw&ab_channel=DMSAnalytics
 
 
@@ -122,41 +123,7 @@ button {
 }
 
 
-@media screen and (max-width:768px) {
-    #desktop{
-       display: none; 
-    }
-    #tablet{
-        display: none; 
-     }
-     #mobile{
-        display: inline; 
-     }
-}
 
-@media screen and (min-width: 769px) and (max-width:1023px) {
-    #desktop{
-       display: none; 
-    }
-    #tablet{
-        display: inline; 
-     }
-     #mobile{
-        display: none; 
-     }
-}
-
-@media screen and (min-width:1024px) {
-    #desktop{
-       display: inline; 
-    }
-    #tablet{
-        display: none; 
-     }
-     #mobile{
-        display: none; 
-     }
-}
 
 
 

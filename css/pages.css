@@ -1,7 +1,7 @@
 /*PAGES*/
 
 /* MAIN PAGES */
-#page_roboticist, #page_botsmith, #page_inventor, #page_writer, #page_traveller{
+.page_content{
     width: calc(100vw - 6vmin);
     height: calc(100vh - 8.75vmin);
 
