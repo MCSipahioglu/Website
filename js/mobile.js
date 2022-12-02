@@ -33,8 +33,8 @@ document.getElementById("mobile_traveller").onclick  = function() {PageChangeMob
 function PageChangeMobile(page_index){
     MobileLandingDeactivate();
 
-    //Order the navbar menu items.
-    //MobileMenuOrder(page_index);
+    //Order the mobile menu items.
+    MobileMenuOrder(page_index);
     MobileMenuActivate();
     PageActivate(page_index);
 }
@@ -55,17 +55,29 @@ function MobileLandingDeactivate(){
 //Mobile Menu Order Set
 function MobileMenuOrder(page_index){
     
-    e_mn[(page_index+3)%page_count].style.transform= "translateY(calc("+ -1.78 +"*var(--navmen_y_step)))";
-    e_mn[(page_index+4)%page_count].style.transform= "translateY(calc("+ -0.78 +"*var(--navmen_y_step)))";
-    e_mn[(page_index)%page_count].style.transform= "translateY(calc("+ 0 +"*var(--navmen_y_step)))";
-    e_mn[(page_index+1)%page_count].style.transform= "translateY(calc("+ 1 +"*var(--navmen_y_step)))";
-    e_mn[(page_index+2)%page_count].style.transform= "translateY(calc("+ 2 +"*var(--navmen_y_step)))";
+    e_mn[(page_index+3)%page_count].style.transform= "translateX(calc("+ -2.04 +"*var(--mobmen_x_step)))";
+    e_mn[(page_index+4)%page_count].style.transform= "translateX(calc("+ -1.02 +"*var(--mobmen_x_step)))";
+    e_mn[(page_index)%page_count].style.transform= "translateX(calc("+ -0 +"*var(--mobmen_x_step)))";
+    e_mn[(page_index+1)%page_count].style.transform= "translateX(calc("+ +1 +"*var(--mobmen_x_step)))";
+    e_mn[(page_index+2)%page_count].style.transform= "translateX(calc("+ +2 +"*var(--mobmen_x_step)))";
 
-    e_mn[(page_index)%page_count].style.fontSize="4.5vmin";
-    e_mn[(page_index+1)%page_count].style.fontSize="3vmin";
-    e_mn[(page_index+2)%page_count].style.fontSize="3vmin";
-    e_mn[(page_index+3)%page_count].style.fontSize="3vmin";
-    e_mn[(page_index+4)%page_count].style.fontSize="3vmin";
+    e_mn[(page_index+3)%page_count].style.textAlign= "right";
+    e_mn[(page_index+4)%page_count].style.textAlign= "right";
+    e_mn[(page_index)%page_count].style.textAlign= "center";
+    e_mn[(page_index+1)%page_count].style.textAlign= "left";
+    e_mn[(page_index+2)%page_count].style.textAlign= "left";
+
+    e_mn[(page_index)%page_count].style.fontSize="8vmin";
+    e_mn[(page_index+1)%page_count].style.fontSize="6vmin";
+    e_mn[(page_index+2)%page_count].style.fontSize="6vmin";
+    e_mn[(page_index+3)%page_count].style.fontSize="6vmin";
+    e_mn[(page_index+4)%page_count].style.fontSize="6vmin";
+    
+    e_mn[(page_index)%page_count].style.paddingTop="0vmin";
+    e_mn[(page_index+1)%page_count].style.paddingTop="1vmin";
+    e_mn[(page_index+2)%page_count].style.paddingTop="1vmin";
+    e_mn[(page_index+3)%page_count].style.paddingTop="1vmin";
+    e_mn[(page_index+4)%page_count].style.paddingTop="1vmin";
 
     e_mn[(page_index)%page_count].style.opacity="100%";
     e_mn[(page_index+1)%page_count].style.opacity="30%";
@@ -114,6 +126,16 @@ function PageActivateMobile(page_index){
     e_p[page_index].style.visibility="visible";
     e_p[page_index].style.opacity="100%";
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

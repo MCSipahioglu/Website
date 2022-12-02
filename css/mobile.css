@@ -18,24 +18,39 @@
     #desktop_assets_wrapper{
         display: none;
     }
-
+    html{
+        overflow: hidden;
+    }
+    body{
+        overflow: hidden;
+    }
     .page_content{
         width: 100vw;
-
+        height: calc(100vh - 2 * 10.75vmin);
+    
         position: absolute;
         top: 10.75vmin;
         left: 0vmin;
+    
+        visibility: hidden;
+        transition: 0s;
     }
 
     .projects{
         width: 100vw;
-    
         position: relative;
-    
+        top: 0vmin;
+        left: 0vmin;
+
         display: grid;
-        grid-row: auto;
+        grid-template-columns: 1fr;
         justify-items: center;
         align-items: center;
+        grid-column-gap: 0vmin;
+        grid-row-gap: 0vmin;
+    
+        overflow: hidden;
+
     }
 
     .project_container{
@@ -64,8 +79,8 @@
     }
 
     .project_logo{
-        width: 10vmin;
-        height: 10vmin;
+        width: 20vmin;
+        height: 20vmin;
         
         display: block;
         margin-right: auto;
@@ -75,11 +90,15 @@
         padding-top: 2vmin;
     }
     
+    h1{
+        font-size: 8vmin;
+    }
+
     .project_intro{             /*3 Lines are allowed*/
         padding-top: 1vmin;
         padding-bottom: 1vmin;
     
-        font-size: 2vmin;
+        font-size: 4vmin;
         font-weight: 400;
         text-align: justify;
     }
@@ -87,7 +106,7 @@
     .project_expand{
         padding-top: 1vh;
     
-        font-size: 2vmin;
+        font-size: 4vmin;
         font-weight: 400;
         text-align: center;
     
@@ -96,6 +115,72 @@
         border-top-width: 0.5vmin;
         border-color: white;
     }
+
+    /*Secondary Project Page*/
+    .project_page{
+        width: 100vw;
+
+        position: absolute;
+        top: 0vmin;
+        left: 0vmin;
+
+        height: 0vmin;
+        opacity: 0%;
+
+        transition: 0.4s;
+        z-index: 3;
+
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        scrollbar-width: none; /* for Firefox */
+        overflow-y: scroll;
+    }
+
+    .project_page::-webkit-scrollbar{
+        display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .project_page_return_button{
+        width: 10vmin;
+        height: 10vmin;
+
+        position: relative;
+        top: 1vmin;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image_project_return{
+        width: 7vmin;
+        height: 7vmin;
+
+        padding: 0.6vmin;
+
+        border-width: 1vmin;      /* Gerekirse yeniden hovera alınabilir*/
+        border-radius: 8.2vmin;
+        border-style: solid;
+        cursor: pointer;
+    }
+
+    .project_content{
+        width: 100vw;
+
+        position: absolute;
+        margin-left: 0vmin;
+        
+        font-size: 4vmin;
+        font-weight: 400;
+        text-align: justify;
+
+        height: 0vmin;
+        opacity: 0%;
+        visibility: hidden;
+
+        transition: 0.4s;
+    }
+
+
 
 
     @media (orientation:portrait) {
@@ -111,6 +196,9 @@
 
 
 
+
+
+
     @media (orientation:landscape) {
         .page_content{
             height: calc(100vh - 10.75vmin);
@@ -119,6 +207,11 @@
 
     }
 }
+
+
+
+
+
 
 @media screen and (min-width:1024px) {
     #mobile_assets_wrapper{
@@ -157,21 +250,6 @@
 }
 
 
-#mobile_menu{
-    width: 100vw;
-    height: 10vmin;
-
-    position: absolute;
-    bottom: -10.75vmin;
-    left: 0vmin;
-
-    border-top-style: solid;
-    border-top-width: 0.75vmin;
-    border-top-color: white;
-
-    background-color: aliceblue;
-}
-
 .mobile_landing_element{
     width: 60vmin;
     height: 60vmin;
@@ -206,4 +284,68 @@
 #mobile_traveller{
     background-color: var(--swatch_green);
     box-shadow: 0 0 10vmin var(--swatch_green);
+}
+
+
+
+
+
+
+#mobile_menu{
+    width: 100vw;
+    height: 8vmin;
+
+    padding-top: 2vmin;
+
+    position: absolute;
+    top: calc(100vh - 10vmin);
+    left: 0vmin;
+
+    border-top-style: solid;
+    border-top-width: 0.75vmin;
+    border-top-color: white;
+
+    background-color: var(--bg_black);
+
+    display: none;
+    overflow: hidden;
+
+}
+
+.mobile_menu_element{
+    width: 50vw;
+    height: 8vmin;
+
+    margin-left: 25vw;
+
+    position: absolute;
+    
+    color: white;
+    text-align: center;
+    font-size: 8vmin;
+    font-weight: 550;
+
+
+
+}
+
+
+#mobile_menu_roboticist{
+
+}
+
+#mobile_menu_botsmith{
+
+}
+
+#mobile_menu_designer{
+
+}
+
+#mobile_menu_writer{
+
+}
+
+#mobile_menu_traveller{
+
 }
