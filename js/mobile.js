@@ -28,7 +28,7 @@ document.getElementById("mobile_traveller").onclick  = function() {PageChangeMob
 
 
 
-//--------------------------------------FUNCTIONS--------------------------------------
+//---------------------------------DIRECTING FUNCTIONS---------------------------------
 //First Loading of a Page
 function PageChangeMobile(page_index){
     MobileLandingDeactivate();
@@ -38,8 +38,6 @@ function PageChangeMobile(page_index){
     MobileMenuActivate();
     PageActivate(page_index);
 }
-
-//--------------------------------------FUNCTIONS--------------------------------------
 
 //Mobile Landing (De)Activate
 function MobileLandingActivate(){
@@ -106,8 +104,6 @@ function MobileMenuOrder(page_index){
 
 
 
-
-
 //Mobile Menu (De)Activate
 function MobileMenuActivate(){
     e_mmenu.style.display="block";
@@ -121,34 +117,16 @@ function MobileMenuDeactivate(){
 
 
 
-//Activate Main Page
-function PageActivateMobile(page_index){
-    e_p[page_index].style.visibility="visible";
-    e_p[page_index].style.opacity="100%";
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//--------------------------------REDIRECTING FUNCTIONS--------------------------------
 //Redirecting Between Two Main Pages
-function MobileMenuRedirect(){
-    AllDeactivateMobile(active_page_index, active_project_index)
-    PageDeactivateExcept(navmen_index);
-    PageRedirectMobile(navmen_index);
+function MobileMenuRedirect(page_index){
+    AllDeactivateMobile();
+    PageDeactivateExcept(page_index);
+    PageRedirectMobile(page_index);
 }
 
 
-function AllDeactivateMobile(active_page_index, active_project_index){
+function AllDeactivateMobile(){
     //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
     if(active_project_index != -1){
         Deactivate(active_page_index, active_project_index);
@@ -160,6 +138,12 @@ function PageRedirectMobile(page_index){
 
     //Order the mobile menu items.
     MobileMenuOrder(page_index);
+
+    e_p[(page_index+1)%page_count].style.transition="opacity 0.4s";
+    e_p[(page_index+2)%page_count].style.transition="opacity 0.4s";
+    e_p[(page_index+3)%page_count].style.transition="opacity 0.4s";
+    e_p[(page_index+4)%page_count].style.transition="opacity 0.4s";
+
     PageActivate(page_index);
 }
 
@@ -168,7 +152,7 @@ function PageRedirectMobile(page_index){
 //Return to Landing Interrupt via S Logo
 function ReturnToLandingMobile(){
     //Deactivate All Pages
-    //AllDeactivateMobile();                    //Deactivate active project or CV pages.
+    AllDeactivateMobile();                    //Deactivate active project or CV pages.
     MobileMenuDeactivate();
     PageDeactivateExceptLanding();
 

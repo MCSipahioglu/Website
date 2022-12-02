@@ -18,7 +18,7 @@ const e_navbar_name=document.getElementById("navbar_name");
 
 var navmen_og_index=0;  //Original page condition at navmen.
 var navmen_index=0;
-
+var i;  //Misc counter
 
 //--------------------------------------VARIABLES--------------------------------------
 //Elements to activate and scroll through
@@ -63,7 +63,7 @@ document.getElementById("swatch_traveller").onclick  = function() {PageChange(4)
 
 
 
-//--------------------------------------FUNCTIONS--------------------------------------
+//---------------------------------DIRECTING FUNCTIONS---------------------------------
 //First Loading of a Page
 function PageChange(page_index){
     LandingDeactivate();
@@ -168,6 +168,9 @@ function PageActivate(page_index){
 
 
 
+
+
+//--------------------------------REDIRECTING FUNCTIONS--------------------------------
 //Hover+Wheel interrupt to use the navbar menu
 document.addEventListener('mousemove', e => {
     if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu_") ){ //When on the navbar_menu elements:
@@ -288,16 +291,10 @@ function ReturnToLanding(){
 function PageDeactivateExceptLanding(){
     e_logo_S.style.pointerEvents="none";
 
-    e_p[0].style.visibility="hidden";
-    e_p[0].style.opacity="0%";
-    e_p[1].style.visibility="hidden";
-    e_p[1].style.opacity="0%";
-    e_p[2].style.visibility="hidden";
-    e_p[2].style.opacity="0%";
-    e_p[3].style.visibility="hidden";
-    e_p[3].style.opacity="0%";
-    e_p[4].style.visibility="hidden";
-    e_p[4].style.opacity="0%";
+    for(i=1;i<e_p.length;i++){
+        e_p[i].style.visibility="hidden";
+        e_p[i].style.opacity="0%";
+    }
 }
 
 

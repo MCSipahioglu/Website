@@ -6,10 +6,7 @@
     position: absolute;
     bottom: 0.75vmin;
     right: 0.75vmin;
-
-    background-size: 4.9vmin;
-    background-repeat: no-repeat;
-
+    
     z-index: 10;
     transition: 0.2s;
 
@@ -17,27 +14,27 @@
 }
 
 #logo_S{
-    background: url(../assets/logo_white.svg);
+    background: url(../assets/logo_white.svg) no-repeat;
 }
 
 #logo_S_red{
-    background: url(../assets/logo_red.svg);
+    background: url(../assets/logo_red.svg) no-repeat;
 }
 
 #logo_S_purple{
-    background: url(../assets/logo_purple.svg);
+    background: url(../assets/logo_purple.svg) no-repeat;
 }
 
 #logo_S_orange{
-    background: url(../assets/logo_orange.svg);
+    background: url(../assets/logo_orange.svg) no-repeat;
 }
 
 #logo_S_turqoise{
-    background: url(../assets/logo_turqoise.svg);
+    background: url(../assets/logo_turqoise.svg) no-repeat;
 }
 
 #logo_S_green{
-    background: url(../assets/logo_green.svg);
+    background: url(../assets/logo_green.svg) no-repeat;
 }
 
 /* Add with background and add into common format above*/
