@@ -144,9 +144,9 @@ function PageRedirectMobile(page_index){
 
 
 //Return to Landing Interrupt via S Logo
-function ReturnToLanding(){
+function ReturnToLandingMobile(){
     //Deactivate All Pages
-    AllDeactivateMobile();                    //Deactivate active project or CV pages.
+    //AllDeactivateMobile();                    //Deactivate active project or CV pages.
     MobileMenuDeactivate();
     PageDeactivateExceptLanding();
 

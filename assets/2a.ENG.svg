@@ -4,66 +4,40 @@
 	 viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
 <style type="text/css">
 	.st0{clip-path:url(#SVGID_2_);}
-	.st1{clip-path:url(#SVGID_4_);stroke:#FFFFFF;stroke-width:60;}
-	.st2{clip-path:url(#SVGID_6_);stroke:#000000;stroke-width:40;}
-	.st3{clip-path:url(#SVGID_8_);}
-	.st4{clip-path:url(#SVGID_10_);stroke:#FFFFFF;stroke-width:100;}
-	.st5{clip-path:url(#SVGID_12_);fill:none;stroke:#000000;stroke-width:60;}
+	.st1{fill:#FFFFFF;}
 </style>
 <g>
-	<g>
-		<defs>
-			<circle id="SVGID_1_" cx="150" cy="150" r="150"/>
-		</defs>
-		<clipPath id="SVGID_2_">
-			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
-		</clipPath>
-		<rect class="st0" width="300" height="300"/>
+	<defs>
+		<circle id="SVGID_1_" cx="150" cy="150" r="150"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="XMLID_1_" class="st0">
+		<polygon class="st1" points="229.7,200 200,200 200,229.7 270.3,300 250,300 200,250 200,300 180,300 180,180 300,180 300,200 
+			250,200 300,250 300,270.3 		"/>
 	</g>
-	<g>
-		<defs>
-			<circle id="SVGID_3_" cx="150" cy="150" r="150"/>
-		</defs>
-		<clipPath id="SVGID_4_">
-			<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
-		</clipPath>
-		<path class="st1" d="M0,0l300,300 M300,0L0,300"/>
+	<g id="XMLID_2_" class="st0">
+		<polygon class="st1" points="229.7,100 200,100 200,70.3 270.3,0 250,0 200,50 200,0 180,0 180,120 300,120 300,100 250,100 
+			300,50 300,29.7 		"/>
 	</g>
-	<g>
-		<defs>
-			<circle id="SVGID_5_" cx="150" cy="150" r="150"/>
-		</defs>
-		<clipPath id="SVGID_6_">
-			<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
-		</clipPath>
-		<path class="st2" d="M0,0l300,300 M300,0L0,300"/>
+	<g id="XMLID_3_" class="st0">
+		<polygon class="st1" points="70.3,100 100,100 100,70.3 29.7,0 50,0 100,50 100,0 120,0 120,120 0,120 0,100 50,100 0,50 0,29.7 
+					"/>
 	</g>
-	<g>
-		<defs>
-			<circle id="SVGID_7_" cx="150" cy="150" r="150"/>
-		</defs>
-		<clipPath id="SVGID_8_">
-			<use xlink:href="#SVGID_7_"  style="overflow:visible;"/>
-		</clipPath>
-		<path class="st3" d="M150,150v-30L30,0H0l180,150L300,30V0L150,180l120,120h30L120,150L0,270v30L150,150z"/>
+	<g id="XMLID_4_" class="st0">
+		<polygon class="st1" points="70.3,200 100,200 100,229.7 29.7,300 50,300 100,250 100,300 120,300 120,180 0,180 0,200 50,200 
+			0,250 0,270.3 		"/>
 	</g>
-	<g>
-		<defs>
-			<circle id="SVGID_9_" cx="150" cy="150" r="150"/>
-		</defs>
-		<clipPath id="SVGID_10_">
-			<use xlink:href="#SVGID_9_"  style="overflow:visible;"/>
-		</clipPath>
-		<path class="st4" d="M150,0v300 M0,150h300"/>
-	</g>
-	<g>
-		<defs>
-			<circle id="SVGID_11_" cx="150" cy="150" r="150"/>
-		</defs>
-		<clipPath id="SVGID_12_">
-			<use xlink:href="#SVGID_11_"  style="overflow:visible;"/>
-		</clipPath>
-		<path class="st5" d="M150,0v300 M0,150h300"/>
-	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
 </g>
 </svg>

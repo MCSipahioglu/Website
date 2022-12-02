@@ -8,6 +8,7 @@
     right: 0.75vmin;
 
     background-size: 4.9vmin;
+    background-repeat: no-repeat;
 
     z-index: 10;
     transition: 0.2s;
