@@ -41,7 +41,6 @@
         justify-items: center;
         align-items: center;
         grid-column-gap: 0vmin;
-        grid-row-gap: 0vmin;
 
     }
 
@@ -204,41 +203,49 @@
 
 }
 
+.mobile_landing_header{
+    padding-top: 6vmin;
 
-.mobile_landing_element{
-    width: 60vmin;
-    height: 60vmin;
-
-    margin: 10vmin;
-
-    border-radius: 1vmin;
+    font-size: 9vmin;
+    font-weight: 550;
+    text-align: center;
 }
 
+.mobile_landing_logo{
+    width: 35vmin;
+    height: 35vmin;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    
+    padding-top: 8vmin;
+}
 
 
 #mobile_roboticist{
     background-color: var(--swatch_red);
-    box-shadow: 0 0 10vmin var(--swatch_red);
+    box-shadow: 0 0 15vmin var(--swatch_red);
 }
 
 #mobile_botsmith{
     background-color: var(--swatch_purple);
-    box-shadow: 0 0 10vmin var(--swatch_purple);
+    box-shadow: 0 0 15vmin var(--swatch_purple);
 }
 
 #mobile_designer{
     background-color: var(--swatch_orange);
-    box-shadow: 0 0 10vmin var(--swatch_orange);
+    box-shadow: 0 0 15vmin var(--swatch_orange);
 }
 
 #mobile_writer{
     background-color: var(--swatch_turqoise);
-    box-shadow: 0 0 10vmin var(--swatch_turqoise);
+    box-shadow: 0 0 15vmin var(--swatch_turqoise);
 }
 
 #mobile_traveller{
     background-color: var(--swatch_green);
-    box-shadow: 0 0 10vmin var(--swatch_green);
+    box-shadow: 0 0 15vmin var(--swatch_green);
 }
 
 

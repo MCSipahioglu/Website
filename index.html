@@ -178,11 +178,26 @@
       M. ÇAĞATAY SİPAHİOĞLU
     </div>
     <div id="mobile_landing">
-      <div id="mobile_roboticist" class="mobile_landing_element"></div>
-      <div id="mobile_botsmith" class="mobile_landing_element"></div>
-      <div id="mobile_designer" class="mobile_landing_element"></div>
-      <div id="mobile_writer" class="mobile_landing_element"></div>
-      <div id="mobile_traveller" class="mobile_landing_element"></div>
+      <div id="mobile_roboticist" class="project_container">
+        <img src="./assets/Main_Roboticist.svg"  class="mobile_landing_logo">
+        <div class="mobile_landing_header"> ROBOTICIST </div>
+      </div>
+      <div id="mobile_botsmith" class="project_container">
+        <img src="./assets/Main_Botsmith.svg"  class="mobile_landing_logo">
+        <div class="mobile_landing_header"> BOTSMITH </div>
+      </div>
+      <div id="mobile_designer" class="project_container">
+        <img src="./assets/Main_Designer.svg"  class="mobile_landing_logo">
+        <div class="mobile_landing_header"> DESIGNER </div>
+      </div>
+      <div id="mobile_writer" class="project_container">
+        <img src="./assets/Main_Writer.svg"  class="mobile_landing_logo">
+        <div class="mobile_landing_header"> WRITER </div>
+      </div>
+      <div id="mobile_traveller" class="project_container">
+        <img src="./assets/Main_Traveller.svg"  class="mobile_landing_logo">
+        <div class="mobile_landing_header"> TRAVELLER </div>
+      </div>
     </div>
 
     <div id="mobile_menu">
@@ -210,9 +225,21 @@
     </h1>
     <div class="projects">
 
+      <button type="button" onclick="Activate(0,0)" class="project_container project_container_roboticist" style="margin-top: 0vmin;">
+        <img src="./assets/R1.Scout.svg" class="project_logo">
+        <h1>
+          SCOUT
+        </h1>
+        <div class="project_intro">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
+        </div>
+        <div class="project_expand">
+          See more details about this project.
+        </div>
+      </button>
 
-      <button type="button" onclick="Activate(0,0)" class="project_container project_container_roboticist">
-        <img src="./assets/R1.ESC.svg" class="project_logo">
+      <button type="button" onclick="Activate(0,1)" class="project_container project_container_roboticist" style="margin-top: 0vmin;">
+        <img src="./assets/R2.ESC.svg" class="project_logo">
         <h1>
           ESC
         </h1>
@@ -224,23 +251,10 @@
         </div>
       </button>
 
-      <button type="button" onclick="Activate(0,1)" class="project_container project_container_roboticist">
-        <img src="./assets/R2.WireBender.svg" class="project_logo">
+      <button type="button" onclick="Activate(0,2)" class="project_container project_container_roboticist" style="margin-top: 0vmin;">
+        <img src="./assets/R3.WireBender.svg" class="project_logo">
         <h1>
           WIRE BENDER
-        </h1>
-        <div class="project_intro">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
-        </div>
-        <div class="project_expand">
-          See more details about this project.
-        </div>
-      </button>
-
-      <button type="button" onclick="Activate(0,2)" class="project_container project_container_roboticist">
-        <img src="./assets/R3.AlCNC.svg" class="project_logo">
-        <h1>
-          Al CNC
         </h1>
         <div class="project_intro">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
@@ -251,7 +265,20 @@
       </button>
 
       <button type="button" onclick="Activate(0,3)" class="project_container project_container_roboticist">
-        <img src="./assets/R4.CuCNC.svg" class="project_logo">
+        <img src="./assets/R4.PlotCNC.svg" class="project_logo">
+        <h1>
+          CNC Plotter
+        </h1>
+        <div class="project_intro">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
+        </div>
+        <div class="project_expand">
+          See more details about this project.
+        </div>
+      </button>
+
+      <button type="button" onclick="Activate(0,4)" class="project_container project_container_roboticist">
+        <img src="./assets/R5.CuCNC.svg" class="project_logo">
         <h1>
           Cu CNC
         </h1>
@@ -262,17 +289,59 @@
           See more details about this project.
         </div>
       </button>
+
+      <button type="button" onclick="Activate(0,5)" class="project_container project_container_roboticist">
+        <img src="./assets/R6.AlCNC.svg" class="project_logo">
+        <h1>
+          Al CNC
+        </h1>
+        <div class="project_intro">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
+        </div>
+        <div class="project_expand">
+          See more details about this project.
+        </div>
+      </button>
+
+      <button type="button" onclick="Activate(0,6)" class="project_container project_container_roboticist">
+        <img src="./assets/R7.GNSS.svg" class="project_logo">
+        <h1>
+          GNSS
+        </h1>
+        <div class="project_intro">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
+        </div>
+        <div class="project_expand">
+          See more details about this project.
+        </div>
+      </button>
+
+
       
 
     </div>
     <div id="project_page_roboticist_blanket" class="project_page">
 
 
-      <div class="project_content" id="pp_r1">
+      <div class="project_content" id="pp_r0">
         <button type="button" onclick="Deactivate(0,0)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-        <img src="./assets/R1.ESC.svg" class="project_logo">
+        <img src="./assets/R1.Scout.svg" class="project_logo">
+        <h1>
+          SCOUT
+        </h1>
+        <div class="project_intro">
+
+        </div>
+      </div>
+  
+  
+      <div class="project_content" id="pp_r1">
+        <button type="button" onclick="Deactivate(0,1)" class="project_page_return_button">
+          <img src="./assets/6.return.svg" class="image_project_return">
+        </button>
+        <img src="./assets/R2.ESC.svg" class="project_logo">
         <h1>
           ESC
         </h1>
@@ -283,10 +352,10 @@
   
   
       <div class="project_content" id="pp_r2">
-        <button type="button" onclick="Deactivate(0,1)" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(0,2)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-        <img src="./assets/R2.WireBender.svg" class="project_logo">
+        <img src="./assets/R3.WireBender.svg" class="project_logo">
         <h1>
           WIRE BENDER
         </h1>
@@ -297,26 +366,54 @@
   
   
       <div class="project_content" id="pp_r3">
-        <button type="button" onclick="Deactivate(0,2)" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(0,3)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-        <img src="./assets/R3.AlCNC.svg" class="project_logo">
+        <img src="./assets/R4.PlotCNC.svg" class="project_logo">
         <h1>
-          Al CNC
+          Mini CNC Plotter
         </h1>
         <div class="project_intro">
 
         </div>
       </div>
-  
-  
+
+
       <div class="project_content" id="pp_r4">
-        <button type="button" onclick="Deactivate(0,3)" class="project_page_return_button">
+        <button type="button" onclick="Deactivate(0,4)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
-        <img src="./assets/R4.CuCNC.svg" class="project_logo">
+        <img src="./assets/R5.CuCNC.svg" class="project_logo">
         <h1>
-          Cu CNC
+          Circuit Board CNC
+        </h1>
+        <div class="project_intro">
+
+        </div>
+      </div>
+
+
+      <div class="project_content" id="pp_r5">
+        <button type="button" onclick="Deactivate(0,5)" class="project_page_return_button">
+          <img src="./assets/6.return.svg" class="image_project_return">
+        </button>
+        <img src="./assets/R6.AlCNC.svg" class="project_logo">
+        <h1>
+          Aluminium CNC
+        </h1>
+        <div class="project_intro">
+
+        </div>
+      </div>
+
+
+      <div class="project_content" id="pp_r6">
+        <button type="button" onclick="Deactivate(0,6)" class="project_page_return_button">
+          <img src="./assets/6.return.svg" class="image_project_return">
+        </button>
+        <img src="./assets/R7.GNSS.svg" class="project_logo">
+        <h1>
+          GNSS
         </h1>
         <div class="project_intro">
 
@@ -337,7 +434,7 @@
 
     <div class="projects">
 
-      <button type="button" onclick="Activate(1,0)" class="project_container project_container_botsmith">
+      <button type="button" onclick="Activate(1,0)" class="project_container project_container_botsmith" style="margin-top: 0vmin;">
         <img src="./assets/B1.Quarrel.svg" class="project_logo">
         <h1>
           QUARREL
@@ -350,7 +447,7 @@
         </div>
       </button>
 
-      <button type="button" onclick="Activate(1,1)" class="project_container project_container_botsmith">
+      <button type="button" onclick="Activate(1,1)" class="project_container project_container_botsmith" style="margin-top: 0vmin;">
         <img src="./assets/B2.Lurien.svg" class="project_logo">
         <h1>
           LURIEN
@@ -363,7 +460,7 @@
         </div>
       </button>
 
-      <button type="button" onclick="Activate(1,2)" class="project_container project_container_botsmith">
+      <button type="button" onclick="Activate(1,2)" class="project_container project_container_botsmith" style="margin-top: 0vmin;">
         <img src="./assets/B3.Smithers.svg" class="project_logo">
         <h1>
           SMITHERS
@@ -407,7 +504,7 @@
 
     <div id="project_page_botsmith_blanket" class="project_page">
 
-      <div class="project_content" id="pp_b1">
+      <div class="project_content" id="pp_b0">
         <button type="button" onclick="Deactivate(1,0)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
@@ -422,7 +519,7 @@
         </div>
       </div>
 
-      <div class="project_content" id="pp_b2">
+      <div class="project_content" id="pp_b1">
         <button type="button" onclick="Deactivate(1,1)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
@@ -437,7 +534,7 @@
         </div>
       </div>
   
-      <div class="project_content" id="pp_b3">
+      <div class="project_content" id="pp_b2">
         <button type="button" onclick="Deactivate(1,2)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
@@ -450,7 +547,7 @@
         </div>
       </div>
   
-      <div class="project_content" id="pp_b4">
+      <div class="project_content" id="pp_b3">
         <button type="button" onclick="Deactivate(1,3)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
@@ -463,7 +560,7 @@
         </div>
       </div>
   
-      <div class="project_content" id="pp_b5">
+      <div class="project_content" id="pp_b4">
         <button type="button" onclick="Deactivate(1,4)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>
@@ -491,7 +588,7 @@
     <div class="projects">
 
 
-      <button type="button" onclick="Activate(2,0)" class="project_container project_container_designer">
+      <button type="button" onclick="Activate(2,0)" class="project_container project_container_designer" style="margin-top: 0vmin;">
         <img src="./assets/D1.Website.svg" class="project_logo">
         <h1>
           WEBSITE
@@ -510,7 +607,7 @@
     <div id="project_page_designer_blanket" class="project_page">
 
 
-      <div class="project_content" id="pp_i1">
+      <div class="project_content" id="pp_d0">
         <button type="button" onclick="Deactivate(2,0)" class="project_page_return_button">
           <img src="./assets/6.return.svg" class="image_project_return">
         </button>

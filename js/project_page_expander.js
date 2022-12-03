@@ -4,18 +4,21 @@ const e_blanket=[
     document.getElementById("project_page_designer_blanket")];      //Append when new page.
 
 const e_pp=[
-   [document.getElementById("pp_r1"),
+   [document.getElementById("pp_r0"),
+    document.getElementById("pp_r1"),
     document.getElementById("pp_r2"),
     document.getElementById("pp_r3"),
-    document.getElementById("pp_r4")],
+    document.getElementById("pp_r4"),
+    document.getElementById("pp_r5"),
+    document.getElementById("pp_r6")],
     
-   [document.getElementById("pp_b1"),
+   [document.getElementById("pp_b0"),
+    document.getElementById("pp_b1"),
     document.getElementById("pp_b2"),
     document.getElementById("pp_b3"),
-    document.getElementById("pp_b4"),
-    document.getElementById("pp_b5")],
+    document.getElementById("pp_b4")],
     
-   [document.getElementById("pp_i1")]];                             //Append when new project
+   [document.getElementById("pp_d0")]];                             //Append when new project
 
 var active_project_index=-1;
    

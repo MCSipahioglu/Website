@@ -65,13 +65,15 @@
     justify-items: center;
     align-items: center;
     grid-column-gap: 10vmin;
-    grid-row-gap: 10vmin;
 }
 
 .project_container{
     width: 30vmin;
     height: 30vmin;
 
+    margin-top: 5vmin;
+    margin-bottom: 5vmin;
+    
     border-radius: 1vmin;
 
     transition: 0.25s;
