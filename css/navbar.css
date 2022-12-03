@@ -27,7 +27,7 @@
 }
 
 #navbar_menu{
-    width: calc(100vw - 78.2vmin);
+    width: calc(100vw - 88.2vmin);
     height: 8vmin;
 
     visibility: hidden;

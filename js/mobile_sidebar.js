@@ -61,6 +61,3 @@ function MobileEmailCopy() {
     navigator.clipboard.writeText(email); // Copy text into clipboard
 }
 
-function KofiRedirect(){
-    window.open("https://ko-fi.com/mcsipahioglu#paypalModal");   
-}

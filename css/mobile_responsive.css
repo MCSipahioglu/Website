@@ -8,6 +8,11 @@
         display: none;
     }
 
+    button, .filter_button, #image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_email_copypaste:hover, #image_return:hover{
+        cursor: default;
+    }
+
+
     .page_content{
         width: 100vw;
         height: calc(100vh - 2 * 10.75vmin);
@@ -128,6 +133,8 @@
 
         border-width: 1vmin;      /* Gerekirse yeniden hovera alınabilir*/
         border-radius: 8.2vmin;
+
+        cursor: default;
     }
 
     .project_content{

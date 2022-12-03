@@ -28,3 +28,12 @@ function CVDeactivate(){
     e_logo_cv.style.opacity="100%";
 
 }
+
+
+
+const e_logo_kofi=document.getElementById("logo_kofi");
+e_logo_kofi.addEventListener("click", KofiRedirect, true);
+
+function KofiRedirect(){
+    window.open("https://ko-fi.com/mcsipahioglu#paypalModal");   
+}

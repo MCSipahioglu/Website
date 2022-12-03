@@ -1,6 +1,6 @@
 /*LOGOS*/
 #logo_wrapper{
-    width: 25vmin;
+    width: 35vmin;
     height: 5vmin;
 
     display: flex;
@@ -15,7 +15,7 @@
     z-index: 12;
 }
 
-#logo_cv, #logo_eng, #logo_tr, #logo_email, #logo_dot, #logo_return, #logo_filter{
+.logo_desktop{
     width: 5vmin;
     height: 5vmin;
 
@@ -26,7 +26,7 @@
     z-index: inherit;
 }
 
-#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_email_copypaste, #image_return, #image_filter{
+#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_email_copypaste, #image_return, #image_filter, #image_kofi{
     width: 3.5vmin;
     height: 3.5vmin;
 
@@ -40,7 +40,7 @@
     height: 3.5vmin;
 }
 
-#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_email_copypaste:hover, #image_return:hover{
+#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_email_copypaste:hover, #image_return:hover, #image_kofi:hover{
     border-width: 0.5vmin;
     border-radius: 4.1vmin;
     border-style: solid;
@@ -90,8 +90,8 @@
 
 
 #email_wrapper{
-    height: 4.2vmin;
-    width: 30vmin;
+    height: 4.1vmin;
+    width: 35vmin;
 
     position: absolute;
     top: 1.4vmin;
@@ -105,8 +105,8 @@
     align-items: center;
 
     border-width: 0.5vmin;
-    border-top-left-radius: 5vmin;
-    border-bottom-left-radius: 5vmin;
+    border-top-left-radius: 4.1vmin;
+    border-bottom-left-radius: 4.1vmin;
     border-style: solid;
 
     background-color: var(--bg_black);
@@ -116,11 +116,12 @@
 
 }
 
-#logo_email_copypaste{
-    width: 4.2vmin;
-    height: 4.2vmin;
 
-    margin-right: 1vmin;
+#logo_email_copypaste{
+    width: 4.1vmin;
+    height: 4.1vmin;
+
+    margin-right: 2vmin;
 
     display: flex;
     justify-content: center;
