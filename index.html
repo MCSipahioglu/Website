@@ -10,6 +10,7 @@
   <title>MÇS</title>
 
   <!--CSS-->
+  <link rel="stylesheet" href="./css/main.css">
   <link rel="stylesheet" href="./css/loader.css">
   <link rel="stylesheet" href="./css/navbar.css">
   <link rel="stylesheet" href="./css/logos.css">
@@ -21,8 +22,10 @@
   <link rel="stylesheet" href="./css/pages.css">
 
   <link rel="stylesheet" href="./css/S_logos.css">
-  <link rel="stylesheet" href="./css/main.css">             <!--Main at the end so that media queries work-->
-  <link rel="stylesheet" href="./css/mobile.css"> 
+  <link rel="stylesheet" href="./css/mobile_landing.css">
+  <link rel="stylesheet" href="./css/mobile_menu.css">
+  <link rel="stylesheet" href="./css/mobile_sidebar.css">
+  <link rel="stylesheet" href="./css/mobile_responsive.css"><!--Responsive at the end so that media queries work-->
 
   <!--Font-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -120,33 +123,33 @@
   
       <span id="logo_wrapper">
         <span id="logo_cv">
-          <img src="./assets/1.cv.svg" id="image_cv">
+          <img src="./assets/1.CV.svg" id="image_cv">
         </span>
     
         <span id="logo_dot">
-          <img src="./assets/4.dot.svg" id="image_dot">
+          <img src="./assets/0.Dot.svg" id="image_dot">
         </span>
         
         <span id="logos_lang">
           <div id="lang_dropdown"></div>
           <div id="logo_eng">
-            <img src="./assets/2a.ENG.svg" id="image_eng">
+            <img src="./assets/2A.ENG.svg" id="image_eng">
           </div>
           <div id="logo_tr">
-            <img src="./assets/2b.TR.svg" id="image_tr">
+            <img src="./assets/2B.TR.svg" id="image_tr">
           </div>
         </span>
     
         <span id="logo_dot">
-          <img src="./assets/4.dot.svg" id="image_dot">
+          <img src="./assets/0.Dot.svg" id="image_dot">
         </span>
     
         <span id="logo_email">
-          <img src="./assets/3.at.svg" id="image_email">
+          <img src="./assets/3.Email.svg" id="image_email">
         </span>
   
         <span id="logo_return">
-          <img src="./assets/6.return.svg" id="image_return">
+          <img src="./assets/0.Return.svg" id="image_return">
         </span>
   
       </span>
@@ -154,7 +157,7 @@
   
     <div id="email_wrapper">
       <span id="logo_email_copypaste">
-        <img src="./assets/5.copypaste.svg" id="image_email_copypaste">
+        <img src="./assets/0.CopyPaste.svg" id="image_email_copypaste">
       </span>
       <span id="email">
         mcsipahioglu@gmail.com
@@ -206,9 +209,26 @@
       <button type="button" onclick="MobileMenuRedirect(2)" id="mobile_menu_designer" class="mobile_menu_element">  DESIGNER </button>
       <button type="button" onclick="MobileMenuRedirect(3)" id="mobile_menu_writer" class="mobile_menu_element">    WRITER </button>
       <button type="button" onclick="MobileMenuRedirect(4)" id="mobile_menu_traveller" class="mobile_menu_element"> TRAVELLER </button>
-
     </div>
 
+
+    <div id="mobile_sidebar">
+      <button type="button" onclick="MobileSidebarToggle()" id="mobile_logo_arrow" class="mobile_logo">
+        <img src="./assets/0.SidebarArrow.svg" id="mobile_image_arrow" class="mobile_image">
+      </button>
+      <button type="button" onclick="MobileCVDownload()"  id="mobile_logo_cv" class="mobile_logo">
+        <img src="./assets/1.CV.svg" id="mobile_image_cv" class="mobile_image">
+      </button>
+      <button type="button" onclick="MobileLanguageToggle()"  id="mobile_logo_lang" class="mobile_logo">
+        <img src="./assets/2C.TRvENG.svg" id="mobile_image_lang" class="mobile_image">
+      </button>
+      <button type="button" onclick="MobileEmailCopy()"  id="mobile_logo_email" class="mobile_logo">
+        <img src="./assets/3.Email.svg" id="mobile_image_email" class="mobile_image">
+      </button>
+      <button type="button" onclick="KofiRedirect()"  id="mobile_logo_kofi" class="mobile_logo">
+        <img src="./assets/4.Kofi.svg" id="mobile_image_kofi" class="mobile_image">
+      </button>
+    </div>
   </div>
 
 
@@ -325,7 +345,7 @@
 
       <div class="project_content" id="pp_r0">
         <button type="button" onclick="Deactivate(0,0)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/R1.Scout.svg" class="project_logo">
         <h1>
@@ -339,7 +359,7 @@
   
       <div class="project_content" id="pp_r1">
         <button type="button" onclick="Deactivate(0,1)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/R2.ESC.svg" class="project_logo">
         <h1>
@@ -353,7 +373,7 @@
   
       <div class="project_content" id="pp_r2">
         <button type="button" onclick="Deactivate(0,2)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/R3.WireBender.svg" class="project_logo">
         <h1>
@@ -367,7 +387,7 @@
   
       <div class="project_content" id="pp_r3">
         <button type="button" onclick="Deactivate(0,3)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/R4.PlotCNC.svg" class="project_logo">
         <h1>
@@ -381,7 +401,7 @@
 
       <div class="project_content" id="pp_r4">
         <button type="button" onclick="Deactivate(0,4)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/R5.CuCNC.svg" class="project_logo">
         <h1>
@@ -395,7 +415,7 @@
 
       <div class="project_content" id="pp_r5">
         <button type="button" onclick="Deactivate(0,5)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/R6.AlCNC.svg" class="project_logo">
         <h1>
@@ -409,7 +429,7 @@
 
       <div class="project_content" id="pp_r6">
         <button type="button" onclick="Deactivate(0,6)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/R7.GNSS.svg" class="project_logo">
         <h1>
@@ -506,14 +526,14 @@
 
       <div class="project_content" id="pp_b0">
         <button type="button" onclick="Deactivate(1,0)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/B1.Quarrel.svg" class="project_logo">
         <h1>
           QUARREL
         </h1>
         <div class="project_intro">
-          <img src="./assets/8.Attention.svg" class="image_attention">
+          <img src="./assets/4.Kofi.svg" class="image_attention">
           Limited information available: This project contains proprietary information. Please contact me for licensing or purchase. <br>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
         </div>
@@ -521,14 +541,14 @@
 
       <div class="project_content" id="pp_b1">
         <button type="button" onclick="Deactivate(1,1)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/B2.Lurien.svg" class="project_logo">
         <h1>
           LURIEN
         </h1>
         <div class="project_intro">
-          <img src="./assets/8.Attention.svg" class="image_attention">
+          <img src="./assets/4.Kofi.svg" class="image_attention">
           Limited information available: This project contains proprietary information. Please contact me for licensing or purchase. <br>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Lorem ipsum.
         </div>
@@ -536,7 +556,7 @@
   
       <div class="project_content" id="pp_b2">
         <button type="button" onclick="Deactivate(1,2)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/B3.Smithers.svg" class="project_logo">
         <h1>
@@ -549,7 +569,7 @@
   
       <div class="project_content" id="pp_b3">
         <button type="button" onclick="Deactivate(1,3)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/B4.Draper.svg" class="project_logo">
         <h1>
@@ -562,7 +582,7 @@
   
       <div class="project_content" id="pp_b4">
         <button type="button" onclick="Deactivate(1,4)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/B5.Sparrow.svg" class="project_logo">
         <h1>
@@ -609,7 +629,7 @@
 
       <div class="project_content" id="pp_d0">
         <button type="button" onclick="Deactivate(2,0)" class="project_page_return_button">
-          <img src="./assets/6.return.svg" class="image_project_return">
+          <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <img src="./assets/D1.Website.svg" class="project_logo">
         <h1>
@@ -629,7 +649,7 @@
   <div id="page_writer" class="page_content">
     <div id="filter_container">
       <div id="logo_filter">
-        <img src="./assets/7.filter_empty.svg" id="image_filter">
+        <img src="./assets/0.FilterEmpty.svg" id="image_filter">
       </div>
 
       <div id="filter_buttons_container">
@@ -814,6 +834,7 @@
   <script src="./js/project_page_expander.js"></script>
   <script src="./js/writer_filter.js"></script>
   <script src="./js/mobile.js"></script>
+  <script src="./js/mobile_sidebar.js"></script>
 
 </body>
 </html>

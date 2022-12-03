@@ -1,0 +1,54 @@
+#mobile_sidebar{
+    width: 12vmin;
+
+    position: absolute;
+    top: 13.75vmin;
+    left: calc(100vw - 14vmin);
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    grid-row-gap: 2vmin;
+
+    z-index: 3; /*Project Page açıkken de görünsün ki project page'in dili değiştirilebilsin. */
+
+}
+
+.mobile_logo{
+    width: 10vmin;
+    height: 10vmin;
+
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.2s;
+
+    z-index: inherit;
+}
+
+
+
+.mobile_image{
+    width: 7vmin;
+    height: 7vmin;
+
+    padding: 0.6vmin;
+
+    display: block;
+    border-color: white;
+    border-width: 1vmin;
+    border-radius: 8.2vmin;
+    border-style: solid;
+
+    z-index: inherit;
+}
+
+
+#mobile_logo_cv, #mobile_logo_lang, #mobile_logo_email, #mobile_logo_kofi{
+    transform: translateX(12vmin);
+}

@@ -1,0 +1,39 @@
+#mobile_menu{
+    width: 100vw;
+    height: 8vmin;
+
+    padding-top: 2vmin;
+
+    position: fixed;
+    top: calc(100vh - 10vmin);
+    left: 0vmin;
+
+    border-top-style: solid;
+    border-top-width: 0.75vmin;
+    border-top-color: white;
+
+    background-color: var(--bg_black);
+
+    display: none;
+    overflow: hidden;
+
+}
+
+.mobile_menu_element{
+    width: 50vw;
+    height: 8vmin;
+
+    margin-left: 25vw;
+
+    position: absolute;
+    
+    color: white;
+    text-align: center;
+    font-size: 8vmin;
+    font-weight: 550;
+
+    transition: 0.4s;
+
+
+
+}

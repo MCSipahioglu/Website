@@ -1,0 +1,83 @@
+#desktop_assets_wrapper{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#mobile_assets_wrapper{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#mobile_header{
+    width: 100vw;
+    height: 8vmin;
+
+    padding-top: 2vmin;
+
+    text-align: center;
+    font-size: 8vmin;
+    font-weight: 550;
+
+    border-bottom-style: solid;
+    border-bottom-width: 0.75vmin;
+    border-bottom-color: white;
+}
+
+#mobile_landing{
+    width: 100vw;
+    height: calc(100vh - 10.75vmin);
+
+    overflow: scroll;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.mobile_landing_header{
+    padding-top: 6vmin;
+
+    font-size: 9vmin;
+    font-weight: 550;
+    text-align: center;
+}
+
+.mobile_landing_logo{
+    width: 35vmin;
+    height: 35vmin;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    
+    padding-top: 8vmin;
+}
+
+
+#mobile_roboticist{
+    background-color: var(--swatch_red);
+    box-shadow: 0 0 12.5vmin var(--swatch_red);
+}
+
+#mobile_botsmith{
+    background-color: var(--swatch_purple);
+    box-shadow: 0 0 12.5vmin var(--swatch_purple);
+}
+
+#mobile_designer{
+    background-color: var(--swatch_orange);
+    box-shadow: 0 0 12.5vmin var(--swatch_orange);
+}
+
+#mobile_writer{
+    background-color: var(--swatch_turqoise);
+    box-shadow: 0 0 12.5vmin var(--swatch_turqoise);
+}
+
+#mobile_traveller{
+    background-color: var(--swatch_green);
+    box-shadow: 0 0 12.5vmin var(--swatch_green);
+}
