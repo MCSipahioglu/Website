@@ -56,17 +56,32 @@
     
     .project_container_roboticist{
         background-color: var(--swatch_red);
-        box-shadow: 0 0 15vmin var(--swatch_red);
+        box-shadow: 0 0 12.5vmin var(--swatch_red);
     }
     
     .project_container_botsmith{
         background-color: var(--swatch_purple);
-        box-shadow: 0 0 15vmin var(--swatch_purple);
+        box-shadow: 0 0 12.5vmin var(--swatch_purple);
     }
     
     .project_container_designer{
         background-color: var(--swatch_orange);
-        box-shadow: 0 0 15vmin var(--swatch_orange);
+        box-shadow: 0 0 12.5vmin var(--swatch_orange);
+    }
+
+    .project_container_roboticist:hover{
+        background-color: var(--swatch_red);
+        box-shadow: 0 0 12.5vmin var(--swatch_red);
+    }
+    
+    .project_container_botsmith:hover{
+        background-color: var(--swatch_purple);
+        box-shadow: 0 0 12.5vmin var(--swatch_purple);
+    }
+    
+    .project_container_designer:hover{
+        background-color: var(--swatch_orange);
+        box-shadow: 0 0 12.5vmin var(--swatch_orange);
     }
 
     .project_logo{
@@ -225,27 +240,27 @@
 
 #mobile_roboticist{
     background-color: var(--swatch_red);
-    box-shadow: 0 0 15vmin var(--swatch_red);
+    box-shadow: 0 0 12.5vmin var(--swatch_red);
 }
 
 #mobile_botsmith{
     background-color: var(--swatch_purple);
-    box-shadow: 0 0 15vmin var(--swatch_purple);
+    box-shadow: 0 0 12.5vmin var(--swatch_purple);
 }
 
 #mobile_designer{
     background-color: var(--swatch_orange);
-    box-shadow: 0 0 15vmin var(--swatch_orange);
+    box-shadow: 0 0 12.5vmin var(--swatch_orange);
 }
 
 #mobile_writer{
     background-color: var(--swatch_turqoise);
-    box-shadow: 0 0 15vmin var(--swatch_turqoise);
+    box-shadow: 0 0 12.5vmin var(--swatch_turqoise);
 }
 
 #mobile_traveller{
     background-color: var(--swatch_green);
-    box-shadow: 0 0 15vmin var(--swatch_green);
+    box-shadow: 0 0 12.5vmin var(--swatch_green);
 }
 
 
@@ -259,7 +274,7 @@
 
     padding-top: 2vmin;
 
-    position: absolute;
+    position: fixed;
     top: calc(100vh - 10vmin);
     left: 0vmin;
 
