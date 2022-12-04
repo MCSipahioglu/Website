@@ -1,9 +1,21 @@
+#desktop_assets_wrapper{
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#mobile_assets_wrapper{
+    width: 100%;
+    height: 100%;
+
+}
+
 /*@media screen and (max-width:768px) {
 
 
 }*/
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width:1367px) {
     #desktop_assets_wrapper{
         display: none;
     }
