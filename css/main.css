@@ -53,6 +53,7 @@ NEW PROJECT:pages.css:    whatever you need
     color: rgb(255, 255, 255);
 
     line-height: 0.94;      /*Critical to make it consistent across browsers*/
+
 }
 
 .screen{
