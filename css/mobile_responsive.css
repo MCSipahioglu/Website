@@ -154,6 +154,99 @@
 
 
 
+
+
+
+    /* WRITER */
+    #filter_container{
+        width: auto;
+        height: auto;
+     
+        position: static;
+        top: 4vmin;
+        left: 3vmin;
+    }
+    
+    #logo_filter{
+        width: 10vmin;
+        height: 10vmin;
+    
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: static;
+
+        padding-top: 4vmin;
+        padding-left: 3vmin;
+    
+    }
+    
+    #image_filter{
+        width: 7vmin;
+        height: 7vmin;
+    
+        padding: 0.6vmin;
+    
+        border-color: white;
+        border-width: 1vmin;
+        border-radius: 8.2vmin;
+        border-style: solid;
+    }
+    
+    #filter_buttons_container{
+        position: relative;
+
+        top: 2vmin;
+        left: 0vmin;
+    }
+    
+
+    .filter_button_container{
+        height: 6vmin;
+    
+        padding-left: calc(3vmin + 5vmin - 1.4vmin);
+    }
+    
+    .filter_button{
+        height: 2.8vmin;
+        width: 2.8vmin;
+    
+        border-width: 0.7vmin;
+        outline-width: 0.7vmin;
+    
+    }
+
+    .post_container{
+        width: 94vw;
+
+        position: static;
+        padding-top: 4vmin;
+        padding-left: 3vmin;
+    }
+    
+    .post_title{
+        padding-top: 2vmin;
+    
+        font-size: 6vmin;
+    
+    }
+    
+    .post_tag{
+        font-size: 3.5vmin;
+    }
+    
+    .post_content{
+        padding-top: 1vh;
+    
+        font-size: 4vmin;
+    }
+    
+    
+
+
+
 }
 
 
