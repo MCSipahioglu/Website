@@ -20,7 +20,7 @@ function MobileSidebarToggle(){
 
     if(sidebar_active==0){
         sidebar_active=1;
-        em_logo_arrow.style.transform="scaleX(-1)";
+        em_logo_arrow.style.transform="rotate(+180deg)";
         setTimeout(() => {  em_logo_cv.style.transform="translateX(0vmin)"; },    0*sidebar_delay_step);
         setTimeout(() => {  em_logo_lang.style.transform="translateX(0vmin)"; },  1*sidebar_delay_step);
         setTimeout(() => {  em_logo_email.style.transform="translateX(0vmin)"; }, 2*sidebar_delay_step);
@@ -29,7 +29,7 @@ function MobileSidebarToggle(){
 
     else if(sidebar_active==1){
         sidebar_active=0;
-        em_logo_arrow.style.transform="scaleX(+1)";
+        em_logo_arrow.style.transform="rotate(0deg)";
         em_logo_cv.style.transform="translateX(12vmin)";
         em_logo_lang.style.transform="translateX(12vmin)";
         em_logo_email.style.transform="translateX(12vmin)";

@@ -35,8 +35,10 @@
     width: 12vmin;
 
     position: absolute;
-    top: 14.75vmin;
+    top: 13.75vmin;
     left: calc(100vw - 14vmin);
+
+    padding-top: 1vmin;
 
     overflow: hidden;
 
@@ -81,6 +83,9 @@
     z-index: inherit;
 }
 
+#mobile_logo_arrow{
+    transform-origin: center;
+}
 
 #mobile_logo_cv, #mobile_logo_lang, #mobile_logo_email, #mobile_logo_kofi{
     transform: translateX(12vmin);
