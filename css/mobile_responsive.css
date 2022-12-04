@@ -16,7 +16,7 @@
     .page_content{
         width: 100vw;
         height: calc(100vh - 2 * 10.75vmin);
-    
+
         top: 10.75vmin;
         left: 0vmin;
         
@@ -28,6 +28,8 @@
         top: 0vmin;
         left: 0vmin;
 
+        margin-bottom: 10.75vmin;
+        
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;

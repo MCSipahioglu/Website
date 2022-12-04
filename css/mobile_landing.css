@@ -29,6 +29,8 @@
     width: 100vw;
     height: calc(100vh - 10.75vmin);
 
+    margin-bottom: 10.75vmin;
+    
     overflow: scroll;
 
     display: grid;
