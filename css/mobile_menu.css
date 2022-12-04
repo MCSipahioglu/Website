@@ -5,7 +5,7 @@
     padding-top: 2vmin;
 
     position: fixed;
-    top: calc(100vh - 10vmin);
+    bottom: 0vmin;
     left: 0vmin;
 
     border-top-style: solid;
