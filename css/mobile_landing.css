@@ -15,8 +15,8 @@
 
 #mobile_landing{
     width: 100vw;
-    height: calc(100% - 10.75vmin);
-    
+    height: calc(100% - 10.75vmin);      /* Must size %100 rather than 100vh to fix android cutoff issue*/
+
     overflow: scroll;
 
     display: grid;

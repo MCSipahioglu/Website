@@ -80,13 +80,13 @@ title{
 }
 
 html{
-    width:100%;                /* Must size %100 to fix anroid cutoff issue*/
+    width:100%;                 /* Must size %100 rather than 100vh to fix android cutoff issue*/
     height:100%;
 }
 
 body{
-    width:100%;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
-    height:100%;
+    width:100%;                 /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
+    height:100%;                /* Must size %100 rather than 100vh to fix android cutoff issue*/
 
     font-family: 'League Spartan', sans-serif;
 

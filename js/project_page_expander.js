@@ -31,7 +31,7 @@ function Activate(page_index, project_index){
     ActivateBlanket(page_index);                    //Spawn in the blanket.
 
     //Activate Page[page_index][project_index]
-    e_pp[page_index][project_index].style.height="calc(100vh - 8.75vmin)";
+    e_pp[page_index][project_index].style.height="calc(100%)";/* Must size %100 rather than 100vh to fix android cutoff issue*/
     e_pp[page_index][project_index].style.opacity="100%";
     e_pp[page_index][project_index].style.visibility="visible";
 
@@ -41,7 +41,7 @@ function Activate(page_index, project_index){
 }
 
 function ActivateBlanket(page_index){
-    e_blanket[page_index].style.height="calc(100vh - 8.75vmin)";
+    e_blanket[page_index].style.height="calc(100%)";/* Must size %100 rather than 100vh to fix android cutoff issue*/
     e_blanket[page_index].style.opacity="100%";
 }
 
@@ -62,7 +62,7 @@ function Deactivate(page_index, project_index){
 }
 
 function DeactivateBlanket(page_index){
-    e_blanket[page_index].style.height="0vmin";
+    e_blanket[page_index].style.height="0%";
     e_blanket[page_index].style.opacity="0%";
 }
 

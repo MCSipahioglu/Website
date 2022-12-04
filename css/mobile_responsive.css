@@ -6,7 +6,7 @@
 
 #mobile_assets_wrapper{
     width: 100%;
-    height: 100%;
+    height: 100%;       /* Must size %100 rather than 100vh to fix anroid cutoff issue*/
 
 }
 
@@ -27,7 +27,6 @@
 
     .page_content{
         width: 100vw;
-        height: calc(100vh - 2 * 10.75vmin);
 
         top: 10.75vmin;
         left: 0vmin;
@@ -39,8 +38,6 @@
 
         top: 0vmin;
         left: 0vmin;
-
-        margin-bottom: 20vmin;
         
         display: grid;
         grid-template-columns: 1fr;
@@ -164,7 +161,7 @@
 
     @media (orientation:portrait) {
         .page_content{
-            height: calc(100vh - 2 * 10.75vmin);
+            height: calc(100% - 2 * 10.75vmin); /* Must size %100 rather than 100vh to fix android cutoff issue*/
         }
 
         
@@ -180,7 +177,7 @@
 
     @media (orientation:landscape) {
         .page_content{
-            height: calc(100vh - 10.75vmin);
+            height: calc(100% - 10.75vmin); /* Must size %100 rather than 100vh to fix android cutoff issue*/
         }
 
 
