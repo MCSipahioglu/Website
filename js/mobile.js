@@ -107,12 +107,13 @@ function MobileMenuOrder(page_index){
 function MobileMenuActivate(){
     e_mmenu.style.display="block";
     e_mmenu.addEventListener("touchstart", TouchStart, true);
-    e_mmenu.addEventListener("touchmove", TouchMove, true);
     e_mmenu.addEventListener("touchend", TouchEnd, true);
 }
 
 function MobileMenuDeactivate(){
     e_mmenu.style.display="none";
+    e_mmenu.removeEventListener("touchstart", TouchStart, true);
+    e_mmenu.removeEventListener("touchend", TouchEnd, true);
 }
 
 
@@ -182,11 +183,6 @@ function TouchStart(e){
 
 }
 
-function TouchMove(e){
-    //var diffX = startingX - e.touches[0].clientX;
-    //e.preventDefault();
-}
-
 function TouchEnd(e){
     touchendX=e.changedTouches[0].screenX;
     
@@ -195,9 +191,9 @@ function TouchEnd(e){
     if (Math.abs(diffX) < threshold) {
         MobileMenuOrder(active_page_index);
     } else if (diffX>0){
-        MobileMenuRedirect(active_page_index+1);
+        MobileMenuRedirect((active_page_index+1)%page_count);
     } else if (diffX<0){
-        MobileMenuRedirect(active_page_index-1);
+        MobileMenuRedirect((active_page_index -1 +page_count)%page_count);
     }
 }
 
