@@ -19,7 +19,9 @@ const e_navbar_name=document.getElementById("navbar_name");
 
 var navmen_og_index=0;  //Original page condition at navmen.
 var navmen_index=0;
+var active_page_index= -1;
 var i;  //Misc counter
+
 
 //--------------------------------------VARIABLES--------------------------------------
 //Elements to activate and scroll through
@@ -165,6 +167,7 @@ function PageActivate(page_index){
     e_p[page_index].style.visibility="visible";
     e_p[page_index].style.opacity="100%";
     e_logo_S.style.pointerEvents="all";
+    active_page_index=page_index;
 }
 
 

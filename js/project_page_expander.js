@@ -35,7 +35,6 @@ function Activate(page_index, project_index){
     e_pp[page_index][project_index].style.opacity="100%";
     e_pp[page_index][project_index].style.visibility="visible";
 
-    active_page_index=page_index;
     active_project_index=project_index;
 
 }
@@ -61,7 +60,6 @@ function Deactivate(page_index, project_index){
     e_pp[page_index][project_index].style.opacity="0%";
     e_pp[page_index][project_index].style.visibility="hidden";
 
-    active_page_index=-1;
     active_project_index=-1;
 }
 

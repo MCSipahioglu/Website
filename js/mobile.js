@@ -1,4 +1,3 @@
-
 //--------------------------------------CONSTANTS--------------------------------------
 //Elements to disactivate
 const e_mlanding=document.getElementById("mobile_landing");
@@ -107,6 +106,9 @@ function MobileMenuOrder(page_index){
 //Mobile Menu (De)Activate
 function MobileMenuActivate(){
     e_mmenu.style.display="block";
+    e_mmenu.addEventListener("touchstart", TouchStart, true);
+    e_mmenu.addEventListener("touchmove", TouchMove, true);
+    e_mmenu.addEventListener("touchend", TouchEnd, true);
 }
 
 function MobileMenuDeactivate(){
@@ -166,3 +168,41 @@ function ReturnToLandingMobile(){
     //Activate Landing
     MobileLandingActivate();
 }
+
+
+
+
+
+
+//----------------------------------SWIPING FUNCTIONS----------------------------------
+var touchstartX, touchendX, diffX;
+
+function TouchStart(e){
+    touchstartX=e.touches[0].screenX;
+
+}
+
+function TouchMove(e){
+    //var diffX = startingX - e.touches[0].clientX;
+    //e.preventDefault();
+}
+
+function TouchEnd(e){
+    touchendX=e.changedTouches[0].screenX;
+    
+    var diffX = touchstartX - touchendX;
+    var threshold = screen.width / 4;
+    if (Math.abs(diffX) < threshold) {
+        MobileMenuOrder(active_page_index);
+    } else if (diffX>0){
+        MobileMenuRedirect(active_page_index+1);
+    } else if (diffX<0){
+        MobileMenuRedirect(active_page_index-1);
+    }
+}
+
+
+
+
+
+
