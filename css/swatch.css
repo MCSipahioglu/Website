@@ -13,14 +13,14 @@
 .swatch_element{
     position: absolute;
     top: 47.25vh;
-    margin-left: 70vmin;
+    padding-left: 70vmin;
 
     font-size: 5.5vmin;
     font-weight: 550;
     text-align: left;
-    padding-top: 1.203125vmin;      /*Perfect for dead center at this font*/
+    padding-top: 1.2vmin;      /*Perfect for dead center at this font*/
 
-    transform-origin: -19.8vh 2.75vh;
+    transform-origin: 50vmin 2.75vmin;
 
     cursor: pointer;
 }
