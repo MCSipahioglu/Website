@@ -79,6 +79,11 @@ title{
     display: none;
 }
 
+html{
+    width:100%;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
+    height:100%;
+}
+
 body{
     width:100%;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
     height:100%;
