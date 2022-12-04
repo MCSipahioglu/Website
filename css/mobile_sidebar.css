@@ -1,8 +1,41 @@
+#mobile_notification{
+    width: calc(100vw - 2* (3vmin + 10.2vmin) - 2vmin);
+
+    position: absolute;
+    top: 14.75vmin;
+    left: 13.2vmin;
+
+    border-color: white;
+    border-style: solid;
+    border-width: 1vmin;
+    border-radius: 8vmin;
+
+
+    background-color: var(--bg_black);
+
+    visibility: hidden;
+    opacity: 0%;
+    transition: 0.4s;
+
+    z-index: 10;
+}
+
+#mobile_notification_text{
+    padding-top: calc(4vmin - 4.5vmin / 2);
+    padding-bottom: calc(4vmin - 4.5vmin / 2);
+
+    color: white;
+    font-size: 4.5vmin;
+    font-weight: 550;
+    text-align: center;
+}
+
+
 #mobile_sidebar{
     width: 12vmin;
 
     position: absolute;
-    top: 13.75vmin;
+    top: 14.75vmin;
     left: calc(100vw - 14vmin);
 
     overflow: hidden;
@@ -52,3 +85,5 @@
 #mobile_logo_cv, #mobile_logo_lang, #mobile_logo_email, #mobile_logo_kofi{
     transform: translateX(12vmin);
 }
+
+
