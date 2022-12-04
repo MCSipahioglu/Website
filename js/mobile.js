@@ -187,7 +187,7 @@ function TouchEnd(e){
     touchendX=e.changedTouches[0].screenX;
     
     var diffX = touchstartX - touchendX;
-    var threshold = screen.width / 4;
+    var threshold = screen.width / 5;
     if (Math.abs(diffX) < threshold) {
         MobileMenuOrder(active_page_index);
     } else if (diffX>0){
