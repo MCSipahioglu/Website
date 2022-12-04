@@ -5,7 +5,7 @@
     padding-top: 2vmin;
 
     position: fixed;
-    bottom: 0vmin;
+    bottom: 0vmin;  /* If given from top, androd cutoff problem occurs*/
     left: 0vmin;
 
     border-top-style: solid;
@@ -16,6 +16,8 @@
 
     display: none;
     overflow: hidden;
+
+    z-index: 10;
 
 }
 
