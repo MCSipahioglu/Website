@@ -69,8 +69,3 @@
     background-color: var(--swatch_green);
     box-shadow: 0 0 12.5vmin var(--swatch_green);
 }
-
-#android_cutoff_fixer{
-    width: 100vw;
-    height: 40vmin;
-}

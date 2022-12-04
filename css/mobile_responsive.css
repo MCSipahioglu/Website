@@ -10,12 +10,7 @@
 
 }
 
-/*@media screen and (max-width:768px) {
-
-
-}*/
-
-@media screen and (max-width:1367px) {
+@media screen and (max-width:1367px) {      /* Ipad Pro 11.9" is the limit*/
     #desktop_assets_wrapper{
         display: none;
     }
@@ -27,6 +22,7 @@
 
     .page_content{
         width: 100vw;
+        height: calc(100% - 2 * 10.75vmin);     /* Must size %100 rather than 100vh to fix android cutoff issue*/
 
         top: 10.75vmin;
         left: 0vmin;
@@ -158,30 +154,6 @@
 
 
 
-
-    @media (orientation:portrait) {
-        .page_content{
-            height: calc(100% - 2 * 10.75vmin); /* Must size %100 rather than 100vh to fix android cutoff issue*/
-        }
-
-        
-    }
-
-
-
-
-
-
-
-
-
-    @media (orientation:landscape) {
-        .page_content{
-            height: calc(100% - 10.75vmin); /* Must size %100 rather than 100vh to fix android cutoff issue*/
-        }
-
-
-    }
 }
 
 
@@ -189,7 +161,7 @@
 
 
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1367px) {
     #mobile_assets_wrapper{
         display: none;
     }
