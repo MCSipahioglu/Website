@@ -120,9 +120,15 @@ function MobileMenuDeactivate(){
 //--------------------------------REDIRECTING FUNCTIONS--------------------------------
 //Redirecting Between Two Main Pages
 function MobileMenuRedirect(page_index){
-    AllDeactivateMobile();
-    PageDeactivateExcept(page_index);
-    PageRedirectMobile(page_index);
+    //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
+    if(active_project_index != -1){
+        Deactivate(active_page_index, active_project_index);
+        setTimeout(() => {  PageDeactivateExcept(page_index); PageRedirectMobile(page_index); }, 200);  //Must give delay for project deactivation animation to conclude.
+    }else{
+        PageDeactivateExcept(page_index);
+        PageRedirectMobile(page_index);
+    }
+    
 }
 
 
@@ -132,6 +138,7 @@ function AllDeactivateMobile(){
         Deactivate(active_page_index, active_project_index);
     }
 }
+
 
 //Redirect to Page[page_index]
 function PageRedirectMobile(page_index){
