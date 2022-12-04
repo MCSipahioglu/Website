@@ -28,8 +28,6 @@
 #mobile_landing{
     width: 100vw;
     height: calc(100vh - 10.75vmin);
-
-    margin-bottom: 10.75vmin;
     
     overflow: scroll;
 
@@ -82,4 +80,9 @@
 #mobile_traveller{
     background-color: var(--swatch_green);
     box-shadow: 0 0 12.5vmin var(--swatch_green);
+}
+
+#android_cutoff_fixer{
+    width: 100vw;
+    height: 20vmin;
 }
