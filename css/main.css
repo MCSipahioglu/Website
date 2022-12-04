@@ -80,7 +80,7 @@ title{
 }
 
 html{
-    width:100%;                /*Head kullanmayıp, sadece body kullandığımız ve onu da 100 vw,vh ile ölçeklendirdiğimiz için hiçbir zaman scrollable olamayacak, nice*/
+    width:100%;                /* Must size %100 to fix anroid cutoff issue*/
     height:100%;
 }
 
