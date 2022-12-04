@@ -48,9 +48,13 @@ function ActivateBlanket(page_index){
 
 
 function Deactivate(page_index, project_index){
-    e_blanket[page_index].style.transform="translateY(0px)";  //Reset blanket position to absolute top of the page.
-    e_p[page_index].style.overflowY="scroll";        //Unlock the page at current scroll
     DeactivateBlanket(page_index);
+    setTimeout(() => {                                   //Give time to blanket to despawn via animation.
+        e_blanket[page_index].style.transform="translateY(0px)";  //Reset blanket position to absolute top of the page.
+        e_p[page_index].style.overflowY="scroll";        //Unlock the page at current scroll
+     }, 400);
+
+
 
     //Deactivate Page[page_index][project_index]
     e_pp[page_index][project_index].style.height="0vmin";
