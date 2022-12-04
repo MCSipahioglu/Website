@@ -43,6 +43,7 @@ NEW PROJECT:pages.css:    whatever you need
 
 }
 
+
 *{                              /*Formats all*/
     margin:0px;
     padding:0px;
@@ -50,6 +51,8 @@ NEW PROJECT:pages.css:    whatever you need
     border-style: solid;
     border-width: var(--visualization_border_width);
     color: rgb(255, 255, 255);
+
+    line-height: 0.94;      /*Critical to make it consistent across browsers*/
 }
 
 .screen{
