@@ -25,7 +25,10 @@ var active_project_index=-1;
 
 
 function Activate(page_index, project_index){
-    ActivateBlanket(page_index);
+    //Code to get blanket to spawn in on the "top" of the page wrt. overflowed scrolled position.
+    e_p[page_index].style.overflowY="hidden";        //Lock the page at current scroll
+    e_blanket[page_index].style.transform="translateY("+ e_p[page_index].scrollTop +"px)";  //Make the blanket spawn in from the "top" of the scrolled position.
+    ActivateBlanket(page_index);                    //Spawn in the blanket.
 
     //Activate Page[page_index][project_index]
     e_pp[page_index][project_index].style.height="calc(100vh - 8.75vmin)";
@@ -45,6 +48,8 @@ function ActivateBlanket(page_index){
 
 
 function Deactivate(page_index, project_index){
+    e_blanket[page_index].style.transform="translateY(0px)";  //Reset blanket position to absolute top of the page.
+    e_p[page_index].style.overflowY="scroll";        //Unlock the page at current scroll
     DeactivateBlanket(page_index);
 
     //Deactivate Page[page_index][project_index]

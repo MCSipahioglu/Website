@@ -64,7 +64,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     align-items: center;
-    grid-column-gap: 10vmin;
+    grid-column-gap: 5vmin;
 }
 
 .project_container{
@@ -141,7 +141,7 @@
     height: 0vmin;
     opacity: 0%;
 
-    transition: 0.4s;
+    transition: height 0.4s, opacity 0.4s;  /*Instead of transition: 0.4s do it like this so that the blanket can be translated without delay in project_page_expander */
     z-index: 3;
 
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
