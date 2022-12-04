@@ -6,7 +6,7 @@ const em_logo_kofi=document.getElementById("mobile_logo_kofi");
 
 var sidebar_active=0;
 var lang_active=0;
-
+var sidebar_delay_step=50;
 
 
 
@@ -18,10 +18,14 @@ function MobileSidebarToggle(){
     if(sidebar_active==0){
         sidebar_active=1;
         em_logo_arrow.style.transform="scaleX(-1)";
-        em_logo_cv.style.transform="translateX(0vmin)";
-        em_logo_lang.style.transform="translateX(0vmin)";
-        em_logo_email.style.transform="translateX(0vmin)";
-        em_logo_kofi.style.transform="translateX(0vmin)";
+        setTimeout(() => {  em_logo_cv.style.transform="translateX(0vmin)"; },    0*sidebar_delay_step);
+        setTimeout(() => {  em_logo_lang.style.transform="translateX(0vmin)"; },  1*sidebar_delay_step);
+        setTimeout(() => {  em_logo_email.style.transform="translateX(0vmin)"; }, 2*sidebar_delay_step);
+        setTimeout(() => {  em_logo_kofi.style.transform="translateX(0vmin)"; },  3*sidebar_delay_step);
+        
+        
+        
+        
     }
 
     else if(sidebar_active==1){
