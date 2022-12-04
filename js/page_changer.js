@@ -3,6 +3,7 @@
 const e_landing_header_name=document.getElementById("landing_header_name");
 const e_landing_header_surname=document.getElementById("landing_header_surname");
 const e_landing_swatch_wrapper=document.getElementById("landing_swatch_wrapper");
+const e_navbar_scroll_indicator=document.getElementById("navbar_scroll_indicator");
 
 //Elements for transition to other pages
 const e_sweeper_wrapper=document.getElementById("sweeper_wrapper");
@@ -197,6 +198,7 @@ function NavbarMenuScroll(event){
     }
 
     NavbarMenuOrder(navmen_index);
+    e_navbar_scroll_indicator.style.display="none";
 }
 
 //Redirecting Between Two Main Pages
@@ -291,7 +293,7 @@ function ReturnToLanding(){
 function PageDeactivateExceptLanding(){
     e_logo_S.style.pointerEvents="none";
 
-    for(i=1;i<e_p.length;i++){
+    for(i=0;i<e_p.length;i++){
         e_p[i].style.visibility="hidden";
         e_p[i].style.opacity="0%";
     }

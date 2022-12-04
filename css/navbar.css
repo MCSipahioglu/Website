@@ -53,4 +53,22 @@
     cursor: pointer;
 }
 
+#navbar_scroll_indicator{
+    width: 10vmin;
+    
+    position: absolute;
+    margin-top: 3.25vmin;
+    margin-left: calc((100vw - 88.2vmin)/2 + 9vmin);
+    
+    color: white;
+    font-size: 1.5vmin;
+    font-weight: 400;
+    text-align: center;
+
+    opacity: 50%;
+    transition: 0.2s;
+
+    transform: rotate(90deg);
+
+}
 

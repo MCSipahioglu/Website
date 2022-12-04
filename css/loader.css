@@ -16,7 +16,7 @@
     display:none;   /*Remove this when you want to use the loading screen */
     opacity: 100%;
     transition: 1s;
-    z-index: 11;
+    z-index: 15;
 }
 
 #loader{
