@@ -1,8 +1,8 @@
 #mobile_header{
     width: 100vw;
-    height: 8vmin;
+    height: var(--mobile_header_height);
 
-    padding-top: 2vmin;
+    padding-top: calc((var(--mobile_header_height) - 8vmin)/2 + 2vmin);
 
     text-align: center;
     font-size: 8vmin;
@@ -15,7 +15,7 @@
 
 #mobile_landing{
     width: 100vw;
-    height: calc(100% - 10.75vmin);      /* Must size %100 rather than 100vh to fix android cutoff issue*/
+    height: calc(100% - var(--mobile_header_height) - 2.75vmin);      /* Must size %100 rather than 100vh to fix android cutoff issue*/
 
     overflow: scroll;
 

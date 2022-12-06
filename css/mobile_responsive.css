@@ -22,9 +22,9 @@
 
     .page_content{
         width: 100vw;
-        height: calc(100% - 10.75vmin - 2.75vmin - var(--mobile_menu_height));     /* Must size %100 rather than 100vh to fix android cutoff issue*/
+        height: calc(100% - var(--mobile_header_height) - 2* 2.75vmin - var(--mobile_menu_height));     /* Must size %100 rather than 100vh to fix android cutoff issue*/
 
-        top: 10.75vmin;
+        top: calc(var(--mobile_header_height) + 2.75vmin);
         left: 0vmin;
         
     }
