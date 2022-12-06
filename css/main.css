@@ -41,6 +41,9 @@ NEW PROJECT:pages.css:    whatever you need
     --mobmen_x_step: 50vw;
     --visualization_border_width:0px;
 
+    /* Mobile Menu */
+    --mobile_menu_height: 12vmin;
+
 }
 
 

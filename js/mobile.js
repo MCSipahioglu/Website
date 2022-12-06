@@ -1,8 +1,9 @@
 //--------------------------------------CONSTANTS--------------------------------------
 //Elements to disactivate
 const e_mlanding=document.getElementById("mobile_landing");
-const e_mmenu=document.getElementById("mobile_menu");
 
+//Elements to activate
+const e_mmenu=document.getElementById("mobile_menu");
 
 //--------------------------------------VARIABLES--------------------------------------
 //Elements to activate and scroll through
@@ -23,6 +24,8 @@ document.getElementById("mobile_designer").onclick   = function() {PageChangeMob
 document.getElementById("mobile_writer").onclick     = function() {PageChangeMobile(3)};
 document.getElementById("mobile_traveller").onclick  = function() {PageChangeMobile(4)};
 
+document.getElementById("mobile_header").onclick     = function() {ReturnToLandingMobile()};
+
 
 
 
@@ -40,7 +43,7 @@ function PageChangeMobile(page_index){
 
 //Mobile Landing (De)Activate
 function MobileLandingActivate(){
-    e_mlanding.style.display="block";                   //Activate landing page
+    e_mlanding.style.display="grid";                   //Activate landing page
 }
 
 function MobileLandingDeactivate(){
@@ -162,12 +165,21 @@ function PageRedirectMobile(page_index){
 //Return to Landing Interrupt via S Logo
 function ReturnToLandingMobile(){
     //Deactivate All Pages
-    AllDeactivateMobile();                    //Deactivate active project or CV pages.
-    MobileMenuDeactivate();
-    PageDeactivateExceptLanding();
+    if(active_project_index != -1){
+        Deactivate(active_page_index, active_project_index);
+        setTimeout(() => {      
+            MobileMenuDeactivate();
+            PageDeactivateExceptLanding();
+            MobileLandingActivate(); }, 400);  //Must give delay for project deactivation animation to conclude.
+    }else{
+        MobileMenuDeactivate();
+        PageDeactivateExceptLanding();
+        MobileLandingActivate();
+    }
 
-    //Activate Landing
-    MobileLandingActivate();
+
+    
+
 }
 
 

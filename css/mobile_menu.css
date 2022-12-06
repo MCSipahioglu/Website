@@ -1,6 +1,6 @@
 #mobile_menu{
     width: 100vw;
-    height: 8vmin;
+    height: var(--mobile_menu_height);
 
     padding-top: 2vmin;
 
@@ -23,8 +23,9 @@
 
 .mobile_menu_element{
     width: 50vw;
-    height: 8vmin;
+    height: auto;
 
+    margin-top: calc((var(--mobile_menu_height) - 8vmin) /2);
     margin-left: 25vw;
 
     position: absolute;
