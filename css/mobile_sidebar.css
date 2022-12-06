@@ -2,7 +2,7 @@
     width: calc(100vw - 2* (3vmin + 10.2vmin) - 2vmin);
 
     position: absolute;
-    top: calc(var(--mobile_header_height) + 2.75vmin + 4vmin);
+    top: calc(var(--mobile_header_height) + 2.75vmin + 3vmin);
     left: 13.2vmin;
 
     border-color: white;
@@ -35,7 +35,7 @@
     width: 12vmin;
 
     position: absolute;
-    top: calc(var(--mobile_header_height) + 2.75vmin + 3vmin);
+    top: calc(var(--mobile_header_height) + 2.75vmin + 2vmin);
     left: calc(100vw - 14vmin);
 
     padding-top: 1vmin;
