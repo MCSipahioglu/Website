@@ -39,6 +39,8 @@
     left: calc(100vw - 14vmin);
 
     padding-top: 1vmin;
+    padding-bottom: 1vmin;
+
 
     overflow: hidden;
 
