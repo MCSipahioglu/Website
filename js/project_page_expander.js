@@ -10,7 +10,11 @@ const e_pp=[
     document.getElementById("pp_r3"),
     document.getElementById("pp_r4"),
     document.getElementById("pp_r5"),
-    document.getElementById("pp_r6")],
+    document.getElementById("pp_r6"),
+    document.getElementById("pp_r7"),
+    document.getElementById("pp_r8"),
+    document.getElementById("pp_r9"),
+    document.getElementById("pp_r10")],
     
    [document.getElementById("pp_b0"),
     document.getElementById("pp_b1"),
