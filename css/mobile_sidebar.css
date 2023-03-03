@@ -48,7 +48,7 @@
     grid-template-columns: 1fr;
     justify-items: center;
     align-items: center;
-    grid-row-gap: 2vmin;
+    grid-row-gap: 4vmin;
 
     z-index: 3; /*Project Page açıkken de görünsün ki project page'in dili değiştirilebilsin. */
 
@@ -62,8 +62,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
 
     transition: 0.2s;
 
