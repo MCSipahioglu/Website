@@ -11,8 +11,6 @@
 }
 
 #mobile_traveller_intro{
-    margin-top: 3.9vmin;
-
     font-size: 7vmin;
     font-weight: 550;
     text-align: center;
@@ -251,6 +249,13 @@
         font-size: 5.5vmin;
     }
     
+
+
+    /* TRAVELLER */
+    #page_traveller{
+        display: flex;
+        align-items: center;
+    }
     
 
 
