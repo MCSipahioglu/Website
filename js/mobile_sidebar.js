@@ -9,7 +9,7 @@ const em_notification_text=document.getElementById("mobile_notification_text");
 
 var sidebar_active=0;
 var lang_active=0;
-var sidebar_delay_step=35;
+var sidebar_delay_step=30;
 
 
 
