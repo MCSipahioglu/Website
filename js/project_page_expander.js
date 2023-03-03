@@ -45,6 +45,7 @@ function Activate(page_index, project_index){
 function ActivateBlanket(page_index){
     e_blanket[page_index].style.height="calc(100%)";/* Must size %100 rather than 100vh to fix android cutoff issue*/
     e_blanket[page_index].style.opacity="100%";
+    MobileSidebarColor(colors[page_index]);
 }
 
 
@@ -69,6 +70,8 @@ function Deactivate(page_index, project_index){
 function DeactivateBlanket(page_index){
     e_blanket[page_index].style.height="0%";
     e_blanket[page_index].style.opacity="0%";
+    MobileSidebarColor("var(--bg_black)");
+
 }
 
 

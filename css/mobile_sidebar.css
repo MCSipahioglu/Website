@@ -78,19 +78,23 @@
 
     display: block;
     border-color: white;
-    background-color: var(--bg_black);
     border-width: 1vmin;
     border-radius: 8.2vmin;
     border-style: solid;
 
+    transform: background-color 0.4s;
     z-index: inherit;
 }
 
 #mobile_logo_dots{
+    border-radius: 8.2vmin;
+    background-color: var(--bg_black);
     transform-origin: center;
 }
 
 #mobile_logo_cv, #mobile_logo_lang, #mobile_logo_email, #mobile_logo_kofi{
+    border-radius: 8.2vmin;
+    background-color: var(--bg_black);
     transform: translateX(12vmin);
 }
 

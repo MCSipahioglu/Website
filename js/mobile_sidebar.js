@@ -1,4 +1,4 @@
-const em_logo_arrow=document.getElementById("mobile_logo_dots");
+const em_logo_dots=document.getElementById("mobile_logo_dots");
 const em_logo_cv=document.getElementById("mobile_logo_cv");
 const em_logo_lang=document.getElementById("mobile_logo_lang");
 const em_logo_email=document.getElementById("mobile_logo_email");
@@ -20,7 +20,7 @@ function MobileSidebarToggle(){
 
     if(sidebar_active==0){
         sidebar_active=1;
-        em_logo_arrow.style.transform="rotate(+180deg)";
+        em_logo_dots.style.transform="rotate(+180deg)";
         setTimeout(() => {  em_logo_cv.style.transform="translateX(0vmin)"; },    0*sidebar_delay_step);
         setTimeout(() => {  em_logo_lang.style.transform="translateX(0vmin)"; },  1*sidebar_delay_step);
         setTimeout(() => {  em_logo_email.style.transform="translateX(0vmin)"; }, 2*sidebar_delay_step);
@@ -29,7 +29,7 @@ function MobileSidebarToggle(){
 
     else if(sidebar_active==1){
         sidebar_active=0;
-        em_logo_arrow.style.transform="rotate(0deg)";
+        em_logo_dots.style.transform="rotate(0deg)";
         em_logo_cv.style.transform="translateX(12vmin)";
         em_logo_lang.style.transform="translateX(12vmin)";
         em_logo_email.style.transform="translateX(12vmin)";
@@ -76,4 +76,13 @@ function MobileNotification(message){
     em_notification_wrapper.style.visibility="hidden";
     em_notification_wrapper.style.opacity="0%";      
     }, 1400);
+}
+
+function MobileSidebarColor(color) {
+    em_logo_dots.style.backgroundColor=color;
+    em_logo_cv.style.backgroundColor=color;
+    em_logo_lang.style.backgroundColor=color;
+    em_logo_email.style.backgroundColor=color;
+    em_logo_kofi.style.backgroundColor=color;
+
 }
