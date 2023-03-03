@@ -24,8 +24,11 @@ function DropdownActivateWhenEng(){
     e_lang_dropdown.style.visibility="visible";
     e_lang_dropdown.style.opacity="100%";
 
-    e_logo_tr.style.visibility="visible";
-    e_logo_tr.style.opacity="100%";
+    setTimeout(() => {  
+        e_logo_tr.style.visibility="visible";
+        e_logo_tr.style.opacity="100%";
+     },    400);
+
 
     //Start listening for lang change click or exit mouseleave
     e_logo_tr.addEventListener("click", LanguageChangeTr, true);  
