@@ -35,7 +35,7 @@
     width: 12vmin;
 
     position: absolute;
-    top: calc(var(--mobile_header_height) + 2.75vmin + 2vmin);
+    top: calc(var(--mobile_header_height) + 4vmin);
     left: calc(100vw - 14vmin);
 
     padding-top: 1vmin;
