@@ -59,7 +59,7 @@
 
 
 #logo_eng, #logo_tr, #logo_cv, #logo_return{
-    transition: visibility 0s, opacity 0.4s;
+    transition: height 0s, visibility 0s, opacity 0.4s;
 }
 
 #logo_tr{

@@ -24,11 +24,8 @@ function DropdownActivateWhenEng(){
     e_lang_dropdown.style.visibility="visible";
     e_lang_dropdown.style.opacity="100%";
 
-    setTimeout(() => {  
-        e_logo_tr.style.visibility="visible";
-        e_logo_tr.style.opacity="100%";
-     },    400);
-
+    e_logo_tr.style.visibility="visible";
+    e_logo_tr.style.opacity="100%";
 
     //Start listening for lang change click or exit mouseleave
     e_logo_tr.addEventListener("click", LanguageChangeTr, true);  
@@ -38,7 +35,7 @@ function DropdownDeactivateWhenEng(){
     e_logo_tr.style.visibility="hidden";
     e_logo_tr.style.opacity="0%";
 
-    e_lang_dropdown.style.height="0vmin";
+    e_lang_dropdown.style.height="4.1vmin";
     e_lang_dropdown.style.visibility="hidden";
     e_lang_dropdown.style.opacity="0%";
     
@@ -77,7 +74,7 @@ function DropdownDeactivateWhenTr(){
     e_logo_eng.style.visibility="hidden";
     e_logo_eng.style.opacity="0%";
 
-    e_lang_dropdown.style.height="0vmin";
+    e_lang_dropdown.style.height="4.1vmin";
     e_lang_dropdown.style.visibility="hidden";
     e_lang_dropdown.style.opacity="0%";
     
@@ -95,7 +92,7 @@ function DropdownLeftWhenTr(event){
 
 
 
-
+//TRANSLATE
 
 function LanguageChangeEng(){
     DropdownDeactivateWhenTr();
