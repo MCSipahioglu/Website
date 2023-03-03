@@ -37,3 +37,7 @@ e_logo_kofi.addEventListener("click", KofiRedirect, true);
 function KofiRedirect(){
     window.open("https://ko-fi.com/mcsipahioglu#paypalModal");   
 }
+
+function InstagramRedirect(){
+    window.open("https://www.instagram.com/mcsipahioglu/");   
+}

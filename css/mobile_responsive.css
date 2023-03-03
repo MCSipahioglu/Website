@@ -13,6 +13,7 @@
 #mobile_traveller_intro{
     text-align: center;
     margin-top: calc(12.2vmin);
+    padding-bottom: 2vmin;
 }
 
 @media screen and (max-width:1367px) {      /* Ipad Pro 11.9" is the limit*/
