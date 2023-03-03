@@ -107,8 +107,7 @@
 }
 
 .project_intro{             /*3 Lines are allowed*/
-    padding-top: 1vmin;
-    padding-bottom: 1vmin;
+    padding: 1vmin;
 
     font-size: 2vmin;
     font-weight: 400;
@@ -117,6 +116,8 @@
 
 .project_expand{
     padding-top: 1vmin;
+    padding-right: 0.5vmin;
+    padding-left: 0.5vmin;
 
     font-size: 2vmin;
     font-weight: 400;
