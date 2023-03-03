@@ -16,6 +16,12 @@
     text-align: center;
 }
 
+#mobile_traveller_image{
+    width:100vw;
+    padding-top: 3vmin;
+    padding-bottom: 3vmin;
+}
+
 @media screen and (max-width:1367px) {      /* Ipad Pro 11.9" is the limit*/
     #desktop_assets_wrapper{
         display: none;
