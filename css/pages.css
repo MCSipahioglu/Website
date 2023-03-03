@@ -331,7 +331,7 @@
 #traveller_instagram_follow{
     margin-left: 7.5vw;
     width: 85vw;
-    height: 12vmin;
+    height: 11vmin;
     background: #f09433; 
     background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
     background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
@@ -340,10 +340,10 @@
     
     border-style: solid;
     border-width: 1vmin;
-    border-radius: 12vmin;
+    border-radius: 11vmin;
     border-color: white;
 
-    font-size: 7vmin;
+    font-size: 6vmin;
     padding-top: 0.625vmin;
     font-weight: 550;
     text-align: center;
