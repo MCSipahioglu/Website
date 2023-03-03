@@ -7,10 +7,12 @@ const e_lang_dropdown=document.getElementById("lang_dropdown");
 const e_cv_pdf_eng=document.getElementById("cv_pdf_eng");
 const e_cv_pdf_tr=document.getElementById("cv_pdf_tr");
 
+//For changing the page content
 
 
-e_logo_eng.addEventListener("click", DropdownActivateWhenEng, true);     //Page boots up on English
-
+//Page boots up on English
+e_logo_eng.addEventListener("click", DropdownActivateWhenEng, true);
+email_msg="Email copied to clipboard.";
 
 
 
@@ -100,7 +102,7 @@ function LanguageChangeEng(){
 
 
 
-    //Change Page Content
+    //Change Logo
     e_logo_eng.style.visibility="visible";
     e_logo_eng.style.opacity="100%";
     e_cv_pdf_eng.style.visibility="visible";
@@ -110,7 +112,8 @@ function LanguageChangeEng(){
     e_cv_pdf_tr.style.visibility="hidden";
     e_cv_pdf_tr.style.opacity="0%";
 
-
+   //Change Page Content
+   email_msg="Email copied to clipboard.";
 
 
 
@@ -127,7 +130,7 @@ function LanguageChangeTr(){
 
 
 
-    //Change Page Content
+    //Change Logo
     e_logo_tr.style.visibility="visible";
     e_logo_tr.style.opacity="100%";
     e_cv_pdf_tr.style.visibility="visible";
@@ -137,6 +140,8 @@ function LanguageChangeTr(){
     e_cv_pdf_eng.style.visibility="hidden";
     e_cv_pdf_eng.style.opacity="0%";
 
+    //Change Page Content
+    email_msg="E-posta panoya kopyalandı.";
 
 }
 

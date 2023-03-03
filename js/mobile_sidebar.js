@@ -65,7 +65,7 @@ function MobileLanguageToggle(){
 
 function MobileEmailCopy() {
     navigator.clipboard.writeText(email); // Copy text into clipboard
-    MobileNotification("Email copied to clipboard.");
+    MobileNotification(email_msg);
 }
 
 function MobileNotification(message){
