@@ -63,6 +63,8 @@
     justify-content: center;
     align-items: center;
 
+    
+
     transition: 0.2s;
 
     z-index: inherit;
@@ -78,6 +80,7 @@
 
     display: block;
     border-color: white;
+    background-color: var(--bg_black);
     border-width: 1vmin;
     border-radius: 8.2vmin;
     border-style: solid;
