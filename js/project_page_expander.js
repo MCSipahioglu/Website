@@ -25,7 +25,6 @@ const e_pp=[
    [document.getElementById("pp_d0")]];                             //Append when new project
 
 var active_project_index=-1;
-   
 
 
 function Activate(page_index, project_index){

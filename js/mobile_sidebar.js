@@ -1,4 +1,4 @@
-const em_logo_arrow=document.getElementById("mobile_logo_arrow");
+const em_logo_arrow=document.getElementById("mobile_logo_dots");
 const em_logo_cv=document.getElementById("mobile_logo_cv");
 const em_logo_lang=document.getElementById("mobile_logo_lang");
 const em_logo_email=document.getElementById("mobile_logo_email");
