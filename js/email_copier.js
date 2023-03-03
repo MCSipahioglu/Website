@@ -27,7 +27,7 @@ function EmailActivate(){
 function EmailCopy() {
     /* Copy text into clipboard */
     navigator.clipboard.writeText(email);
-    e_email.innerHTML="Email copied to clipboard.";
+    e_email.innerHTML=email_msg;
 }
 
 
