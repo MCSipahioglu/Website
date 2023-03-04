@@ -258,6 +258,10 @@
 
 
     /* TRAVELLER */
+    #desktop_traveller_container{
+        display: none;
+    }
+    
     #page_traveller{
         display: flex;
         align-items: center;
@@ -274,9 +278,11 @@
 
 
 @media screen and (min-width:1367px) {
-    #mobile_assets_wrapper{
+    #mobile_assets_wrapper, #mobile_traveller_container{
         display: none;
     }
+
+
     
 }
 

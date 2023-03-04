@@ -328,6 +328,8 @@
     
 }
 
+
+
 #traveller_instagram_follow{
     margin-left: 5vw;
     width: 90vw;
@@ -350,6 +352,32 @@
 
 }
 
+#desktop_traveller_container{
+    width: calc(100vw - 2 * 6.4vmin);
+    left: 3.4vmin;
+    position: absolute;
+    height: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#world_map{
+    transform: scale(4.4375);   /*1.3125 Full-Screen*/
+}
+
+svg path{
+    fill: hsl(81, 60%, 25%);
+    stroke: white;
+    stroke-width: .25;
+}
+
+svg path:hover{
+    fill: var(--swatch_green);
+}
 
 
 
