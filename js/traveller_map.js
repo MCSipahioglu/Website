@@ -25,10 +25,11 @@ function MapSetUp(){
     if(ratio_width < ratio_height){                 //Smaller ratio governs.
         zoom=ratio_width;                           //Zoom in such that the width of the map matches the window.
         min_zoom=zoom;
-        initial_translate_x=0;                              //Since there is still a height difference, translate just the half of the height difference to center.
+        initial_translate_x=0;                      //Since there is still a height difference, translate just the half of the height difference to center.
         initial_translate_y= (dtc_size.height-map_height*zoom)/2;
     }else{
         zoom=ratio_height;                          //Vice versa.
+        min_zoom=zoom;
         initial_translate_x= (dtc_size.width-map_width*zoom)/2;
         initial_translate_y=0;
     }
