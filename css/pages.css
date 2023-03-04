@@ -360,13 +360,11 @@
 
     overflow: hidden;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 #world_map{
-    transform: scale(4.4375);   /*1.3125 Full-Screen*/
+    transform-origin: 0 0;
+    
 }
 
 svg path{
