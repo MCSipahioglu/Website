@@ -1,22 +1,12 @@
 e_map=document.getElementById("world_map")
-
-
-
-document.addEventListener("wheel", MapZoom, true);
-
-
-
-
-
-
-
-
-
-
+e_map.addEventListener("wheel", MapZoom, true);
 
 
 zoom=4.703125;
 const zoom_speed=0.3125;
+
+
+
 
 
 
@@ -32,8 +22,5 @@ function MapZoom(event){
         }     
     }
     e_map.style.transform="scale("+ zoom +")";
-
-    console.log(zoom);
-
 
 }
