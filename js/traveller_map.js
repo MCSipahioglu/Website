@@ -29,7 +29,6 @@ function MapSetUp(){
         initial_translate_y= (dtc_size.height-map_height*zoom)/2;
     }else{
         zoom=ratio_height;                          //Vice versa.
-        max_zoom=zoom;
         initial_translate_x= (dtc_size.width-map_width*zoom)/2;
         initial_translate_y=0;
     }
