@@ -9,7 +9,7 @@ e_map=document.getElementById("world_map");
 
 //Parameters
 const zoom_speed=0.3125;
-const min_zoom=1;
+min_zoom=1;
 const max_zoom=60;
 const map_width=1009.6727;
 const map_height=665.96301;
@@ -24,19 +24,21 @@ function MapSetUp(){
 
     if(ratio_width < ratio_height){                 //Smaller ratio governs.
         zoom=ratio_width;                           //Zoom in such that the width of the map matches the window.
-        translate_x=0;                              //Since there is still a height difference, translate just the half of the height difference to center.
-        translate_y= (dtc_size.height-map_height*zoom)/2;
+        min_zoom=zoom;
+        initial_translate_x=0;                              //Since there is still a height difference, translate just the half of the height difference to center.
+        initial_translate_y= (dtc_size.height-map_height*zoom)/2;
     }else{
         zoom=ratio_height;                          //Vice versa.
-        translate_x= (dtc_size.width-map_width*zoom)/2;
-        translate_y=0;
+        max_zoom=zoom;
+        initial_translate_x= (dtc_size.width-map_width*zoom)/2;
+        initial_translate_y=0;
     }
 
 }
 MapSetUp();
 
 //Variables
-translate = { scale: zoom, translateX: translate_x, translateY: translate_y };
+translate = { scale: zoom, translateX: initial_translate_x, translateY: initial_translate_y };
 initialContentsPos = { x:0, y:0 };
 initialZoomPos = { x:0, y:0 };
 pinnedMousePosition = { x:0, y:0 };
@@ -78,39 +80,37 @@ function MapMouseUp(event){
 
 function MapZoom(event){
     prev_zoom=zoom;
-    if(event.deltaY>0 && (zoom-prev_zoom*zoom_speed<min_zoom)){   //Don't try to zoom out if we are maxed zoomed out.
-        zoom=min_zoom;
-    }else if(event.deltaY<0 && (zoom+prev_zoom*zoom_speed>max_zoom)){ 
+    if(event.deltaY>0 && (zoom-prev_zoom*zoom_speed<min_zoom)){         //Don't try to zoom out if we are maxed zoomed out.
+        zoom=min_zoom;                                                  //In this case just go to the initial zoom & centered scale.
+        translate.translateX = initial_translate_x;
+        translate.translateY = initial_translate_y;
+    }else if(event.deltaY<0 && (zoom+prev_zoom*zoom_speed>max_zoom)){   //Limit max zoom in and no shift etc. necessary since zoom doesn't change.
         zoom=max_zoom;
     }else{
         if(event.deltaY<0){
-            zoom+=prev_zoom*zoom_speed;                 //Must zoom exponentially more to feel linear.
+            zoom+=prev_zoom*zoom_speed;                                 //Must zoom exponentially more to feel linear.
         }else{
             zoom-=prev_zoom*zoom_speed;
-        }     
+        }
+
+        //Compansate for the zoom shift & also zoom on where the cursor is
+        mousePosition.x = event.clientX;
+        mousePosition.y = event.clientY;
+
+        mousePosition.x = event.clientX - dtc_size.x;
+        mousePosition.y = event.clientY - dtc_size.y;
+
+        const contentMousePosX = (mousePosition.x - translate.translateX);
+        const contentMousePosY = (mousePosition.y - translate.translateY);  
+        const x = mousePosition.x - (contentMousePosX * (zoom / prev_zoom));
+        const y = mousePosition.y - (contentMousePosY * (zoom / prev_zoom));
+    
+        translate.translateX = x;
+        translate.translateY = y;
     }
-
+    
     translate.scale = zoom;
-
-    mousePosition.x = event.clientX;
-	mousePosition.y = event.clientY;
-
-
-
-    //Compansate for the zoom shift & also zoom on here the cursor is
-    mousePosition.x = event.clientX - dtc_size.x;
-	mousePosition.y = event.clientY - dtc_size.y;
-
-    const contentMousePosX = (mousePosition.x - translate.translateX);
-    const contentMousePosY = (mousePosition.y - translate.translateY);  
-    const x = mousePosition.x - (contentMousePosX * (zoom / prev_zoom));
-    const y = mousePosition.y - (contentMousePosY * (zoom / prev_zoom));
-  
-	translate.translateX = x;
-   	translate.translateY = y;
-
-
-    MapUpdate();
+    MapUpdate();    
 }
 
 
@@ -119,3 +119,12 @@ function MapUpdate(){
     const matrix = `matrix(${translate.scale},0,0,${translate.scale},${translate.translateX},${translate.translateY})`;
     e_map.style.transform = matrix;
   };
+
+
+  function traveller_expander(){
+    page_index=4;
+    e_p[page_index].style.overflowY="hidden";        //Lock the page at current scroll
+    e_blanket[page_index].style.transform="translateY("+ e_p[page_index].scrollTop +"px)";  //Make the blanket spawn in from the "top" of the scrolled position.
+    ActivateBlanket(page_index);                    //Spawn in the blanket.
+
+  }

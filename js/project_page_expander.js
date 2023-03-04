@@ -1,7 +1,9 @@
 const e_blanket=[
     document.getElementById("project_page_roboticist_blanket"),
     document.getElementById("project_page_botsmith_blanket"),
-    document.getElementById("project_page_designer_blanket")];      //Append when new page.
+    document.getElementById("project_page_designer_blanket"),
+    document.getElementById("project_page_writer_blanket"),
+    document.getElementById("project_page_traveller_blanket")];      //Append when new page.
 
 const e_pp=[
    [document.getElementById("pp_r0"),

@@ -235,6 +235,10 @@
 
 
 /* WRITER */
+#project_page_writer_blanket{
+    background-color: var(--swatch_turqoise);
+}
+
 .post_container{
     width: 50vw;
 
@@ -325,7 +329,6 @@
 /* TRAVELLER */
 #map{
     width: calc(100vw - 6vmin);
-    
 }
 
 
@@ -377,8 +380,12 @@ svg path:hover{
     fill: var(--swatch_green);
 }
 
-#TR, #CY, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE{
+#TR, #NL, #BE, #CY, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE{
     fill: var(--swatch_green);
+}
+
+#project_page_traveller_blanket{
+    background-color: var(--swatch_green);
 }
 
 
