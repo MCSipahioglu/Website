@@ -17,13 +17,13 @@
 
 }
 
-#page_roboticist, #page_botsmith, #page_designer, #page_writer{
+#page_roboticist, #page_botsmith, #page_designer, #page_writer, #page_traveller{
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll;
 }
 
-#page_roboticist::-webkit-scrollbar, #page_botsmith::-webkit-scrollbar, #page_designer::-webkit-scrollbar, #page_writer::-webkit-scrollbar {
+#page_roboticist::-webkit-scrollbar, #page_botsmith::-webkit-scrollbar, #page_designer::-webkit-scrollbar, #page_writer::-webkit-scrollbar, #page_traveller::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
 
