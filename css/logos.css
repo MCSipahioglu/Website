@@ -1,6 +1,6 @@
 /*LOGOS*/
 #logo_wrapper{
-    width: 45vmin;
+    width: 45.5vmin;    /* 3.5*(7+6)=45.5 It looks like there is 1 image gap between each image*/
     height: 5vmin;
 
     display: grid;
