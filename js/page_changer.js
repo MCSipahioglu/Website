@@ -19,7 +19,7 @@ const e_navbar_name=document.getElementById("navbar_name");
 
 var navmen_og_index=0;  //Original page condition at navmen.
 var navmen_index=0;
-var active_page_index= -1;
+var active_page_index= "none";
 var i;  //Misc counter
 
 
@@ -219,8 +219,8 @@ function AllDeactivate(){
     CVDeactivate();
 
     //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
-    if(active_project_index != -1){
-        Deactivate(active_page_index, active_project_index);
+    if(active_project_id != "none"){
+        Deactivate(active_page_index, active_project_id);
     }
     
 }

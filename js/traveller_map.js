@@ -119,12 +119,3 @@ function MapUpdate(){
     const matrix = `matrix(${translate.scale},0,0,${translate.scale},${translate.translateX},${translate.translateY})`;
     e_map.style.transform = matrix;
   };
-
-
-  function traveller_expander(){
-    page_index=4;
-    e_p[page_index].style.overflowY="hidden";        //Lock the page at current scroll
-    e_blanket[page_index].style.transform="translateY("+ e_p[page_index].scrollTop +"px)";  //Make the blanket spawn in from the "top" of the scrolled position.
-    ActivateBlanket(page_index);                    //Spawn in the blanket.
-
-  }

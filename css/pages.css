@@ -379,8 +379,11 @@ svg path:hover{
     fill: var(--swatch_green);
 }
 
-#TR, #NL, #BE, #CY, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE{
+#TR, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE{
     fill: var(--swatch_green);
+}
+#TR:hover, #EG:hover, #IT:hover, #CH:hover, #FR:hover, #DE:hover, #AT:hover, #HU:hover, #PL:hover, #DK:hover, #SE:hover{
+    cursor: pointer;
 }
 
 #project_page_traveller_blanket{
