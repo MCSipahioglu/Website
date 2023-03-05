@@ -10,7 +10,7 @@ e_logo_email.onclick = function() {EmailActivate()};
 
 
 function EmailActivate(){
-    e_email_wrapper.style.left="calc(100vw - 30vmin)";
+    e_email_wrapper.style.left="calc(100vw - 31.75vmin)";
     e_logo_email_copypaste.addEventListener("click", EmailCopy, true);
 
     setTimeout(() => {  
