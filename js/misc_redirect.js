@@ -31,11 +31,12 @@ function CVDeactivate(){
 
 
 
-const e_logo_kofi=document.getElementById("logo_kofi");
-e_logo_kofi.addEventListener("click", KofiRedirect, true);
-
 function KofiRedirect(){
     window.open("https://ko-fi.com/mcsipahioglu#paypalModal");   
+}
+
+function TwitterRedirect(){
+    window.open("https://twitter.com/mcsipahioglu");   
 }
 
 function InstagramRedirect(){
