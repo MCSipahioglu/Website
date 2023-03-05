@@ -3,7 +3,7 @@
 const e_landing_header_name=document.getElementById("landing_header_name");
 const e_landing_header_surname=document.getElementById("landing_header_surname");
 const e_landing_swatch_wrapper=document.getElementById("landing_swatch_wrapper");
-const e_navbar_scroll_indicator=document.getElementById("navbar_scroll_indicator");
+const e_navbar_menu_scroll_indicator=document.getElementById("navbar_menu_scroll_indicator");
 
 //Elements for transition to other pages
 const e_sweeper_wrapper=document.getElementById("sweeper_wrapper");
@@ -177,7 +177,7 @@ function PageActivate(page_index){
 //--------------------------------REDIRECTING FUNCTIONS--------------------------------
 //Hover+Wheel interrupt to use the navbar menu
 document.addEventListener('mousemove', e => {
-    if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu_") ){ //When on the navbar_menu elements:
+    if ( ((document.elementFromPoint(e.clientX, e.clientY)).id).includes("navbar_menu") ){ //When on the navbar_menu elements:
         document.addEventListener("wheel", NavbarMenuScroll, true);       //Check for scrolling. (Scroll navbar_menu when scrolling while hovering on it.)
         document.addEventListener("click", NavbarMenuRedirect, true);     //If clicked when able to scroll. Then redirect.
     }else{
@@ -201,7 +201,7 @@ function NavbarMenuScroll(event){
     }
 
     NavbarMenuOrder(navmen_index);
-    e_navbar_scroll_indicator.style.display="none";
+    e_navbar_menu_scroll_indicator.style.display="none";
 }
 
 //Redirecting Between Two Main Pages

@@ -27,7 +27,7 @@
 }
 
 #navbar_menu{
-    width: calc(100vw - 88.2vmin);
+    width: calc(100vw - 98.7vmin);
     height: 8vmin;
 
     visibility: hidden;
@@ -41,7 +41,7 @@
     width: 25vmin;
     
     position: absolute;
-    margin-left: calc((100vw - 88.2vmin)/2 - 12.5vmin);
+    margin-left: calc((100vw - 98.7vmin)/2 - 12.5vmin);
     
     color: white;
     font-size: 4.5vmin;
@@ -53,12 +53,12 @@
     cursor: pointer;
 }
 
-#navbar_scroll_indicator{
+#navbar_menu_scroll_indicator{
     width: 10vmin;
     
     position: absolute;
     margin-top: 3.25vmin;
-    margin-left: calc((100vw - 88.2vmin)/2 + 9vmin);
+    margin-left: calc((100vw - 98.7vmin)/2 + 9vmin);
     
     color: white;
     font-size: 1.5vmin;
@@ -69,6 +69,8 @@
     transition: 0.2s;
 
     transform: rotate(90deg);
+
+    cursor: default;
 
 }
 
