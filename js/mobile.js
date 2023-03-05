@@ -128,7 +128,7 @@ function MobileMenuDeactivate(){
 function MobileMenuRedirect(page_index){
     //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
     if(active_project_id != "none"){
-        Deactivate(active_page_index, active_project_id);
+        ProjectDeactivate(active_page_index, active_project_id);
         setTimeout(() => {  PageDeactivateExcept(page_index); PageRedirectMobile(page_index); }, 200);  //Must give delay for project deactivation animation to conclude.
     }else{
         PageDeactivateExcept(page_index);
@@ -141,7 +141,7 @@ function MobileMenuRedirect(page_index){
 function AllDeactivateMobile(){
     //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
     if(active_project_id != "none"){
-        Deactivate(active_page_index, active_project_id);
+        ProjectDeactivate(active_page_index, active_project_id);
     }
 }
 
@@ -166,7 +166,7 @@ function PageRedirectMobile(page_index){
 function ReturnToLandingMobile(){
     //Deactivate All Pages
     if(active_project_id != "none"){
-        Deactivate(active_page_index, active_project_id);
+        ProjectDeactivate(active_page_index, active_project_id);
         setTimeout(() => {      
             MobileMenuDeactivate();
             PageDeactivateExceptLanding();
