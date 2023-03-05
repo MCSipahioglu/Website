@@ -158,12 +158,14 @@
     width: 5vmin;
     height: 5vmin;
 
-    position: relative;
+    position: absolute;
     top: 3vmin;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 4;
 }
 
 .image_project_return{
@@ -390,7 +392,14 @@ svg path:hover{
     background-color: var(--swatch_green);
 }
 
+.header_traveller{
+    position: relative;
+    top: 3.6vmin;
 
+    font-size: 4vmin;
+    font-weight: 550;
+    text-align: center;
+}
 /* NEW PAGE */
 
 
