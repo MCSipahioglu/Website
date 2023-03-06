@@ -32,7 +32,7 @@ function CVDeactivate(){
 
 
 function KofiRedirect(){
-    window.open("https://ko-fi.com/mcsipahioglu#paypalModal");   
+    window.open("https://ko-fi.com/mcsipahioglu");   
 }
 
 function TwitterRedirect(){
