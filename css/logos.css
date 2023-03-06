@@ -39,10 +39,16 @@
     cursor: pointer;
 }
 
+#logos_cv{
+
+}
+
+#logo_cv{
+    position: absolute;
+}
+
 #logo_return{
     position: absolute;
-    top: 1.5vmin;
-    right: 10vmin;
 
     visibility: hidden;
     opacity: 0%;
