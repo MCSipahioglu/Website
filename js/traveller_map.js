@@ -84,13 +84,15 @@ function MapZoom(event){
         zoom=min_zoom;                                                  //In this case just go to the initial zoom & centered scale.
         translate.translateX = initial_translate_x;
         translate.translateY = initial_translate_y;
-    }else if(event.deltaY<0 && (zoom+prev_zoom*zoom_speed>max_zoom)){   //Limit max zoom in and no shift etc. necessary since zoom doesn't change.
-        zoom=max_zoom;
     }else{
-        if(event.deltaY<0){
-            zoom+=prev_zoom*zoom_speed;                                 //Must zoom exponentially more to feel linear.
+        if(event.deltaY<0 && (zoom+prev_zoom*zoom_speed>max_zoom)){   //Limit max zoom in and no shift etc. necessary since zoom doesn't change.
+            zoom=max_zoom;
         }else{
-            zoom-=prev_zoom*zoom_speed;
+            if(event.deltaY<0){
+                zoom+=prev_zoom*zoom_speed;                                 //Must zoom exponentially more to feel linear.
+            }else{
+                zoom-=prev_zoom*zoom_speed;
+            }
         }
 
         //Compansate for the zoom shift & also zoom on where the cursor is
@@ -107,7 +109,7 @@ function MapZoom(event){
     
         translate.translateX = x;
         translate.translateY = y;
-    }
+    } 
     
     translate.scale = zoom;
     MapUpdate();    
