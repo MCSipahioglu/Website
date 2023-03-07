@@ -159,6 +159,7 @@
 
     position: absolute;
     top: 3vmin;
+    left: 3vmin;
 
     display: flex;
     justify-content: center;

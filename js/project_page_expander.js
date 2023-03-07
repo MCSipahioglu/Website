@@ -9,11 +9,12 @@ const e_blanket=[
 var active_project_id="none";
 
 
-function ProjectActivate(page_index, project_id){
+function ProjectActivate(project_id){
+
     //Code to get blanket to spawn in on the "top" of the page wrt. overflowed scrolled position.
-    e_p[page_index].style.overflowY="hidden";        //Lock the page at current scroll
-    e_blanket[page_index].style.transform="translateY("+ e_p[page_index].scrollTop +"px)";  //Make the blanket spawn in from the "top" of the scrolled position.
-    BlanketActivate(page_index);                    //Spawn in the blanket.
+    e_p[active_page_index].style.overflowY="hidden";        //Lock the page at current scroll
+    e_blanket[active_page_index].style.transform="translateY("+ e_p[active_page_index].scrollTop +"px)";  //Make the blanket spawn in from the "top" of the scrolled position.
+    BlanketActivate();                    //Spawn in the blanket.
 
     //Activate Page[page_index][project_id]
     e_pp=document.getElementById(project_id);
@@ -25,25 +26,24 @@ function ProjectActivate(page_index, project_id){
 
 }
 
-function BlanketActivate(page_index){
-    e_blanket[page_index].style.height="calc(100%)";/* Must size %100 rather than 100vh to fix android cutoff issue*/
-    e_blanket[page_index].style.opacity="100%";
-    MobileSidebarColor(colors[page_index]);
+function BlanketActivate(){
+    e_blanket[active_page_index].style.height="calc(100%)";/* Must size %100 rather than 100vh to fix android cutoff issue*/
+    e_blanket[active_page_index].style.opacity="100%";
+    MobileSidebarColor(colors[active_page_index]);
 }
 
 
 
-function ProjectDeactivate(page_index, project_id){
-    BlanketDeactivate(page_index);
+function ProjectDeactivate(){
+    BlanketDeactivate();
     setTimeout(() => {                                   //Give time to blanket to despawn via animation.
-        e_blanket[page_index].style.transform="translateY(0px)";  //Reset blanket position to absolute top of the page.
-        e_p[page_index].style.overflowY="scroll";        //Unlock the page at current scroll
+        e_blanket[active_page_index].style.transform="translateY(0px)";  //Reset blanket position to absolute top of the page.
+        e_p[active_page_index].style.overflowY="scroll";        //Unlock the page at current scroll
      }, 400);
 
 
 
-    //Deactivate Page[page_index][project_id]
-    e_pp=document.getElementById(project_id);
+    //Deactivate Page[project_id]
     e_pp.style.height="0vmin";
     e_pp.style.opacity="0%";
     e_pp.style.visibility="hidden";
@@ -51,9 +51,9 @@ function ProjectDeactivate(page_index, project_id){
     active_project_id="none";
 }
 
-function BlanketDeactivate(page_index){
-    e_blanket[page_index].style.height="0%";
-    e_blanket[page_index].style.opacity="0%";
+function BlanketDeactivate(){
+    e_blanket[active_page_index].style.height="0%";
+    e_blanket[active_page_index].style.opacity="0%";
     MobileSidebarColor("var(--bg_black)");
 
 }

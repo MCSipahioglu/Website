@@ -3,7 +3,7 @@ e_carousel_title=document.getElementById("carousel_title");
 e_carousel_counter=document.getElementById("carousel_counter");
 
 image_index=0;
-
+let e_gallery;
 //Possible Additions: Control with arrow keys. (Left-Right Carousel, Up-Down: Between Posts)
 //Captions below the image. => Just use titles so we are not pressed for space.
 
@@ -18,6 +18,7 @@ function GalleryActivate(gallery_title, gallery_id){
     ImageUpdate();
 
 }
+
 
 
 function GalleryDeactivate(){
