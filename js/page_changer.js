@@ -222,6 +222,9 @@ function AllDeactivate(){
     if(active_project_id != "none"){
         ProjectDeactivate(active_page_index, active_project_id);
     }
+
+    //Deactivate Open Galleries
+    GalleryDeactivate();
     
 }
 
