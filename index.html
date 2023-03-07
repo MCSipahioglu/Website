@@ -421,7 +421,7 @@
       
 
     </div>
-    
+
     <div id="project_page_roboticist_blanket" class="project_page">
 
 
@@ -2037,31 +2037,51 @@
           <img src="./assets/0.Return.svg" class="image_project_return">
         </button>
         <div class="header_traveller">🇹🇷 Turkiye</div>
-        <div class="gallery">
-          <div class="img_h">
+        <div class="covers_gallery">
+          <button type="button" onclick="GalleryActivate('gal_TR_06_001')">
             <img src="./assets/Photographs/TR/1.jpg">
-          </div>
-          <div class="img_v"><img src="./assets/Photographs/TR/2.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/3.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/4.jpg"></div>
-          <div class="img_v"><img src="./assets/Photographs/TR/5.jpg"></div>
-          <div class="img_v"><img src="./assets/Photographs/TR/6.jpg"></div>
-          <div class="img_v"><img src="./assets/Photographs/TR/7.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/8.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/9.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/10.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/11.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/12.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/13.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/14.jpg"></div>
-          <div class="img_h"><img src="./assets/Photographs/TR/15.jpg"></div>
+          </button>
+          <button type="button" onclick="">
+            <img src="./assets/Photographs/TR/2.jpg">
+          </button>
+          <button type="button" onclick="">
+            <img src="./assets/Photographs/TR/3.jpg">
+          </button>
           
 
         </div>
       </div>
 
+      <div id="carousel_gallery">
+        <div id="carousel_controls">
+          <button type="button" onclick="GalleryDeactivate()" id="gallery_return_button" class="gallery_button">
+            <img src="./assets/0.Return.svg" class="image_project_return">
+          </button>
+          <button type="button" onclick="ImagePrevious()" id="gallery_left_button" class="gallery_button">
+            <img src="./assets/0.ArrowLeft.svg" class="image_project_return">
+          </button>
+          <button type="button" onclick="ImageNext()" id="gallery_right_button" class="gallery_button">
+            <img src="./assets/0.ArrowRight.svg" class="image_project_return">
+          </button>
+          <h1 id="carousel_title">
+            ADGASGASDGASFAFASFASDFD
+          </h1>
+          <h1 id="carousel_counter">
+            100/100
+          </h1>
+        </div>
 
 
+
+        <div class="carousel_container" id="gal_TR_06_001">
+          <img src="./assets/Photographs/TR/7.jpg">
+          <img src="./assets/Photographs/TR/8.jpg">
+          <img src="./assets/Photographs/TR/10.jpg">
+        </div>
+
+
+
+      </div>
     </div>
 
     
@@ -2144,6 +2164,7 @@
   <script src="./js/project_page_expander.js"></script>
   <script src="./js/writer_filter.js"></script>
   <script src="./js/traveller_map.js"></script>
+  <script src="./js/traveller_gallery.js"></script>
   <script src="./js/mobile.js"></script>
   <script src="./js/mobile_sidebar.js"></script>
 
