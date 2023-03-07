@@ -441,6 +441,8 @@ svg path:hover{
 
     display: none;
 
+    z-index: 5;
+
 }
 
 #carousel_controls{
@@ -459,6 +461,7 @@ svg path:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #gallery_return_button{
