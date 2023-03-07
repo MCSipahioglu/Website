@@ -4,7 +4,8 @@ e_carousel_counter=document.getElementById("carousel_counter");
 
 image_index=0;
 
-
+//Possible Additions: Control with arrow keys. (Left-Right Carousel, Up-Down: Between Posts)
+//Captions below the image. => Just use titles so we are not pressed for space.
 
 function GalleryActivate(gallery_title, gallery_id){
     e_gallery=document.getElementById(gallery_id);
