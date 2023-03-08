@@ -12,7 +12,10 @@ function ProjectActivate(project_id){
 
     //Code to get blanket to spawn in on the "top" of the page wrt. overflowed scrolled position.
     e_p.style.overflowY="hidden";        //Lock the page at current scroll
-    e_blanket[active_page_index].style.transform="translateY("+ e_p.scrollTop +"px)";  //Make the blanket spawn in from the "top" of the scrolled position.
+    if(e_blanket[active_page_index]){
+        e_blanket[active_page_index].style.transform="translateY("+ e_p.scrollTop +"px)";  //Make the blanket spawn in from the "top" of the scrolled position.
+    }
+
     BlanketActivate();                    //Spawn in the blanket.
 
     //Activate Page[page_index][project_id]
@@ -24,8 +27,11 @@ function ProjectActivate(project_id){
 }
 
 function BlanketActivate(){
-    e_blanket[active_page_index].style.height="calc(100%)";/* Must size %100 rather than 100vh to fix android cutoff issue*/
-    e_blanket[active_page_index].style.opacity="100%";
+    if(e_blanket[active_page_index]){
+        e_blanket[active_page_index].style.height="calc(100%)";/* Must size %100 rather than 100vh to fix android cutoff issue*/
+        e_blanket[active_page_index].style.opacity="100%";
+    }
+
     MobileSidebarColor(colors[active_page_index]);
 }
 
@@ -34,7 +40,10 @@ function BlanketActivate(){
 function ProjectDeactivate(){
     BlanketDeactivate();
     setTimeout(() => {                                   //Give time to blanket to despawn via animation.
-        e_blanket[active_page_index].style.transform="translateY(0px)";  //Reset blanket position to absolute top of the page.
+        if(e_blanket[active_page_index]){
+            e_blanket[active_page_index].style.transform="translateY(0px)";  //Reset blanket position to absolute top of the page.
+        }
+
         e_p.style.overflowY="scroll";        //Unlock the page at current scroll
      }, 400);
 
@@ -48,8 +57,10 @@ function ProjectDeactivate(){
 }
 
 function BlanketDeactivate(){
-    e_blanket[active_page_index].style.height="0%";
-    e_blanket[active_page_index].style.opacity="0%";
+    if(e_blanket[active_page_index]){
+        e_blanket[active_page_index].style.height="0%";
+        e_blanket[active_page_index].style.opacity="0%";
+    }
     MobileSidebarColor("var(--bg_black)");
 
 }
