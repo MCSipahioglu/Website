@@ -33,14 +33,13 @@ const e_n=[
     document.getElementById("navbar_menu_traveller")];      //Append the new element here.
 
 //Pages to activate
-const e_p=[
-    document.getElementById("page_roboticist"),
-    document.getElementById("page_botsmith"),
-    document.getElementById("page_designer"),
-    document.getElementById("page_writer"),
-    document.getElementById("page_traveller")];             //Append the new element here.
-
-    const page_count=5;                                         //Add 1 here.
+let e_p;
+page_names=["page_roboticist",
+            "page_botsmith",
+            "page_designer",
+            "page_writer",
+            "page_traveller"];             //Append the new element here.]
+const page_count=5;                                         //Add 1 here.
 
 colors=[
     "var(--swatch_red)",
@@ -164,8 +163,9 @@ function NavbarMenuDeactivate(){
 
 //Activate Main Page
 function PageActivate(page_index){
-    e_p[page_index].style.visibility="visible";
-    e_p[page_index].style.opacity="100%";
+    e_p=document.getElementById(page_names[page_index]);
+    e_p.style.visibility="visible";
+    e_p.style.opacity="100%";
     e_logo_S.style.pointerEvents="all";
     active_page_index=page_index;
 }
@@ -206,11 +206,12 @@ function NavbarMenuScroll(event){
 
 //Redirecting Between Two Main Pages
 function NavbarMenuRedirect(){
+    page_index=navmen_index;
     AllDeactivate();                    //Deactivate active project or CV pages.
     e_sweeper_wrapper.style.left="calc(100vw + 5vmin)";         //Reset for left sweep animation. (Right Sweep)
     e_sweeper_secondary.style.left="0vw";
 
-    setTimeout(() => {  PageDeactivateExcept(navmen_index); PageRedirect(navmen_index); }, 1000);
+    setTimeout(() => {  PageDeactivate(); PageRedirect(); }, 1000);
 }
 
 //Close Any Open Projects or the CV
@@ -219,7 +220,7 @@ function AllDeactivate(){
     CVDeactivate();
 
     //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
-    if(active_project_id != "none"){
+    if(e_pp){
         ProjectDeactivate();
     }
 
@@ -231,24 +232,15 @@ function AllDeactivate(){
 }
 
 //Deactivate Pages Except Page[page_index]
-function PageDeactivateExcept(page_index){
-    e_p[(page_index+1)%page_count].style.transition="opacity 0s";     //Make transitions 0s. Such that the previous pages despawn immediately to not be seen during the sweeper left animation.
-    e_p[(page_index+2)%page_count].style.transition="opacity 0s";
-    e_p[(page_index+3)%page_count].style.transition="opacity 0s";
-    e_p[(page_index+4)%page_count].style.transition="opacity 0s";
+function PageDeactivate(){
+    e_p.style.transition="opacity 0s";     //Make transitions 0s. Such that the previous pages despawn immediately to not be seen during the sweeper left animation.
+    e_p.style.visibility="hidden";
+    e_p.style.opacity="0%";
 
-    e_p[(page_index+1)%page_count].style.visibility="hidden";
-    e_p[(page_index+1)%page_count].style.opacity="0%";
-    e_p[(page_index+2)%page_count].style.visibility="hidden";
-    e_p[(page_index+2)%page_count].style.opacity="0%";
-    e_p[(page_index+3)%page_count].style.visibility="hidden";
-    e_p[(page_index+3)%page_count].style.opacity="0%";
-    e_p[(page_index+4)%page_count].style.visibility="hidden";
-    e_p[(page_index+4)%page_count].style.opacity="0%";
 }
 
 //Redirect to Page[page_index]
-function PageRedirect(page_index){
+function PageRedirect(){
     e_sweeper_neon.style.backgroundColor = colors[page_index];//Assign Colors
     e_sweeper_neon.style.boxShadow="0px 0px 3vmin 1.5vmin "+colors[page_index];
     e_sweeper_wrapper.style.left="-0.75vmin";                 //Sweep to left
@@ -258,13 +250,9 @@ function PageRedirect(page_index){
     //Order the navbar menu items.
     NavbarMenuOrder(page_index);
     navmen_og_index=page_index;
-    navmen_index=page_index;
 
     setTimeout(() => {          //Reassign animation length after sweeping before activating the page.
-        e_p[(page_index+1)%page_count].style.transition="opacity 0.4s";
-        e_p[(page_index+2)%page_count].style.transition="opacity 0.4s";
-        e_p[(page_index+3)%page_count].style.transition="opacity 0.4s";
-        e_p[(page_index+4)%page_count].style.transition="opacity 0.4s";
+        e_p.style.transition="opacity 0.4s";
     }, 400);  
 
     setTimeout(() => {  PageActivate(page_index); }, 1000);
@@ -301,10 +289,8 @@ function ReturnToLanding(){
 function PageDeactivateExceptLanding(){
     e_logo_S.style.pointerEvents="none";
 
-    for(i=0;i<e_p.length;i++){
-        e_p[i].style.visibility="hidden";
-        e_p[i].style.opacity="0%";
-    }
+    e_p.style.visibility="hidden";
+    e_p.style.opacity="0%";
 }
 
 

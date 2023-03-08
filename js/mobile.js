@@ -127,11 +127,11 @@ function MobileMenuDeactivate(){
 //Redirecting Between Two Main Pages
 function MobileMenuRedirect(page_index){
     //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
-    if(active_project_id != "none"){
+    if(e_pp){
         ProjectDeactivate();
-        setTimeout(() => {  PageDeactivateExcept(page_index); PageRedirectMobile(page_index); }, 200);  //Must give delay for project deactivation animation to conclude.
+        setTimeout(() => {  PageDeactivate(); PageRedirectMobile(page_index); }, 200);  //Must give delay for project deactivation animation to conclude.
     }else{
-        PageDeactivateExcept(page_index);
+        PageDeactivate();
         PageRedirectMobile(page_index);
     }
     
@@ -140,7 +140,7 @@ function MobileMenuRedirect(page_index){
 
 function AllDeactivateMobile(){
     //Deactivate Open Projects. (Must check if there is an active project to not fire the function uselessly)
-    if(active_project_id != "none"){
+    if(e_pp){
         ProjectDeactivate();
     }
 }
@@ -152,10 +152,7 @@ function PageRedirectMobile(page_index){
     //Order the mobile menu items.
     MobileMenuOrder(page_index);
 
-    e_p[(page_index+1)%page_count].style.transition="opacity 0.4s";
-    e_p[(page_index+2)%page_count].style.transition="opacity 0.4s";
-    e_p[(page_index+3)%page_count].style.transition="opacity 0.4s";
-    e_p[(page_index+4)%page_count].style.transition="opacity 0.4s";
+    e_p.style.transition="opacity 0.4s";
 
     PageActivate(page_index);
 }
@@ -165,7 +162,7 @@ function PageRedirectMobile(page_index){
 //Return to Landing Interrupt via S Logo
 function ReturnToLandingMobile(){
     //Deactivate All Pages
-    if(active_project_id != "none"){
+    if(e_pp){
         ProjectDeactivate();
         setTimeout(() => {      
             MobileMenuDeactivate();
