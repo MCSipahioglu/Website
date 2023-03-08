@@ -58,7 +58,8 @@
     width: 10vmin;
     height: 10vmin;
 
-    display: block;
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,26 +95,38 @@
 }
 
 #mobile_logo_cv{
-    transform: translateX(12vmin);
+    right: -12vmin;
+    transition-delay: 0ms;
+    transition-property: right;
 }
 
 #mobile_logo_lang{
-    transform: translateX(24vmin);
+    right: -12vmin;
+    transition-delay: calc(var(--sidebar_delay_step) * 1);
+    transition-property: right;
 }
 
 
 #mobile_logo_email{
-    transform: translateX(36vmin);
+    right: -12vmin;
+    transition-delay: calc(var(--sidebar_delay_step) * 2);
+    transition-property: right;
 }
 
 #mobile_logo_instagram{
-    transform: translateX(48vmin);
+    right: -12vmin;
+    transition-delay: calc(var(--sidebar_delay_step) * 3);
+    transition-property: right;
 }
 
 #mobile_logo_twitter{
-    transform: translateX(60vmin);
+    right: -12vmin;
+    transition-delay: calc(var(--sidebar_delay_step) * 4);
+    transition-property: right;
 }
 
 #mobile_logo_kofi{
-    transform: translateX(72vmin);
+    right: -12vmin;
+    transition-delay: calc(var(--sidebar_delay_step) * 5);
+    transition-property: right;
 }

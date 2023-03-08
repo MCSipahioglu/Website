@@ -11,31 +11,43 @@ const em_notification_text=document.getElementById("mobile_notification_text");
 
 var sidebar_active=0;
 var lang_active=0;
-var sidebar_delay_step=6;
+var sidebar_delay_step=1.8;
 
 
 function MobileSidebarToggle(){
 
+    //Activate
     if(sidebar_active==0){
-        sidebar_active=1;
+        sidebar_active=1;           //For typewriter effect, when coming to screen step by step, when going out of screen all at once.
         em_logo_dots.style.transform="rotate(+180deg)";
-        em_logo_cv.style.transform="translateX(0vmin)";
-        em_logo_lang.style.transform="translateX(0vmin)";
-        em_logo_email.style.transform="translateX(0vmin)";
-        em_logo_instagram.style.transform="translateX(0vmin)";
-        em_logo_twitter.style.transform="translateX(0vmin)";
-        em_logo_kofi.style.transform="translateX(0vmin)";
+        em_logo_lang.style.transitionDelay="calc(var(--sidebar_delay_step) * 1)";
+        em_logo_email.style.transitionDelay="calc(var(--sidebar_delay_step) * 2)";
+        em_logo_instagram.style.transitionDelay="calc(var(--sidebar_delay_step) * 3)";
+        em_logo_twitter.style.transitionDelay="calc(var(--sidebar_delay_step) * 4)";
+        em_logo_kofi.style.transitionDelay="calc(var(--sidebar_delay_step) * 5)";
+        em_logo_cv.style.right="0vmin";
+        em_logo_lang.style.right="0vmin";
+        em_logo_email.style.right="0vmin";
+        em_logo_instagram.style.right="0vmin";
+        em_logo_twitter.style.right="0vmin";
+        em_logo_kofi.style.right="0vmin";
     }
-
+    
+    //Deactivate
     else if(sidebar_active==1){
         sidebar_active=0;
         em_logo_dots.style.transform="rotate(0deg)";
-        em_logo_cv.style.transform="translateX(12vmin)";
-        em_logo_lang.style.transform="translateX("+(12+1*sidebar_delay_step)+"vmin)";
-        em_logo_email.style.transform="translateX("+(12+2*sidebar_delay_step)+"vmin)";
-        em_logo_instagram.style.transform="translateX("+(12+3*sidebar_delay_step)+"vmin)";
-        em_logo_twitter.style.transform="translateX("+(12+4*sidebar_delay_step)+"vmin)";
-        em_logo_kofi.style.transform="translateX("+(12+5*sidebar_delay_step)+"vmin)";
+        em_logo_lang.style.transitionDelay="0s";
+        em_logo_email.style.transitionDelay="0s";
+        em_logo_instagram.style.transitionDelay="0s";
+        em_logo_twitter.style.transitionDelay="0s";
+        em_logo_kofi.style.transitionDelay="0s";
+        em_logo_cv.style.right="-12vmin";
+        em_logo_lang.style.right="-12vmin";
+        em_logo_email.style.right="-12vmin";
+        em_logo_instagram.style.right="-12vmin";
+        em_logo_twitter.style.right="-12vmin";
+        em_logo_kofi.style.right="-12vmin";
     }
     
 }

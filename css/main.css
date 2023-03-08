@@ -48,6 +48,8 @@ NEW PROJECT:pages.css:    whatever you need
     --mobile_header_height: 8vmin;
     --mobile_menu_height: 16vmin;
 
+    --sidebar_delay_step: 30ms;
+
 }
 
 
