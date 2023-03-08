@@ -55,11 +55,11 @@ S_ids=["logo_S_red",
 
 //MAIN
 //Elements for getting onclick interrupt                    //Add new element with its interrupt here.
-document.getElementById("swatch_roboticist").onclick = function() {PageChange(0)};
-document.getElementById("swatch_botsmith").onclick   = function() {PageChange(1)};
-document.getElementById("swatch_designer").onclick   = function() {PageChange(2)};
-document.getElementById("swatch_writer").onclick     = function() {PageChange(3)};
-document.getElementById("swatch_traveller").onclick  = function() {PageChange(4)};
+document.getElementById("swatch_roboticist").onclick = function() {LandingRedirect(0)};
+document.getElementById("swatch_botsmith").onclick   = function() {LandingRedirect(1)};
+document.getElementById("swatch_designer").onclick   = function() {LandingRedirect(2)};
+document.getElementById("swatch_writer").onclick     = function() {LandingRedirect(3)};
+document.getElementById("swatch_traveller").onclick  = function() {LandingRedirect(4)};
 
 
 
@@ -67,7 +67,7 @@ document.getElementById("swatch_traveller").onclick  = function() {PageChange(4)
 
 //---------------------------------DIRECTING FUNCTIONS---------------------------------
 //First Loading of a Page
-function PageChange(page_index){
+function LandingRedirect(page_index){
     LandingDeactivate();
 
     e_sweeper_neon.style.backgroundColor=colors[page_index];//Assign Colors
@@ -231,12 +231,11 @@ function AllDeactivate(){
     
 }
 
-//Deactivate Pages Except Page[page_index]
+//Deactivate Active Page
 function PageDeactivate(){
     e_p.style.transition="opacity 0s";     //Make transitions 0s. Such that the previous pages despawn immediately to not be seen during the sweeper left animation.
     e_p.style.visibility="hidden";
     e_p.style.opacity="0%";
-
 }
 
 //Redirect to Page[page_index]

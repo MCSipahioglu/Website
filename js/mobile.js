@@ -18,11 +18,11 @@ const e_mn=[
 
 //MAIN
 //Elements for getting onclick interrupt                    //Add new element with its interrupt here.
-document.getElementById("mobile_roboticist").onclick = function() {PageChangeMobile(0)};
-document.getElementById("mobile_botsmith").onclick   = function() {PageChangeMobile(1)};
-document.getElementById("mobile_designer").onclick   = function() {PageChangeMobile(2)};
-document.getElementById("mobile_writer").onclick     = function() {PageChangeMobile(3)};
-document.getElementById("mobile_traveller").onclick  = function() {PageChangeMobile(4)};
+document.getElementById("mobile_roboticist").onclick = function() {LandingRedirectMobile(0)};
+document.getElementById("mobile_botsmith").onclick   = function() {LandingRedirectMobile(1)};
+document.getElementById("mobile_designer").onclick   = function() {LandingRedirectMobile(2)};
+document.getElementById("mobile_writer").onclick     = function() {LandingRedirectMobile(3)};
+document.getElementById("mobile_traveller").onclick  = function() {LandingRedirectMobile(4)};
 
 document.getElementById("mobile_header").onclick     = function() {ReturnToLandingMobile()};
 
@@ -32,7 +32,7 @@ document.getElementById("mobile_header").onclick     = function() {ReturnToLandi
 
 //---------------------------------DIRECTING FUNCTIONS---------------------------------
 //First Loading of a Page
-function PageChangeMobile(page_index){
+function LandingRedirectMobile(page_index){
     MobileLandingDeactivate();
 
     //Order the mobile menu items.
