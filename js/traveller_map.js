@@ -16,6 +16,7 @@ const map_height=665.96301;
 
 const dtc_size = e_dtc.getBoundingClientRect();
 panning_allowed = false;
+panned=false;
 
 //Map Set Up
 function MapSetUp(){
@@ -46,7 +47,14 @@ mousePosition = { x:0, y:0 };
 
 MapUpdate();
 
+function CountryActivate(country_id){
+    if(panned==false){
+        ProjectActivate(country_id);
+    }else{
+        panned=false;
+    }
 
+}
 
 function MapMouseDown(event){
     initialContentsPos.x = translate.translateX;
@@ -62,10 +70,12 @@ function MapMouseMove(event){
     mousePosition.x = event.clientX;
 	mousePosition.y = event.clientY;
 	if (panning_allowed) {
-		  const diffX = (mousePosition.x - pinnedMousePosition.x);
-      const diffY = (mousePosition.y - pinnedMousePosition.y);
-      translate.translateX = initialContentsPos.x + diffX;
-      translate.translateY = initialContentsPos.y + diffY;
+        const diffX = (mousePosition.x - pinnedMousePosition.x);
+        const diffY = (mousePosition.y - pinnedMousePosition.y);
+        translate.translateX = initialContentsPos.x + diffX;
+        translate.translateY = initialContentsPos.y + diffY;
+
+        panned=true;
 	}
 	MapUpdate();
 }
