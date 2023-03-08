@@ -66,6 +66,9 @@
     transition: 0.2s;
 
     z-index: inherit;
+
+    border-radius: 8.2vmin;
+    background-color: var(--bg_black);
 }
 
 
@@ -87,15 +90,30 @@
 }
 
 #mobile_logo_dots{
-    border-radius: 8.2vmin;
-    background-color: var(--bg_black);
     transform-origin: center;
 }
 
-#mobile_logo_cv, #mobile_logo_lang, #mobile_logo_email, #mobile_logo_kofi{
-    border-radius: 8.2vmin;
-    background-color: var(--bg_black);
+#mobile_logo_cv{
     transform: translateX(12vmin);
 }
 
+#mobile_logo_lang{
+    transform: translateX(24vmin);
+}
 
+
+#mobile_logo_email{
+    transform: translateX(36vmin);
+}
+
+#mobile_logo_instagram{
+    transform: translateX(48vmin);
+}
+
+#mobile_logo_twitter{
+    transform: translateX(60vmin);
+}
+
+#mobile_logo_kofi{
+    transform: translateX(72vmin);
+}
