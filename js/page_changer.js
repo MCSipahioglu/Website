@@ -53,15 +53,6 @@ S_ids=["logo_S_red",
     "logo_S_turqoise",
     "logo_S_green"];                                        //Append the new element here.
 
-//MAIN
-//Elements for getting onclick interrupt                    //Add new element with its interrupt here.
-document.getElementById("swatch_roboticist").onclick = function() {LandingRedirect(0)};
-document.getElementById("swatch_botsmith").onclick   = function() {LandingRedirect(1)};
-document.getElementById("swatch_designer").onclick   = function() {LandingRedirect(2)};
-document.getElementById("swatch_writer").onclick     = function() {LandingRedirect(3)};
-document.getElementById("swatch_traveller").onclick  = function() {LandingRedirect(4)};
-
-
 
 
 

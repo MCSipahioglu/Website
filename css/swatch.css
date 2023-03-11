@@ -11,29 +11,34 @@
 }
 
 .swatch_element{
-    position: absolute;
-    top: 47.25vh;
-    padding-left: 70vmin;
+    width: 100vmin;
 
+    position: absolute;
+    top: 46.65vh;
+    transform-origin: 50vmin 3.35vmin;    
+}
+
+.swatch_button{
     font-size: 5.5vmin;
     font-weight: 550;
     text-align: left;
-    padding-top: 1.2vmin;      /*Perfect for dead center at this font*/
 
-    transform-origin: 50vmin 2.75vmin;
+    margin-left: 70vmin;
+    margin-top: 1.2vmin;      /*Perfect for dead center at this font*/
 
     cursor: pointer;
 }
 
+
 @-moz-document url-prefix() {
-    .swatch_element {
-        padding-left: 72vmin;
+    .swatch_button {
+        margin-left: 72vmin;
     }
 }
 
 #swatch_roboticist{
 }
-#swatch_roboticist:hover {
+#swatch_button_roboticist:hover {
     color: var(--swatch_red);
     text-shadow:    0 0 50px var(--swatch_red),
                     0 0 100px var(--swatch_red),
@@ -45,7 +50,7 @@
 #swatch_botsmith{
     transform:rotate(var(--swatch_angle_step));
 }
-#swatch_botsmith:hover {
+#swatch_button_botsmith:hover {
     color: var(--swatch_purple);
     text-shadow:    0 0 50px var(--swatch_purple),
                     0 0 100px var(--swatch_purple),
@@ -57,7 +62,7 @@
 #swatch_designer{
     transform:rotate(calc(var(--swatch_angle_step) * 2));
 }
-#swatch_designer:hover {
+#swatch_button_designer:hover {
     color: var(--swatch_orange);
     text-shadow:    0 0 50px var(--swatch_orange),
                     0 0 100px var(--swatch_orange),
@@ -69,7 +74,7 @@
 #swatch_writer{
     transform:rotate(calc(var(--swatch_angle_step) * 3));
 }
-#swatch_writer:hover {
+#swatch_button_writer:hover {
     color: var(--swatch_turqoise);
     text-shadow:    0 0 50px var(--swatch_turqoise),
                     0 0 100px var(--swatch_turqoise),
@@ -81,7 +86,7 @@
 #swatch_traveller{
     transform:rotate(calc(var(--swatch_angle_step) * 4));
 }
-#swatch_traveller:hover {
+#swatch_button_traveller:hover {
     color: var(--swatch_green);
     text-shadow:    0 0 50px var(--swatch_green),
                     0 0 100px var(--swatch_green),
