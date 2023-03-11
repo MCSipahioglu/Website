@@ -47,6 +47,7 @@ mousePosition = { x:0, y:0 };
 
 MapUpdate();
 
+//Mouseup before onclick
 function CountryActivate(country_id){
     if(panned==false){
         ProjectActivate(country_id);
@@ -75,7 +76,10 @@ function MapMouseMove(event){
         translate.translateX = initialContentsPos.x + diffX;
         translate.translateY = initialContentsPos.y + diffY;
 
-        panned=true;
+        if(diffX!=0 || diffY!=0){
+            panned=true;
+        }
+        
 	}
 	MapUpdate();
 }
@@ -84,6 +88,7 @@ function MapMouseMove(event){
 
 function MapMouseUp(event){
     panning_allowed = false;
+    setTimeout(() => panned=false);   //Allows for panned=false to be execute after onclick event. (Resets panned for next loop without interfering ith the current one)
 }
 
 
