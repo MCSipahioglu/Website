@@ -40,6 +40,7 @@ NEW PROJECT:pages.css:    whatever you need
 
     --bg_black: rgb(21,21,21);
     --map_green: hsl(81, 60%, 25%);
+    --traveller_cover_gap: 20vmin;
     --swatch_angle_step: 25deg;         /* Just changing here will reflect to any js use as well*/
     --navmen_y_step: 4vmin;
     --mobmen_x_step: 50vw;

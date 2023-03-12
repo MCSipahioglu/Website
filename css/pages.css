@@ -396,8 +396,7 @@ svg path:hover{
 
 #project_page_traveller_blanket{
     background-color: var(--bg_black);
-    box-shadow: -1vmin 0 0 0 var(--swatch_green) inset; /* Border left */
-    box-shadow: 1vmin 0 0 0 var(--swatch_green) inset; /* Border right */
+    box-shadow: -1vmin 0 0 0 var(--swatch_green) inset, 1vmin 0 0 0 var(--swatch_green) inset; /* Border left & right */
 
 }
 
@@ -412,17 +411,20 @@ svg path:hover{
 }
 
 .covers_gallery{
-    width: calc(100vw - 2 * 6.4vmin - 12vmin);
+    width: calc(100vw - 2 * 6.4vmin - 6vmin - var(--traveller_cover_gap));
+    padding-left:calc(var(--traveller_cover_gap)/2);
+    padding-right:calc(var(--traveller_cover_gap)/2);
+    padding-bottom: var(--traveller_cover_gap);
     position: absolute;
     top: 11vmin;
-    padding-left:3vmin;
-    padding-bottom: 3vmin;
+
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 1fr;
     grid-auto-flow: dense;
-    grid-gap: 6vmin;
+    grid-gap: calc(var(--traveller_cover_gap)/2);
+
 
 }
 
