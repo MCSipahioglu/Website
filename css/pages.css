@@ -407,9 +407,57 @@ svg path:hover{
 }
 
 .header_traveller{
-    position: relative;
-    top: 3.7vmin;
+    padding-top: 3.7vmin;
+    padding-bottom: 3.7vmin;
 
+    font-size: 4vmin;
+    font-weight: 550;
+    text-align: center;
+}
+
+.subheader_traveller{
+    padding-top: 1.85vmin;
+    padding-bottom: 1.85vmin;
+    margin-left:calc(var(--traveller_cover_gap)/2);
+    margin-right:calc(var(--traveller_cover_gap)/2);
+
+    border-style: solid;
+    border-top-width: 1vmin;
+    border-color: var(--swatch_green);
+    border-top-right-radius: 0.5vmin;
+    border-top-left-radius: 0.5vmin;
+}
+
+.logo_subheader_expand{
+    width: 4vmin;
+    height: 4vmin;
+
+    
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 4vmin;
+
+    transition: 0.2s;
+
+}
+
+.image_subheader_expand{
+    width: 3vmin;
+    height: 3vmin;
+    padding: 0.091vmin;
+    border-width: 0.5vmin;      /* Gerekirse yeniden hovera alınabilir*/
+
+    border-style: solid;
+    border-radius: 4vmin;
+    cursor: pointer;
+}
+
+.subheader_traveller_text{
+    padding-top: 0.2415vmin;
     font-size: 4vmin;
     font-weight: 550;
     text-align: center;
@@ -419,10 +467,7 @@ svg path:hover{
     width: calc(100vw - 2 * 6.4vmin - 6vmin - var(--traveller_cover_gap));
     padding-left:calc(var(--traveller_cover_gap)/2);
     padding-right:calc(var(--traveller_cover_gap)/2);
-    padding-bottom: var(--traveller_cover_gap);
-    position: absolute;
-    top: 11vmin;
-
+    padding-bottom:calc(var(--traveller_cover_gap)/4);
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);

@@ -7,6 +7,21 @@ let e_gallery;
 //Possible Additions: Control with arrow keys. (Left-Right Carousel, Up-Down: Between Posts)
 //Captions below the image. => Just use titles so we are not pressed for space.
 
+
+
+function CoversGalleryToggle(current_element){
+    if(current_element.parentElement.parentElement.children[1].style.display=="none"){  //If deactive, activate
+        current_element.style.transform= "rotate(0deg)";
+        current_element.parentElement.parentElement.children[1].style.display="grid";
+    }else{                                                                              //If active, deactivate
+        current_element.style.transform= "rotate(-90deg)";
+        current_element.parentElement.parentElement.children[1].style.display="none";
+    }
+
+}
+
+
+
 function GalleryActivate(gallery_title, gallery_id){
     e_gallery=document.getElementById(gallery_id);
     e_carousel.style="display: block";
@@ -20,7 +35,6 @@ function GalleryActivate(gallery_title, gallery_id){
 }
 
 
-
 function GalleryDeactivate(){
     e_images[image_index].style="display: none";
     e_gallery.style="display: none";
@@ -28,7 +42,6 @@ function GalleryDeactivate(){
     image_index=0;
 
 }
-
 
 
 function ImageNext(){
