@@ -166,6 +166,9 @@
     align-items: center;
 
     z-index: 4;
+
+    border-radius: 4.1vmin;
+    background-color: var(--bg_black);
 }
 
 .image_project_return{
