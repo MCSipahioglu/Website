@@ -69,6 +69,7 @@ function BlanketDeactivate(){
     if(e_blanket[active_page_index]){
         e_blanket[active_page_index].style.height="0%";
         e_blanket[active_page_index].style.opacity="0%";
+        e_return_button[active_page_index].style.display="none";
     }
     MobileSidebarColor("var(--bg_black)");
 
