@@ -154,8 +154,8 @@
 }
 
 .project_page_return_button{
-    width: 5vmin;
-    height: 5vmin;
+    width: 5.1vmin;
+    height: 5.1vmin;
 
     position: absolute;
     top: 3vmin;
@@ -167,7 +167,7 @@
 
     z-index: 4;
 
-    border-radius: 4.1vmin;
+    border-radius: 5.1vmin;
     background-color: var(--bg_black);
 }
 
@@ -178,7 +178,7 @@
     padding: 0.3vmin;
 
     border-width: 0.5vmin;      /* Gerekirse yeniden hovera alınabilir*/
-    border-radius: 4.1vmin;
+    border-radius: 5.1vmin;
     border-style: solid;
     cursor: pointer;
 }
@@ -398,6 +398,8 @@ svg path:hover{
     cursor: pointer;
 }
 
+
+/* TRAVELLER COVER GALLERY */
 #project_page_traveller_blanket{
     background-color: var(--bg_black);
     box-shadow: -1vmin 0 0 0 var(--swatch_green) inset, 1vmin 0 0 0 var(--swatch_green) inset; /* Border left & right */
@@ -406,14 +408,13 @@ svg path:hover{
 
 .header_traveller{
     position: relative;
-    top: 3.625vmin;
+    top: 3.7vmin;
 
     font-size: 4vmin;
     font-weight: 550;
     text-align: center;
 }
 
-/* TRAVELLER COVER GALLERY */
 .covers_gallery{
     width: calc(100vw - 2 * 6.4vmin - 6vmin - var(--traveller_cover_gap));
     padding-left:calc(var(--traveller_cover_gap)/2);
@@ -528,8 +529,6 @@ svg path:hover{
     right: 3vmin;
 }
 
-
-
 .carousel_container{
     width: calc(100% - 2*11vmin);
     height: calc(100% - 11vmin);
@@ -557,7 +556,7 @@ svg path:hover{
     width: calc(100% - 2*11vmin);
 
     position: absolute;
-    top: 3.625vmin;
+    top: 3.7vmin;
     left: 11vmin;
     
     font-size: 4vmin;
@@ -567,7 +566,7 @@ svg path:hover{
 
 #carousel_counter{
     position: absolute;
-    top: 4.125vmin;
+    top: 4.2vmin;
     right: 3vmin;
 
     font-size: 3.5vmin;
