@@ -161,7 +161,7 @@
     top: 3vmin;
     left: 3vmin;
 
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 

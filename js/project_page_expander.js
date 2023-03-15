@@ -38,6 +38,7 @@ function BlanketActivate(){
     if(e_blanket[active_page_index]){
         e_blanket[active_page_index].style.height="calc(100%)";/* Must size %100 rather than 100vh to fix android cutoff issue*/
         e_blanket[active_page_index].style.opacity="100%";
+        e_return_button[active_page_index].style.display="flex";
     }
 
     MobileSidebarColor(colors[active_page_index]);

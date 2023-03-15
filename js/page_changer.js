@@ -41,21 +41,21 @@ page_names=["page_roboticist",
             "page_traveller"];             //Append the new element here.]
 const page_count=5;                                         //Add 1 here.
 
-colors=[
+const colors=[
     "var(--swatch_red)",
     "var(--swatch_purple)",
     "var(--swatch_orange)",
     "var(--swatch_turqoise)",
     "var(--swatch_green)"];                                 //Append the new element here.
 
-return_button_colors=[
+const return_button_colors=[
     "var(--swatch_red)",
     "var(--swatch_purple)",
     "var(--swatch_orange)",
     "var(--swatch_turqoise)",
     "var(--bg_black)"];                                 //Append the new element here.
 
-S_ids=["logo_S_red",
+const S_ids=["logo_S_red",
     "logo_S_purple",
     "logo_S_orange",
     "logo_S_turqoise",
@@ -166,8 +166,8 @@ function PageActivate(page_index){
     e_p.style.visibility="visible";
     e_p.style.opacity="100%";
     e_logo_S.style.pointerEvents="all";
-    ReturnButtonColor(return_button_colors[active_page_index]);
     active_page_index=page_index;
+    ReturnButtonColor(return_button_colors[active_page_index]);
 }
 
 
