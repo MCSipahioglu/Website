@@ -35,31 +35,7 @@
 
 
 /* PROJECT GRID */
-.relevant_skills{
-    width: calc(100vw - 2 * 6.4vmin);
-
-    position: relative;
-    left: 3.4vmin;
-
-    font-size: 3vmin;
-    font-weight: 400;
-    text-align: center;
-
-    column-count: 3;
-
-    /*
-    <h1 class="header_botsmith"> 
-      RELEVANT SKILLS
-    </h1>
-    <div class="relevant_skills">
-      <ul>
-        <li>• A</li><li>• B</li><li>• C</li><li>• D</li><li>• E</li><li>• F</li><li>• G</li><li>• A</li><li>• B</li><li>• C</li><li>• D</li><li>• E</li>
-      </ul>
-    </div>
-    */
-}
-
-.projects{
+.project_containers_grid{
     width: calc(100vw - 2 * 6.4vmin);
 
     position: relative;
@@ -100,7 +76,7 @@
     box-shadow: 0 0 10vmin var(--swatch_orange);
 }
 
-.project_logo{
+.project_container_logo{
     width: 10vmin;
     height: 10vmin;
     
@@ -112,7 +88,7 @@
     padding-top: 2vmin;
 }
 
-.project_intro{             /*3 Lines are allowed*/
+.project_container_intro{             /*3 Lines are allowed*/
     padding-top: 1vmin;
     padding-bottom: 1vmin;
     padding-right: 0.5vmin;
@@ -123,7 +99,7 @@
     text-align: justify;
 }
 
-.project_expand{
+.project_container_seemore{
     padding-top: 1vmin;
 
     font-size: 2vmin;
@@ -138,7 +114,7 @@
 
 
 /* EXPANDED PROJECT */
-.project_page{
+.project_page_blanket{
     width: calc(100vw - 2 * 6.4vmin);
 
     position: absolute;
@@ -208,6 +184,36 @@
 .project_content::-webkit-scrollbar{
     display: none; /* for Chrome, Safari, and Opera */
 }
+
+.project_info{
+    padding-top: 1.5vmin;
+}
+
+th{
+    width: 20vmin;
+    font-size: 2.5vmin;
+    font-weight: 500;
+    text-align: left;
+
+    vertical-align: top;
+    padding-bottom: 1vmin;
+}
+
+td{
+    font-size: 2.5vmin;
+    font-weight: 400;
+    text-align: left;
+
+    vertical-align: top;
+    padding-left: 1vmin;
+    padding-bottom: 1vmin;
+}
+
+
+
+
+
+
 
 
 /* ROBOTICIST PAGE */

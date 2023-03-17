@@ -41,7 +41,7 @@
         
     }
 
-    .projects{
+    .project_containers_grid{
         width: 100vw;
 
         top: 0vmin;
@@ -95,7 +95,7 @@
         box-shadow: 0 0 12.5vmin var(--swatch_orange);
     }
 
-    .project_logo{
+    .project_container_logo{
         width: 20vmin;
         height: 20vmin;
         
@@ -107,14 +107,14 @@
         padding-top: 4vmin;
     }
 
-    .project_intro{             /*3 Lines are allowed*/
+    .project_container_intro{             /*3 Lines are allowed*/
         padding-top: 2vmin;
         padding-bottom: 2vmin;
     
         font-size: 4vmin;
     }
     
-    .project_expand{
+    .project_container_seemore{
         padding-top: 2vmin;
     
         font-size: 4vmin;
@@ -126,7 +126,7 @@
 
 
     /*Secondary Project Page*/
-    .project_page{
+    .project_page_blanket{
         width: 100vw;
 
         position: absolute;
@@ -164,6 +164,29 @@
         font-size: 4vmin;
     }
 
+    .project_info{
+        padding-top: 3vmin;
+    }
+    
+    th{
+        width: 20vmin;
+        font-size: 5vmin;
+        font-weight: 500;
+        text-align: left;
+    
+        vertical-align: top;
+        padding-bottom: 2vmin;
+    }
+    
+    td{
+        font-size: 5vmin;
+        font-weight: 400;
+        text-align: left;
+    
+        vertical-align: top;
+        padding-left: 2vmin;
+        padding-bottom: 2vmin;
+    }
 
 
 
