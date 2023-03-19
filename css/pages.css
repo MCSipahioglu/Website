@@ -553,8 +553,8 @@ svg path:hover{
 }
 
 .gallery_button{
-    width: 5vmin;
-    height: 5vmin;
+    width: 5.1vmin;
+    height: 5.1vmin;
 
     position: absolute;
     
@@ -562,7 +562,10 @@ svg path:hover{
     justify-content: center;
     align-items: center;
 
+    border-radius: 5.1vmin;
+
 }
+
 
 #gallery_return_button{
     top: 3vmin;
