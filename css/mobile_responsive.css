@@ -41,7 +41,7 @@
         
     }
 
-    .project_containers_grid{
+    .projects_container_grid{
         width: 100vw;
 
         top: 0vmin;
@@ -192,7 +192,7 @@
 
 
 
-    /* WRITER */
+    /* ACADEMIC */
     #filter_container{
         width: auto;
         height: auto;

@@ -71,10 +71,10 @@
                     0 0 300px var(--swatch_orange);
 }
 
-#swatch_writer{
+#swatch_academic{
     transform:rotate(calc(var(--swatch_angle_step) * 3));
 }
-#swatch_button_writer:hover {
+#swatch_button_academic:hover {
     color: var(--swatch_turqoise);
     text-shadow:    0 0 50px var(--swatch_turqoise),
                     0 0 100px var(--swatch_turqoise),
