@@ -76,6 +76,12 @@
     box-shadow: 0 0 10vmin var(--swatch_orange);
 }
 
+.project_container_academic:hover{
+    background-color: var(--swatch_turqoise);
+    box-shadow: 0 0 10vmin var(--swatch_turqoise);
+}
+
+
 .project_container_logo{
     width: 10vmin;
     height: 10vmin;
@@ -331,7 +337,8 @@ svg path:hover{
 #TR, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE, #MC, #ES, #NL, #BE{
     fill: var(--swatch_green);
 }
-#TR:hover, #EG:hover, #IT:hover, #CH:hover, #FR:hover, #DE:hover, #AT:hover, #HU:hover, #PL:hover, #DK:hover, #SE:hover, #MC:hover, #ES:hover, #NL:hover, #BE:hover{
+
+:where(#TR, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE, #MC, #ES, #NL, #BE):hover{
     cursor: pointer;
 }
 
