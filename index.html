@@ -291,7 +291,7 @@
     </h1>
     <div class="projects_container_grid">
 
-      <button type="button" onclick="ProjectActivate('linefollower')" class="project_container project_container_roboticist">
+      <button type="button" onclick="ProjectActivate('pp_linefollower')" class="project_container project_container_roboticist">
         <img src="./assets/logo_linefollower.svg" class="project_container_logo">
         <h1>
           Line Follower
@@ -368,20 +368,32 @@
           See more details about this project.
         </div>
       </button>
-
-      <button type="button" onclick="ProjectActivate('pp_wirebender')" class="project_container project_container_roboticist">
-        <img src="./assets/logo_wirebender.svg" class="project_container_logo">
+      
+      <button type="button" onclick="ProjectActivate('pp_imageanalysis')" class="project_container project_container_roboticist">
+        <img src="./assets/logo_imageanalysis.svg" class="project_container_logo">
         <h1>
-          Wire Bender
+          Image Analysis
         </h1>
         <div class="project_container_intro">
-          <br>An automated wire bender for neat looking breadboard prototyping.
+          Image analysis software for rectification and unwrapping of a cylindrical ceiling's image
         </div>
         <div class="project_container_seemore">
           See more details about this project.
         </div>
       </button>
-      
+
+      <button type="button" onclick="ProjectActivate('pp_8ballpool')" class="project_container project_container_roboticist">
+        <img src="./assets/logo_8ballpool.svg" class="project_container_logo">
+        <h1>
+          8 Ball Pool
+        </h1>
+        <div class="project_container_intro">
+          Computer vision software for analyzing a single-view 8 Ball Pool game video.
+        </div>
+        <div class="project_container_seemore">
+          See more details about this project.
+        </div>
+      </button>
 
     </div>
 
@@ -390,7 +402,7 @@
         <img src="./assets/0.Return.svg" class="image_project_return">
       </button>
 
-      <div class="project_content" id="linefollower">
+      <div class="project_content" id="pp_linefollower">
         <img src="./assets/logo_linefollower.svg" class="project_container_logo">
         <h1>
           Line Follower
@@ -535,7 +547,7 @@
             <td>
               <ul>
                 <li><a href="https://github.com/MCSipahioglu/Turtle" target="_blank" rel="noopener noreferrer">Github Repository</a></li>
-                <li><a href="https://drive.google.com/file/d/18CQfVsbw6muxgdxT_1S1vWRVLSTo2hqr/view?usp=sharing" target="_blank" rel="noopener noreferrer">Report PDF</a></li>
+                <li><a href="https://github.com/MCSipahioglu/Turtle/blob/main/Turtle%20Report.pdf" target="_blank" rel="noopener noreferrer">Report PDF</a></li>
               </ul>
             </td>
           </tr>
@@ -711,30 +723,126 @@
         </table>
       </div>
 
-      <div class="project_content" id="pp_wirebender">
-        <img src="./assets/logo_wirebender.svg" class="project_container_logo">
+      <div class="project_content" id="pp_imageanalysis">
+        <img src="./assets/logo_imageanalysis.svg" class="project_container_logo">
         <h1>
-          Wire Bender
+          Image Analysis of a Cylindrical Object
         </h1>
         <table class="project_info">
           <tr>
             <th>Context</th>
-            <td>Built to be used as a personal workshop tool.</td>
+            <td>Built as a homework for PoliMi Image Analysis and Computer Vision Class.</td>
           </tr>
           <tr>
             <th>Summary</th>
-            <td>A wire bending device that bends, strips and cuts copper wires to be neatly used on breadboards.</td>
+            <td>Given an image of cylindrical ceiling (Palazzo Te, Mantova, Italy) this software extracts the ceiling portion of the image, rectifies it and unwraps it to a planar image.</td>
           </tr>
           <tr>
             <th>Team Size</th>
             <td>1 Person</td>
           </tr>
           <tr>
+            <th>Year & Duration</th>
+            <td>2023 (2 Weeks)</td>
+          </tr>
+          <tr>
             <th>Status</th>
-            <td>In Queue</td>
+            <td>Archived</td>
+          </tr>
+          <tr>
+            <th>Skill-Set Used</th>
+            <td>
+              <ul>
+                <li>• Image Preprocessing</li>
+                <li>• Contour Detection and Image Extraction</li>
+                <li>• Image Rectification</li>
+                <li>• Projecting an Image to 3D Space</li>
+                <li>• Unwrapping of Cylindrical Objects' Images</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Repository</th>
+            <td>
+              <ul>
+                <li><a href="https://github.com/MCSipahioglu/IACV-Homework-2023-2024" target="_blank" rel="noopener noreferrer">Github Repository</a></li>
+                <li><a href="https://github.com/MCSipahioglu/IACV-Homework-2023-2024/blob/main/Cylinder%20Image%20Analysis%20Report.pdf" target="_blank" rel="noopener noreferrer">Report PDF</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>DEMO</th>
+            <td>
+              <ul>
+                <li><a href="https://github.com/MCSipahioglu/IACV-Homework-2023-2024/blob/main/Cylinder%20Image%20Analysis%20Computed%20Results.pdf" target="_blank" rel="noopener noreferrer">Computed Results</a></li>
+              </ul>
+            </td>
           </tr>
         </table>
       </div>
+
+      <div class="project_content" id="pp_8ballpool">
+        <img src="./assets/logo_8ballpool.svg" class="project_container_logo">
+        <h1>
+          Computer Vision for 8 Ball Pool
+        </h1>
+        <table class="project_info">
+          <tr>
+            <th>Context</th>
+            <td>Built as a term project for PoliMi Image Analysis and Computer Vision Class.</td>
+          </tr>
+          <tr>
+            <th>Summary</th>
+            <td>Given the single-view video of a single game of 8 Ball Pool, this software is designed to recognize the pool balls and calculate the state of the game. For ball recognition a simple, deterministic, tuned classifier was built. The shortcomings of such a classifier was remedied by building a ball tracking module that can track each individual ball separately.</td>
+          </tr>
+          <tr>
+            <th>Team Size</th>
+            <td>1 Person</td>
+          </tr>
+          <tr>
+            <th>Year & Duration</th>
+            <td>2024 (1 Week)</td>
+          </tr>
+          <tr>
+            <th>Status</th>
+            <td>Archived</td>
+          </tr>
+          <tr>
+            <th>Skill-Set Used</th>
+            <td>
+              <ul>
+                <li>• Image Preprocessing</li>
+                <li>• Object Detection</li>
+                <li>• Object Classification</li>
+                <li>• Ball Tracking</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>Repository</th>
+            <td>
+              <ul>
+                <li><a href="https://github.com/MCSipahioglu/8-Ball-Pool" target="_blank" rel="noopener noreferrer">Github Repository</a></li>
+                <li><a href="https://github.com/MCSipahioglu/8-Ball-Pool/blob/main/Report.pdf" target="_blank" rel="noopener noreferrer">Report PDF</a></li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <th>DEMO</th>
+            <td>
+              <ul>
+                <li><a href="https://github.com/MCSipahioglu/8-Ball-Pool/blob/main/Presentation.pptx" target="_blank" rel="noopener noreferrer">Presentation</a></li>
+                <div class="responsive-iframe-container">
+                  <iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/GLPxGitelUM?si=o3V0zV647u4xdJW5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+              </ul>
+
+            </td>
+          </tr>
+        </table>
+      </div>
+
+
   
     </div>
 
@@ -1093,7 +1201,7 @@
         <table class="project_info">
           <tr>
             <th>Context</th>
-            <td>Built as a graduation thesis/project in the Bogazici University Mechanical Engineering Department.</td>
+            <td>Built for my BSc. graduation thesis in the Bogazici University Mechanical Engineering Department.</td>
           </tr>
           <tr>
             <th>Summary</th>
@@ -2141,7 +2249,7 @@
         
       <path
         d="m 509.80575,333.9114 -0.024,0.003 -0.009,-0.013 0.009,-0.017 0.021,-0.003 z"
-        id="VA" ><title>Vatican City</title></path>
+        id="VA" onclick="InstagramRedirect()"><title>Vatican City</title></path>
         
       <path
         d="m 303.20975,425.9094 -0.083,0.045 -0.206,-0.192 0.025,-0.224 0.125,-0.123 0.118,-0.072 0.121,-0.008 0.042,0.185 -0.029,0.261 -0.113,0.128 z m -0.145,0.468 -0.045,0.031 0.021,0 -0.021,0.021 -0.014,-0.021 -0.022,-0.013 -0.028,-0.006 -0.033,10e-4 0,-0.021 0.042,0.013 0.063,-0.013 0,-0.023 -0.019,-0.021 -0.008,-0.015 0.023,-0.022 0.078,-0.05 0.033,-0.026 0.004,0.011 10e-4,0.01 0.004,0.01 0.012,0.01 -0.04,0.039 -0.051,0.085 z m -0.304,0.857 -0.028,0.001 -0.025,-0.01 0.007,-0.009 0.032,-0.007 0.015,-0.019 -0.005,-0.025 10e-4,-0.028 0.025,-0.017 0.02,-0.001 0.009,0.011 0.005,0.026 -0.015,0.02 -0.017,0.016 -0.008,0.025 -0.016,0.017 z"

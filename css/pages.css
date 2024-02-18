@@ -354,11 +354,11 @@ svg path:hover{
     fill: var(--swatch_green);
 }
 
-#TR, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE, #MC, #ES, #NL, #BE, #LU, #CZ{
+#TR, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE, #MC, #ES, #NL, #BE, #LU, #CZ, #VA{
     fill: var(--swatch_green);
 }
 
-:where(#TR, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE, #MC, #ES, #NL, #BE, #LU, #CZ):hover{
+:where(#TR, #EG, #IT, #CH, #FR, #DE, #AT, #HU, #PL, #DK, #SE, #MC, #ES, #NL, #BE, #LU, #CZ, #VA):hover{
     cursor: pointer;
 }
 
