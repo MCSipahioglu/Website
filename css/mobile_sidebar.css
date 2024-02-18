@@ -113,19 +113,19 @@
     transition-property: right;
 }
 
-#mobile_logo_instagram{
+#mobile_logo_linkedin{
     right: -12vmin;
     transition-delay: calc(var(--sidebar_delay_step) * 3);
     transition-property: right;
 }
 
-#mobile_logo_twitter{
+#mobile_logo_spotify{
     right: -12vmin;
     transition-delay: calc(var(--sidebar_delay_step) * 4);
     transition-property: right;
 }
 
-#mobile_logo_kofi{
+#mobile_logo_instagram{
     right: -12vmin;
     transition-delay: calc(var(--sidebar_delay_step) * 5);
     transition-property: right;

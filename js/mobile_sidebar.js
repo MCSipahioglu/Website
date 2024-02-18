@@ -3,8 +3,8 @@ const em_logo_cv=document.getElementById("mobile_logo_cv");
 const em_logo_lang=document.getElementById("mobile_logo_lang");
 const em_logo_email=document.getElementById("mobile_logo_email");
 const em_logo_instagram=document.getElementById("mobile_logo_instagram");
-const em_logo_twitter=document.getElementById("mobile_logo_twitter");
-const em_logo_kofi=document.getElementById("mobile_logo_kofi");
+const em_logo_spotify=document.getElementById("mobile_logo_spotify");
+const em_logo_linkedin=document.getElementById("mobile_logo_linkedin");
 
 const em_notification_wrapper=document.getElementById("mobile_notification");
 const em_notification_text=document.getElementById("mobile_notification_text");
@@ -22,15 +22,15 @@ function MobileSidebarToggle(){
         em_logo_dots.style.transform="rotate(+180deg)";
         em_logo_lang.style.transitionDelay="calc(var(--sidebar_delay_step) * 1)";
         em_logo_email.style.transitionDelay="calc(var(--sidebar_delay_step) * 2)";
-        em_logo_instagram.style.transitionDelay="calc(var(--sidebar_delay_step) * 3)";
-        em_logo_twitter.style.transitionDelay="calc(var(--sidebar_delay_step) * 4)";
-        em_logo_kofi.style.transitionDelay="calc(var(--sidebar_delay_step) * 5)";
+        em_logo_linkedin.style.transitionDelay="calc(var(--sidebar_delay_step) * 3)";
+        em_logo_spotify.style.transitionDelay="calc(var(--sidebar_delay_step) * 4)";
+        em_logo_instagram.style.transitionDelay="calc(var(--sidebar_delay_step) * 5)";
         em_logo_cv.style.right="0vmin";
         em_logo_lang.style.right="0vmin";
         em_logo_email.style.right="0vmin";
         em_logo_instagram.style.right="0vmin";
-        em_logo_twitter.style.right="0vmin";
-        em_logo_kofi.style.right="0vmin";
+        em_logo_spotify.style.right="0vmin";
+        em_logo_linkedin.style.right="0vmin";
     }
     
     //Deactivate
@@ -39,15 +39,15 @@ function MobileSidebarToggle(){
         em_logo_dots.style.transform="rotate(0deg)";
         em_logo_lang.style.transitionDelay="0s";
         em_logo_email.style.transitionDelay="0s";
+        em_logo_linkedin.style.transitionDelay="0s";
+        em_logo_spotify.style.transitionDelay="0s";
         em_logo_instagram.style.transitionDelay="0s";
-        em_logo_twitter.style.transitionDelay="0s";
-        em_logo_kofi.style.transitionDelay="0s";
         em_logo_cv.style.right="-12vmin";
         em_logo_lang.style.right="-12vmin";
         em_logo_email.style.right="-12vmin";
         em_logo_instagram.style.right="-12vmin";
-        em_logo_twitter.style.right="-12vmin";
-        em_logo_kofi.style.right="-12vmin";
+        em_logo_spotify.style.right="-12vmin";
+        em_logo_linkedin.style.right="-12vmin";
     }
     
 }
@@ -98,7 +98,7 @@ function MobileSidebarColor(color) {
     em_logo_lang.style.backgroundColor=color;
     em_logo_email.style.backgroundColor=color;
     em_logo_instagram.style.backgroundColor=color;
-    em_logo_twitter.style.backgroundColor=color;
-    em_logo_kofi.style.backgroundColor=color;
+    em_logo_spotify.style.backgroundColor=color;
+    em_logo_linkedin.style.backgroundColor=color;
 
 }

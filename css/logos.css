@@ -23,7 +23,7 @@
     z-index: inherit;
 }
 
-#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_email_copypaste, #image_return, #image_filter, #image_kofi, #image_twitter, #image_instagram{
+#image_cv, #image_eng, #image_tr, #image_email, #image_dot, #image_email_copypaste, #image_return, #image_filter, #image_linkedin, #image_spotify, #image_instagram{
     width: 3.5vmin;
     height: 3.5vmin;
 
@@ -32,7 +32,7 @@
     z-index: inherit;
 }
 
-#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_email_copypaste:hover, #image_return:hover, #image_kofi:hover, #image_twitter:hover, #image_instagram:hover{
+#image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_email_copypaste:hover, #image_return:hover, #image_linkedin:hover, #image_spotify:hover, #image_instagram:hover{
     border-width: 0.5vmin;
     border-radius: 4.1vmin;
     border-style: solid;
