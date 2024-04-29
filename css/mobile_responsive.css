@@ -27,6 +27,12 @@
         display: none;
     }
 
+    #eky860KzHwM1{
+        width: 50%;
+        height: auto;
+    
+    }
+
     button, .filter_button, #image_cv:hover, #image_eng:hover, #image_tr:hover, #image_email:hover, #image_email_copypaste:hover, #image_return:hover{
         cursor: default;
     }

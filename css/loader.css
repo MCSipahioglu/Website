@@ -13,46 +13,14 @@
     justify-content: center;
     align-items: center;
 
-    display:none;   /*Remove this when you want to use the loading screen */
     opacity: 100%;
     transition: 1s;
     z-index: 15;
 }
 
-#loader{
-    width: 3vmin;
-    height: 3vmin;
 
-    position: absolute;
-    top: 50%;
+#eky860KzHwM1{
+    width: 9%;
+    height: auto;
 
-    border: 4px solid rgb(255,255,255);
-
-    display: inline-block;
-
-    animation: loader 2s infinite ease;
-}
-
-#loader_inner{
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
-    background-color: white;
-    animation: loader_inner 2s infinite ease-in;
-}
-
-@keyframes loader{
-    0%{transform: rotate(0deg);}
-    25%{transform: rotate(180deg);}
-    50%{transform: rotate(180deg);}
-    75%{transform: rotate(360deg);}
-    100%{transform: rotate(360deg);}
-}
-
-@keyframes loader_inner{
-    0%{height: 0%;}
-    25%{height: 0%;}
-    50%{height: 100%;}
-    75%{height: 100%;}
-    100%{height: 0%;}
 }
